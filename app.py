@@ -519,6 +519,7 @@ def render_daily_dynamic():
             is_selected = st.session_state.selected_category == cat
             if st.button(cat, key=f"tab_{cat}", use_container_width=True, type="primary" if is_selected else "secondary"):
                 st.session_state.selected_category = cat
+                st.rerun()
     
     keyword = st.text_input("🔍 搜索关键词", placeholder=f"搜索{st.session_state.selected_category}相关资讯...", key="dd_search_input")
     cat_articles = get_articles_by_category(st.session_state.articles, st.session_state.selected_category)
