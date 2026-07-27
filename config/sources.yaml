@@ -1,0 +1,50 @@
+sources:
+  - name: "36氪前沿科技"
+    type: "rss"
+    url: "https://36kr.com/feed"
+    category_weight: 0.9
+
+  - name: "少数派"
+    type: "rss"
+    url: "https://sspai.com/feed"
+    category_weight: 0.85
+
+  - name: "IT之家AI频道"
+    type: "rss"
+    url: "https://www.ithome.com/rss/"
+    category_weight: 0.8
+
+  - name: "AI前线"
+    type: "rss"
+    url: "https://www.infoq.cn/feed/subscribe/57cb0a60-d840-452d-9e35-774204e3d3a2"
+    category_weight: 0.85
+
+  - name: "开源中国"
+    type: "rss"
+    url: "https://www.oschina.net/news/rss"
+    category_weight: 0.8
+
+  - name: "Engadget"
+    type: "rss"
+    url: "https://www.engadget.com/rss.xml"
+    category_weight: 0.9
+
+  - name: "Hacker News"
+    type: "rss"
+    url: "https://news.ycombinator.com/rss"
+    category_weight: 0.95
+
+  - name: "TechCrunch"
+    type: "rss"
+    url: "https://techcrunch.com/feed/"
+    category_weight: 0.9
+
+  - name: "MIT Technology Review"
+    type: "rss"
+    url: "https://www.technologyreview.com/feed/"
+    category_weight: 0.95
+
+  - name: "The Verge"
+    type: "rss"
+    url: "https://www.theverge.com/rss/index.xml"
+    category_weight: 0.9
