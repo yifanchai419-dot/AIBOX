@@ -54,6 +54,12 @@ st.markdown("""
     [data-testid="stSidebar"] * {
         color: #f1f5f9 !important;
     }
+    
+    /* Logo标题样式 - AI部分蓝色高亮 */
+    [data-testid="stSidebar"] h1 .logo-ai {
+        color: #3b82f6 !important;
+        text-shadow: 0 0 10px rgba(59,130,246,0.6) !important;
+    }
     [data-testid="stSidebarNav"] { display: none !important; }
     
     /* 隐藏侧边栏折叠按钮 */
@@ -140,31 +146,15 @@ st.markdown("""
         transform: translateY(-1px) !important;
     }
     
-    /* Radio导航组件样式 - 完全重写 */
+    /* Radio导航组件样式 */
     [data-testid="stSidebar"] [data-testid="stRadio"] {
         margin: 0 !important;
         padding: 0 !important;
-        width: 100% !important;
-        min-width: 0 !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] > div {
         flex-direction: column !important;
-        gap: 4px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        min-width: 0 !important;
+        gap: 8px !important;
     }
-    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 4px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        min-width: 0 !important;
-    }
-    /* 核心样式：统一所有label */
     [data-testid="stSidebar"] [data-testid="stRadio"] label {
         width: 100% !important;
         padding: 12px 16px !important;
@@ -172,68 +162,45 @@ st.markdown("""
         text-align: left !important;
         font-size: 15px !important;
         font-weight: 500 !important;
-        transition: background-color 0.2s ease !important;
-        border: none !important;
-        background: transparent !important;
-        color: #9ca3af !important;
+        transition: all 0.3s !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background: rgba(30, 41, 59, 0.8) !important;
+        color: #f1f5f9 !important;
         cursor: pointer !important;
         margin: 0 !important;
         display: flex !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        box-sizing: border-box !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        min-height: 44px !important;
-        line-height: 1.5 !important;
-        position: relative !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
-        background: rgba(255, 255, 255, 0.05) !important;
+        background: rgba(59, 130, 246, 0.3) !important;
+        border-color: rgba(96, 165, 250, 0.5) !important;
+        color: #ffffff !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label[data-baseweb="radio"] {
+        background: rgba(30, 41, 59, 0.8) !important;
         color: #f1f5f9 !important;
     }
-    /* 选中状态 - 深色背景圆角卡片，仅改变背景色，不改变布局 */
+    [data-testid="stSidebar"] [data-testid="stRadio"] label[data-baseweb="radio"]:hover {
+        background: rgba(59, 130, 246, 0.3) !important;
+        color: #ffffff !important;
+    }
+    /* 选中状态的radio标签 */
     [data-testid="stSidebar"] [data-testid="stRadio"] label[data-state="checked"],
     [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {
-        background: rgba(55, 65, 81, 1) !important;
-        color: #f1f5f9 !important;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+        color: #ffffff !important;
+        border-color: #60a5fa !important;
         font-weight: 600 !important;
-        box-shadow: none !important;
-        border: none !important;
-        padding: 12px 16px !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] label[data-state="checked"]:hover,
     [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked):hover {
-        background: rgba(75, 85, 99, 1) !important;
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+        box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5) !important;
     }
-    /* 圆孔容器 - 固定宽度确保垂直对齐 */
+    /* 隐藏radio圆点 */
     [data-testid="stSidebar"] [data-testid="stRadio"] label > div:first-child {
-        flex-shrink: 0 !important;
-        width: 18px !important;
-        height: 18px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        margin-right: 12px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-width: 18px !important;
-    }
-    /* 确保文字容器正确对齐 */
-    [data-testid="stSidebar"] [data-testid="stRadio"] label > div:last-child,
-    [data-testid="stSidebar"] [data-testid="stRadio"] label > span:last-child {
-        flex: 1 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        min-width: 0 !important;
-    }
-    /* 移除所有可能影响布局的内部样式 */
-    [data-testid="stSidebar"] [data-testid="stRadio"] label * {
-        box-sizing: border-box !important;
+        display: none !important;
     }
 
     /* 文章卡片 */
@@ -492,8 +459,8 @@ def render_sidebar():
     with st.sidebar:
         st.markdown("""
 <div style="text-align:center; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,0.1);">
-    <h1 style="font-size:28px; font-weight:800; margin:0; letter-spacing:2px;">
-        <span style="color:#60a5fa;">AI</span>BOX
+    <h1 style="font-size:36px; font-weight:900; margin:0; letter-spacing:3px;">
+        <span class="logo-ai">AI</span><span>BOX</span>
     </h1>
 </div>
 """, unsafe_allow_html=True)
