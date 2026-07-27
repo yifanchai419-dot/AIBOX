@@ -150,6 +150,20 @@ def generate_daily_report():
         # 保存到缓存
         save_daily_report_to_cache(date_str, report, filtered_articles)
         
+        # 自动保存到文件管理的日报板块
+        # 使用日报内容日期作为文件名（前一天），而不是生成日期
+        report_date_str = yesterday.strftime("%Y%m%d")
+        daily_reports_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "daily_reports")
+        os.makedirs(daily_reports_dir, exist_ok=True)
+        output_path = os.path.join(daily_reports_dir, f"daily_report_{report_date_str}.md")
+        
+        if not os.path.exists(output_path):
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write(report)
+            logger.info(f"日报已自动保存到文件管理板块: {output_path}")
+        else:
+            logger.info(f"日报文件已存在，跳过保存: {output_path}")
+        
         logger.info("=" * 60)
         logger.info("定时任务执行完成")
         logger.info("=" * 60)
