@@ -75,7 +75,7 @@ def generate_daily_report():
     生成日报主函数
     
     时间范围：前一天00:00-24:00
-    例如：7月24日6点运行时，抓取7月23日00:00到7月23日24:00的数据
+    从持久化数据库中读取数据，而不是重新抓取
     """
     logger.info("=" * 60)
     logger.info("开始执行定时任务：生成每日AI日报")
@@ -92,36 +92,63 @@ def generate_daily_report():
     logger.info(f"时间范围: {start_time.strftime('%Y-%m-%d %H:%M')} 到 {end_time.strftime('%Y-%m-%d %H:%M')}")
     
     try:
-        # 导入模块
-        from src.fetcher import fetch_all_articles
+        # 从持久化数据库中获取文章
+        from src.database import get_all_articles
         from src.processor import DataProcessor
         from src.generator import CourseGenerator
         
-        # 抓取指定时间范围的文章
-        logger.info("开始抓取文章数据...")
-        articles = fetch_all_articles(
-            start_time=start_time,
-            end_time=end_time
-        )
-        logger.info(f"抓取完成，共获取 {len(articles)} 篇文章")
+        # 读取数据库中的所有文章
+        logger.info("从持久化数据库中读取文章...")
+        all_articles = get_all_articles()
+        logger.info(f"数据库中共有 {len(all_articles)} 篇文章")
         
-        if not articles:
-            logger.warning("未抓取到任何文章，跳过本次生成")
-            return
+        # 过滤指定时间范围的文章
+        def in_time_range(article):
+            published_at = article.get("published_at", "")
+            if not published_at:
+                return False
+            try:
+                if published_at.endswith("Z"):
+                    published_at = published_at[:-1] + "+00:00"
+                dt = datetime.fromisoformat(published_at)
+                return start_time <= dt <= end_time
+            except Exception:
+                return False
         
-        # 处理文章（使用Mock模式，不调用API）
-        logger.info("开始处理文章（去重、打分、分类）...")
+        filtered_articles = [a for a in all_articles if in_time_range(a)]
+        logger.info(f"筛选出 {len(filtered_articles)} 篇指定时间范围内的文章")
+        
+        if not filtered_articles:
+            logger.warning("未找到指定时间范围内的文章，尝试抓取补充数据...")
+            # 尝试抓取补充数据
+            from src.fetcher import fetch_all_articles
+            articles = fetch_all_articles(start_time=start_time, end_time=end_time)
+            if articles:
+                processor = DataProcessor(use_api=False)
+                filtered_articles = processor.process_articles(articles)
+                # 添加到数据库
+                from src.database import add_new_articles
+                add_new_articles(filtered_articles)
+                logger.info(f"抓取补充数据完成，共获取 {len(filtered_articles)} 篇文章")
+            else:
+                logger.warning("抓取补充数据也未成功，跳过本次生成")
+                return
+        
+        # 确保文章都有category字段
         processor = DataProcessor(use_api=False)
-        processed_articles = processor.process_articles(articles)
-        logger.info(f"处理完成，保留 {len(processed_articles)} 篇高质量文章")
+        for article in filtered_articles:
+            if "category" not in article:
+                article["category"] = processor.classify_article(article)
+            if "score" not in article:
+                article["score"] = processor.score_article(article)
         
         # 生成日报（使用Mock模式）
         logger.info("开始生成日报...")
         generator = CourseGenerator(use_api=False)
-        report = generator.generate_daily_report(processed_articles)
+        report = generator.generate_daily_report(filtered_articles)
         
         # 保存到缓存
-        save_daily_report_to_cache(date_str, report, processed_articles)
+        save_daily_report_to_cache(date_str, report, filtered_articles)
         
         logger.info("=" * 60)
         logger.info("定时任务执行完成")

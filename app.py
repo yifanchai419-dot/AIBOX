@@ -351,9 +351,11 @@ def generate_mock_articles():
     ]
 
 def fetch_latest_articles():
-    """获取最新文章，支持增量抓取"""
-    # 读取缓存
-    cached_articles, last_fetch_time = load_articles_cache()
+    """获取最新文章，支持增量抓取与持久化存储"""
+    from src.database import get_recent_articles, add_new_articles, cleanup_old_articles, get_all_articles
+    
+    # 读取持久化数据库中的最近7天数据
+    db_articles = get_recent_articles(7)
     
     try:
         from src.fetcher import fetch_all_articles
@@ -362,30 +364,36 @@ def fetch_latest_articles():
         now = datetime.now(timezone.utc)
         processor = DataProcessor(use_api=False)
         
-        if last_fetch_time:
+        # 获取上次抓取时间（从缓存获取，用于判断是否需要抓取）
+        cached_articles, last_fetch_time = load_articles_cache()
+        
+        # 如果数据库为空，强制首次抓取
+        if not db_articles:
+            logger.info("首次抓取模式: 数据库为空，抓取最近7天文章")
+            end_date = now.date()
+            start_date = end_date - timedelta(days=7)
+            articles = fetch_all_articles(start_date=start_date, end_date=end_date)
+        elif last_fetch_time:
             time_diff = now - last_fetch_time
-            if time_diff.total_seconds() < 3600:  # 1小时内不重新抓取
-                logger.info(f"快速缓存模式: 距离上次抓取仅 {time_diff.total_seconds():.0f} 秒，直接返回缓存")
-                # 确保缓存数据都有category字段
-                for article in cached_articles:
+            if time_diff.total_seconds() < 1800:  # 30分钟内不重新抓取
+                logger.info(f"快速缓存模式: 距离上次抓取仅 {time_diff.total_seconds():.0f} 秒，直接返回数据库数据")
+                # 确保数据都有category字段
+                for article in db_articles:
                     if "category" not in article:
                         article["category"] = processor.classify_article(article)
                     if "score" not in article:
                         article["score"] = processor.score_article(article)
-                return cached_articles
-            elif time_diff.days < 1:
+                # 更新缓存时间
+                save_articles_cache(db_articles)
+                return db_articles
+            else:
                 # 增量模式：只抓取上次抓取时间到现在的新文章
+                # 数据库中已有的数据不需要重新抓取
                 logger.info(f"增量抓取模式: {last_fetch_time} 到 {now}")
                 articles = fetch_all_articles(start_time=last_fetch_time, end_time=now)
-            else:
-                # 全量模式：超过1天，重新抓取最近7天的文章
-                logger.info("全量抓取模式: 超过1天，重新抓取")
-                end_date = now.date()
-                start_date = end_date - timedelta(days=7)
-                articles = fetch_all_articles(start_date=start_date, end_date=end_date)
         else:
-            # 全量模式：首次抓取，抓取最近7天的文章
-            logger.info("全量抓取模式: 首次抓取")
+            # 首次抓取：数据库为空，需要抓取最近7天的文章
+            logger.info("首次抓取模式: 无上次抓取时间，抓取最近7天文章")
             end_date = now.date()
             start_date = end_date - timedelta(days=7)
             articles = fetch_all_articles(start_date=start_date, end_date=end_date)
@@ -393,37 +401,40 @@ def fetch_latest_articles():
         if articles:
             new_articles = processor.process_articles(articles)
             
-            if cached_articles:
-                # 确保缓存数据都有category字段
-                for article in cached_articles:
-                    if "category" not in article:
-                        article["category"] = processor.classify_article(article)
-                    if "score" not in article:
-                        article["score"] = processor.score_article(article)
-                # 合并并去重（按链接去重）
-                existing_links = {a.get("link", "") for a in cached_articles}
-                for article in new_articles:
-                    if article.get("link", "") not in existing_links:
-                        cached_articles.append(article)
-                        existing_links.add(article.get("link", ""))
-                # 按时间倒序重新排序
-                cached_articles.sort(key=lambda a: convert_to_beijing_time(a.get("published_at", "")), reverse=True)
-                result = cached_articles
-            else:
-                result = new_articles
+            # 确保新文章都有category字段
+            for article in new_articles:
+                if "category" not in article:
+                    article["category"] = processor.classify_article(article)
+                if "score" not in article:
+                    article["score"] = processor.score_article(article)
             
+            # 添加到持久化数据库（自动去重）
+            added_count = add_new_articles(new_articles)
+            logger.info(f"新增 {added_count} 篇文章到数据库")
+            
+            # 清理超过7天的旧文章
+            deleted_count = cleanup_old_articles(7)
+            if deleted_count > 0:
+                logger.info(f"清理 {deleted_count} 篇超过7天的旧文章")
+            
+            # 重新加载数据库数据
+            result = get_recent_articles(7)
+            
+            # 更新缓存
             save_articles_cache(result)
             return result
         else:
-            # 没有新文章，返回缓存数据
-            if cached_articles:
-                # 确保缓存数据都有category字段
-                for article in cached_articles:
+            # 没有新文章，返回数据库数据
+            if db_articles:
+                # 确保数据都有category字段
+                for article in db_articles:
                     if "category" not in article:
                         article["category"] = processor.classify_article(article)
                     if "score" not in article:
                         article["score"] = processor.score_article(article)
-                return cached_articles
+                # 更新缓存
+                save_articles_cache(db_articles)
+                return db_articles
     
     except Exception as e:
         logger.warning(f"抓取失败，使用缓存数据: {e}")
