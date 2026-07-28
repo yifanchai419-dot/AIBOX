@@ -2,16 +2,54 @@ import os
 import sys
 import json
 import logging
+import threading
 import streamlit as st
 from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 try:
-    from scheduler import generate_daily_report, get_daily_cache_path, save_daily_report_to_cache
+    from scheduler import (
+        generate_daily_report,
+        get_daily_cache_path,
+        save_daily_report_to_cache,
+        start_scheduler as _scheduler_start,
+    )
 except ImportError:
     def get_daily_cache_path(date_str):
         return os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", f"report_{date_str}.json")
+
+    _scheduler_start = None
+
+
+# -----------------------------
+# 应用启动：后台启动调度器（仅一次）
+# -----------------------------
+_SCHEDULER_STARTED_FLAG = "_scheduler_started_v1"
+
+
+def _bootstrap_scheduler_once():
+    """在 Streamlit 启动阶段启动定时任务调度器，仅执行一次。"""
+    if _scheduler_start is None:
+        return
+    if st.session_state.get(_SCHEDULER_STARTED_FLAG):
+        return
+    try:
+        # 放在后台线程中启动，避免阻塞 Streamlit 主渲染
+        def _run():
+            try:
+                _scheduler_start()
+            except Exception as e:
+                logging.error(f"启动调度器失败: {e}", exc_info=True)
+
+        threading.Thread(target=_run, daemon=True, name="aibox-scheduler").start()
+        st.session_state[_SCHEDULER_STARTED_FLAG] = True
+        logging.info("AIBOX 调度器已在后台线程中启动")
+    except Exception as e:
+        logging.error(f"启动调度器失败: {e}", exc_info=True)
+
+
+_bootstrap_scheduler_once()
 
 logging.basicConfig(
     level=logging.WARNING,
@@ -248,6 +286,90 @@ st.markdown("""
     .file-card { background: rgba(30,41,59,0.8); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.05); }
     .file-icon { font-size: 32px; margin-bottom: 8px; }
     .file-name { font-size: 14px; font-weight: 600; color: #f1f5f9; margin-bottom: 4px; }
+
+    /* ============ AI日报 头部样式 ============ */
+    .daily-report-header {
+        padding: 16px 0 20px 0;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .daily-report-title {
+        font-size: 56px;
+        font-weight: 900;
+        color: #f8fafc;
+        letter-spacing: 3px;
+        line-height: 1.1;
+        margin: 0 auto 4px auto;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: inline-block;
+    }
+    .daily-report-title .title-brand {
+        color: #3b82f6;
+        text-shadow: 0 0 12px rgba(59,130,246,0.5), 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .daily-report-title .title-cn {
+        color: #f8fafc;
+        margin-left: 18px;
+    }
+    .daily-report-divider {
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, #3b82f6 30%, #6366f1 70%, transparent 100%);
+        margin: 18px auto 14px auto;
+        border-radius: 2px;
+        max-width: 720px;
+    }
+    .daily-report-subtitle {
+        font-size: 15px;
+        color: #94a3b8;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .daily-report-subtitle .date-cn {
+        color: #e2e8f0;
+        font-weight: 600;
+    }
+    .daily-report-subtitle .sep {
+        color: #475569;
+        font-weight: 300;
+    }
+    .daily-report-subtitle .day-en {
+        color: #60a5fa;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+    .daily-report-subtitle .time-info {
+        color: #94a3b8;
+    }
+    /* 响应式 */
+    @media (max-width: 768px) {
+        .daily-report-title { font-size: 36px; letter-spacing: 2px; }
+        .daily-report-title .title-cn { margin-left: 12px; }
+        .daily-report-subtitle { font-size: 13px; flex-wrap: wrap; gap: 6px; }
+    }
+
+    /* TOP 5 区块标题 */
+    .daily-section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 24px 0 14px 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #f1f5f9;
+    }
+    .daily-section-header .section-icon {
+        font-size: 22px;
+    }
+    .daily-section-header .section-rank {
+        color: #fbbf24;
+    }
+    .daily-section-header .section-title-text {
+        color: #f1f5f9;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -567,32 +689,165 @@ def render_daily_report():
     # 页面隔离检查：确保只在AI日报页面渲染
     if st.session_state.get("current_page") != "AI日报":
         return
-    
-    st.title("📊 AI日报")
-    st.markdown("---")
-    today = datetime.now()
-    wd_map = {0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
-    st.markdown(f"**AIBOX日报** - 二○二六年{today.month}月{today.day}日 · 星期{wd_map[today.weekday()]} · 每早六时")
-    
-    date_str = today.strftime("%Y%m%d")
-    cached = load_daily_report_from_cache(date_str)
-    
-    if cached:
-        st.session_state.daily_report = cached.get("report", "")
-    
+
+    now_bjt = datetime.now()
+    wd_map = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
+
+    # 日报内容为"昨天" 00:00-24:00 的数据，文件名以昨天日期命名
+    yesterday = now_bjt - timedelta(days=1)
+    today_str = now_bjt.strftime("%Y%m%d")
+    yesterday_str = yesterday.strftime("%Y%m%d")
+
+    # 中文日期格式化
+    cn_date = f"二○二六年{yesterday.month}月{yesterday.day}日"
+    cn_weekday = f"星期{wd_map[yesterday.weekday()]}"
+
+    # 渲染定制日报头部（居中、AIBOX品牌、无顶部小字）
+    st.markdown(f"""
+<div class="daily-report-header">
+    <div class="daily-report-title">
+        <span class="title-brand">AIBOX</span><span class="title-cn">日报</span>
+    </div>
+    <div class="daily-report-divider"></div>
+    <div class="daily-report-subtitle">
+        <span class="date-cn">{cn_date}</span>
+        <span class="sep">·</span>
+        <span class="date-cn">{cn_weekday}</span>
+        <span class="sep">·</span>
+        <span class="day-en">DAILY</span>
+        <span class="sep">·</span>
+        <span class="time-info">每早六时</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+    # 优先加载昨天的日报（6 点后自动生成）
+    date_str_to_load = yesterday_str
+    cached = load_daily_report_from_cache(date_str_to_load)
+
+    # 若昨天日报不存在，尝试加载今天（当天启动时补齐场景）
+    if not cached:
+        cached = load_daily_report_from_cache(today_str)
+        if cached:
+            date_str_to_load = today_str
+
+    # 若仍无缓存，直接尝试读取 Markdown 文件
+    if not cached:
+        md_path = os.path.join(OUTPUT_DIR, "daily_reports", f"daily_report_{date_str_to_load}.md")
+        if os.path.exists(md_path):
+            try:
+                with open(md_path, "r", encoding="utf-8") as f:
+                    report_content = f.read()
+                st.session_state.daily_report = report_content
+            except Exception:
+                report_content = ""
+        else:
+            report_content = ""
+    else:
+        report_content = cached.get("report", "")
+        st.session_state.daily_report = report_content
+
     if st.session_state.daily_report:
-        st.download_button("📥 下载日报", st.session_state.daily_report, f"daily_report_{date_str}.md", mime="text/markdown")
-        st.markdown(st.session_state.daily_report)
-        
-        # 自动保存到日报文件夹
+        st.download_button(
+            "📥 下载日报",
+            st.session_state.daily_report,
+            f"daily_report_{date_str_to_load}.md",
+            mime="text/markdown",
+        )
+
+        # 从缓存中获取结构化文章数据，用于渲染 TOP 5 卡片 + 分类卡片
+        top5_articles = []
+        cat_articles_map = {}
+        target_date_str = yesterday.strftime("%Y-%m-%d")
+
+        if cached and cached.get("articles"):
+            sorted_articles = sorted(cached["articles"], key=lambda a: a.get("score", 0), reverse=True)
+            top5_articles = sorted_articles[:5]
+
+            # 按分类筛选目标日期文章
+            cat_order = ["模型发布", "产品更新", "行业动态", "论文研究", "技巧观点"]
+            for cat in cat_order:
+                cat_list = []
+                for a in cached["articles"]:
+                    if a.get("category") != cat:
+                        continue
+                    published_at = a.get("published_at", "")
+                    if not published_at:
+                        continue
+                    try:
+                        if published_at.endswith("Z"):
+                            published_at = published_at[:-1] + "+00:00"
+                        dt = datetime.fromisoformat(published_at)
+                        dt_beijing = dt.astimezone(timezone(timedelta(hours=8)))
+                        if dt_beijing.strftime("%Y-%m-%d") == target_date_str:
+                            cat_list.append(a)
+                    except Exception:
+                        continue
+                cat_list.sort(key=lambda a: a.get("score", 0), reverse=True)
+                cat_articles_map[cat] = cat_list
+
+        if top5_articles:
+            # 渲染 TOP 5 区块标题
+            st.markdown("## 🎯 今日 AI 焦点 **TOP 5**")
+
+            # 渲染 TOP 5 为文章卡片（与 AI 动态列表样式一致）
+            for article in top5_articles:
+                summary = article.get("content", "")[:120]
+                if len(article.get("content", "")) > 120:
+                    summary += "..."
+                cat = article.get("category", "")
+                st.markdown(f"""
+<div class="article-card">
+    <div class="article-title"><a href="{article.get('link','')}" target="_blank">{article.get('title','')}</a></div>
+    <div class="article-meta">
+        <span>📰 {article.get('source','')}</span>
+        <span>⭐ {article.get('score', 0):.2f}</span>
+        <span class="category-badge {CATEGORY_COLORS.get(cat, '')}">{cat}</span>
+    </div>
+    <div class="article-summary">{summary}</div>
+</div>
+""", unsafe_allow_html=True)
+
+            # 渲染 5大分类动态速览（使用与教案生成一致的卡片样式）
+            st.markdown("## 📊 5大分类动态速览")
+
+            for cat in cat_order:
+                cat_list = cat_articles_map.get(cat, [])
+                st.markdown(f"### 📁 {cat} ({len(cat_list)}篇)")
+                if not cat_list:
+                    st.markdown("暂无相关资讯")
+                else:
+                    for article in cat_list:
+                        dt = convert_to_beijing_time(article.get("published_at", ""))
+                        st.markdown(f"""
+<div class="article-card">
+    <div class="article-title"><a href="{article.get('link','')}" target="_blank">{article.get('title','')}</a></div>
+    <div class="article-meta">
+        <span>📰 {article.get('source','')}</span>
+        <span>⏰ {format_time(dt)}</span>
+        <span class="score-badge score-high">{article.get('score',0)}分</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+        else:
+            # 无结构化文章数据，直接渲染 Markdown
+            report_md = st.session_state.daily_report
+            lines = report_md.split("\n")
+            filtered = [l for l in lines if "本文由AI知识日报智能体自动生成" not in l]
+            st.markdown("\n".join(filtered))
+
+        # 同步保存到日报文件夹（防止启动时补齐但未写入文件的情况）
         daily_reports_dir = os.path.join(OUTPUT_DIR, "daily_reports")
         os.makedirs(daily_reports_dir, exist_ok=True)
-        output_path = os.path.join(daily_reports_dir, f"daily_report_{date_str}.md")
+        output_path = os.path.join(daily_reports_dir, f"daily_report_{date_str_to_load}.md")
         if not os.path.exists(output_path):
-            with open(output_path, "w", encoding="utf-8") as f:
-                f.write(st.session_state.daily_report)
+            try:
+                with open(output_path, "w", encoding="utf-8") as f:
+                    f.write(st.session_state.daily_report)
+            except Exception:
+                pass
     else:
-        st.info("日报将于每天早上6点自动生成")
+        st.info("⏳ 日报将于每天早上 6 点自动生成，启动时系统会自动补齐缺失的日报")
 
 def render_lesson_plan():
     # 页面隔离检查：确保只在教案生成页面渲染
