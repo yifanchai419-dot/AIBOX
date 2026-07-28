@@ -649,8 +649,9 @@ def render_lesson_plan():
             if cat_articles:
                 for i, article in enumerate(cat_articles):
                     article_link = article.get("link", "")
-                    # 使用文章link作为复选框的key，避免index-based导致状态泄漏
-                    checkbox_key = f"lp_chk_{article_link[:50].replace('/', '_').replace(':', '_')}"
+                    # 使用分类+文章link作为复选框的key，确保唯一性
+                    safe_link = article_link[:50].replace('/', '_').replace(':', '_').replace('?', '_').replace('&', '_')
+                    checkbox_key = f"lp_chk_{cat}_{safe_link}"
                     
                     col_check, col_content = st.columns([1, 9])  # 调整列比例，增加复选框列宽度
                     with col_check:
