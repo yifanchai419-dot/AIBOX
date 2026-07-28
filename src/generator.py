@@ -198,43 +198,98 @@ class CourseGenerator:
         # 生成TOP 5
         top_5 = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[:5]
         
-        # 构建Markdown内容（直接从二级标题开始，不包含H1标题）
-        content = """## 🎯 今日 AI 焦点 TOP 5
-
-"""
+        def fmt_time(article):
+            """格式化发布时间"""
+            dt_str = article.get("published_at", "")
+            if not dt_str:
+                return ""
+            try:
+                if dt_str.endswith("Z"):
+                    dt_str = dt_str[:-1] + "+00:00"
+                from datetime import timezone, timedelta
+                dt = datetime.fromisoformat(dt_str)
+                dt_beijing = dt.astimezone(timezone(timedelta(hours=8)))
+                return dt_beijing.strftime("%m-%d %H:%M")
+            except Exception:
+                return dt_str[:16] if len(dt_str) >= 16 else dt_str
         
-        for article in top_5:
-            content += f"""**[{article['title']}]({article.get('link', '')})**
-- 评分: {article.get('score', 0)} | 信源: {article.get('source', '未知')}
+        def score_label(score):
+            """评分等级标签"""
+            s = float(score) if score else 0
+            if s >= 7:
+                return f"{s:.2f}分"
+            elif s >= 5:
+                return f"{s:.1f}分"
+            else:
+                return f"{s:.1f}分"
+        
+        def summary_text(article, max_len=120):
+            """获取摘要文本"""
+            content = article.get("content", "") or article.get("summary", "") or ""
+            if not content:
+                return ""
+            content = content.strip().replace("\n", " ").replace("\r", "")
+            if len(content) > max_len:
+                return content[:max_len] + "..."
+            return content
+        
+        def article_block(article, show_summary=True):
+            """生成单篇文章的Markdown块"""
+            title = article.get("title", "无标题")
+            link = article.get("link", "")
+            source = article.get("source", "未知")
+            score = article.get("score", 0)
+            cat = article.get("category", "")
+            pub_time = fmt_time(article)
+            summary = summary_text(article)
+            
+            lines = []
+            # 标题行
+            lines.append(f"**[{title}]({link})**")
+            # 元数据行（信源、时间、评分、分类）
+            meta_parts = []
+            meta_parts.append(f"📰 {source}")
+            if pub_time:
+                meta_parts.append(f"⏰ {pub_time}")
+            meta_parts.append(f"⭐ {score_label(score)}")
+            if cat:
+                meta_parts.append(f"🏷️ {cat}")
+            lines.append(" | ".join(meta_parts))
+            # 摘要行
+            if show_summary and summary:
+                lines.append(f"")
+                lines.append(f"> {summary}")
+            return "\n".join(lines)
+        
+        # 构建Markdown内容
+        content = f"""## 🎯 今日 AI 焦点 TOP 5
 
 """
+        for article in top_5:
+            content += article_block(article, show_summary=True)
+            content += "\n\n---\n\n"
         
         # 5大分类动态速览
-        content += """## 📊 5大分类动态速览
+        content += f"""## 📊 5大分类动态速览
 
 """
         
         for category in categories:
             articles_in_cat = category_groups[category]
-            if articles_in_cat:
-                content += f"""### 📁 {category} ({len(articles_in_cat)}篇)
-
-"""
-                for article in articles_in_cat:
-                    content += f"""**[{article['title']}]({article.get('link', '')})**
-- 评分: {article.get('score', 0)} | 信源: {article.get('source', '未知')}
-
-"""
+            cat_count = len(articles_in_cat)
+            content += f"### 📁 {category} ({cat_count}篇)\n\n"
+            
+            if not articles_in_cat:
+                content += "_暂无相关资讯_\n\n"
             else:
-                content += f"""### 📁 {category} (0篇)
-
-暂无相关资讯
-
-"""
+                for article in articles_in_cat:
+                    content += article_block(article, show_summary=False)
+                    content += "\n\n---\n\n"
         
+        total_count = len(articles)
         content += f"""---
 
-*📝 本文由AI知识日报智能体自动生成 | 共收录 {len(articles)} 篇资讯*
+*📝 本文由AI知识日报智能体自动生成 | 共收录 {total_count} 篇资讯*
 """
         
         return content
