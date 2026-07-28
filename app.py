@@ -381,10 +381,121 @@ CATEGORY_COLORS = {
 }
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache")
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+RECYCLE_BIN_DIR = os.path.join(OUTPUT_DIR, "recycle_bin")
+RECYCLE_BIN_META = os.path.join(RECYCLE_BIN_DIR, "_meta.json")
 ARTICLES_CACHE_FILE = os.path.join(CACHE_DIR, "articles_cache.json")
 
 os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(RECYCLE_BIN_DIR, exist_ok=True)
+
+def _load_recycle_meta():
+    """加载回收站元数据"""
+    if os.path.exists(RECYCLE_BIN_META):
+        try:
+            with open(RECYCLE_BIN_META, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {"items": []}
+    return {"items": []}
+
+def _save_recycle_meta(meta):
+    """保存回收站元数据"""
+    with open(RECYCLE_BIN_META, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+
+def move_to_recycle_bin(filepath, source_type="unknown"):
+    """将文件移入回收站"""
+    if not os.path.exists(filepath):
+        return False
+    filename = os.path.basename(filepath)
+    unique_name = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{filename}"
+    dest_path = os.path.join(RECYCLE_BIN_DIR, unique_name)
+    os.rename(filepath, dest_path)
+    meta = _load_recycle_meta()
+    meta["items"].append({
+        "recycle_name": unique_name,
+        "original_name": filename,
+        "original_path": filepath,
+        "source_type": source_type,
+        "file_size": os.path.getsize(dest_path),
+        "deleted_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    })
+    _save_recycle_meta(meta)
+    logging.info(f"文件移入回收站: {filename} (来源: {source_type})")
+    return True
+
+def get_recycle_bin_items():
+    """获取回收站所有项目（按删除时间倒序）"""
+    meta = _load_recycle_meta()
+    return sorted(meta["items"], key=lambda x: x["deleted_at"], reverse=True)
+
+def purge_expired_recycle_items(days=7):
+    """清除超过指定天数的回收站项目"""
+    meta = _load_recycle_meta()
+    now = datetime.now()
+    kept = []
+    removed_count = 0
+    for item in meta["items"]:
+        deleted_at = datetime.strptime(item["deleted_at"], "%Y-%m-%d %H:%M:%S")
+        if (now - deleted_at).days > days:
+            file_path = os.path.join(RECYCLE_BIN_DIR, item["recycle_name"])
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            removed_count += 1
+        else:
+            kept.append(item)
+    if removed_count > 0:
+        meta["items"] = kept
+        _save_recycle_meta(meta)
+        logging.info(f"回收站清理: 移除 {removed_count} 个超过 {days} 天的项目")
+    return removed_count
+
+def restore_from_recycle_bin(recycle_name):
+    """从回收站恢复文件"""
+    meta = _load_recycle_meta()
+    item = None
+    for i, it in enumerate(meta["items"]):
+        if it["recycle_name"] == recycle_name:
+            item = it
+            meta["items"].pop(i)
+            break
+    if item is None:
+        return False, "回收站中未找到该项目"
+    src_path = os.path.join(RECYCLE_BIN_DIR, recycle_name)
+    if not os.path.exists(src_path):
+        _save_recycle_meta(meta)
+        return False, "文件已被永久清除"
+    original_path = item["original_path"]
+    restore_path = original_path
+    if os.path.exists(restore_path):
+        base, ext = os.path.splitext(original_path)
+        counter = 1
+        while os.path.exists(restore_path):
+            restore_path = f"{base}_{counter}{ext}"
+            counter += 1
+    os.rename(src_path, restore_path)
+    _save_recycle_meta(meta)
+    logging.info(f"文件恢复: {recycle_name} -> {restore_path}")
+    return True, f"已恢复到 {os.path.basename(restore_path)}"
+
+def permanent_delete_from_recycle(recycle_name):
+    """从回收站永久删除文件"""
+    meta = _load_recycle_meta()
+    item = None
+    for i, it in enumerate(meta["items"]):
+        if it["recycle_name"] == recycle_name:
+            item = it
+            meta["items"].pop(i)
+            break
+    if item is None:
+        return False
+    file_path = os.path.join(RECYCLE_BIN_DIR, recycle_name)
+    if os.path.exists(file_path):
+        os.remove(file_path)
+    _save_recycle_meta(meta)
+    logging.info(f"回收站永久删除: {recycle_name}")
+    return True
 
 def init_session_state():
     if "current_page" not in st.session_state:
@@ -584,6 +695,7 @@ def get_icon(page_name):
         "AI日报": "📊",
         "教案生成": "📚",
         "文件管理": "📁",
+        "回收站": "🗑️",
     }
     return icon_map.get(page_name, "📄")
 
@@ -603,22 +715,23 @@ def render_sidebar():
             "📊 AI日报",
             "📚 教案生成",
             "📁 文件管理",
+            "🗑️ 回收站",
         ]
+        page_names = ["AI动态", "AI日报", "教案生成", "文件管理", "回收站"]
         
-        # 使用radio组件实现导航，原生支持选中状态高亮
+        current_idx = page_names.index(st.session_state.current_page) if st.session_state.current_page in page_names else 0
+        
         selected_nav = st.radio(
             "",
             nav_items,
-            index=nav_items.index(f"{get_icon(st.session_state.current_page)} {st.session_state.current_page}"),
+            index=current_idx,
             key="nav_radio",
             horizontal=False,
             label_visibility="hidden",
         )
         
-        # 获取选中的页面名称
-        selected_page = selected_nav[2:] if len(selected_nav) > 2 else selected_nav
+        selected_page = page_names[nav_items.index(selected_nav)] if selected_nav in nav_items else st.session_state.current_page
         
-        # 如果选择了不同的页面，执行页面切换
         if selected_page != st.session_state.current_page:
             st.session_state.selected_category = "全部讯息"
             st.session_state.selected_articles = []
@@ -983,35 +1096,68 @@ def render_file_manager():
     os.makedirs(daily_reports_dir, exist_ok=True)
     os.makedirs(lesson_plans_dir, exist_ok=True)
     
-    # 处理删除请求
+    # 处理删除请求（移入回收站）
     if "delete_file" in st.session_state:
         delete_path = st.session_state.delete_file
         if os.path.exists(delete_path):
-            os.remove(delete_path)
-            st.success(f"已删除文件: {os.path.basename(delete_path)}")
+            source_type = "日报" if daily_reports_dir in delete_path else "教案"
+            if move_to_recycle_bin(delete_path, source_type):
+                st.success(f"已移入回收站: {os.path.basename(delete_path)}")
+            else:
+                st.error("移入回收站失败")
         else:
             st.error("文件不存在")
         del st.session_state.delete_file
     
-    # 处理上传请求
-    if "upload_file" in st.session_state:
-        file_info = st.session_state.upload_file
-        target_dir = daily_reports_dir if file_info["folder"] == "daily" else lesson_plans_dir
-        
-        # 文件名冲突检测
-        filename = file_info["filename"]
-        filepath = os.path.join(target_dir, filename)
-        if os.path.exists(filepath):
-            # 添加时间戳后缀
-            base_name, ext = os.path.splitext(filename)
-            timestamp = datetime.now().strftime("_%Y%m%d_%H%M%S")
-            filename = f"{base_name}{timestamp}{ext}"
-            filepath = os.path.join(target_dir, filename)
-        
-        with open(filepath, "wb") as f:
-            f.write(file_info["content"])
-        st.success(f"文件上传成功: {filename}")
-        del st.session_state.upload_file
+    # 清空日报目录确认对话框
+    @st.dialog("🗑️ 确认清空日报文件夹")
+    def clear_daily_dialog():
+        file_count = len([f for f in os.listdir(daily_reports_dir) if f.endswith(".md")])
+        st.write(f"即将将日报文件夹中的 **{file_count}** 个 Markdown 文件移入回收站！")
+        col_confirm, col_cancel = st.columns(2)
+        with col_confirm:
+            if st.button("✅ 确认清空", type="primary", key="confirm_clear_daily"):
+                try:
+                    files = [f for f in os.listdir(daily_reports_dir) if f.endswith(".md")]
+                    moved = 0
+                    for f in files:
+                        fpath = os.path.join(daily_reports_dir, f)
+                        if move_to_recycle_bin(fpath, "日报"):
+                            moved += 1
+                    logging.info(f"清空日报文件夹: 移入回收站 {moved} 个文件")
+                    st.success(f"已将 {moved} 个文件移入回收站")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"清空失败: {str(e)}")
+                    logging.error(f"清空日报文件夹失败: {str(e)}")
+        with col_cancel:
+            if st.button("❌ 取消", key="cancel_clear_daily"):
+                st.rerun()
+    
+    # 清空教案目录确认对话框
+    @st.dialog("🗑️ 确认清空教案文件夹")
+    def clear_lesson_dialog():
+        file_count = len([f for f in os.listdir(lesson_plans_dir) if f.endswith(".md")])
+        st.write(f"即将将教案文件夹中的 **{file_count}** 个 Markdown 文件移入回收站！")
+        col_confirm, col_cancel = st.columns(2)
+        with col_confirm:
+            if st.button("✅ 确认清空", type="primary", key="confirm_clear_lesson"):
+                try:
+                    files = [f for f in os.listdir(lesson_plans_dir) if f.endswith(".md")]
+                    moved = 0
+                    for f in files:
+                        fpath = os.path.join(lesson_plans_dir, f)
+                        if move_to_recycle_bin(fpath, "教案"):
+                            moved += 1
+                    logging.info(f"清空教案文件夹: 移入回收站 {moved} 个文件")
+                    st.success(f"已将 {moved} 个文件移入回收站")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"清空失败: {str(e)}")
+                    logging.error(f"清空教案文件夹失败: {str(e)}")
+        with col_cancel:
+            if st.button("❌ 取消", key="cancel_clear_lesson"):
+                st.rerun()
     
     # 文件夹标签页导航
     tabs = st.tabs(["📋 日报文件夹", "📚 教案文件夹"], key="fm_tabs")
@@ -1028,20 +1174,19 @@ def render_file_manager():
 </div>
 """, unsafe_allow_html=True)
         
-        # 上传按钮
-        uploaded_file = st.file_uploader("📤 上传日报文件 (.md)", type="md", key="upload_daily")
-        if uploaded_file is not None:
-            st.session_state.upload_file = {
-                "folder": "daily",
-                "filename": uploaded_file.name,
-                "content": uploaded_file.read()
-            }
-            st.rerun()
-        
-        # 文件列表 - 按修改时间倒序排列
         report_files = sorted([f for f in os.listdir(daily_reports_dir) if f.endswith(".md")], 
                              key=lambda x: os.path.getmtime(os.path.join(daily_reports_dir, x)), 
                              reverse=True)
+        
+        # 操作工具栏：一键清空
+        toolbar_col1, toolbar_col2 = st.columns([4, 1])
+        with toolbar_col1:
+            st.markdown(f"**共 {len(report_files)} 个文件**")
+        with toolbar_col2:
+            if report_files:
+                if st.button("🗑️ 一键清空", key="clear_daily_btn"):
+                    clear_daily_dialog()
+        
         if report_files:
             st.markdown("### 文件列表")
             for filename in report_files:
@@ -1076,7 +1221,7 @@ def render_file_manager():
                         if st.button("🗑️", key=f"delete_daily_{filename}"):
                             st.session_state.delete_file = filepath
                             st.rerun()
-        
+            
             # 文件预览区域
             if "view_file" in st.session_state and st.session_state.view_file.startswith(daily_reports_dir):
                 view_path = st.session_state.view_file
@@ -1105,20 +1250,19 @@ def render_file_manager():
 </div>
 """, unsafe_allow_html=True)
         
-        # 上传按钮
-        uploaded_file = st.file_uploader("📤 上传教案文件 (.md)", type="md", key="upload_lesson")
-        if uploaded_file is not None:
-            st.session_state.upload_file = {
-                "folder": "lesson",
-                "filename": uploaded_file.name,
-                "content": uploaded_file.read()
-            }
-            st.rerun()
-        
-        # 文件列表 - 按修改时间倒序排列
         lesson_files = sorted([f for f in os.listdir(lesson_plans_dir) if f.endswith(".md")], 
                              key=lambda x: os.path.getmtime(os.path.join(lesson_plans_dir, x)), 
                              reverse=True)
+        
+        # 操作工具栏：一键清空
+        toolbar_col1, toolbar_col2 = st.columns([4, 1])
+        with toolbar_col1:
+            st.markdown(f"**共 {len(lesson_files)} 个文件**")
+        with toolbar_col2:
+            if lesson_files:
+                if st.button("🗑️ 一键清空", key="clear_lesson_btn"):
+                    clear_lesson_dialog()
+        
         if lesson_files:
             st.markdown("### 文件列表")
             for filename in lesson_files:
@@ -1153,7 +1297,7 @@ def render_file_manager():
                         if st.button("🗑️", key=f"delete_lesson_{filename}"):
                             st.session_state.delete_file = filepath
                             st.rerun()
-        
+            
             # 文件预览区域
             if "view_file" in st.session_state and st.session_state.view_file.startswith(lesson_plans_dir):
                 view_path = st.session_state.view_file
@@ -1167,6 +1311,128 @@ def render_file_manager():
     <div style="font-size: 48px; margin-bottom: 12px;">📭</div>
     <div style="font-size: 14px;">暂无教案文件</div>
     <div style="font-size: 12px; margin-top: 4px;">生成教案后将自动保存到此处</div>
+</div>
+""", unsafe_allow_html=True)
+
+def render_recycle_bin():
+    """渲染回收站页面"""
+    if st.session_state.get("current_page") != "回收站":
+        return
+    
+    st.title("🗑️ 回收站")
+    st.markdown("---")
+    
+    # 自动清理超过7天的过期项目
+    purged = purge_expired_recycle_items(days=7)
+    if purged > 0:
+        st.info(f"🗑️ 已自动清理 {purged} 个超过 7 天的过期项目")
+    
+    # 处理恢复请求
+    if "restore_item" in st.session_state:
+        recycle_name = st.session_state.restore_item
+        success, msg = restore_from_recycle_bin(recycle_name)
+        if success:
+            st.success(f"✅ {msg}")
+        else:
+            st.error(f"❌ {msg}")
+        del st.session_state.restore_item
+    
+    # 处理永久删除请求
+    if "permanent_delete_item" in st.session_state:
+        recycle_name = st.session_state.permanent_delete_item
+        if permanent_delete_from_recycle(recycle_name):
+            st.success(f"已永久删除: {recycle_name}")
+        else:
+            st.error("永久删除失败")
+        del st.session_state.permanent_delete_item
+    
+    # 获取回收站项目
+    items = get_recycle_bin_items()
+    
+    # 统计信息
+    total_size = sum(item.get("file_size", 0) for item in items)
+    st.markdown(f"""
+<div style="background: rgba(30,41,59,0.6); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 20px;">🗑️</span>
+        <span style="font-weight: 600;">回收站</span>
+        <span style="font-size: 12px; color: #6b7280; margin-left: auto;">保留最近 7 天内删除的项目，超出自动清除</span>
+    </div>
+    <div style="margin-top: 8px; font-size: 13px; color: #94a3b8;">
+        📦 共 {len(items)} 个文件 · {total_size / 1024:.2f} KB
+    </div>
+</div>
+""", unsafe_allow_html=True)
+    
+    if items:
+        col_title, col_clear = st.columns([3, 1])
+        with col_title:
+            st.markdown("### 回收项目")
+        with col_clear:
+            if st.button("🗑️ 清空回收站", key="clear_all_recycle", use_container_width=False):
+                removed = 0
+                for item in items:
+                    if permanent_delete_from_recycle(item["recycle_name"]):
+                        removed += 1
+                if removed > 0:
+                    st.success(f"已清空回收站，共永久删除 {removed} 个文件")
+                    st.rerun()
+                else:
+                    st.info("回收站已为空")
+        
+        @st.dialog("⚠️ 永久删除确认")
+        def permanent_delete_dialog():
+            st.write("此操作将永久删除该文件，且不可恢复！")
+            col_confirm, col_cancel = st.columns(2)
+            with col_confirm:
+                if st.button("✅ 确认永久删除", type="primary", key="confirm_perm_delete"):
+                    st.session_state.permanent_delete_item = st.session_state.get("_pending_perm_delete")
+                    st.rerun()
+            with col_cancel:
+                if st.button("❌ 取消", key="cancel_perm_delete"):
+                    st.rerun()
+        
+        for item in items:
+            recycle_name = item["recycle_name"]
+            original_name = item["original_name"]
+            source_type = item.get("source_type", "")
+            file_size = item.get("file_size", 0)
+            deleted_at = item.get("deleted_at", "")
+            days_left = 7 - (datetime.now() - datetime.strptime(deleted_at, "%Y-%m-%d %H:%M:%S")).days
+            
+            col_info, col_actions = st.columns([3, 2])
+            with col_info:
+                st.markdown(f"""
+<div class="file-card" style="padding: 12px;">
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+        <span>{'📄' if source_type == '日报' else '📝'}</span>
+        <span style="font-size: 14px; font-weight: 600; color: #f1f5f9;">{original_name}</span>
+        <span style="font-size: 11px; color: #f59e0b; margin-left: 4px;">{source_type}</span>
+    </div>
+    <div style="display: flex; gap: 16px; font-size: 12px; color: #6b7280;">
+        <span>📦 {file_size / 1024:.2f} KB</span>
+        <span>🗑️ 删除于 {deleted_at}</span>
+        <span style="color: {'#22c55e' if days_left > 3 else '#f59e0b' if days_left > 1 else '#ef4444'};">⏳ 剩余 {days_left} 天</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+            with col_actions:
+                col_restore, col_delete = st.columns(2)
+                with col_restore:
+                    if st.button("♻️ 恢复", key=f"restore_{recycle_name}", use_container_width=True):
+                        st.session_state.restore_item = recycle_name
+                        st.rerun()
+                with col_delete:
+                    if st.button("💥 永久删除", key=f"perm_delete_{recycle_name}", use_container_width=True):
+                        st.session_state._pending_perm_delete = recycle_name
+                        permanent_delete_dialog()
+        
+    else:
+        st.markdown("""
+<div style="text-align: center; padding: 60px 40px; color: #6b7280;">
+    <div style="font-size: 56px; margin-bottom: 16px;">🗑️</div>
+    <div style="font-size: 16px; font-weight: 600; color: #94a3b8; margin-bottom: 8px;">回收站是空的</div>
+    <div style="font-size: 13px;">当您删除文件时，将暂存在这里，保留 7 天</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1188,6 +1454,9 @@ def main():
         return
     if page == "文件管理":
         render_file_manager()
+        return
+    if page == "回收站":
+        render_recycle_bin()
         return
 
 if __name__ == "__main__":
