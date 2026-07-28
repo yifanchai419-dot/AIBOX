@@ -1192,7 +1192,7 @@ def render_file_manager():
             for filename in report_files:
                 filepath = os.path.join(daily_reports_dir, filename)
                 file_size = os.path.getsize(filepath) / 1024
-                modified_time = datetime.fromtimestamp(os.path.getmtime(filepath)).strftime("%Y-%m-%d %H:%M")
+                modified_time = datetime.fromtimestamp(os.path.getmtime(filepath), tz=timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
                 
                 col_file, col_size, col_time, col_actions = st.columns([4, 1, 1, 2])
                 with col_file:
@@ -1268,7 +1268,7 @@ def render_file_manager():
             for filename in lesson_files:
                 filepath = os.path.join(lesson_plans_dir, filename)
                 file_size = os.path.getsize(filepath) / 1024
-                modified_time = datetime.fromtimestamp(os.path.getmtime(filepath)).strftime("%Y-%m-%d %H:%M")
+                modified_time = datetime.fromtimestamp(os.path.getmtime(filepath), tz=timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
                 
                 col_file, col_size, col_time, col_actions = st.columns([4, 1, 1, 2])
                 with col_file:
