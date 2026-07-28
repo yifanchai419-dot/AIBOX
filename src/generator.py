@@ -319,6 +319,54 @@ class CourseGenerator:
         logger.info("生成日报：使用Mock模式（确保格式正确）")
         return self._generate_daily_report_mock(articles)
     
+    def _ensure_category_line(self, content: str, category: str) -> str:
+        """确保教案内容中包含新闻分类行，若缺失则硬插入"""
+        if not category:
+            return content
+        
+        category_line = f"**新闻分类：{category}**"
+        
+        # 已经包含分类则直接返回
+        if "新闻分类" in content:
+            return content
+        
+        lines = content.split("\n")
+        
+        # 优先找"课程标题"行（排除"课程教案"等其他标题）
+        title_idx = -1
+        for i, line in enumerate(lines):
+            # 精确匹配"课程标题"开头的行，排除已有的新闻分类行
+            stripped = line.strip()
+            if stripped.startswith("课程标题") or stripped.startswith("**课程标题"):
+                title_idx = i
+                break
+        
+        # 如果没找到课程标题，找课程教案行作为降级
+        if title_idx == -1:
+            for i, line in enumerate(lines):
+                if "课程教案" in line and not line.strip().startswith("**"):
+                    title_idx = i
+                    break
+        
+        if title_idx >= 0:
+            # 在标题行之后插入（跳过空行）
+            insert_idx = title_idx + 1
+            # 跳过标题后的空行
+            while insert_idx < len(lines) and lines[insert_idx].strip() == "":
+                insert_idx += 1
+            # 在这个位置插入分类行
+            new_lines = lines[:insert_idx] + ["", category_line, ""] + lines[insert_idx:]
+            return "\n".join(new_lines)
+        
+        # 兜底：在课程目标之前插入
+        for i, line in enumerate(lines):
+            if "课程目标" in line:
+                new_lines = lines[:i] + ["", category_line, ""] + lines[i:]
+                return "\n".join(new_lines)
+        
+        # 最终兜底：直接在开头插入
+        return category_line + "\n\n" + content
+    
     def _generate_lesson_plan_mock(self, articles: List[Dict], custom_topic: Optional[str] = None) -> str:
         """
         Mock模式：使用模板生成1小时课程教案
@@ -593,6 +641,12 @@ class CourseGenerator:
         
         # 优先使用API生成
         if self.use_api and self.client:
+            # 提取主分类
+            main_category = ""
+            if articles:
+                top_article = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[0]
+                main_category = top_article.get("category", "技巧观点")
+            
             # 构建提示词
             articles_text = ""
             for article in articles[:8]:  # 取前8篇高质量文章
@@ -660,6 +714,8 @@ class CourseGenerator:
             
             if result:
                 logger.info("生成教案：API调用成功")
+                # 后处理：确保新闻分类行存在
+                result = self._ensure_category_line(result, main_category)
                 return result
         
         # Mock模式兜底
