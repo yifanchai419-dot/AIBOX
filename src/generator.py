@@ -190,10 +190,14 @@ class CourseGenerator:
         categories = ["模型发布", "产品更新", "行业动态", "论文研究", "技巧观点"]
         category_groups = {cat: [] for cat in categories}
         
-        for article in articles[:20]:  # 取前20篇
+        for article in articles:
             category = article.get("category", "技巧观点")
             if category in category_groups:
                 category_groups[category].append(article)
+        
+        # 各分类内按评分从高到低排序
+        for cat in category_groups:
+            category_groups[cat].sort(key=lambda a: a.get("score", 0), reverse=True)
         
         # 生成TOP 5
         top_5 = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[:5]
