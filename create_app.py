@@ -685,13 +685,23 @@ def render_lesson_plan():
                 for article in st.session_state.selected_articles:
                     topic = article.get("title", "AI技术前沿")[:50]
                     plan = generator.generate_lesson_plan([article], topic)
-                    lesson_plans.append({"article_title": article.get("title", ""), "content": plan, "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
+                    news_date_str = ""
+                    published_at = article.get("published_at", "")
+                    if published_at:
+                        try:
+                            news_date_str = datetime.fromisoformat(published_at).strftime("%Y%m%d")
+                        except (ValueError, TypeError):
+                            news_date_str = datetime.now().strftime("%Y%m%d")
+                    else:
+                        news_date_str = datetime.now().strftime("%Y%m%d")
+                    lesson_plans.append({"article_title": article.get("title", ""), "content": plan, "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "news_date": news_date_str})
                 st.session_state.lesson_plans = lesson_plans
                 st.success(f"🎉 成功生成 {len(lesson_plans)} 份教案！")
                 os.makedirs(os.path.join(OUTPUT_DIR, "lesson_plans"), exist_ok=True)
                 for plan in lesson_plans:
                     safe_title = plan["article_title"].replace("/", "-").replace("\\\\", "-")[:50]
-                    filepath = os.path.join(OUTPUT_DIR, "lesson_plans", f"{safe_title}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+                    news_date = plan.get("news_date", datetime.now().strftime("%Y%m%d"))
+                    filepath = os.path.join(OUTPUT_DIR, "lesson_plans", f"{safe_title}_{news_date}_{datetime.now().strftime('%H%M%S')}.md")
                     generator.save_markdown(plan["content"], filepath)
             except Exception as e:
                 st.error(f"生成教案失败: {str(e)}")
@@ -700,7 +710,7 @@ def render_lesson_plan():
         for i, plan in enumerate(st.session_state.lesson_plans):
             with st.expander(f"教案 {i+1}: {plan['article_title'][:50]}..."):
                 st.markdown(f'<div class="lesson-preview">{plan["content"]}</div>', unsafe_allow_html=True)
-                st.download_button(label=f"📥 下载教案 {i+1}", data=plan["content"], file_name=f"lesson_plan_{i+1}_{datetime.now().strftime('%Y%m%d')}.md", mime="text/markdown", key=f"download_lesson_{i}")
+                st.download_button(label=f"📥 下载教案 {i+1}", data=plan["content"], file_name=f"lesson_plan_{i+1}_{plan.get('news_date', datetime.now().strftime('%Y%m%d'))}.md", mime="text/markdown", key=f"download_lesson_{i}")
 
 def render_file_manager():
     st.title("📁 文件管理")
