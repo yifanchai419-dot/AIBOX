@@ -36975,3 +36975,337 @@ streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machin
 2026-07-28 09:34:59,028 - WARNING - GitHub API 抓取失败: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
 2026-07-28 09:34:59,028 - INFO - 开始抓取 10 个信源的文章...
 2026-07-28 09:34:59,028 - INFO - 正在抓取信源: 36氪前沿科技
+2026-07-28 09:35:09,079 - WARNING - 信源 36氪前沿科技 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:09,079 - INFO - 正在抓取信源: 少数派
+2026-07-28 09:35:09,380 - INFO - 信源 少数派 抓取完成，共 1 篇文章
+2026-07-28 09:35:09,380 - INFO - 正在抓取信源: IT之家AI频道
+2026-07-28 09:35:11,719 - WARNING - arXiv API 连接错误，第 3/3 次尝试: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:14,408 - WARNING - 信源 IT之家AI频道 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:14,408 - INFO - 正在抓取信源: AI前线
+2026-07-28 09:35:14,769 - INFO - 信源 AI前线 抓取完成，共 0 篇文章
+2026-07-28 09:35:14,769 - INFO - 正在抓取信源: 开源中国
+2026-07-28 09:35:24,825 - WARNING - 信源 开源中国 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:24,825 - INFO - 正在抓取信源: Engadget
+2026-07-28 09:35:26,721 - WARNING - arXiv API 抓取失败: arXiv API 请求失败，已重试 3 次
+2026-07-28 09:35:26,721 - INFO - 使用 arXiv API 兜底方案：获取最近提交的论文
+2026-07-28 09:35:31,754 - WARNING - arXiv API 兜底方案失败: HTTP Error 502: Bad Gateway
+2026-07-28 09:35:31,754 - INFO - 正在通过 GitHub API 抓取热门仓库: 2026-07-27 16:04:34.633569+00:00 到 2026-07-28 01:34:36.474896+00:00
+2026-07-28 09:35:34,903 - WARNING - 信源 Engadget 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:34,905 - INFO - 正在抓取信源: Hacker News
+2026-07-28 09:35:39,787 - WARNING - GitHub API 抓取失败: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:39,787 - INFO - 开始抓取 10 个信源的文章...
+2026-07-28 09:35:39,787 - INFO - 正在抓取信源: 36氪前沿科技
+2026-07-28 09:35:40,005 - WARNING - 信源 Hacker News 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:40,005 - INFO - 正在抓取信源: TechCrunch
+2026-07-28 09:35:49,829 - WARNING - 信源 36氪前沿科技 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:49,829 - INFO - 正在抓取信源: 少数派
+2026-07-28 09:35:50,042 - INFO - 信源 少数派 抓取完成，共 1 篇文章
+2026-07-28 09:35:50,043 - INFO - 正在抓取信源: IT之家AI频道
+2026-07-28 09:35:50,045 - WARNING - 信源 TechCrunch 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:50,073 - INFO - 正在抓取信源: MIT Technology Review
+2026-07-28 09:35:50,985 - INFO - 信源 MIT Technology Review 抓取完成，共 1 篇文章
+2026-07-28 09:35:50,985 - INFO - 正在抓取信源: The Verge
+2026-07-28 09:35:55,110 - WARNING - 信源 IT之家AI频道 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:35:55,110 - INFO - 正在抓取信源: AI前线
+2026-07-28 09:35:55,294 - INFO - 信源 AI前线 抓取完成，共 0 篇文章
+2026-07-28 09:35:55,295 - INFO - 正在抓取信源: 开源中国
+2026-07-28 09:35:57,897 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-28 09:35:57,968 - INFO - 增量抓取模式: 2026-07-27 16:04:34.633569+00:00 到 2026-07-28 01:35:57.964999+00:00
+2026-07-28 09:35:57,982 - INFO - 定时任务模式: 2026-07-27 16:04:34.633569+00:00 到 2026-07-28 01:35:57.964999+00:00
+2026-07-28 09:35:57,982 - INFO - 正在通过 arXiv API 抓取论文: 2026-07-27 16:04:34.633569+00:00 到 2026-07-28 01:35:57.964999+00:00
+2026-07-28 09:35:58,881 - INFO - 信源 开源中国 抓取完成，共 0 篇文章
+2026-07-28 09:35:58,881 - INFO - 正在抓取信源: Engadget
+2026-07-28 09:36:01,033 - WARNING - 信源 The Verge 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:01,033 - INFO - 抓取完成，共获取 102 篇文章
+2026-07-28 09:36:01,033 - INFO - 主处理：开始处理 102 篇文章
+2026-07-28 09:36:01,033 - INFO - 去重：开始处理 102 篇文章
+2026-07-28 09:36:01,174 - INFO - 去重：完成，保留 102 篇文章
+2026-07-28 09:36:01,185 - INFO - 主处理：完成，共 98 篇高质量文章
+2026-07-28 09:36:01,201 - INFO - 新增 98 篇文章到数据库
+2026-07-28 09:36:02,984 - INFO - arXiv API 请求URL: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Astat.ML+OR+cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.NE%29%2BAND%2BsubmittedDate%3A%5B202607271604%2BTO%2B202607280135%5D&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending
+2026-07-28 09:36:07,987 - WARNING - arXiv API 连接错误，第 1/3 次尝试: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:08,921 - WARNING - 信源 Engadget 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:08,921 - INFO - 正在抓取信源: Hacker News
+2026-07-28 09:36:13,953 - WARNING - 信源 Hacker News 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:13,953 - INFO - 正在抓取信源: TechCrunch
+2026-07-28 09:36:17,991 - WARNING - arXiv API 连接错误，第 2/3 次尝试: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:24,008 - WARNING - 信源 TechCrunch 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:24,008 - INFO - 正在抓取信源: MIT Technology Review
+2026-07-28 09:36:29,052 - WARNING - 信源 MIT Technology Review 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:29,052 - INFO - 正在抓取信源: The Verge
+2026-07-28 09:36:29,996 - INFO - 信源 The Verge 抓取完成，共 7 篇文章
+2026-07-28 09:36:29,998 - INFO - 抓取完成，共获取 8 篇文章
+2026-07-28 09:36:29,998 - INFO - 主处理：开始处理 8 篇文章
+2026-07-28 09:36:29,998 - INFO - 去重：开始处理 8 篇文章
+2026-07-28 09:36:29,999 - INFO - 去重：完成，保留 8 篇文章
+2026-07-28 09:36:30,000 - INFO - 主处理：完成，共 6 篇高质量文章
+2026-07-28 09:36:30,012 - INFO - 新增 4 篇文章到数据库
+2026-07-28 09:36:32,997 - WARNING - arXiv API 连接错误，第 3/3 次尝试: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:36:47,998 - WARNING - arXiv API 抓取失败: arXiv API 请求失败，已重试 3 次
+2026-07-28 09:36:47,998 - INFO - 使用 arXiv API 兜底方案：获取最近提交的论文
+2026-07-28 09:36:57,577 - INFO - arXiv API 兜底方案也没有找到论文
+2026-07-28 09:36:57,577 - INFO - 正在通过 GitHub API 抓取热门仓库: 2026-07-27 16:04:34.633569+00:00 到 2026-07-28 01:35:57.964999+00:00
+2026-07-28 09:37:01,283 - INFO - GitHub API 没有找到仓库
+2026-07-28 09:37:01,283 - INFO - 开始抓取 10 个信源的文章...
+2026-07-28 09:37:01,283 - INFO - 正在抓取信源: 36氪前沿科技
+2026-07-28 09:37:02,004 - INFO - 信源 36氪前沿科技 抓取完成，共 21 篇文章
+2026-07-28 09:37:02,004 - INFO - 正在抓取信源: 少数派
+2026-07-28 09:37:07,042 - WARNING - 信源 少数派 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:37:07,042 - INFO - 正在抓取信源: IT之家AI频道
+2026-07-28 09:37:07,518 - INFO - 信源 IT之家AI频道 抓取完成，共 55 篇文章
+2026-07-28 09:37:07,518 - INFO - 正在抓取信源: AI前线
+2026-07-28 09:37:07,699 - INFO - 信源 AI前线 抓取完成，共 0 篇文章
+2026-07-28 09:37:07,699 - INFO - 正在抓取信源: 开源中国
+2026-07-28 09:37:09,090 - INFO - 信源 开源中国 抓取完成，共 0 篇文章
+2026-07-28 09:37:09,090 - INFO - 正在抓取信源: Engadget
+2026-07-28 09:37:10,038 - INFO - 信源 Engadget 抓取完成，共 13 篇文章
+2026-07-28 09:37:10,039 - INFO - 正在抓取信源: Hacker News
+2026-07-28 09:37:15,090 - WARNING - 信源 Hacker News 解析异常: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+2026-07-28 09:37:15,090 - INFO - 正在抓取信源: TechCrunch
+2026-07-28 09:37:15,723 - INFO - 信源 TechCrunch 抓取完成，共 14 篇文章
+2026-07-28 09:37:15,724 - INFO - 正在抓取信源: MIT Technology Review
+2026-07-28 09:37:16,514 - INFO - 信源 MIT Technology Review 抓取完成，共 1 篇文章
+2026-07-28 09:37:16,515 - INFO - 正在抓取信源: The Verge
+2026-07-28 09:37:17,360 - INFO - 信源 The Verge 抓取完成，共 7 篇文章
+2026-07-28 09:37:17,360 - INFO - 抓取完成，共获取 111 篇文章
+2026-07-28 09:37:17,360 - INFO - 主处理：开始处理 111 篇文章
+2026-07-28 09:37:17,360 - INFO - 去重：开始处理 111 篇文章
+2026-07-28 09:37:17,528 - INFO - 去重：完成，保留 110 篇文章
+2026-07-28 09:37:17,548 - INFO - 主处理：完成，共 65 篇高质量文章
+2026-07-28 09:37:17,567 - INFO - 新增 52 篇文章到数据库
+2026-07-28 09:37:23,527 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-28 09:37:23,580 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-28 09:37:23,606 - INFO - 快速缓存模式: 距离上次抓取仅 6 秒，直接返回数据库数据
+2026-07-28 09:39:17,952 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-28 09:39:18,055 - INFO - 快速缓存模式: 距离上次抓取仅 114 秒，直接返回数据库数据
+2026-07-28 09:39:34,772 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-28 09:39:34,932 - INFO - 快速缓存模式: 距离上次抓取仅 17 秒，直接返回数据库数据
+2026-07-28 09:46:18,167 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4

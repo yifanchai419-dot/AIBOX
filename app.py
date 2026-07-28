@@ -783,8 +783,10 @@ def render_file_manager():
             }
             st.rerun()
         
-        # 文件列表
-        report_files = sorted([f for f in os.listdir(daily_reports_dir) if f.endswith(".md")], reverse=True)
+        # 文件列表 - 按修改时间倒序排列
+        report_files = sorted([f for f in os.listdir(daily_reports_dir) if f.endswith(".md")], 
+                             key=lambda x: os.path.getmtime(os.path.join(daily_reports_dir, x)), 
+                             reverse=True)
         if report_files:
             st.markdown("### 文件列表")
             for filename in report_files:
@@ -858,8 +860,10 @@ def render_file_manager():
             }
             st.rerun()
         
-        # 文件列表
-        lesson_files = sorted([f for f in os.listdir(lesson_plans_dir) if f.endswith(".md")], reverse=True)
+        # 文件列表 - 按修改时间倒序排列
+        lesson_files = sorted([f for f in os.listdir(lesson_plans_dir) if f.endswith(".md")], 
+                             key=lambda x: os.path.getmtime(os.path.join(lesson_plans_dir, x)), 
+                             reverse=True)
         if lesson_files:
             st.markdown("### 文件列表")
             for filename in lesson_files:
