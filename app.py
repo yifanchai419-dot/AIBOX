@@ -1404,10 +1404,10 @@ def render_recycle_bin():
             with col_info:
                 st.markdown(f"""
 <div class="file-card" style="padding: 12px;">
-    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-        <span>{'📄' if source_type == '日报' else '📝'}</span>
-        <span style="font-size: 14px; font-weight: 600; color: #f1f5f9;">{original_name}</span>
-        <span style="font-size: 11px; color: #f59e0b; margin-left: 4px;">{source_type}</span>
+    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px; flex-wrap: nowrap;">
+        <span style="flex-shrink: 0;">{'📄' if source_type == '日报' else '📝'}</span>
+        <span style="font-size: 14px; font-weight: 600; color: #f1f5f9; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0;">{original_name}</span>
+        <span style="font-size: 11px; color: #f59e0b; margin-left: 4px; flex-shrink: 0;">{source_type}</span>
     </div>
     <div style="display: flex; gap: 16px; font-size: 12px; color: #6b7280;">
         <span>📦 {file_size / 1024:.2f} KB</span>
