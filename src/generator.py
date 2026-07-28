@@ -332,6 +332,12 @@ class CourseGenerator:
         """
         today = datetime.now().strftime("%Y年%m月%d日")
         
+        # 提取主分类
+        main_category = ""
+        if articles:
+            top_article = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[0]
+            main_category = top_article.get("category", "技巧观点")
+        
         # 确定课程主题
         if custom_topic:
             topic = custom_topic
@@ -356,6 +362,8 @@ class CourseGenerator:
         content = f"""# 📚 1小时AI课程教案
 
 ## 📖 课程主题：{topic}
+
+**新闻分类：{main_category}**
 
 ### 📅 日期：{today}
 ### ⏱️ 时长：60分钟
@@ -639,7 +647,11 @@ class CourseGenerator:
   - 课后任务（2分钟）：布置课后学习任务和延伸阅读
 
 【输出格式】
-请以Markdown格式输出，包含课程标题、目标、详细讲稿要点、讨论问题等。
+请以Markdown格式输出，必须包含以下结构（严格按顺序）：
+1. 课程标题
+2. 新闻分类：从资讯素材中提取主分类（如"模型发布"、"产品更新"、"行业动态"、"论文研究"、"技巧观点"等），格式为"**新闻分类：xxx**"
+3. 课程目标
+4. 详细讲稿要点、讨论问题等
 
 【资讯素材】
 {articles_text}"""
