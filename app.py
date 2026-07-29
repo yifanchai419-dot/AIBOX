@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import hashlib
 import logging
 import threading
 import streamlit as st
@@ -980,7 +981,7 @@ def render_lesson_plan():
     with col2:
         end_date = st.date_input("结束日期", value=datetime.now().date(), min_value=min_date, max_value=max_date, key="lp_end_date")
     with col3:
-        st.button("确认筛选", use_container_width=True, type="primary")
+        st.button("确认筛选", use_container_width=True, type="primary", key="lp_confirm_filter")
     
     keyword = st.text_input("🔍 关键词过滤", placeholder="输入关键词（如：智能体、大模型、AI等）", key="lp_keyword")
     cats = ["模型发布", "产品更新", "行业动态", "论文研究", "技巧观点"]
@@ -1011,26 +1012,36 @@ def render_lesson_plan():
     # 获取已选中文章的link集合用于快速查找
     selected_links = {a.get("link", "") for a in st.session_state.selected_articles}
     
-    for idx, cat in enumerate(cats):
-        with tabs[idx]:
+    # 用于生成唯一key的计数器（防止极端情况下的key冲突）
+    key_counter = 0
+    
+    for tab_idx, cat in enumerate(cats):
+        with tabs[tab_idx]:
             cat_articles = [a for a in filtered if a.get("category") == cat]
             if cat_articles:
                 for i, article in enumerate(cat_articles):
                     article_link = article.get("link", "")
-                    # 使用分类+文章link作为复选框的key，确保唯一性
-                    safe_link = article_link[:50].replace('/', '_').replace(':', '_').replace('?', '_').replace('&', '_')
-                    checkbox_key = f"lp_chk_{cat}_{safe_link}"
+                    # 使用完整链接哈希+全局计数器作为key，确保绝对唯一
+                    if article_link:
+                        link_hash = hashlib.md5(article_link.encode()).hexdigest()[:16]
+                    else:
+                        # 空链接使用标题哈希作为降级方案
+                        title = article.get("title", f"article_{key_counter}")
+                        link_hash = hashlib.md5(title.encode()).hexdigest()[:16]
                     
-                    col_check, col_content = st.columns([1, 9])  # 调整列比例，增加复选框列宽度
+                    # 全局计数器确保即使同链接跨分类也不会冲突
+                    key_counter += 1
+                    checkbox_key = f"lp_chk_{cat}_{key_counter}_{link_hash}"
+                    
+                    col_check, col_content = st.columns([1, 9])
                     with col_check:
                         checked = st.checkbox("", value=article_link in selected_links, key=checkbox_key)
                         if checked and article_link not in selected_links:
                             st.session_state.selected_articles.append(article)
                         elif not checked and article_link in selected_links:
-                            # 找到并移除对应的文章
-                            for idx, sel_article in enumerate(st.session_state.selected_articles):
+                            for sel_idx, sel_article in enumerate(st.session_state.selected_articles):
                                 if sel_article.get("link", "") == article_link:
-                                    st.session_state.selected_articles.pop(idx)
+                                    st.session_state.selected_articles.pop(sel_idx)
                                     break
                     with col_content:
                         dt = convert_to_beijing_time(article.get("published_at", ""))
