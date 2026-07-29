@@ -517,6 +517,7 @@ init_session_state()
 from dotenv import load_dotenv
 load_dotenv()
 
+@st.cache_data(ttl=300)
 def load_daily_report_from_cache(date_str):
     cache_path = get_daily_cache_path(date_str)
     if os.path.exists(cache_path):
@@ -539,6 +540,7 @@ def save_articles_cache(articles):
     except Exception as e:
         logger.warning(f"保存缓存失败: {e}")
 
+@st.cache_data(ttl=300)
 def load_articles_cache():
     """加载文章缓存，返回(articles, last_fetch_time)"""
     if os.path.exists(ARTICLES_CACHE_FILE):
@@ -584,6 +586,7 @@ def generate_mock_articles():
         {"title": "硬氪首发 | 复旦教授、前英特尔首席科学家做端侧具身大脑，「眸深智能」完成近亿元Pre-A轮追加融资", "content": "复旦教授做端侧具身大脑，完成近亿元融资。", "link": "https://example.com/3", "published_at": (now - timedelta(hours=8)).isoformat(), "source": "36氪前沿科技", "category": "模型发布", "score": 7.65},
     ]
 
+@st.cache_data(ttl=300)
 def fetch_latest_articles():
     """获取最新文章，支持增量抓取与持久化存储"""
     from src.database import get_recent_articles, add_new_articles, cleanup_old_articles, get_all_articles

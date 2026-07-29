@@ -7329,7 +7329,597 @@
       "weight": 0.9,
       "score": 5.5,
       "category": "模型发布"
+    },
+    {
+      "title": "谷歌旗下 Wiz 公布漏洞挖掘系统 Atlas：利用多个 AI 智能体分工协作、已发现超 200 个漏洞",
+      "content": "IT之家 7 月 29 日消息，谷歌旗下网络安全部门 Wiz 发文，宣布推出一款能够自主寻找漏洞的 AI 智能体漏洞挖掘系统 Atlas，目前 Atlas 已发现超过 200 个安全漏洞，\n同时斩获了 GitHub 10 万美元（IT之家注：现汇率约合 67.8 万元人民币）漏洞发现奖金\n。\n据介绍，Atlas 由多个 AI 智能体（AI Agent）组成，每个智能体负责不同任务，整体运作方式类似人类安全研究团队。不同代理分别负责理解代码库、提出漏洞假设、相互验证与质疑，并最终完成漏洞确认和报告。\n与传统单一 AI 模型从头到尾执行任务不同，Atlas 采用多阶段任务拆分以及程序化协作方式完成漏洞挖掘。其首先会针对目标软件代码库建立威胁模型，并利用代码属性图（Code Property Graph）分析程序结构，寻找潜在攻击路径。\n之后，系统中的多个 AI 智能体会分别提出漏洞假设并进行验证，生成可能存在的多步骤复合型漏洞候选方案，并将候选漏洞交由三个分别担任“支持论证”“反驳分析”和“最终裁决”角色的智能体，只有通过验证的漏洞才会被保留下来。\n最后，Atlas 会自动建立专用测试环境，安装所需依赖组件，并执行攻击输入以触发漏洞，从而验证漏洞是否真实存在。\n为了降低运行成本，Atlas 采用了更加精细的 AI 任务分配策略。例如在需要高推理能力的环节，例如复杂漏洞利用链分析以及最终漏洞裁决阶段，系统才会调用能力更强的大型模型。而对于代码属性图分析、初步漏洞筛选等范围明确且重复性较高的任务，则交由成本更低的小型模型处理。\n此外，Atlas 还结合确定性代码分析技术进行高效率引导，通过对抗式审核机制提前过滤误判，并利用专门为漏洞研究设计的执行框架（Harness）进行验证，以进一步降低系统运行成本。\nWiz 表示，这种设计让 Atlas 能够以较低成本进行大规模深度代码分析，同时系统会针对每个发现的漏洞自动生成攻击验证程序，降低误报可能性。根据 Wiz 引用的 AI 漏洞研究基准测试 CyberGym 结果，Atlas 取得 90.9% 的成绩，\n超过 GPT-5.5-Cyber、Claude 4.6 以及 Claude Mythos Preview 等竞争模型\n。\n在实际应用方面，Wiz 表示，Atlas 经过数个月开发后，已经在多个知名开源项目中发现并验证超过 20",
+      "link": "https://www.ithome.com/0/983/319.htm",
+      "published_at": "2026-07-29T13:14:11+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 8.5,
+      "category": "模型发布"
+    },
+    {
+      "title": "2026 财年 EA CEO 拿 2.62 亿元奖金，同期裁掉大量游戏开发者",
+      "content": "IT之家 7 月 29 日消息，EA 首席执行官安德鲁 · 威尔逊（Andrew Wilson）在 2026 财年获得了高达 3870 万美元（IT之家注：现汇率约合 2.62 亿元人民币）的奖金，此前公司旗下游戏表现良好，例如《战地 6》取得成功，同时完成了“所有关键里程碑”，并执行了一项新的 AI 战略。不过，这笔奖金以及 EA 多名高管获得的巨额奖励，均发生在同一财年内多家工作室裁员的背景下。\n这一信息来自 EA 最新发布的 10-K 报告。10-K 是所有上市公司必须提交的文件，用于披露公司的财务表现和业务运营情况。报告第 21 页显示，威尔逊通过股票奖励和奖金支付获得了总计 38,694,984 美元（现汇率约合 2.62 亿元人民币）的报酬。\n其他 EA 高级管理人员也获得了大额奖金和股票奖励。其中，首席财务官斯图尔特 · 坎菲尔德（Stuart Canfield）获得约 1130 万美元（现汇率约合 7659.7 万元人民币），EA 总裁劳拉 · 米莱（Laura Miele）获得约 1370 万美元（现汇率约合 9286.5 万元人民币），首席人力官玛拉 · 辛格（Mala Singh）获得约 830 万美元（现汇率约合 5626.1 万元人民币），首席法务官雅各布 · 沙茨（Jacob Schatz）获得约 840 万美元（现汇率约合 5693.9 万元人民币）。\n报告显示，EA 过去 12 个月的业务表现相当成功。《战地 6》“达成了高质量发售所需的全部里程碑”；《EA Sports FC》则“完成了既定用户留存目标，达成了指定地区 FC Mobile 的用户增长目标，并完成了关键产品执行里程碑”。\n《Skate》超额完成了玩家数量目标，《EA Sports American Football》游戏似乎也达成了“特定营收目标”，不过该游戏在某个指定里程碑上仅“部分”完成目标，具体指哪一项并未明确说明。\n与此同时，EA 还推进了一项“大胆”的 AI 战略。早在 2024 年底，威尔逊就曾表示 AI 是公司业务的“核心所在”。根据 10-K 报告，EA 已经建立了多个重要的 AI 战略合作关系，推出了生成式 AI 投资框架，并利用 AI 推动公司内部的“研究、扩展和效率提升”。\n从商业角度来看，EA 过去一年的表现似乎相当不错。不过值得注意的是，这些",
+      "link": "https://www.ithome.com/0/983/247.htm",
+      "published_at": "2026-07-29T09:49:13+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 8.3,
+      "category": "行业动态"
+    },
+    {
+      "title": "Microsoft 365 引入 Copilot 后涨价，英国对微软是否误导消费者展开调查",
+      "content": "IT之家 7 月 29 日消息，英国竞争与市场管理局（CMA）表示，已对微软展开调查，原因是该机构担心微软在调整 Microsoft 365 Personal 和 Family 订阅计划时，可能没有提前向用户清楚说明可选方案，其中包括新增 Copilot 等功能。\n此次调查针对微软对 Microsoft 365 Personal 和 Family 计划所做的调整。这些订阅服务为英国用户提供 Word、Excel、PowerPoint、Outlook 以及 Copilot 等功能，用户可以选择按月或按年购买。\n从 2025 年 1 月开始，微软自动向现有用户提供包括 Copilot 在内的新功能，且在用户当前订阅周期剩余时间内无需额外付费。当订阅周期结束后，除非用户主动选择其他方案或取消订阅，否则系统会自动将用户转入包含新增功能的新计划，而该计划价格更高。与此同时，微软也停止向新用户提供不包含这些新功能的 Personal 和 Family 订阅计划。\n对于已经使用 Personal 和 Family 计划的老用户，微软推出了一个限时切换选项，允许用户转为“Classic”（经典版）计划。Classic 计划保留了用户此前使用的功能，并维持原有价格。对于按年订阅 Microsoft 365 Personal 和 Family 计划的用户来说，新计划的价格比对应的 Classic 版本每年高出 25 英镑（IT之家注：现汇率约合 225 元人民币）。\nCMA 正在调查微软在订阅续费前向用户发送的信息是否具有误导性。调查将重点审查微软是否向用户提供了足够关键信息，包括不同订阅方案之间的区别以及价格差异，以帮助用户在做出决定前充分了解可选择的方案。\n目前，CMA 尚未认定微软是否违反法律。CMA 表示，其高度支持人工智能技术的普及，并认可 AI 为英国民众生活带来的潜在益处，但同时强调，任何消费者都不应受到不公平对待。此外，消费者必须获得清晰的信息，以便比较不同产品，并选择最适合自己的 AI 服务。\nCMA 消费者保护部门高级负责人海莉 · 弗莱彻（Hayley Fletcher）表示：“英国各地的人们都依赖 Microsoft 365，无论是用于学习、发送电子邮件，还是管理家庭财务。在家庭预算压力不断增加的时期，消费者了解不同订阅方案的价格和可选内容非常重要，这样他们才能",
+      "link": "https://www.ithome.com/0/983/268.htm",
+      "published_at": "2026-07-29T10:55:06+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.85,
+      "category": "产品更新"
+    },
+    {
+      "title": "AI 竞赛背后，从业者健康成为新代价",
+      "content": "IT之家 7 月 29 日消息，据 Business Insider 报道，人工智能行业最新的代价，或许是些亲手打造它的人的健康。\nThinking Machines Lab 联合创始人莉莲 · 温（Lilian Weng）表示，由于长期压力和健康问题，她将辞去目前的职务。温此前也曾在 OpenAI 工作。她没有透露具体患上了什么疾病，但表示，过去 7 个月里，她生病的次数比人生中任何其他时期都更多。\n“我感觉自己已经无法继续保持初创公司所要求的工作节奏。”温在写给同事的一份说明中表示。\n她并不是唯一一个受到影响的人，互联网对她离职的反应就是明证。高度激烈的 AI 竞争正在给参与其中的人带来越来越大的压力。\nIT之家注意到，今年早些时候，OpenAI 高管菲吉 · 西莫（Fidji Simo）曾因健康原因休假，随后完全离开全职岗位，转为兼职顾问。西莫此前还曾担任 Meta 高管以及 Instacart CEO。她患有体位性心动过速综合征（POTS），这是一种慢性疾病，会导致心悸、头晕以及晕厥等症状。\nxAI 联合创始人格雷格 · 杨（Greg Yang）也在被诊断出莱姆病后，转为非正式顾问角色。杨表示，自己有时每天睡 12 个小时，却依然无法恢复精力，并称自己需要“在健康问题上进入创始人模式”。\n过去几年，科技行业一直在宣扬要“硬核化”（hardcore）并进入“创始人模式”（founder mode）以参与竞争。科技高管因为如此高强度的工作节奏而身心俱疲，应该会促使整个行业重新思考这种竞争方式。\n但现实是，AI 竞赛不会因为任何人的离开而停下脚步。背后涉及数万亿美元的市场机会，同时整个行业普遍认为，任何放慢速度的行为都可能导致失去竞争优势。\n值得注意的是，选择离开的高管往往距离公司的最高决策者还有一层距离。而各家公司的 CEO 们，目前仍然稳坐岗位。\n近期少数涉及最高负责人离职的健康事件之一，是\nC3.ai\n创始人兼 CEO 汤姆 · 西贝尔（Tom Siebel）的经历，这一案例也颇具代表性。西贝尔因自身免疫疾病导致视力问题，于 2025 年辞去 CEO 职务，但今年 5 月又重新回到公司掌舵。他当时向 CNBC 表示，公司此前的业绩表现“坦率地说令人无法接受”。",
+      "link": "https://www.ithome.com/0/983/293.htm",
+      "published_at": "2026-07-29T12:02:41+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.8,
+      "category": "行业动态"
+    },
+    {
+      "title": "氪星晚报 | 月之暗面Kimi已完成超35亿美元F轮融资，投后估值涨至350亿美元； SpaceX空头持仓超260亿美元，账面获利超70亿",
+      "content": "大公司：\n美的集团：受欧洲持续极端高温影响当地空调需求爆发，空调芜湖、广州双基地一月内新增欧洲订单共20万台\n36氪获悉，美的集团在互动平台表示，受欧洲持续极端高温影响，当地空调需求爆发，美的空调芜湖、广州双基地一月内新增欧洲订单共20万台。PortaSplit移动分体空调自6月新增接单超16万台。7月，法国3万台移动空调紧急订单中2万台已完成发运。\n新东方：2026财年第四季度净营收15.3亿美元，同比增长23.0%\n36氪获悉，新东方发布截至2026年5月31日止第四季度及年度的未经审核财务业绩，第四财季净营收15.3亿美元，同比增长23.0%；第四财季经营利润8580万美元，上年同期亏损870万美元。\n瓴羊AgentOne“四名AI员工”正式上岗，覆盖销售、客服、运营、营销四大场景\n7月29日，瓴羊AgentOne四名AI员工正式上岗，分别覆盖AI销售、AI客服、AI运营和AI营销四个场景。企业也可以根据自身业务需求，基于AgentOne的能力，和瓴羊FDE（前沿部署工程师）团队一起打造专属场景的X员工。“瓴羊AgentOne以业务效果为导向，以企业数据为基座，以岗位标杆为预设，真正帮助企业在AI时代获得增长。”阿里云智能集团瓴羊CEO朋新宇表示。\n联电：将在台南新建晶圆厂，以满足AI需求\n联电7月29日宣布，将扩建新加坡厂区无尘室产能，并同步于台南科学园区展开新厂外壳工程。此项扩产计划，旨在满足客户近期需求。联电表示，将在台湾兴建一座全新晶圆厂房，作为未来第七期（P7）及第八期（P8）厂区基地。台南新厂将扩大公司在先进封装领域的布局。（界面）\n月之暗面Kimi已完成超35亿美元F轮融资，投后估值涨至350亿美元\n月之暗面Kimi已完成F轮融资，融资金额超35亿美元，投后估值涨至350亿美元。因超目标金额3倍多，本轮融资系提前关闭，原定8月开始的G轮（Pre IPO轮）已提前开始，投前估值升至500亿美元。（财联社）\n美邦股份：上半年净利润5106.74万元，同比增长41.32%\n36氪获悉，美邦股份披露半年报，公司上半年实现营业收入5.55亿元，同比增长14.34%；归属于上市公司股东的净利润5106.74万元，同比增长41.32%；基本每股收益0.38元。\n爱马仕二季度销售增长7%\n法国奢侈品集团爱马仕近日公布的第二季度业绩显示，该公司当季销售额达41亿欧",
+      "link": "https://36kr.com/p/3916547493965442?f=rss",
+      "published_at": "2026-07-29T19:04:52+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 7.7,
+      "category": "行业动态"
+    },
+    {
+      "title": "马斯克旗下 SpaceXAI 起诉明尼苏达州，反对“AI 脱衣”应用禁令",
+      "content": "IT之家 7 月 29 日消息，埃隆 · 马斯克旗下的 xAI（如今已更名为 SpaceXAI）强烈反对明尼苏达州一项禁止“脱衣”应用（nudify apps）的法律，甚至因此起诉了该州总检察长。\n明尼苏达州这项将于本周六生效的法律，将严惩允许用户生成未经他人同意的色情化图像的应用和网站。相关服务背后的公司，每当有人生成此类图像时，都将面临 5 万美元（IT之家注：现汇率约合 33.9 万元人民币）罚款。\nxAI 在诉状中表示，该法律是一项“范围过度、基于内容限制的言论自由禁令”，同时也限制了视觉表达工具，是为了“笨拙地禁止 AI 脱衣功能”而制定的措施。该公司律师称，除了侵犯言论自由外，该法律规定的罚款金额也过高。xAI 举例称，如果一家企业的用户生成了 10 万张此类图像，那么该企业可能面临高达 500 亿美元（现汇率约合 3389.24 亿元人民币）的罚款。\nxAI 强调，公司并不反对明尼苏达州“禁止未经本人同意传播真实人物 AI 生成的裸体图像”的立法目标，但认为该法律“远远超出了这一目标，将大量受法律保护的言论内容置于民事责任和政府处罚之下”。\n考虑到 xAI 过去在类似问题上的表现，这场诉讼并不令人意外。今年年初，该公司的聊天机器人 Grok 就曾因大量生成“脱衣”深度伪造图像而引发广泛关注，其中包括未成年人的相关图像。\n目前，xAI 仍面临受害者提出的集体诉讼。该诉讼同样指控 xAI 未向执法机构提供有关涉嫌利用 Grok 制作受害者裸露图像人员的信息。此外，xAI 也因相关功能在英国和欧盟面临调查。\nxAI 在诉状中表示，公司严格禁止用户在未经本人同意的情况下生成他人的裸体或色情化图像，并称已经针对绕过其多重技术限制、试图生成此类内容的用户提起诉讼。最近，xAI 就曾起诉一名南卡罗来纳州用户，指控其利用 Grok 制作成年人和未成年人的私密图像。\nxAI 表示，如果该法律以目前的形式生效，公司将不得不对 Grok Imagine 的图像编辑功能进行多方面限制。xAI 进一步称，“在法律生效前可以自由获得的受保护言论内容，将因此受到限制和压制”。\n该公司请求法院宣布这项法律违宪，并阻止州政府执行该法律。\n针对这起诉讼，明尼苏达州总检察长基思 · 埃里森（Keith Ellison）回应称：“利用人工智能违背他人意愿生成其裸照的行为令人发指。关于 AI，",
+      "link": "https://www.ithome.com/0/983/298.htm",
+      "published_at": "2026-07-29T12:12:21+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.65,
+      "category": "产品更新"
+    },
+    {
+      "title": "消息称 vivo 组织架构调整，成立 XR 研发部门",
+      "content": "IT之家 7 月 29 日消息，据雷峰网今日消息，vivo 近日内部发文宣布组织架构调整，涉及智慧终端事业部、硬件平台技术部及开发一部、二部、三部多个部门。本轮调整有两大主线：折叠机研发职能整体并入开发一部，XR 相关业务则整合至开发三部。\n根据内部发文，\n开发一部将成立折叠机结构开发中心\n，开发三部原折叠机结构预研、结构开发、铰链和结构跟进相关职能及人员划入该中心；开发三部原折叠机电子开发职能及人员，则划入开发一部电子开发中心。至此，vivo 折叠机的结构与电子开发资源全部集中至开发一部。\n直板机业务归入开发二部\n：开发三部原直板机结构开发、连接器相关职能及人员划入开发二部结构开发中心；原直板机电子开发职能及人员划入开发二部电子开发中心。\n开发三部的调整力度最大：电子开发中心、结构开发中心、运动结构与材料研究中心及其下设所有组织全部撤销，相应管理者不再担任原管理职务。\n在划出手机业务的同时，\n开发三部整体承接了 XR 业务\n：\n智慧终端事业部 XR 设计开发部下辖硬件架构中心、OS 软件与 UCD 中心、系统架构中心整体划入；\n洞察规划与项目管理中心下辖软件项目组划入开发三部直属；\n硬件平台技术部电子技术规划中心下辖 XR 项目组亦划入并更名为 XR 电子开发组。\n关于 XR 项目独立成组一事，有 vivo 员工透露：“\n目前 vivo 内部正在做 MR 产品研发\n，未来产品将会正常迭代。”\n据IT之家此前报道，去年 8 月，\nvivo 曾发布 vivo Vision 探索版 MR 头显\n，搭载第二代骁龙 XR2+ 平台，\n并在全国部分门店开放体验\n。",
+      "link": "https://www.ithome.com/0/983/267.htm",
+      "published_at": "2026-07-29T10:51:38+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.63,
+      "category": "模型发布"
+    },
+    {
+      "title": "The Download: a chip talent battle, and deflating AI hype",
+      "content": "This is today’s edition of\nThe Download\n,\nour weekday newsletter that provides a daily dose of what’s going on in the world of technology.\nSamsung’s chip workers are jumping ship to rival SK Hynix\nLee, an engineer at Samsung’s semiconductor division, used to work late. But lately, he’s been clocking out on time and heading straight home to work on his job application for the chipmaker’s South Korean rival SK Hynix.\nHis colleagues are doing the same. They feel demoralized by the $476,000 bonus that SK Hynix is set to pay its employees, flush with record profits from making the high-bandwidth memory (HBM) chips that power Nvidia’s AI accelerators. The figure dwarfs what chip workers at Samsung are set to receive and is sparking an exodus.\nRead our story about why this fierce talent war could help determine who dominates the next generation of AI chips.\n—Michelle Kim\nThe AI Hype Index: Unsexy AI\nSeparating AI reality from hyped-up fiction isn’t always easy. That’s why we’ve created the AI",
+      "link": "https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/",
+      "published_at": "2026-07-29T12:10:00+00:00",
+      "source": "MIT Technology Review",
+      "weight": 0.95,
+      "score": 7.5,
+      "category": "技巧观点"
+    },
+    {
+      "title": "DoorDash is going airborne with new drone delivery division",
+      "content": "A Wing drone carrying a DoorDash delivery. The food delivery app company says it will build its own drones going forward. | Image: Google\nDoorDash is launching a new drone delivery program called DoorDash Air. The largest food delivery app in the US said that it has approval from the Federal Aviation Administration that clears the way for drone delivery in the near future.\nDoorDash said it has received a Part 135 air carrier certification from the FAA that enable it to delivery small packages via drone. Other companies to receive this designation include\nAlphabet's Wing\n,\nZipline\n, and\nAmazon\n.\nPreviously, DoorDash worked with Alphabet's drone delivery division Wing on a number of pilots in places like\nDallas-Fort Worth\n,\nVirginia\n, and\nAustralia\n. Now the company says it will d …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/science/970731/doordash-air-drone-delivery-faa",
+      "published_at": "2026-07-29T09:00:00-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.5,
+      "category": "技巧观点"
+    },
+    {
+      "title": "荣耀 Robot Phone 手机影像亮点汇总：双两亿摄像头，全链路融入阿莱色彩科学工作流",
+      "content": "IT之家 7 月 29 日消息，荣耀手机官方今日汇总了荣耀影像技术发布会的核心亮点。\n据介绍，荣耀 Robot Phone 配备双两亿摄像头、首款自研影像芯片、行业首个钛合金云台、行业最全运镜和跟随模式、行业领先防抖和智能跟随算法，同时还全链路融入阿莱色彩科学工作流。\n参考IT之家昨日报道，\n该机也是荣耀与阿莱达成战略合作后的首款落地产品\n，首次将阿莱 Log-C 编码和 LUT 调色文件引入移动端。据官方介绍，专业影视的 C-Log、LUTs 全部可用，摄影师和导演常用的锁焦、锁白平衡、锁 AE 和运镜数据均可下放至手机。\n荣耀 Robot Phone 搭载第五代骁龙 8 至尊版芯片，配备一块 6.3 至 6.4 英寸的 1.5K 分辨率四等边直屏。该机内置端侧大模型 YOYO，具备情感感知能力，能够主动识别用户的情绪状态、使用习惯及当前所处环境。相机还支持 AI 物体追踪、AI 视频剪辑与智能拍摄，可实时感知与补偿以确保画面稳定。",
+      "link": "https://www.ithome.com/0/983/315.htm",
+      "published_at": "2026-07-29T13:06:25+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.47,
+      "category": "模型发布"
+    },
+    {
+      "title": "三星回应 Galaxy Z Fold 系列能否重新支持 S Pen 手写笔：前提是能维持机身轻薄",
+      "content": "IT之家 7 月 29 日消息，三星从 Galaxy Z Fold 3 开始为横折叠手机加入 S Pen 手写笔支持，从而令大尺寸内屏拥有了更高的实用价值。此后，为了进一步压缩机身厚度，三星从 Galaxy Z Fold 7 开始放弃了 S Pen 功能。\n▲ 三星最后一代支持 S Pen 的横折叠机型 Galaxy Z Fold 6\n最新发布的 Galaxy Z Fold 8 Ultra 和 Galaxy Z Fold 8 依然无法使用 S Pen。不过，三星\n并没有彻底放弃\n让 S Pen 重返 Galaxy Z Fold 产品线。\n据外媒 Tom's Guide 报道，在 7 月 22 日 Galaxy Unpacked 发布会前，三星移动研发硬件副总裁文成勋（音译）接受采访时被问到，Galaxy Z Fold 系列未来是否还会支持 S Pen。文成勋表示：“我们仍在探索和评估各种更具创新性的技术，希望\n以更加轻薄的形态整合数字化层和 S Pen\n。”\n文成勋进一步提到，每一代折叠屏手机的研发决策，都要围绕当代产品的核心目标作出。本代产品希望在保留大屏观看体验的同时，做到\n更纤薄、更轻巧，也更便于携带\n。\n据IT之家此前报道，今年 2 月，三星 MX 事业部首席运营官崔元俊（音译）曾在接受彭博社采访时透露，公司内部正在开发新一代 S Pen 手写笔并革新屏幕架构，从而降低配备 S Pen 所带来的取舍，“S Pen 将继续作为我们的核心技术之一（存在）”。\n相关阅读：\n《\n三星正研发改进型 S Pen 手写笔，有望搭载 USI 2.0 标准\n》",
+      "link": "https://www.ithome.com/0/983/274.htm",
+      "published_at": "2026-07-29T11:26:13+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.47,
+      "category": "产品更新"
+    },
+    {
+      "title": "上汽名爵 MG 07 预售：搭载 Momenta R7 世界模型，12.59 万元起",
+      "content": "IT之家 7 月 29 日消息，在今晚举行的发布会上，上汽名爵 MG 07 正式开启预售，\n预售价 12.59 万元起\n：\nMG 07 650 舒享版：预售价 12.59 万元\nMG 07 610 激光雷达版：预售价 13.59 万元\nMG 07 610 旗舰版：预售价 14.59 万元\nMG 07 845 激光雷达版：早鸟预售价 15.59 万元\nMG 07 845 旗舰版：早鸟预售价 16.59 万元\n其中 600+ 公里续航版本将于 8 月底正式启动交付，845 公里续航版本将于 10 月初启动交付。\nIT之家获悉，新车尺寸为 4886×1900×1485mm、\n轴距 2825mm\n。前脸采用一体冲压蚌式机盖 + 曲面切割悬浮前大灯组设计，尾部采用掀背式溜背造型设计，配备四门无框车门和五档可调电动尾翼，可选 19 英寸星环引力轮毂和 19 英寸银石竞速轮毂。\n上汽名爵 MG 07 内饰可选白紫罗兰和皇家蓝两种配色，\n拥有 168L KK 自动开合前备箱、697L 电动后备厢，以及 109L 下沉空间\n。新车支持全车通风加热按摩、配备整片式调光全景天幕，同时行业首创“女王多功能美妆台”。\n新车配备副驾零重力座椅，\n内置 7.1.4 声道 21 扬声器\n；车机搭载 8295P 芯片，配备 15.6 英寸 2.5K 中控屏，支持 3D Moli 实时交互大世界、全场景手车互联等功能。\n上汽名爵 MG 07 还首搭 Momenta R7 世界模型 +  Xheart X7 大模型专用芯片\n；配备 mCDC 智能电磁悬架，支持每秒 200 次调整；拥有 AI 预瞄功能，可前瞻探测 15-150 米距离。\n动力方面，新车采用纯电驱动，基于 800V 高压平台打造，最大纯电续航可达 845km，百公里加速 5 秒级，此外新车还支持 5C 快充。",
+      "link": "https://www.ithome.com/0/983/312.htm",
+      "published_at": "2026-07-29T13:00:10+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.46,
+      "category": "模型发布"
+    },
+    {
+      "title": "Artists are lawyering up against AI slop, and some are even winning",
+      "content": "Artists whose work has been co-opted by AI are taking to court. | Image: Alex Parkin / The Verge\nWhen\nThe Atlantic\npublished a\nsearchable dataset\nof works used to train AI, Kirk Wallace Johnson, like a lot of artists, looked for his name out of curiosity. And, like a lot of artists, he found it. Essentially, his books, like\nThe Feather Thief\nand\nThe Fishermen and the Dragon -\nnonfiction tomes that he spent \"five to six years researching, writing, and investigating\" - had been pirated and fed to a chatbot. He says he felt a \"cocktail\" of emotions: \"anger over the brazenness of the theft, worry over what this means for writers, and a healthy thirst for revenge on these massive corporations that have become galactically wealthy\" using his  …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/971059/ai-artists-lawsuit-google-meta-anthropic",
+      "published_at": "2026-07-29T08:00:00-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.41,
+      "category": "技巧观点"
+    },
+    {
+      "title": "支付宝升级“AI 支付开发者激励计划”，号称“最高提供 5660 元词元专项补贴”",
+      "content": "IT之家 7 月 29 日消息，支付宝发文，宣布升级“AI 支付开发者激励计划”，为 AI 开发者提供最高 5660 元的 Token（词元）专项补贴，同时扩展激励享受范围，降低开发者的参与门槛。\n官方表示，即日起至 8 月 21 日，开发者完成报名并接入“AI 按量付费”“AI 网页应用收款”或“AI 移动应用收款”后，可按照累计有效交易用户数解锁五档奖励，最高累计可获得价值 5660 元的阿里云 Token 资源包（词元）：\nAI 网页应用收款：适配电脑网站与手机网页场景的收款能力，开发者可通过 Skill 一行命令快速接入，流程更极简、集成更轻量，同时支持个人收款。\nAI 移动应用收款：面向 iOS、安卓、HarmonyOS 等移动端应用，开发者通过 Skill 一行命令可快速接入收款能力，适用于电商购物、会员充值、在线订票、本地生活、数字内容购买等 App 内消费场景。\nAI 按量付费：可让开发者的 API、数字内容或算力资源，能够直接向访问它们的 AI 智能体发起自动收款，告别低效率的月费订阅，实现按调用计量精准计费和结算。\n具体来看，累计有效交易用户达到 10 人，可以解锁 10 元阿里云 Token 资源包。达到 100 人、1000 人和 5000 人，分别解锁 50 元、100 元和 500 元。达到 5 万人后，再解锁 5000 元。五档依次叠加，最高累计 5660 元，达到对应档位后第 7 天解锁。\n当然，相应奖励明显集中在最高档。\n前四档全部完成，开发者累计只能获得 660 元资源包\n，5 万名有效交易用户对应的 5000 元占全部奖励的大部分。\n支付宝同时表示，个人开发者使用支付宝“AI 按量付费”，还能享受 0 费率优惠至 2026 年 12 月 31 日。",
+      "link": "https://www.ithome.com/0/983/310.htm",
+      "published_at": "2026-07-29T12:47:43+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.36,
+      "category": "技巧观点"
+    },
+    {
+      "title": "OpenAI’s rogue AI agent didn’t stop at hacking Hugging Face",
+      "content": "The AI agent that escaped from OpenAI and hacked developer platform Hugging Face attacked other companies as well, OpenAI\nrevealed\non Tuesday. The update substantially widens the scope of an already concerning incident, which has\nalarmed industry insiders\nand fueled growing calls for stronger oversight on frontier AI systems.\nIn an update to a\nblog post\ndetailing its ongoing investigation into the incident, OpenAI said the wayward AI agent attacked several \"publicly-available services\" in its efforts to reach Hugging Face. \"This includes four accounts on four services,\" the company said, adding that the agent had found login credentials o …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
+      "published_at": "2026-07-29T07:54:29-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.36,
+      "category": "技巧观点"
+    },
+    {
+      "title": "零刻推出 SEi13 AI / SEi14 AI 迷你主机：搭载最高 160TOPS 算力独立 NPU，11895 元起",
+      "content": "IT之家 7 月 29 日消息，零刻今日宣布推出零刻 SEi13 AI 与零刻 SEi14 AI 迷你主机，号称“为本地 AI 推理而生”，售价 11895 元起：\n零刻 SEi13 AI：酷睿 i7-13620H、32G+1TB、24G 算力卡，\n11895 元\n零刻 SEi14 AI：酷睿 Ultra 9 185H、32G+1TB、24G 算力卡，\n13988 元\n官方表示，两款产品均采用 x86 + 独立 NPU 双计算架构，系统运行与 AI 推理分离，\n独立 NPU 最高 160TOPS 算力\n，搭配\n24GB LPDDR5\n推理专用内存，兼容 Windows / Linux 生态，可支持大模型、AI Agent、多模态等应用。\nIT之家附产品详细参数如下：\n零刻 SEi13 AI\n京东\n零刻「内置 AI 算力卡」SEi13\n11895 元\n直达链接\n零刻 SEi14 AI\n京东\n零刻「内置 AI 算力卡」SEi14\n13988 元\n直达链接",
+      "link": "https://www.ithome.com/0/983/263.htm",
+      "published_at": "2026-07-29T10:32:11+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.31,
+      "category": "模型发布"
+    },
+    {
+      "title": "联想拯救者手机 Y70 新一代 OTA 升级内容公布：新增车载互联、AI 游戏伙伴等",
+      "content": "IT之家 7 月 29 日消息，联想拯救者手机官方今日宣布，拯救者 Y70 新一代 OTA\n全量推送在即\n，AI 游戏伙伴、车载互联等功能上新。\nIT之家附本次更新主要内容：\nAI 变声器：10+ 特色声线自由切换，开黑聊天随心变换（变声器功能仅赠送 3 天实时免费试用，后续需付费使用）\nAI 连招：复杂操作一键录入，AI 让连招随手释放\nAI 声纹猎手：AI 强化关键声音，捕捉敌人位置变化；射击类游戏中索敌直线距离提升 60%，敌人脚步声 AI 增强至 316%\n游戏准星 / 计时器：准星辅助精准锁定目标，技能 CD、Buff 刷新等关键节点实时提醒\n自由小窗应用分身 AI 保活：支持 5 个游戏窗口同步运行，游戏分身适配 AI 智能保活，多开运行更稳定\n临场振感：特定游戏场景将攻击、技能等瞬间化为真实震感\n车载互联：手机一键连接车内大屏，覆盖 400+ 主流车型\nAI 游戏伙伴：悬浮球一键唤醒 AI，攻略、打法技巧随问随答\n相关阅读：\n《\n联想拯救者新一代 Y70 手机发布：骁龙 8 Gen 5、2K 144Hz 屏，2599 元起\n》",
+      "link": "https://www.ithome.com/0/983/311.htm",
+      "published_at": "2026-07-29T12:48:17+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.29,
+      "category": "产品更新"
+    },
+    {
+      "title": "宣称“全程免动手”：海尔机器人与橡鹿机器人达成战略合作，共研全自动家庭 AI 烹饪机器人",
+      "content": "IT之家 7 月 29 日消息，海尔机器人与橡鹿机器人今日达成战略合作。双方将围绕中餐烹饪生态、AI 技术能力、家庭场景应用及产业链协同等方向展开合作，\n共同打造行业全新一代全自动家庭 AI 烹饪机器人\n。\n官方表示，全新一代全自动家庭 AI 烹饪机器人，从自动投放调料、食材到智能翻炒，\n全程免动手\n。新品搭载海尔自研 AI 之眼科技，\n可精准识别主流品牌净菜\n，省去用户洗菜、切菜等繁琐前置步骤，智能匹配适配菜谱。\n据介绍，机器人搭载 AI 烹饪大模型，宣称可完美复刻大厨级技艺：精控火候、精准调味、翻炒模仿，还原地道锅气。同时，菜谱体系覆盖美容养颜、健脾养胃、低脂瘦身等六大功效分类，适配老人、孩童、健身人群等八大不同家庭成员的饮食需求。\nIT之家获悉，\n双方合作成果将于 8 月在北京 WRC 上正式亮相\n。此外，橡鹿机器人自主研发的多模态烹饪 AI 基座和具身烹饪机器人现炒方舟也将于 8 月在北京 WRC 正式发布。",
+      "link": "https://www.ithome.com/0/983/323.htm",
+      "published_at": "2026-07-29T13:27:11+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.27,
+      "category": "模型发布"
+    },
+    {
+      "title": "消息称中国市场需求强劲，法拉利首款纯电车型 Luce 提前完成年度销售目标",
+      "content": "IT之家 7 月 29 日消息，据英国《金融时报》报道，尽管外观设计引发了投资者和车迷的广泛争议，但凭借中国市场的强劲需求，法拉利（Ferrari）今年首款纯电车 Luce 已提前完成了年度销售目标。\n法拉利并未公开 Luce 的具体销量目标。不过，两位知情人士透露，公司原计划今年销售不到 500 辆这款纯电车型。Luce 由前苹果首席设计官乔纳森 · 伊夫（Jony Ive）操刀设计，起售价为 55 万欧元（IT之家注：现汇率约合 423.9 万元人民币）。\n其中一位知情人士表示，法拉利早在今年 7 月便完成了这一销售目标，距离 Luce 于今年 5 月正式发布仅过去两个月。\nLuce 发布后，其极具争议的外观迅速成为社交媒体的讨论焦点，不少网友批评其造型过于另类，甚至将其与价格远低于法拉利的大众化车型相提并论。\n当时，法拉利前董事长卢卡 · 迪 · 蒙特泽莫罗（Luca Cordero di Montezemolo）甚至公开表示，Luce 不配悬挂法拉利标志性的跃马车标。\n受新车争议影响，法拉利在米兰上市的股票于新车发布后的首个交易日一度下跌超过 8%。\n争议发生后，法拉利长期担任首席营销与商务官的恩里科 · 加列拉（Enrico Galliera）本月突然离职。不过，公司表示，其离职以及由一名前宝马高管接任的安排，早在 Luce 发布之前就已经确定。\n法拉利将于本周四公布第二季度财报。公司始终为 Luce 辩护，称推出这款车型旨在展示法拉利的技术实力，并吸引新一代高净值消费者，尤其是中国市场以及美国硅谷等科技产业聚集地区的富裕客户，因为这些消费者本身已经习惯驾驶电动车。\n与此同时，法拉利还明确要求经销商，不得强迫那些钟情于燃油跑车的传统收藏家转向购买纯电车型。\n法拉利此前制定的长期目标是，到 2030 年累计销售约 2500 辆 Luce，相当于每年约 600 辆。这一规模约占法拉利全年汽车销量的 5%，不少分析师认为这一目标具有实现的可能性。\n法拉利首席执行官贝内代托 · 维尼亚（Benedetto Vigna）此前也表示，由于 Luce 销量规模有限，公司进军电动车市场不会影响其行业领先的约 30% 营业利润率。\n对于 Luce 的销售目标以及上市以来的实际交付数据，法拉利拒绝置评。\n尽管新车发布初期遭遇大量批评，但接近法拉利的人士表示，Luce 在中国市",
+      "link": "https://www.ithome.com/0/983/325.htm",
+      "published_at": "2026-07-29T13:37:53+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.25,
+      "category": "行业动态"
+    },
+    {
+      "title": "弃用激光雷达，沃尔沃向挪威 EX90/ES90 车主进行赔偿",
+      "content": "IT之家 7 月 29 日消息，沃尔沃汽车（Volvo Cars）当地时间上周日宣布，将向挪威所有购买配备激光雷达（LiDAR）的 EX90 和 ES90 车型车主支付 1.8 万挪威克朗（IT之家注：现汇率约合 12879 元人民币）补偿金。这源于沃尔沃正式放弃采用 Luminar 提供的激光雷达技术，以及所有依赖该技术开发的功能。\n沃尔沃汽车挪威发言人亨里克 · 尤尔 · 泰格（Henrik Juel Teige）当天向汽车媒体\nMotor.no\n证实了这一补偿方案。\n这一决定是在 Luminar 于 2025 年底申请美国《破产法》第 11 章破产保护后作出的。根据双方于 2020 年 5 月签署的供应协议，总部位于美国佛罗里达州的 Luminar 将为沃尔沃提供激光雷达及感知技术。双方合作随后于 2023 年扩展至沃尔沃姊妹品牌 Polestar（极星）。\n尤尔 · 泰格表示：“沃尔沃汽车已经终止了与该激光雷达供应商的合作，并停止了针对 EX90 和 ES90 开发基于激光雷达功能的计划。”\n因此，“沃尔沃此前公布的所有基于激光雷达的功能都不会推出，EX90 和 ES90 的驾驶辅助系统也不会再依赖激光雷达技术。”\n此外，沃尔沃还将逐步停止对已交付车辆激光雷达系统的数据采集。\n由于目前没有拆除车顶激光雷达传感器的改装方案，因此现有车主仍需保留车辆上的整套传感器设备。\n沃尔沃推出 EX90 时，将 Luminar 的 Iris 激光雷达作为全系标配，并将安装于车顶的激光雷达宣传为碰撞预防技术的一次跨时代升级，同时也是未来自动驾驶能力的重要基础。\n配合双 NVIDIA Drive AGX Orin 计算平台、摄像头、毫米波雷达以及超声波传感器，激光雷达被视为沃尔沃所谓“Safe Space Technology（安全空间技术）”体系的核心组成部分。\n然而，实际落地效果并未达到宣传水平。\nLuminar 激光雷达产生的数据量超过了 EX90 初始中央计算平台的处理能力，导致依赖激光雷达的功能在车辆首批交付后的数月内一直无法启用。\n虽然沃尔沃后来升级了车辆计算硬件，但仍未能兑现此前承诺的全部功能。\n与此同时，Luminar 的供应能力受到限制，加之财务状况不断恶化，迫使沃尔沃于 2025 年开始生产不再配备激光雷达的 EX90 和 ES90。\n2025 年 11 月",
+      "link": "https://www.ithome.com/0/983/308.htm",
+      "published_at": "2026-07-29T12:40:23+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.25,
+      "category": "产品更新"
+    },
+    {
+      "title": "美国三州将试点校园无人机防御系统，最快 15 秒响应枪击",
+      "content": "IT之家 7 月 29 日消息，美国学校即将加入无人机军备竞赛行列。Mithril Defense 公司推出的“校园守护天使”（Campus Guardian Angel）无人机计划将在今年年底前进入至少 3 个州的 9 所学校进行测试。\n据《华盛顿邮报》报道，该试点项目将在佛罗里达州、佐治亚州和科罗拉多州的学校展开，测试对象包括校园内配备资源警员以及未配备资源警员的学校。这些无人机将被安全部署在校园关键区域，当教师通过手机应用或紧急按钮触发后，无人机便会自动出动，通过频闪灯、警报器、胡椒喷雾以及最高时速 60 英里（约 97 公里）的撞击能力，对持枪攻击者进行干预。\n如果该项目取得成功，或许能够缓解美国学生长期面临的校园枪支暴力威胁。《华盛顿邮报》指出，自 1999 年哥伦拜恩高中枪击案以来，已有近 40 万名学生经历过校园枪支暴力事件。\n不过，Campus Guardian Angel 无人机系统的部署成本相当高。例如，佐治亚州计划采用该无人机防御系统的 5 所学校，将获得 50 万美元（IT之家注：现汇率约合 338.9 万元人民币）资金支持，用于开展试点项目。但该州政界人士和立法者似乎较为顺利地通过了相关预算。\nCampus Guardian Angel 无人机系统的工作流程如下：\n无人机将被部署在校园周边的安全位置；\n教师通过手机应用或紧急按钮启动无人机部署；\n远程飞手接管无人机，通过频闪灯、警报器、胡椒凝胶以及最高时速 60 英里的撞击能力，对攻击者进行干扰、威慑和制止；\n无人机系统的反应速度至关重要。\nMithril Defense 表示，Campus Guardian Angel 无人机最快可以在 15 秒内做出反应并抵达枪手位置。该公司的创始人兼 CEO 贾斯汀 · 马斯顿（Justin Marston）还对无人机的响应速度提出了一些更大胆的说法。例如，他表示，类似 Guardian Angel 的无人机“或许能够挽救乌瓦尔德事件中的生命”。\n这里指的是 2022 年发生在美国得克萨斯州乌瓦尔德市一所小学的严重枪击事件，当时共有 19 名学生和 2 名教师遇害。\n这家无人机防御公司的 CEO 强调：“最初 120 秒非常关键，因为大多数枪击行为都是在这一时间段内发生的。”这意味着他认为 Campus Guardian Angel 无人机能够在极短时",
+      "link": "https://www.ithome.com/0/983/284.htm",
+      "published_at": "2026-07-29T11:51:22+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.25,
+      "category": "行业动态"
+    },
+    {
+      "title": "We’re running out of reasons to ignore AI safety",
+      "content": "Earlier this month, OpenAI gave several of its AI models a task: complete a\ntest\ndesigned to measure their cybersecurity capabilities. It put the systems in a sandboxed environment without an internet connection and set them off to work.\nWhat\nhappened next\nis almost laughably silly - but also, as Adam Gleave, cofounder and CEO of AI safety organization FAR.AI, put it, \"a visceral example of how misaligned AI could cause harm.\" According to OpenAI, the models escaped the sandbox meant to contain them, moved through the company's internal systems, found a route to the internet, and then started looking for a way into Hugging Face. And why was …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
+      "published_at": "2026-07-29T07:00:00-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.22,
+      "category": "技巧观点"
+    },
+    {
+      "title": "华为 MateBook Pro S 鸿蒙笔记本隐藏细节曝光，A 面预计将搭载摄像头",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，全球最轻 14 英寸金属笔记本 —— 华为 MateBook Pro S 笔记本首次公开亮相。\n该机将在 8 月 5 日的尊界时代旗舰 MPV 及华为全场景新品发布会上正式发布\n。\n华为官方今日还发布预热视频，简单介绍了 MateBook Pro S 的外观。\n新机采用左右双 C 口设计，提供仲夏紫、晨曦黄、烟云灰、丝绒白、羽砂黑等配色，\n底部有风扇开孔，侧边还有一个滑动键\n，预计会有新玩法。\nIT之家注意到，预热视频中一段画面，展示了新笔记本的 A 面。局部画面显示，MateBook Pro S 的顶部有一小块凸起，印有“HarmonyOS”字样，\n其左侧预计还有一枚摄像头\n。\n根据华为官方在鸿蒙电脑新品技术沟通会上释出的信息来看，MateBook Pro S 首创了榫卯一体化结构，辅以外观无螺丝钉的纯净设计、镁锂合金与三段式主板，实现了 798g、11.9mm 的轻薄设计；搭载全新麒麟 XE90 高能效 PC 处理器，对比麒麟 X90 单核性能提升 23%、能效比提升 25%、NPU 提升 40%。",
+      "link": "https://www.ithome.com/0/983/322.htm",
+      "published_at": "2026-07-29T13:22:44+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.21,
+      "category": "模型发布"
+    },
+    {
+      "title": "上海发布新一轮消费品以旧换新细则，外骨骼机器人等适老化家居产品单件补贴最高 2000 元",
+      "content": "IT之家 7 月 29 日消息，上海市商务委等 8 部门今天发布“关于印发《上海市 2026 年消费品以旧换新自主品类补贴政策实施细则》的通知”，相应《实施细则》有效期至 2026 年 12 月 31 日止。\nIT之家参考《实施细则》，有关部门将为个人消费者购买智能清洁机器人（含扫地、擦窗机器人）、智能马桶（含智能马桶盖）、智能床（含智能床垫）、功能沙发（含按摩椅）、智能吸油烟机、智能家用燃气灶（含集成灶）、数码相机（含运动相机）、智能净水器、智能洗碗机等 9 类智能家居产品提供补贴（按扣除各环节优惠后最终销售价格的 15% 予以补贴），\n每位消费者每类产品可补贴 1 件，单件最高补贴不超过 1500 元\n。\n同时，个人消费者购买智能助行机（含电动轮椅、外骨骼机器人）等适老化家居产品，可按扣除各环节优惠后最终销售价格的 20% 予以补贴，每位消费者每类产品可补贴 1 件，\n单件最高补贴不超过 2000 元\n。\n《实施细则》显示，上述 10 类产品须具备智能功能。有能效或水效标识的，须为中国能效或水效标识一级，并在中国能效、水效标识网备案。",
+      "link": "https://www.ithome.com/0/983/276.htm",
+      "published_at": "2026-07-29T11:32:10+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.13,
+      "category": "产品更新"
+    },
+    {
+      "title": "奕境曾清林谈“智驾小蓝灯将被禁用”，称真正的智驾能力只会阔步向前",
+      "content": "IT之家 7 月 29 日消息，“\n智驾小蓝灯将被禁用\n”话题今日登上热搜。奕境汽车品牌总经理曾清林刚刚发文称，\n收到这个紧急通知，团队立即行动，按照国家要求实施\n。\n他透露，到叫停小蓝灯的核心原因有两个：\n一是各家蓝灯亮度、频闪无统一标准，\n影响交通安全和带来光污染\n；\n其次是一些司机看到亮蓝灯的车辆，\n会刻意加塞、别车来试探智驾极限\n，带来的安全风险。\n曾清林认为，国家出手规范这些乱象是一件好事。他表示，\n小蓝灯出现的背景是企业想把智驾能力进行外显，初衷是告诉路人“现在是系统在开车”\n，算是一种善意的沟通，而随着智驾的普及，小蓝灯几乎成为车企的必争之地。\n他坦言，客观来说，现在的辅助驾驶能力参差不齐。对于智驾能力强、安全上限高的车型来说，小蓝灯是一个无形的品牌宣传；\n但是对于智驾能力弱的车型来说，有时候就成为一个“路障”，\n确实带来了道路安全风险。\n曾清林表示，国家法规的出台，一方面提高道路安全水平，另一方面，也将企业从小蓝灯外观样式的竞争，引导到聚焦真正智驾能力提升上来。他还认为，\n虽然小蓝灯被禁，但真正的智驾能力只会阔步向前\n。\n根据规划，奕境汽车旗下首车 —— 奕境 X9 将在今年第三季度上市交付（今年 6 月 8 日在成都经开区完成试制下线，\n此前有消息称会在 9 月开启全国交付\n）。同时，奕境品牌未来三年还将投放 5 款全新产品。\n据IT之家了解，奕境 X9 长 5301mm、宽 2015mm、高 1820mm，轴距为 3120mm；全系搭载华为乾崑车载光“三件套”，包括 HUAWEI XPIXEL 百万像素智慧投影大灯、HUAWEI XSCENE 车载激光投影和 HUAWEI XHUD 增强现实抬头显示。\n相关阅读：\n《\n网传智驾车辆“小蓝灯”不符合国标要求，后续将禁止乘用车安装\n》\n《\n奕境 X9 完成试制下线，将于 9 月开启全国交付\n》",
+      "link": "https://www.ithome.com/0/983/262.htm",
+      "published_at": "2026-07-29T10:23:31+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.13,
+      "category": "产品更新"
+    },
+    {
+      "title": "Valve 公布 Steam Machine 最新进展：Proton 兼容层已支持 FSR 4.1 技术、年底前完成全部预订队列发货",
+      "content": "IT之家 7 月 29 日消息，V 社发文，声称 Steam Machine 主机预订队列内的所有用户在年底前都将收到购买资格邮件，同时开放 Steam Machine 主机外部 CAD 文件供下载，IT之家附 Steam 官方公告链接（\nhttps://store.steampowered.com/hardware/steammachine\n）。\nSteam Machine 功能与资源更新\nProton 兼容层（Proton Experimental）现已支持 FSR 4.1 技术，所有兼容 FSR 超分辨率升级的游戏均可启用该功能，进一步提升运行帧率表现。\n官方已开放 Steam Machine 设备外部几何结构的 CAD 文件免费下载，可供用户自行用于配件定制、改装等相关开发工作。\n预订队列与候补名单调整说明\nV 社目前正在按随机排序后的预订顺序每日推进订单发货，预计预订队列内的所有用户在\n2026 年年底前\n都将收到购买资格邮件。\n不同地区不同型号的预订队列推进速度受需求影响存在差异，部分区域特定型号已完成全部预订队列的发货，正式启动候补名单用户的邀请流程。\n官方此前曾出现操作疏漏，直接向首批候补名单用户发送了购买邮件，后续流程已修正：后续所有从候补名单转入预订队列的用户，将先收到确认入队通知，等待轮到自己的排位后才会收到购买邮件。\n官方强调候补名单用户不会插队，仅在对应地区对应型号的正式预订队列完全清空后，才会开始从候补名单中抽取用户。\n收到购买资格邮件的用户必须在 72 小时内完成付款，超时未购买将自动顺延至队列下一位用户。",
+      "link": "https://www.ithome.com/0/982/792.htm",
+      "published_at": "2026-07-29T11:54:32+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.11,
+      "category": "产品更新"
+    },
+    {
+      "title": "Samsung’s Galaxy Z Fold 8 feels like the future",
+      "content": "﻿A short king.\nIs this the future of foldable phones?\nSamsung clearly thinks so. The company has given its new wide foldable the \"Z Fold 8\" name, positioning the phone not as a widescreen oddity, but as the new normal, the default design for foldables going forward. Rumor has it that Apple feels the same way, with a similar squat shape widely predicted for the\nfirst foldable iPhone\n, expected to launch in September.\nWhether you want to give the credit to Apple, Samsung, or even Huawei (which got here first with the\nPura X Max\n), I think they might be onto something. After a week, the Z Fold 8 feels comfortable, natural, and\nnormal\n, despite being the short …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/tech/972387/samsung-galaxy-z-fold-8-review",
+      "published_at": "2026-07-29T08:22:03-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.1,
+      "category": "技巧观点"
+    },
+    {
+      "title": "微软 Xbox CTO：将修复服务器宕机时实体光盘游戏无法运行的问题",
+      "content": "IT之家 7 月 29 日消息，微软 Xbox 首席技术官（CTO）最新声明显示，公司正在推出一项修复措施，以解决服务中断期间实体光盘游戏无法运行的问题。\n此前，Xbox 曾遭遇一次严重服务故障，导致其在线服务受到影响，许多功能无法使用，同时部分已下载游戏也无法启动。当时，Xbox 首席技术官曾对此事件作出回应，表示：“\n这是不可接受的情况\n。”如今，他又针对服务中断期间出现的实体光盘游戏无法运行问题发表了进一步说明。\nIT之家注意到，Xbox CTO 斯科特 · 范 · 弗利特（Scott Van Vliet）在接受 The Verge 采访时，回应了近期服务中断期间实体光盘游戏无法使用的问题。\n他首先确认，确实有玩家反馈称，在此次故障期间，他们无法玩自己购买的光盘版游戏。范 · 弗利特解释称，Xbox 主机会对光盘版游戏执行“授权验证”（entitlement checks），但他强调，这类验证“本不应该阻止玩家访问自己的游戏，这是系统设计时的预期”。\n范 · 弗利特表示，Xbox 已经发现部分主机存在无法在服务中断期间访问“已保存授权信息”（saved entitlements）的问题。这些保存的授权信息原本就是为了让玩家即使在网络服务中断时，也能够运行自己的光盘版游戏。\nXbox 计划通过即将推出的一次系统更新修复这一问题。\n对于不了解该机制的玩家来说，“授权”（entitlements）指的是光盘内容所对应的数字版权许可信息。即便游戏以实体光盘形式存在，主机仍需要通过这些数字授权信息确认玩家拥有运行该内容的权利。",
+      "link": "https://www.ithome.com/0/983/320.htm",
+      "published_at": "2026-07-29T13:15:41+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.09,
+      "category": "产品更新"
+    },
+    {
+      "title": "Xbox outage shouldn&#8217;t have affected games on disc, Microsoft confirms",
+      "content": "After the recent Xbox outage even blocked people from playing offline disc-based console games, Microsoft is trying to soothe concerns that you don't truly own anything under Xbox's license system. In a statement to\nThe Verge\n, Xbox technology chief Scott Van Vliet says that while physical game discs are subject to licensing inspections, that shouldn't have prevented them from working during this week's outage, or while consoles are offline.\n\"We're looking into reports that some players were unable to access games using discs as expected during the service interruption. Disc-based entitlement checks should not prevent players from accessing  …\nRead the full story at The Verge.",
+      "link": "https://www.theverge.com/games/972416/xbox-outage-game-disc-entitlement-check-issue",
+      "published_at": "2026-07-29T06:58:29-04:00",
+      "source": "The Verge",
+      "weight": 0.9,
+      "score": 7.07,
+      "category": "技巧观点"
+    },
+    {
+      "title": "东风汽车：全栈自研 1500kW 兆瓦超充桩、300kW 千伏电驱样机下线",
+      "content": "IT之家 7 月 29 日消息，东风汽车研发总院今日宣布，千伏电驱、兆瓦超充桩双产品样机于东风全球创新中心正式下线。\nIT之家附两款新品介绍如下：\n千伏电驱动产品 iD5-300SN\n搭载 1500V 耐压 SiC 功率模块，电压覆盖 450V 至 1000V，峰值功率达 300kW，兼容 800V 平台并可向上拓展至 1200V；\n依托千伏架构、智能可变驱动参数与自研同轴减速箱，CLTC 效率行业领先；\n集成电机绕组复用升压充电功能，峰值充电功率 180kW，适配市面 500V、750V 快充桩；\n极致空间优化设计使整机功率密度较上一代产品增加 30%，大幅降低整车底盘布置难度；\n产品将赋能马赫动力，\n支撑奕境首款千伏车型投产\n。\n兆瓦超充桩\n东风汽车首款全自主研发的大功率充电产品\n，搭载 1.2MW 主机，支持灵活并柜，功率可拓展至 2.4MW 及以上；\n单枪峰值功率 1500kW、峰值电流 1500A，覆盖 150V–1000V 超宽电压平台；\n整机效率≥96.7%，是新能效国标实施后行业首批一级能效大功率充电产品；\n依托模块化、平台化设计，设备可适配乘用车、商用车多类场景。",
+      "link": "https://www.ithome.com/0/983/318.htm",
+      "published_at": "2026-07-29T13:13:48+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.04,
+      "category": "产品更新"
+    },
+    {
+      "title": "中国电信：8 月 1 日起，其他第三方互联网渠道不再提供电信号卡办理相关服务",
+      "content": "IT之家 7 月 29 日消息，中国电信官网发布关于规范互联网渠道售卡管理的公告（\nhttps://www.189.cn/web/notice/detail\n?order=1&offerCode=519526800001\n）。自 2026 年 8 月 1 日起，其他第三方互联网渠道不再提供电信号卡办理相关服务。\nIT之家附公告原文如下：\n尊敬的用户：\n近期，我司发现部分不法商家擅自冒用“中国电信授权合作”的名义发布虚假售卡信息，或假借售卡名义收集用户的身份证件、住址、联系方式等个人敏感信息，侵害了用户权益，给用户带来了极大的信息泄露风险。\n为保障用户权益和数据信息安全，中国电信将对互联网渠道号卡订购业务进行统一规范。\n自 2026 年 8 月 1 日起\n，用户如需在互联网渠道订购中国电信号卡，请通过中国电信 App、中国电信官方网站（\nwww.189.cn\n）等官方渠道办理，\n其他第三方互联网渠道不再提供电信号卡办理相关服务\n。\n感谢您的理解与支持。",
+      "link": "https://www.ithome.com/0/983/303.htm",
+      "published_at": "2026-07-29T12:25:29+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.91,
+      "category": "模型发布"
+    },
+    {
+      "title": "马斯克：已要求 SpaceXAI 团队以非破坏性的方式扫描书籍，而不是直接切除书脊",
+      "content": "IT之家 7 月 29 日消息，据调查媒体 404 Media 此前报道，人工智能公司正在大量收购稀缺图书，使用切除书脊的高速扫描设备进行数字化，随后将纸质原件粉碎销毁。\nIT之家注意到，马斯克昨日转发了这篇报道，并表示：\n我已要求 SpaceXAI 团队妥善保存图书馆中的所有珍稀图书，并采用非破坏性的方式进行扫描，\n而不是直接切除书脊进行扫描\n。\n据报道，作为当前卷入版权诉讼的主要 AI 公司之一，Anthropic 曾投入数百万美元购买大量纸质图书，用于提取内容训练 Claude AI 模型，随后再将这些图书销毁。\n非破坏性扫描通常使用俯拍扫描仪、平板扫描仪或 V 型扫描设备，在不拆解图书的情况下完成数字化。而破坏性扫描则会直接拆开书籍，将每一页送入高速工业扫描仪进行处理。\n由于破坏性扫描效率更高、成本更低，因此 AI 公司普遍选择这一方式，最终导致数百万本纸质图书被拆毁\n。\n相关阅读：\n《\nAI 公司被曝大量收购旧书，以获取“纯净”训练素材\n》",
+      "link": "https://www.ithome.com/0/983/328.htm",
+      "published_at": "2026-07-29T13:52:07+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.86,
+      "category": "行业动态"
+    },
+    {
+      "title": "四项世界之最，我国 630℃ 二次再热发电机组全容量投产",
+      "content": "IT之家 7 月 29 日消息，据央视新闻报道，7 月 28 日，中国大唐山东郓（IT之家注读音：yùn）城 630℃ 二次再热国家电力示范项目\n全容量投产\n，正式转入商业稳定运行阶段。\n大唐郓城 630°C 国家电力示范项目在全球首次突破了同类机组发电热效率 50% 的“天花板”，将机组再热蒸汽温度提高到 631℃，实现了\n效率、温度、压力、能耗等四项世界之最\n。\n据介绍，传统的一次再热技术，蒸汽仅回炉重新加热一次；\n二次再热，则是将蒸汽先后两次送入锅炉逐级加温，能耗更低，发电却更多\n。项目采用了 4 种新型耐高温特种钢材，攻克耐高温高压材料长期依赖进口的“卡脖子”难题，\n整体设备国产化率达 98.89%\n。\n中国大唐郓城国家电力示范项目总工刘帅表示，这个项目每年能够减少二氧化碳排放 54 万吨，相当于种植了一片 2000 多个标准足球场大小的森林。真正实现高效、低碳、清洁、稳定发电，为传统能源绿色升级提供了可复制、可推广的样板。",
+      "link": "https://www.ithome.com/0/983/249.htm",
+      "published_at": "2026-07-29T09:56:51+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.86,
+      "category": "技巧观点"
+    },
+    {
+      "title": "华为 WATCH ULTIMATE DESIGN 非凡大师尊界定制款智能腕表上市，24999 元",
+      "content": "IT之家 7 月 29 日消息，华为 WATCH ULTIMATE DESIGN 非凡大师尊界定制款智能腕表现已开售，该表采用古法黄金工艺，支持海豚声呐通信、北斗卫星语音消息等功能，\n售价 24999 元\n。\n京东\n华为（HUAWEI）WATCH ULTIMATE DESIGN 非凡大师 尊界定制款\n24999 元\n直达链接\n据介绍，这块智能腕表是基于华为 WATCH ULTIMATE DESIGN 非凡大师“紫金”系列打造，新增尊界定制功能，包括尊界专属表盘、鸿蒙智行 App 一键备车、星闪车钥匙（自动唤醒迎宾灯语）、车表联动救援等。\n另外，该手表还采用星钻切割设计 + 古法黄金工艺，业界首创复合稀土紫色陶瓷表圈，支持北斗卫星消息、星闪连接智慧控车、海豚声呐通信、X-TAP 智感窗、鸿蒙 AI 等功能。\n京东\n华为（HUAWEI）WATCH ULTIMATE DESIGN 非凡大师 尊界定制款\n24999 元\n直达链接\n2026 年数码家电政府补贴持续进行中，IT 之家为大家汇总国补领券地址，买数码家电之前记得领取。\n数码补贴：\n点此领券\n手机 / 平板 / 3C 数码支持 8.5 折政府补贴，不超过 6000 元的产品至高立减 500 元。\n家电补贴：\n点此领券\n多类家电支持 8.5 折政府补贴，单品至高补贴 1500 元。",
+      "link": "https://www.ithome.com/0/983/271.htm",
+      "published_at": "2026-07-29T11:09:24+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.85,
+      "category": "产品更新"
+    },
+    {
+      "title": "忆联公布 UH812c / UH832c 企业级固态硬盘：NAND 升级，12GB/s 顺序写入",
+      "content": "IT之家 7 月 29 日消息，忆联 (Union Memory) 近日公布了其 PCIe Gen5 企业级固态硬盘新品 UH812c / UH832c，\nUH812c 为 1DWPD 寿命型号\n、\nUH832c 则拥有 3DWPD\n。\n这两款产品采用新款 NAND 闪存存储介质并进行深度调优，相较此前推出的 UH812a 系列\n顺序写入提升 14%、随机写入提升 20%，4KB 随机读取时延低至 52μs\n。\nUH812c / UH832c\n基于 3D eTLC 和忆联自研主控、自主固件\n，采用 PCIe Gen5 ×4 接口，符合 NVMe 2.0 协议，支持 U.2 与 EDSFF\nE3.S\n1T 外形规格，最大容量为 16TB 级。\nUH812c / UH832c\n均支持至高 14.9GB/s 的顺序写入速率和至高 12GB/s 的顺序读取速率\n，其中 UH832c 随机读写速率至高可达 3500K IOPS 和 1100K IOPS；4KB QD1 顺序读写时延为 7μs / 6μs、4KB QD1 随机写入时延也都是 6μs；闲置功耗≤5W，整盘峰值功耗≤25W，顺序读取峰值功耗≤18W。\n其支持 NVMe-MI 1.2b 带外管理、端到端 (E2E) 数据保护、数据安全擦除、Sanitize、256K 原子写入等特性；内置智能多流、TRIM、智能预读与命名空间流控；支持延时统计 + 慢 I/O 监控；支持固件在线升级；集成带外状态监控与资产管理。",
+      "link": "https://www.ithome.com/0/983/269.htm",
+      "published_at": "2026-07-29T10:58:44+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.83,
+      "category": "产品更新"
+    },
+    {
+      "title": "蔚来马麟谈“智驾小蓝灯将被禁用”：有些让后车跟车时看着刺眼，有安全隐患",
+      "content": "IT之家 7 月 29 日消息，“智驾小蓝灯将被禁用”话题今日登上热搜第二。\n上海蔚来汽车有限公司副总裁品牌与传播资深专家马麟刚刚发文谈及此事：\n有些比尾灯还亮。\n有些让后车跟车时看着刺眼，有安全隐患\n。这些肯定不合适。上网看了下，没看到明文。\n据IT之家今日早些时候报道，网传的公告截图显示，针对智驾车辆安装的“小蓝灯”，收到工信部管理要求：因“小蓝灯”不符合 GB4785 要求，即日起，禁止乘用车安装小蓝灯。具体管理措施如下：\n1、自本月工信部第 410 批产品公告申报起，要求所有检测机构对企业提供的检测样车进行认真核查，如安装了“小蓝灯”，则不予申请产品公告。\n2、由于小蓝灯不符合 GB4785，国家汽标委后续将会发布 GB4785 补充要求。\n3、针对企业已售带小蓝灯车辆，工信部下一步研讨处理措施。\n相关阅读：\n《\n网传智驾车辆“小蓝灯”不符合国标要求，后续将禁止乘用车安装\n》",
+      "link": "https://www.ithome.com/0/983/250.htm",
+      "published_at": "2026-07-29T09:59:29+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.73,
+      "category": "模型发布"
+    },
+    {
+      "title": "绿联“首款 2026 新国标 3C 认证”P8 移动电源发售：45W 有线 + 25W 无线，10000mAh 售 279 元",
+      "content": "IT之家 7 月 29 日消息，绿联旗下 P8 磁吸移动电源现已在京东发售，该产品提供 10000mAh 容量，号称拥有全行业首张磁吸充电宝新国标 3C 证书，也是首批 2026 新国标 3C 认证移动电源产品，定价为 279 元。\n京东\n绿联 P8 超薄磁吸充电宝\n279 元\n直达链接\n该产品机身厚度为 1.39cm，重量 216g，内置 MagSafe 磁吸线圈，可提供 25W 无线充电，同时配备了 USB-C 接口及 USB-C 自带线，支持 45W 有线充电，兼容 FCP、PD、QC、SCP、AFC 等协议。\n该产品采用 ATL 聚合物锂离子电芯，循环寿命达到 800 次，并通过约 4mm 钢针针刺、约 2.5 吨挤压及约 140℃ 热箱等严苛测试，测试过程中不起火、不爆炸。新品还加入多重散热矩阵，通过 NTC 智能控温和石墨烯复合散热结构降低充电温度。产品支持 App 连接，可实时查看电池温度、电池循环次数。\nIT之家附产品参数：",
+      "link": "https://www.ithome.com/0/983/282.htm",
+      "published_at": "2026-07-29T11:46:50+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.68,
+      "category": "产品更新"
+    },
+    {
+      "title": "绿联海外推出 Nexode 300W 带屏桌充，6C+1A+1DC 设计",
+      "content": "IT之家 7 月 29 日消息，绿联现已在海外推出一款 Nexode 300W 桌充，该机使用 6C+1A+1DC 设计，单 USB-C 接口至高提供 140W 输出。\n具体来看，该机采用星光灰机身，顶部和侧边使用金属质感处理，正面配备一块长条彩屏，可实时展示总输出功率以及各接口的充电状态，支持查看单口功率、电压、电流和正在使用的快充协议。彩屏下方提供了 6 个 USB-C 接口，其中 USB-C1/2/3 接口支持 140W 输出、USB-C4/5 支持 100W 输出、USB-C6 支持 30W 输出。\n该机侧面设有 1 个 USB-A 22.5W 接口和 1 个 DC 接口，其中 DC 接口提供 240W 峰值输出功率，可以为笔记本 / 迷你主机产品供电。\n同时，该机支持通过 Wi-Fi 或蓝牙连接手机 App，用户在近距离使用时可以通过蓝牙快速连接，在家庭或办公室环境中则可接入 2.4GHz Wi-Fi 网络，远程查看实时充电状态。",
+      "link": "https://www.ithome.com/0/983/270.htm",
+      "published_at": "2026-07-29T11:07:17+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.68,
+      "category": "产品更新"
+    },
+    {
+      "title": "泰坦军团公布 G2785M Glass 显示器：全贴合钢化玻璃，ARAF 镀膜",
+      "content": "IT之家 7 月 29 日消息，泰坦军团 (Titan Army) 昨日公布了元战系列显示器新品 G2785M Glass。这一型号是对早些时候推出的无后缀版 G2785M 的升级，配备全贴合钢化玻璃，拥有 AR（抗反射）AF（抗指纹）镀膜。\n泰坦军团表示，G2785M Glass 上的\n全贴合钢化玻璃消除了层间空气对显示器光学效果的影响\n，保障了画面的通透程度，同时\n提升了其防爆与耐刮能力\n；而 ARAF 镀膜除了名称中包含的能力外\n还能抵御油性物质等污渍和使用痕迹\n，更易清洁打理。\n而在这些新功能之外，G2785M Glass 与 G2785M 共享技术基础。其\n基于 26.5\" QHD (2560×1600) 500Hz QD-OLED 显示面板\n，获得 VESA DisplayHDR True Black 500 认证，APL 3% 下 HDR 峰值亮度 1000nits，色域 99% DCI-P3 / 98% Adobe RGB。\n其集成双模式光照系统和折叠式金属材质耳机挂钩，拥有带刻度标记的大调节范围人体工学支架，标配束线扣；提供 2 个 HDMI 2.1、2 个 DisplayPort 1.4、1 个 USB-B 上行、2 个 USB-A 下行、1 个 3.5mm 音频输出插孔。",
+      "link": "https://www.ithome.com/0/983/272.htm",
+      "published_at": "2026-07-29T11:17:06+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.66,
+      "category": "产品更新"
+    },
+    {
+      "title": "上交所投保专委会三大调研齐发，全面覆盖防非打非、AI应用与纠纷化解",
+      "content": "7月29日从业内获悉，上海证券交易所理事会投资者教育和保护专门委员会今年确定三项重点研究课题——非法证券活动的防控机制建设、人工智能在证券服务中的应用边界与合规治理、证券公司投诉典型情形识别与纠纷化解机制。目前，对应三份专项调研问卷已陆续发至各会员单位，一场覆盖证券行业的投保体系“深度体检”正在展开。券商人士表示，从问卷设计来看，监管思路正从“有没有”转向“好不好”——不再满足于建章立制，而是深入到机制运转的实际效能、技术手段的真实效果、跨部门协同的堵点打通层面。相关调研成果有望为后续行业政策制定与最佳实践推广提供一手依据。（中证报）",
+      "link": "https://36kr.com/newsflashes/3916706867867009?f=rss",
+      "published_at": "2026-07-29T20:40:15+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.65,
+      "category": "行业动态"
+    },
+    {
+      "title": "朗界 M540A01 三防新机入网：搭高通 QCM6490 处理器，为诺基亚 IS540.1 工业手机“远房兄弟”",
+      "content": "IT之家 7 月 29 日消息，朗界旗下新款 RG540 工业手机（公网对讲机）已通过电信设备进网许可，该机具体型号为 M540A01，相对于现款 RG540 核心参数一致，预计是组件供应商方面有所变更。\n参数方面，该机配备一块 6 英寸 1080×2160 分辨率 6 英寸 TFT 面板，匹配 5Mp 前置摄像头；手机后置 48Mp 摄像头。其搭载主频 2.7GHz 的 8 核处理器（高通 QCM6490），配备 8GB RAM + 128GB 内置存储，最高支持 512GB 的 SD 卡扩展存储，配备 4400mAh 额定容量电池，运行安卓操作系统。\n值得一提的是，在公开网络上搜索“M540A01”，反而能找到\ni.safe\n旗下的 MOBILE IS540.1 工业手机结果，查看相应官网产品，可以发现该机型号同样为 M540A01，外形、配置与上述朗界 RG540 几乎一致，预计就是 RG540 的“套娃机”。\n然而实际上诺基亚先前曾联合\ni.safe\n，基于其 MOBILE IS540.1 工业手机推出了一款带有“NOKIA”标的“诺基亚 IS540.1”产品，也就是说目前这款朗界 M540A01 本质上是“诺基亚 IS540.1”的远房兄弟。",
+      "link": "https://www.ithome.com/0/982/793.htm",
+      "published_at": "2026-07-29T12:10:37+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.62,
+      "category": "产品更新"
+    },
+    {
+      "title": "泰坦军团推出裸眼 3D 显示器“M27E6V-3D”：27 英寸 4K 185Hz 面板 + 三扬，8888 元",
+      "content": "IT之家 7 月 29 日消息，泰坦军团现已在京东上架一款型号为“M27E6V-3D”的 27 英寸裸眼 3D 显示器，该机为 4K 185Hz 规格，\n定价为 8888 元\n，部分地区国补后 7999.2 元。\n京东\n泰坦军团裸眼 3D 显示器“M27E6V-3D”\n8888 元\n直达链接\n该机配备一块 3840x2160 分辨率 185Hz 刷新率 2304 分区 QD Mini LED 背光 Fast IPS 面板，GtG 响应速度 1ms，HDR 峰值亮度 1400 尼特，XDR 峰值亮度 2000 尼特，支持 10-Bit 色彩（8-Bit + FRC）。凭借其配备的 3D 立体光学透镜及眼动追踪摄像头，能够搭配软件实现普通 2D 内容转 3D、3D 模型一键渲染、游戏裸眼 3D 化等特性。\n该机支架支持升降 / 倾斜 / 旋转，显示器本体背部带有氛围灯，提供 1 个 12W 低音扬声器和双 5W 中高音扬声器。接口方面，显示器提供了 2 个 HDMI 2.1、1 个 DP 1.4、1 个 USB-C 90W、2 个 USB-A（KVM）、1 个 3.5mm 音频接口。\nIT之家附产品参数：",
+      "link": "https://www.ithome.com/0/983/305.htm",
+      "published_at": "2026-07-29T12:39:12+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.57,
+      "category": "模型发布"
+    },
+    {
+      "title": "纽约州新规明年上路：用户若想刷到算法推荐内容，需提前验证年龄",
+      "content": "IT之家 7 月 29 日消息，根据纽约州总检察长莱蒂希娅 · 詹姆斯公布的《儿童安全法》最终实施规则，纽约居民今后若想继续使用 Instagram、TikTok 等平台的\n算法推荐信息流\n，或在午夜后接收通知，将需要先完成年龄验证。\n该法将于 2027 年 1 月 25 日正式生效，平台每次违规最高可被\n罚款 5000 美元\n（IT之家注：现汇率约合 33892 元人民币）。\n对于提供用户生成内容、用户\n至少 20% 的使用时间集中在算法推荐信息流\n上的社交媒体平台，平台若要继续向成年人开放算法推荐信息流，或允许成年人在午夜 12 时至早晨 6 时接收通知，就必须采用\n达到规定准确率的方法核实用户年龄\n。\n细则没有指定统一的年龄核验方式，同时也要求平台\n将误报率控制在较低水平\n，并能识别 98% 的规避年龄验证行为。平台可以要求用户提交政府签发的身份证件，但同时必须至少提供一种其他验证方式。年龄核验完成后，平台\n必须立即删除收集的信息\n，或对信息进行去标识化处理。\n除此之外，细则还明确了家长授权未成年人使用年龄限制功能的流程。18 岁以下用户可以申请获得父母许可，\n但必须同意平台向父母发送通知\n。",
+      "link": "https://www.ithome.com/0/983/283.htm",
+      "published_at": "2026-07-29T11:46:57+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.56,
+      "category": "论文研究"
+    },
+    {
+      "title": "OPPO 神秘 8000mAh 电池新机曝光：搭 6.57 英寸 1080P 直屏，预计为 A7 Pro",
+      "content": "IT之家 7 月 29 日消息，博主 @熊猫很禿然 发文，曝光了隶属 OPPO A7 系列产品线的新机，该机整体重量 204g、厚度 8.8mm，正面将配备一块 6.57 英寸 1080P 直屏（预计为 OLED 面板），搭载“2.4GHz 处理器”（预计为高通骁龙 4 Gen 5），内置 8000mAh 电池，支持 80W 有线充电。\n综合此前已曝光的 OPPO A7 Pro Max 规格，预计该博主本次曝光的这款新机为 OPPO A7 Pro。\n作为参考，此前消息显示 OPPO A7 Pro Max 厚度 8.47mm，重量 226g，正面配备一块 6.78 英寸 1.5K 120Hz OLED 直屏，匹配 50Mp 自拍摄像头；手机背面配备 50Mp 主摄 + 2Mp 辅助镜头。搭载高通骁龙 4 Gen 5 芯片，拥有 10000mAh 单电芯大电池，支持 80W 有线充电。",
+      "link": "https://www.ithome.com/0/983/278.htm",
+      "published_at": "2026-07-29T11:38:08+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.53,
+      "category": "产品更新"
+    },
+    {
+      "title": "芝奇 AMD EXPO ULL 内存模组焰锋戟 X 上市：16GB×2，6000CL36，4099 元",
+      "content": "IT之家 7 月 29 日消息，\nG.SKILL\n（芝奇）现已在电商平台上架支持 AMD EXPO Technology: Featuring Ultra Low Latency (ULL) 超频技术的焰锋戟 X (Trident Z5 NeoX RGB) 系列 DDR5 内存模组。\n此次贩售型号为 32GB (16GB×2) 套条，预设传输速率 6000MT/s，预设时序 CL36-36-36-76，工作电压 1.35V，\n定价 4099 元\n。\n京东\n芝奇 焰锋戟 X 内存 16GB×2 6000CL36\n4099 元\n直达链接\n在维持相同内存速度与主要时序的前提下，\n支持 EXPO ULL 技术的内存模组透过新增多项低延迟次时序优化设定，进一步降低内存读写延迟\n。这在非 X3D 的 AMD 锐龙桌面处理器上可带来更明显的性能收益。",
+      "link": "https://www.ithome.com/0/983/280.htm",
+      "published_at": "2026-07-29T11:43:07+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.42,
+      "category": "技巧观点"
+    },
+    {
+      "title": "美国商务部与格罗方德签署意向书：拟拨款 3 亿美元推进硅光子发展",
+      "content": "IT之家 7 月 29 日消息，根据 GlobalFoundries（格罗方德）当地时间今日公告，该企业已与美国商务部签署一份意向书 (ROI)。\n根据该意向书，\n美国商务部下属的《芯片法案》研发办公室预计将向格罗方德拨款 3 亿美元\n（IT之家注：现汇率约合 20.34 亿元人民币），用于推进下一代光学材料、晶圆技术、先进封装技术的研发。\n该激励举措将加速格罗方德在下一代硅光子学 (SiPh) 晶圆技术、新型光学材料、先进封装（包括经过验证的 3D 混合键合技术）方面的研发，从而\n推动近封装光学器件（NPO）和共封装光学器件（CPO）的推出\n。\n而根据另一项协议，\n美国商务部将获得格罗方德的股权\n，这部分股权在当下的占比约为 1%。",
+      "link": "https://www.ithome.com/0/983/302.htm",
+      "published_at": "2026-07-29T12:24:14+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.16,
+      "category": "技巧观点"
+    },
+    {
+      "title": "猫头鹰扩大与 Prusa Research 合作，推出标志色 PETG 长丝 3D 打印耗材",
+      "content": "IT之家 7 月 29 日消息，Noctua（猫头鹰）当地时间 28 日宣布扩大与 3D 打印企业 Prusa Research 的合作，在此前推出联名款 Prusament PLA 长丝 3D 打印耗材后将猫头鹰标志性的米色与棕色导入 PETG 长丝。\nIT之家了解到，\nPETG 相较 PLA 具有更高的韧性和耐温性\n，可满足更严苛的应用需求。这意味着基于 PETG 的 3D 打印成品支持定制 PC 机箱、电子设备外壳等使用场景。\nPrusament PETG Noctua Beige / Noctua Brown 长丝定价为 1kg / 32.99 美元（IT之家注：现汇率约合 223.6 元人民币）。",
+      "link": "https://www.ithome.com/0/983/306.htm",
+      "published_at": "2026-07-29T12:39:27+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.09,
+      "category": "技巧观点"
+    },
+    {
+      "title": "腾讯混元开源AngelSpec",
+      "content": "36氪获悉，7月29日，腾讯混元团队宣布正式开源AngelSpec。一个覆盖drafter训练、架构设计到线上部署的投机解码框架，并同步开源Hy3-A21B的MTP与DFly drafter权重及训练代码。",
+      "link": "https://36kr.com/newsflashes/3916684374371721?f=rss",
+      "published_at": "2026-07-29T20:17:22+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.05,
+      "category": "模型发布"
+    },
+    {
+      "title": "Keychron 预热中小手鼠标 G3 Air：碳纤维复合材料，43g",
+      "content": "IT之家 7 月 29 日消息，Keychron（渴创）近日对鼠标新品 G3 Air 进行了预热。这一\n质量仅 43g\n的型号将于 8 月 31 日正式推出。\nKeychron G3 Air 采用碳纤维复合材料，碳纤维含量 30%。其模具设计面向中小手型，适配全部握姿；表面装饰以 3D 立体“蛇鳞”纹理，覆盖玄雾防滑涂层；底部配备 100% PTFE 脚垫。\n在性能方面，\n这款鼠标搭载 Nordic nRF54L15 主控、原相 PAW3950 传感器、TTC  猎鹰 80M 微动\n，在有线 USB-C 和无线 2.4GHz 模式下均支持 8kHz 回报率，配套彩屏 2.4GHz 信号接收器。",
+      "link": "https://www.ithome.com/0/983/314.htm",
+      "published_at": "2026-07-29T13:05:14+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.05,
+      "category": "技巧观点"
+    },
+    {
+      "title": "华为鸿蒙电脑生态应用数量突破 19000 款，覆盖办公、娱乐、创作、游戏等核心场景",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为终端 BG 平板与 PC 产品线总裁朱懂东宣布，鸿蒙电脑生态应用数量突破 19000 款。\n据介绍，鸿蒙电脑生态应用全面覆盖办公、娱乐、创作、游戏等核心场景。\nIT之家从沟通会现场了解到，华为 PC 品牌力也再创新高：2026 年 6 月，华为笔记本电脑认知度达到 94%；2026 年 6 月，华为笔记本电脑考虑度达到 50%。",
+      "link": "https://www.ithome.com/0/983/246.htm",
+      "published_at": "2026-07-29T09:46:25+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.05,
+      "category": "产品更新"
+    },
+    {
+      "title": "Artium AI成为OpenAI高级合作伙伴，助力企业开发定制化智能体AI方案",
+      "content": "7月29日，美国智能体AI软件咨询公司Artium AI宣布，已加入OpenAI合作伙伴网络，成为OpenAI高级合作伙伴。公司表示，未来将与OpenAI合作，帮助企业在金融服务、医疗、科技、电信、媒体和娱乐等领域构建、部署和扩展定制化智能体AI解决方案。（新浪财经）",
+      "link": "https://36kr.com/newsflashes/3916672399207816?f=rss",
+      "published_at": "2026-07-29T20:19:01+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.0,
+      "category": "行业动态"
+    },
+    {
+      "title": "小米澎程系列实车明日起陆续到店，覆盖全国 146 城 499 家门店",
+      "content": "IT之家 7 月 29 日消息，小米官方宣布，小米澎程 7 月 30 日起实车陆续到店，覆盖全国 146 城 499 家门店。\n小米澎程作为小米汽车的第二个系列产品，经过 566 台测试车、累计超过 428 万公里真实路测，覆盖极寒、高温、高海拔等极限工况。首发将推出 N90 系列（大七座旗舰增程 SUV）与 N70 系列（大五座四驱增程 SUV）两款车型。\nIT之家注意到，小米澎程已官宣将于 7 月 30 日晚 7 点举办技术发布会。",
+      "link": "https://www.ithome.com/0/983/321.htm",
+      "published_at": "2026-07-29T13:22:04+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 5.9,
+      "category": "模型发布"
+    },
+    {
+      "title": "永鼎股份：控股子公司签订约11.33亿元大功率激光器芯片采购订单",
+      "content": "36氪获悉，永鼎股份公告，公司控股子公司苏州鼎芯光电科技有限公司于近一个月收到A客户、B客户关于大功率激光器芯片产品的采购订单，相关订单合计金额分别为5.42亿元人民币（含税）、0.87亿美元（含税）（折合人民币约5.91亿元）。若订单顺利实施，预计将对公司2026年度及2027年度经营业绩有积极影响。",
+      "link": "https://36kr.com/newsflashes/3916670326435463?f=rss",
+      "published_at": "2026-07-29T20:10:59+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "产品更新"
+    },
+    {
+      "title": "Framework Laptop 13 Pro review: A repairable notebook at the top of the class",
+      "content": "The Framework 13 Pro is a class-leading Windows laptop that, right now, is just a little too pricey.",
+      "link": "https://www.engadget.com/2225931/framework-laptop-13-pro-review/",
+      "published_at": "2026-07-29T13:00:00+00:00",
+      "source": "Engadget",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "技巧观点"
+    },
+    {
+      "title": "As AI content floods the internet, Pangram raises $9M to detect it",
+      "content": "Pangram has raised $9 million to scale its AI detection software. The startup has also released a new AI text detection model, Pangram 4, and an AI image detection model in research preview.",
+      "link": "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/",
+      "published_at": "2026-07-29T11:00:00+00:00",
+      "source": "TechCrunch",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "技巧观点"
+    },
+    {
+      "title": "达尔优 Flex87 机械键盘 8 月 1 日发布：全新“空悬 Gasket”结构、搭载“皓空轴”",
+      "content": "IT之家 7 月 29 日消息，达尔优发文，预热将于 8 月 1 日推出一款“Flex87” 87 键机械键盘，该产品主打全新的“空悬 Gasket”结构与极致软弹手感。\n据官方介绍，该产品采用自研“云轮硅胶”作为全域缓冲层，在键盘边缘和角落共放置 12 颗高弹性气囊硅胶粒，将内胆托起悬浮。相比传统 Gasket 结构，按压形变空间更大、软弹感更足，边缘按键也不易震手。\n同时，该键盘可选皓空轴，在底部加入特制降噪凸台，使敲击声音更沉闷集中。键盘在有线和 2.4G 无线下均支持 8KHz 回报率，理论延迟低至 0.125ms。",
+      "link": "https://www.ithome.com/0/983/281.htm",
+      "published_at": "2026-07-29T11:43:51+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 5.75,
+      "category": "模型发布"
+    },
+    {
+      "title": "英伟达合作伙伴广达电脑寻求发行全球存托股票筹资不超22亿美元",
+      "content": "7月29日消息，人工智能服务器制造商广达电脑计划通过发行全球存托股票（GDS）筹资至多21.9亿美元。这家英伟达合作伙伴拟发行4900万份证券，每份发行价介于43.91美元至44.77美元。（界面）",
+      "link": "https://36kr.com/newsflashes/3916672776383877?f=rss",
+      "published_at": "2026-07-29T20:23:29+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.35,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Google shuts down its Nobel-prize winning AlphaFold project as it focuses on Gemini",
+      "content": "DeepMind's award-winning AlphaFold team is no more.",
+      "link": "https://www.engadget.com/2225849/google-shuts-down-alphafold/",
+      "published_at": "2026-07-29T10:40:36+00:00",
+      "source": "Engadget",
+      "weight": 0.9,
+      "score": 5.35,
+      "category": "模型发布"
+    },
+    {
+      "title": "离 AI 最近的老牌写作工具不聊 AI：iA Writer 8.0 大版本更新",
+      "content": "本文为你梳理 8.0 版本 iA Writer 的主要亮点。\n查看全文",
+      "link": "https://sspai.com/post/112787",
+      "published_at": "2026-07-29T17:30:00+08:00",
+      "source": "少数派",
+      "weight": 0.85,
+      "score": 4.85,
+      "category": "产品更新"
     }
   ],
-  "updated_at": "2026-07-29T09:43:02.269701+00:00"
+  "updated_at": "2026-07-29T14:05:21.805197+00:00"
 }

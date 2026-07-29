@@ -46819,3 +46819,718 @@ Traceback (most recent call last):
     raise errors.Error("\n".join(msg))
 streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
 2026-07-29 18:15:05,650 - INFO - 快速缓存模式: 距离上次抓取仅 538 秒，直接返回数据库数据
+2026-07-29 18:22:50,833 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 18:22:50,866 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 18:22:56,975 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 19:13:14,327 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 19:13:14,600 - INFO - 调度器已在运行，跳过重复启动
+2026-07-29 19:13:14,601 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-29 19:46:36,580 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 21:12:14,916 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 21:12:15,432 - INFO - 调度器已在运行，跳过重复启动
+2026-07-29 21:12:15,432 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-29 21:12:23,130 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 21:19:34,029 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 21:19:34,214 - INFO - 调度器已在运行，跳过重复启动
+2026-07-29 21:19:34,214 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-29 21:19:35,651 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:04:06,034 - INFO - 启动日报定时任务调度器...
+2026-07-29 22:04:06,034 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-29 22:04:06,118 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-07-29 22:04:06,119 - INFO - Added job "每日AI日报生成" to job store "default"
+2026-07-29 22:04:06,119 - INFO - Scheduler started
+2026-07-29 22:04:06,137 - INFO - 定时任务调度器已启动
+2026-07-29 22:04:06,139 - INFO - 每天早上 6:00（北京时间）自动生成前一天的日报
+2026-07-29 22:04:06,139 - INFO - 启动时日报检查：当前北京时间 2026-07-29 22:04:06
+2026-07-29 22:04:06,140 - INFO - 20260728 的日报已存在，无需生成
+2026-07-29 22:04:06,140 - INFO - 20260727 的日报已存在，无需生成
+2026-07-29 22:04:08,385 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:04:16,805 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:04:16,956 - INFO - 调度器已在运行，跳过重复启动
+2026-07-29 22:04:16,956 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-29 22:04:17,367 - INFO - 增量抓取模式: 2026-07-29 10:15:05.652387+00:00 到 2026-07-29 14:04:17.345457+00:00
+2026-07-29 22:04:17,375 - INFO - 定时任务模式: 2026-07-29 10:15:05.652387+00:00 到 2026-07-29 14:04:17.345457+00:00
+2026-07-29 22:04:17,375 - INFO - 正在通过 arXiv API 抓取论文: 2026-07-29 10:15:05.652387+00:00 到 2026-07-29 14:04:17.345457+00:00
+2026-07-29 22:04:22,377 - INFO - arXiv API 请求URL: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Astat.ML+OR+cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.NE%29%2BAND%2BsubmittedDate%3A%5B202607291015%2BTO%2B202607291404%5D&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending
+2026-07-29 22:04:25,269 - INFO - arXiv API 抓取完成，共 100 篇论文
+2026-07-29 22:04:25,269 - INFO - 正在通过 GitHub API 抓取热门仓库: 2026-07-29 10:15:05.652387+00:00 到 2026-07-29 14:04:17.345457+00:00
+2026-07-29 22:04:29,006 - INFO - GitHub API 没有找到仓库
+2026-07-29 22:04:29,008 - INFO - 开始抓取 10 个信源的文章...
+2026-07-29 22:04:29,008 - INFO - 正在抓取信源: 36氪前沿科技
+2026-07-29 22:04:29,637 - INFO - 信源 36氪前沿科技 抓取完成，共 21 篇文章
+2026-07-29 22:04:29,638 - INFO - 正在抓取信源: 少数派
+2026-07-29 22:04:29,914 - INFO - 信源 少数派 抓取完成，共 1 篇文章
+2026-07-29 22:04:29,914 - INFO - 正在抓取信源: IT之家AI频道
+2026-07-29 22:04:31,184 - INFO - 信源 IT之家AI频道 抓取完成，共 60 篇文章
+2026-07-29 22:04:31,185 - INFO - 正在抓取信源: AI前线
+2026-07-29 22:04:31,394 - INFO - 信源 AI前线 抓取完成，共 0 篇文章
+2026-07-29 22:04:31,394 - INFO - 正在抓取信源: 开源中国
+2026-07-29 22:04:31,765 - INFO - 信源 开源中国 抓取完成，共 3 篇文章
+2026-07-29 22:04:31,765 - INFO - 正在抓取信源: Engadget
+2026-07-29 22:04:34,649 - INFO - 信源 Engadget 抓取完成，共 5 篇文章
+2026-07-29 22:04:34,649 - INFO - 正在抓取信源: Hacker News
+2026-07-29 22:05:16,758 - WARNING - 信源 Hacker News 解析异常: <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>
+2026-07-29 22:05:16,759 - INFO - 正在抓取信源: TechCrunch
+2026-07-29 22:05:18,296 - INFO - 信源 TechCrunch 抓取完成，共 3 篇文章
+2026-07-29 22:05:18,296 - INFO - 正在抓取信源: MIT Technology Review
+2026-07-29 22:05:20,649 - INFO - 信源 MIT Technology Review 抓取完成，共 1 篇文章
+2026-07-29 22:05:20,649 - INFO - 正在抓取信源: The Verge
+2026-07-29 22:05:21,067 - INFO - 信源 The Verge 抓取完成，共 7 篇文章
+2026-07-29 22:05:21,067 - INFO - 抓取完成，共获取 201 篇文章
+2026-07-29 22:05:21,067 - INFO - 主处理：开始处理 201 篇文章
+2026-07-29 22:05:21,067 - INFO - 去重：开始处理 201 篇文章
+2026-07-29 22:05:21,746 - INFO - 去重：完成，保留 201 篇文章
+2026-07-29 22:05:21,784 - INFO - 主处理：完成，共 163 篇高质量文章
+2026-07-29 22:05:21,830 - INFO - 新增 59 篇文章到数据库
+2026-07-29 22:06:08,518 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:06:08,560 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:06:36,478 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:06:36,531 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:06:59,252 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-29 22:06:59,301 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
