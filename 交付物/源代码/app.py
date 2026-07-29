@@ -927,11 +927,13 @@ def render_daily_report():
 
             for cat in cat_order:
                 cat_list = cat_articles_map.get(cat, [])
-                st.markdown(f"### 📁 {cat} ({len(cat_list)}篇)")
+                st.markdown(f"### 📁 {cat}")
                 if not cat_list:
                     st.markdown("暂无相关资讯")
                 else:
-                    for article in cat_list:
+                    sorted_cat_list = sorted(cat_list, key=lambda a: convert_to_beijing_time(a.get("published_at", "")), reverse=True)
+                    display_list = sorted_cat_list[:10] if len(sorted_cat_list) > 10 else sorted_cat_list
+                    for article in display_list:
                         dt = convert_to_beijing_time(article.get("published_at", ""))
                         st.markdown(f"""
 <div class="article-card">

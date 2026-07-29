@@ -176,7 +176,7 @@ class CourseGenerator:
     
     def _generate_daily_report_mock(self, articles: List[Dict]) -> str:
         """
-        Mock模式：使用模板生成每日总结简报
+        Mock模式：使用模板生成每日总结简报（与AI日报版面内容一致）
         
         Args:
             articles: 处理后的文章列表
@@ -184,48 +184,34 @@ class CourseGenerator:
         Returns:
             Markdown格式的每日简报
         """
-        today = datetime.now().strftime("%Y年%m月%d日")
-        
-        # 按分类分组
-        categories = ["模型发布", "产品更新", "行业动态", "论文研究", "技巧观点"]
-        category_groups = {cat: [] for cat in categories}
-        
-        for article in articles:
-            category = article.get("category", "技巧观点")
-            if category in category_groups:
-                category_groups[category].append(article)
-        
-        # 各分类内按评分从高到低排序
-        for cat in category_groups:
-            category_groups[cat].sort(key=lambda a: a.get("score", 0), reverse=True)
-        
-        # 生成TOP 5
-        top_5 = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[:5]
+        from datetime import timezone, timedelta as td
         
         def fmt_time(article):
-            """格式化发布时间"""
+            """格式化发布时间（与app.py中format_time保持一致）"""
             dt_str = article.get("published_at", "")
             if not dt_str:
                 return ""
             try:
                 if dt_str.endswith("Z"):
                     dt_str = dt_str[:-1] + "+00:00"
-                from datetime import timezone, timedelta
                 dt = datetime.fromisoformat(dt_str)
-                dt_beijing = dt.astimezone(timezone(timedelta(hours=8)))
+                dt_beijing = dt.astimezone(timezone(td(hours=8)))
                 return dt_beijing.strftime("%m-%d %H:%M")
             except Exception:
                 return dt_str[:16] if len(dt_str) >= 16 else dt_str
         
-        def score_label(score):
-            """评分等级标签"""
-            s = float(score) if score else 0
-            if s >= 7:
-                return f"{s:.2f}分"
-            elif s >= 5:
-                return f"{s:.1f}分"
-            else:
-                return f"{s:.1f}分"
+        def sort_key_publish_time(article):
+            """按发布时间排序的key（与app.py中AI日报版面保持一致）"""
+            dt_str = article.get("published_at", "")
+            if not dt_str:
+                return datetime.min.replace(tzinfo=timezone(td(hours=8)))
+            try:
+                if dt_str.endswith("Z"):
+                    dt_str = dt_str[:-1] + "+00:00"
+                dt = datetime.fromisoformat(dt_str)
+                return dt.astimezone(timezone(td(hours=8)))
+            except Exception:
+                return datetime.min.replace(tzinfo=timezone(td(hours=8)))
         
         def summary_text(article, max_len=120):
             """获取摘要文本"""
@@ -237,57 +223,71 @@ class CourseGenerator:
                 return content[:max_len] + "..."
             return content
         
-        def article_block(article, show_summary=True):
-            """生成单篇文章的Markdown块"""
+        def top5_article_block(article):
+            """生成TOP5文章的Markdown块（匹配AI日报版面TOP5卡片样式）"""
             title = article.get("title", "无标题")
             link = article.get("link", "")
             source = article.get("source", "未知")
             score = article.get("score", 0)
             cat = article.get("category", "")
-            pub_time = fmt_time(article)
             summary = summary_text(article)
             
             lines = []
-            # 标题行
             lines.append(f"**[{title}]({link})**")
-            # 元数据行（信源、时间、评分、分类）
             meta_parts = []
             meta_parts.append(f"📰 {source}")
-            if pub_time:
-                meta_parts.append(f"⏰ {pub_time}")
-            meta_parts.append(f"⭐ {score_label(score)}")
+            meta_parts.append(f"⭐ {score:.2f}")
             if cat:
                 meta_parts.append(f"🏷️ {cat}")
             lines.append(" | ".join(meta_parts))
-            # 摘要行
-            if show_summary and summary:
+            if summary:
                 lines.append(f"")
                 lines.append(f"> {summary}")
             return "\n".join(lines)
         
-        # 构建Markdown内容
-        content = f"""## 🎯 今日 AI 焦点 TOP 5
-
-"""
+        def cat_article_block(article):
+            """生成5大分类文章的Markdown块（匹配AI日报版面分类卡片样式）"""
+            title = article.get("title", "无标题")
+            link = article.get("link", "")
+            source = article.get("source", "未知")
+            score = article.get("score", 0)
+            pub_time = fmt_time(article)
+            
+            lines = []
+            lines.append(f"**[{title}]({link})**")
+            meta_parts = []
+            meta_parts.append(f"📰 {source}")
+            if pub_time:
+                meta_parts.append(f"⏰ {pub_time}")
+            meta_parts.append(f"⭐ {score}分")
+            lines.append(" | ".join(meta_parts))
+            return "\n".join(lines)
+        
+        # 生成TOP 5（按评分降序，与AI日报版面一致）
+        top_5 = sorted(articles, key=lambda x: x.get("score", 0), reverse=True)[:5]
+        
+        # 构建Markdown内容 - TOP 5板块
+        content = "## 🎯 今日 AI 焦点 TOP 5\n\n"
         for article in top_5:
-            content += article_block(article, show_summary=True)
+            content += top5_article_block(article)
             content += "\n\n---\n\n"
         
-        # 5大分类动态速览
-        content += f"""## 📊 5大分类动态速览
-
-"""
+        # 5大分类动态速览板块（与AI日报版面一致：按评分排序、最多10篇、无数量标注）
+        categories = ["模型发布", "产品更新", "行业动态", "论文研究", "技巧观点"]
+        content += "## 📊 5大分类动态速览\n\n"
         
         for category in categories:
-            articles_in_cat = category_groups[category]
-            cat_count = len(articles_in_cat)
-            content += f"### 📁 {category} ({cat_count}篇)\n\n"
+            cat_list = [a for a in articles if a.get("category") == category]
+            cat_list.sort(key=lambda a: a.get("score", 0), reverse=True)
             
-            if not articles_in_cat:
+            content += f"### 📁 {category}\n\n"
+            
+            if not cat_list:
                 content += "_暂无相关资讯_\n\n"
             else:
-                for article in articles_in_cat:
-                    content += article_block(article, show_summary=False)
+                display_list = cat_list[:10] if len(cat_list) > 10 else cat_list
+                for article in display_list:
+                    content += cat_article_block(article)
                     content += "\n\n---\n\n"
         
         total_count = len(articles)

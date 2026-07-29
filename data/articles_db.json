@@ -5699,7 +5699,1637 @@
       "weight": 0.9,
       "score": 4.65,
       "category": "技巧观点"
+    },
+    {
+      "title": "在大模型的下一阶段议题上，我们找到了一家做持续学习的中国Neo Lab",
+      "content": "文｜王欣逸\n编辑｜张雨忻\n见到Mind Lab创始人陈锴杰，是在北京的晚上9点半，他已经见了一天的投资人。\n陈锴杰是一位连续创业者，从杜克大学休学，做过AI互动故事平台MidReal，也推出了Personal Agent应用Macaron（马卡龙），上线当天就登顶了Product Hunt日榜；2025年10月，Mind Lab成立，团队约30余人，Mind Lab创始人Andrew Chen曾和姚顺雨共同发表FireAct论文，团队主要来自xAI、DeepMind、DeepSeek、字节跳动Seed、MIT和清华大学等企业与高校。他们以Neo Lab的形象再度出现在大众的视野里。\n他们所押注的方向，与图灵奖得主、强化学习之父Richard Sutton和OpenAI前CTO Mira Murati所强调的持续学习方向，高度一致。\n几天前，WAIC 2026首日主论坛上，Sutton发表演讲，强调了下一代AI的核心路线是经验驱动，而静态标注数据模式已触达天花板。DeepSeek近期也把持续学习带进了更多人的视野之中，声称\nAgent之后需要的解决的问题是持续学习，这也是下一代模型必须具备的能力。\n可见，后训练与持续学习，越来越成为下一阶段评判模型能力的关键点。\nMind Lab在上个月发布了Macaron-V1-Preview模型，此后业务迅速被推着往前走：商业化刚开始跑2周，ARR就达到了1000万美金。\nMacaron-V1-Preview的构成是：在GLM-5.1上，挂载了5个参数约1B的LoRA专家模块。尽管只是一个预览版的模型，Macaron-V1-Preview在多个Benchmark上的表现也很亮眼，不仅性能反超基座模型GLM-5.1外，还领先GPT 5.4、Claude Opus 4.6等一众模型。而超越基座的能力，就来自于挂载其上的LoRA。\n而真正让他们备受关注的，是用MoL（Mixture-of-LoRA）的方式做后训练的路径。在模型执行不同任务时，系统可以根据任务类型，动态切换到最适合的专家模块；在用户长时间的使用中，沉淀下来的数据也能积累出一个专属LoRA，能随着模型的不断调用而持续更新。\nPreview版本率先跑通了技术路径、做好了市场验证。紧接着，7月21日，Mind Lab发布并开源了Macaron-V1的正式版本。从官方发布的ben",
+      "link": "https://36kr.com/p/3916202023660929?f=rss",
+      "published_at": "2026-07-29T12:10:36+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 9.0,
+      "category": "模型发布"
+    },
+    {
+      "title": "问世以来最大更新：MCP 2026-07-28 规范发布，转向“无状态”核心",
+      "content": "IT之家 7 月 29 日消息，Anthropic 昨日（7 月 28 日）发布公告，宣布推出第 5 版模型上下文协议（MCP）规范，\n官方将本次更新定性为该协议问世以来规模最大、最系统性的一次颠覆式修订。\nIT之家注：MCP（Model Context Protocol，模型上下文协议）是由 Anthropic 于 2024 年 11 月底推出的一种开放标准开源协议，目的是统一大语言模型（LLM）与外部数据源和工具之间的通信方式。\n相比较旧版本规范（目前主流的 2025-11-25 版本），2026-07-28 版 MCP 协议最核心的变化是从“双方向的有状态（Stateful）连接”全面转向了“无状态（Stateless）核心”，并引入了独立的扩展生态系统。\n2025-11-25 及更早版本（旧规范）\n2026-07-28 最新版本（新规范）\n协议状态\n有状态（Stateful）\n完全无状态（Stateless）\n握手机制\n必须握手：客户端与服务器建立连接时，必须首发 initialize / initialized 请求进行初始化。\n取消握手：彻底移除了协议级别的初始化握手。新增 server / discover 允许预先探索，但不强制。\n会话管理\n依赖会话 ID：通过 Mcp-Session-Id 请求头固定会话。服务器必须在内存或 Redis 中维护连接状态。\n无会话（Sessionless）：完全移除了会话 ID。每个请求相互独立、完全自包含，带有所需的协议版本和能力。\n水平扩展性\n必须使用“粘性会话（Sticky Sessions）”，请求必须路由到同一台服务器实例。\n请求可以路由到任意网关或实例，可完美部署在 AWS Lambda、Cloudflare Workers 等服务器无服务（Serverless）架构中。\n新版本还引入版本化扩展框架，正式纳入 MCP Apps（MCP 应用）与 Tasks（任务）扩展。开发者无需修改核心协议，可借此增加交互式界面、长时间运行任务等能力。\n在授权方面，新规范强化了对生产环境 OAuth 2.0 与 OIDC 部署的适配。MCP 服务器无需采用变通方案，可连接 Entra（微软企业身份与访问管理服务）或 Okta（身份管理平台）等企业身份系统。",
+      "link": "https://www.ithome.com/0/983/102.htm",
+      "published_at": "2026-07-29T07:25:46+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 8.53,
+      "category": "模型发布"
+    },
+    {
+      "title": "AI智能浪潮重塑母婴赛道，吸牛裤如何实现 “智能育儿”？",
+      "content": "导语：\n凌晨三点，新手爸妈第三次起身，摸黑查看宝宝尿裤有无侧漏、臀部是否闷出红疹。依靠经验熬夜看护的传统育儿模式，已是无数家庭的共同困扰。而随着 AI 技术产业化落地，这一育儿痛点迎来全新解法。\n2022 年 ChatGPT 问世，拉开生成式 AI 商业化序幕。国内 AI 产业蓬勃发展，百模大战持续推进，AI 感知、物联网、大数据等技术日趋成熟，为实体产业智能化升级提供坚实支撑。\n母婴作为刚需赛道，顺势拥抱智能变革。新锐品牌吸牛裤抢先布局 AI 智能尿裤赛道，精准捕捉行业变革风口，依托自研硬核技术，开辟贴身智能育儿新路径。\n图片1\n育儿需求\n从“满足生存”转向“精准科学养护”\n90、95 后双职工父母成为母婴消费主力，育儿理念彻底摆脱传统经验主义，科学化、轻量化、低焦虑成为核心诉求。据易观《Z 世代新母婴人群消费洞察 2023》，51% Z 世代宝妈选购母婴产品优先选择智能款，44.1% 认为智能产品安全性更高，43.1% 看重便捷性。结合多份行业调研，新一代父母核心需求分为四点：\n职场育儿双重压力，急需减负工具\n92% Z 世代夫妻为双职工，95 后家庭母婴支出占家庭收入 30%，育儿投入更高，但夜间频繁起夜查看尿裤严重挤压休息时间，碎片化睡眠带来强烈育儿疲惫。他们不愿牺牲全部个人生活，迫切需要智能设备承接重复性看护工作，平衡工作、亲子与自我空间。\n数字原住民，信奉数据化科学养育\n95.4% 年轻父母购买母婴产品前会全网对比测评、成分与技术，拒绝长辈主观育儿经验；76.4% 推崇 “孩本位” 平等养育，宝宝哭闹、皮肤泛红、睡眠不安等问题，不再依靠主观猜测，而是需要温湿度、排泄、睡姿等客观生理数据作为护理依据。\n三重需求闭环：宝宝健康、自我松弛、低碳环保\n宝宝端：高度重视尿裤亲肤透气、低致敏，排斥闷湿引发红臀；\n家长端：追求低焦虑育儿，希望设备主动预警风险，无需时刻紧绷精神；\n社会端：可持续消费意识提升，反感一次性纸尿裤大量耗材浪费。\n智能化为高质量亲子陪伴腾挪空间\n年轻父母认知清晰：智能产品不是放任不管，而是减少无效看护劳动。省去整夜查尿裤、频繁更换的精力后，可专注亲子互动、情绪安抚，实现 “省力不缺席” 的新型亲子关系。\nAI“芯”升级，\n政策与消费双向驱动智能化浪潮\n母婴行业的智能化变革并非偶然，政策导向与新生代父母的育儿消费升级构成两大底层驱动逻辑，整条赛道",
+      "link": "https://36kr.com/p/3916187215408776?f=rss",
+      "published_at": "2026-07-29T16:30:52+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 8.25,
+      "category": "产品更新"
+    },
+    {
+      "title": "全球最轻 14 英寸金属笔记本华为 MateBook Pro S 亮相：搭麒麟 XE90 处理器，首创榫卯一体化结构",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，全球最轻 14 英寸金属笔记本 —— 华为 MateBook Pro S 笔记本首次公开亮相。\n该机将在 8 月 5 日的尊界时代旗舰 MPV 及华为全场景新品发布会上正式发布\n。\n据介绍，华为 MateBook Pro S 首创榫卯一体化结构，辅以外观无螺丝钉的纯净设计、镁锂合金与三段式主板，\n实现了 798g、11.9mm 的轻薄设计\n。\n该机也是全球首款支持 Wi-Fi 7+ 的 4 天线设计轻薄本\n，在网络连接方面宣称“轻薄本超远距离联网首次进入‘公里级’”。\n华为 MateBook Pro S 还是业界首款采用 10% 高硅电池的轻薄本\n，能量密度提升 15%、重量下降 10%；首次引入超级电荷泵技术，整机电源架构进化，续航提升 1 小时；支持智能功耗管理技术，涵盖芯片、屏幕、接口，续航再提升 3.7 小时。\n该机实现了 18 小时超长视频播放能力，宣称“在线、离线一样强大”；\n支持左右双 66W 反向超级快充\n，兼容 SCP / UFCS / PD 主流快充协议，并可提供开机 / 关机 / 待机全场景反充能力。\n华为 MateBook Pro S 还配备金刚铝风扇，拥有 3mm 厚度、102 片扇叶，宣称“比手机风扇还薄”；\n业界首创 3D 阶梯式扇叶，风量提升 20%、整机性能释放可达 20W\n；采用全新高导热垂直排布石墨烯热界面材料，垂直导热能力提升 50%。\nIT之家注意到，\n华为 MateBook Pro S 确认将搭载全新麒麟 XE90 高能效 PC 处理器\n，对比麒麟 X90 单核性能提升 23%、能效比提升 25%、NPU 提升 40%；辅以全新陶瓷复合散热封装 + 基板微孔导热工艺，芯片自散热能力提升 70%。\n该机还会搭载方天视窗引擎，可大大降低图形合成负载，让续航再提升 1 小时；内置方舟引擎，对比 A 产品 Air M5 电脑：1GB 演示文稿打开速度提升 30%、2.5GB 应用文件解压速度提升 25%、表格公式计算速度提升 20%。",
+      "link": "https://www.ithome.com/0/983/161.htm",
+      "published_at": "2026-07-29T08:41:05+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.97,
+      "category": "模型发布"
+    },
+    {
+      "title": "消息称 OpenAI ChatGPT 周活用户即将破 10 亿，但较预期晚了半年",
+      "content": "IT之家 7 月 29 日消息，据 The Information 报道，OpenAI 内部披露的信息显示，其 ChatGPT 的周活跃用户即将突破 10 亿大关，而这较其最初的预期晚了半年。\n该公司原本期望在去年年底达成这一里程碑，目前来看，该目标的达成时间比最初预期晚了 7 个月。\nIT之家注意到，增长节奏不及预期的背后，是外部市场竞争与内部产品挑战的双重作用。从外部来看，聊天机器人市场已不再是单一主导格局。谷歌旗下 Gemini 与 Anthropic 的 Claude 等竞品迅速崛起，持续分流用户，对 ChatGPT 的市场份额形成明显挤压。\n从内部来看，OpenAI 去年秋季发布的新一代大模型 GPT-5 未能有效提振增长势头。据悉，该模型在研发阶段经历多次波折，正式上线后因体验问题遭到大量用户诟病，导致平台周活跃用户增速在发布后出现下滑，成为拖累整体增长节奏的重要因素之一。",
+      "link": "https://www.ithome.com/0/983/191.htm",
+      "published_at": "2026-07-29T09:06:28+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.89,
+      "category": "模型发布"
+    },
+    {
+      "title": "柔性触觉感知企业获新一轮融资，预计2026年公司营收翻10倍｜硬氪首发",
+      "content": "作者｜黄楠\n编辑｜袁斯来\n硬氪获悉，柔性触觉感知企业「尧乐科技」近日完成Pre-A+新一轮融资，本轮融资由鼎和高达领投，上市公司常熟汽饰、祖龙娱乐跟投，云道资本担任长期独家财务顾问。资金将主要用于柔性织物传感技术研发、产品性能迭代升级，加快数据手套产能拓展和批量交付，并完善数据采集、标定与接口能力，加速面向具身智能、世界模型与智能座舱等场景落地。\n尧乐科技以柔性织物传感为硬件入口，面向具身智能与世界模型所需的真实物理交互数据采集与预处理。创始人兼CEO吕莉蕴曾任国际汽车电子头部企业Harman首席架构工程师，曾主导多模态传感器融合计算平台的研发工作；核心团队成员多来自中科院、密歇根大学、北京大学等头部院校，覆盖底层传感材料到上层智能算法的全链条研发能力。\n随着人形机器人本体、电机、关节控制等硬件工程逐一突破，行业竞争发生阶段性切换，深层制约来自数据供给的结构性短缺。根据《中国具身智能产业发展报告》报告显示，截至2026年初，全球高质量真实物理交互数据总量约为50万小时，而训练具备基础泛化能力的通用具身模型至少需要千万小时级数据，缺口达九成以上。\n相较于视觉、文本可通过线上渠道大规模归集的训练素材，触觉模态存在独特供给瓶颈。触觉信号源于实体间直接物理接触，仿真环境可以模拟物体的形状和位置，却难以复现真实场景下压力分布、摩擦力、材质形变等复合力学特征，仿真数据集与真实触觉真值存在固有偏差，无法作为高质量训练素材完全替代真人实采数据。这也倒逼行业从物理端寻找数据获取的新方式。\n数采手套作为连接人类操作与机器人学习的物理接口，既能捕捉真实操作中的接触力学信号，又能以相对标准化的形态实现规模化部署，成为当前填补触觉数据空白的关键路径之一。\n尧乐科技即将发布的数据手套，其创新在于将传感功能直接融入织物结构，实现材料与器件的一体化。创始人兼CEO吕莉蕴告诉硬氪，当前主流的数采手套方案，多采用印刷电路或薄膜传感器贴合于织物表面，传感器层与织物层分离，往往需要多层结构叠加。\n“这种方案在实验室环境或短期演示中尚可运行，一旦进入真实场景，多层结构带来的位移、褶皱、汗渍等问题，就会直接影响数据质量。”吕莉蕴说。\n尧乐的方案是将传感能力直接嵌入织物结构本身。基于公司自主研发的“金属纱线+三明治矩阵”传感器，将金属拉丝合金纱线编织成导电网络，嵌入多层织物构成的矩阵中。其中，纱线采用纯金属材质",
+      "link": "https://36kr.com/p/3915175290901889?f=rss",
+      "published_at": "2026-07-29T09:30:00+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 7.85,
+      "category": "行业动态"
+    },
+    {
+      "title": "华辰芯光完成超亿元融资，全栈技术能力突破高端激光芯片封锁",
+      "content": "文 | 张卓倩\n编辑 | 袁斯来\n近日，国内IDM激光芯片企业浙江华辰芯光技术有限公司（简称华辰芯光）宣布完成新一轮超亿元级人民币融资。本轮融资由同创伟业领投，张江垚坤、洪山资本跟投，部分老股东追投，该批资金将主要用于加强华辰芯光的多系列量产芯片可靠性测试能力建设。\n华辰芯光坚定走高端光芯片研发发展路线，自公司成立之初就确立了“IDM（垂直整合制造）芯片制造模式”及“研发高可靠大功率单模通信激光芯片”的双轮驱动战略。通过长期技术攻关，逐步攻克高端光芯片的底层制造壁垒，其GaAs核心产品1000mW 974nm/976nm泵浦激光芯片已通过严格的内部测试，光电性能与可靠性可对标美国同级产品，制造成本约为国外产品的50%，成为全球极少数能够量产通信用泵浦激光芯片的企业。\n该产品主要用于骨干网、核心网、城域网等陆地以及海洋光纤通信、星间激光互通、AI数据中心DCI等光网络中信号放大产品中，该产品计划于2026年下半年将进入量产阶段并向全球销售；同时华辰芯光还依托自己的IDM能力，面向CPO产品，积极研发超大功率InP CW激光芯片产品，为彻底解决高端光芯片领域进口依赖问题贡献力量。",
+      "link": "https://36kr.com/p/3916108853521792?f=rss",
+      "published_at": "2026-07-29T13:38:46+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 7.83,
+      "category": "行业动态"
+    },
+    {
+      "title": "The AI Hype Index: Unsexy AI",
+      "content": "It feels bad enough when an open letter signed by leading economists warns that AI might steal your job. The fact it may soon be better than you at making dinner? Insult to injury. But that’s exactly what the company 1X promised when it showed off a pair of new, impressively dexterous (and, to some, oddly sexy?) robotic hands in a July demo.\nWhile the tech community was sharply divided over the appeal of those disembodied hands, almost everyone can agree that a few things are decidedly not sexy: Grok’s porn-pilled translation feature, Meta’s creepy glasses (which may soon get even creepier), and Big Tech’s emissions (which continue to skyrocket).\nBut while it’s not always the most popular technology, at least AI is paying off for one group: single chip workers in Korea, newly inundated with dating opportunities thanks to their giant bonuses. Who says you can’t buy love?",
+      "link": "https://www.technologyreview.com/2026/07/29/1140795/the-ai-hype-index-unsexy-ai/",
+      "published_at": "2026-07-29T08:42:57+00:00",
+      "source": "MIT Technology Review",
+      "weight": 0.95,
+      "score": 7.76,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Evaluating VLMs for Autonomous Agent-Driven Geometry Clipping Detection in Video Game QA",
+      "content": "In this work, we study the use of Vision-Language Models (VLMs) for anomaly detection in an agent-driven game Quality Assurance (QA) pipeline focusing on geometry clipping. In this evaluation, a custom exploration agent navigates a game level to collect visual observations, while the automatic annotation pipeline provides frame-level clipping labels. This setup allows us to evaluate recent VLMs on a controlled anomaly detection task without manual annotation. We benchmark six recent VLMs (Gemini, GPT, Qwen, Gemma, Llama, and Ministral) under a zero-shot prompting setting and analyse their sensitivity to four prompt variants.\nOur results show that while the VLMs can capture visual cues associated with geometry clipping, they all produce substantial false positives on visually ambiguous frames such as near-contact geometry and partial occlusions. Gemini-3.1-Flash achieves the best overall accuracy and is the most robust to prompt variation, while open-source models exhibit large precisio",
+      "link": "https://arxiv.org/abs/2607.25921v1",
+      "published_at": "2026-07-28T16:10:47+00:00",
+      "source": "arXiv (Carlos Celemin, Benedict Wilkins, Adrián Barahona-Ríos, Saman Zadtootaghaj, Nabajeet Barman)",
+      "weight": 1.0,
+      "score": 7.75,
+      "category": "模型发布"
+    },
+    {
+      "title": "无需模拟器，开发者利用 AI 工具将《塞尔达传说：时之笛》带到 iOS 平台",
+      "content": "IT之家 7 月 29 日消息，在玩家们等待任天堂公布其《塞尔达传说：时之笛》重制版在\nSwitch 2\n上的发售日期时，开发者 Chris “Kahris” Sotraidis 为那些等不及的玩家带来了一个替代方案。HarkinianPad 是一款将任天堂 64 经典游戏移植到 iOS 和 iPadOS 平台的项目，可原生运行于苹果设备上。\n借助 OpenAI 的 Codex 和 GPT-5.6 Sol，Kahris 克服了传统模拟器的限制以及任天堂 64 硬件本身的约束，为这款经典游戏加入了宽屏显示、全屏支持以及流畅的 60 FPS 运行等现代化特性。不过，玩家仍然需要自行准备游戏 ROM。\n据IT之家了解，《塞尔达传说：时之笛》于 1998 年登陆任天堂 64，被广泛认为是电子游戏历史上最伟大的作品之一。任天堂随后在 2011 年为 Nintendo 3DS 推出了重制版。对于没有任天堂 64 或 Nintendo 3DS 的玩家来说，这款经典作品最终也通过 Nintendo Switch Online + 扩展包服务登陆了 Nintendo Switch 和 Nintendo Switch 2。\n然而，对于那些想体验这款游戏却没有任天堂主机的玩家来说，这些平台限制一直是一大阻碍。\n幸运的是，一个名为 Zelda Research Team（ZELDARET）的开发团队在 2021 年将《塞尔达传说：时之笛》的代码反编译为 C 语言，这使开发者 Harbour Masters 得以打造出 Ship of Harkinian—— 一款非官方的原生移植版本。该项目支持 Microsoft Windows、Linux、macOS、Android、Nintendo Switch 以及 Nintendo Wii U 平台。\n正如 Kahris 项目的名称所暗示的那样，HarkinianPad 基于 Ship of Harkinian 的游戏引擎开发。Kahris 使用 Codex 5.6 Sol 对已经反编译完成的 C 代码进行了适配，使其能够运行在 iOS 平台上。该 AI 编程工具基本上将项目重新构建为原生 Arm64 应用，并通过苹果 Metal API 负责图形渲染。这不仅提升了性能，也为更高的原生分辨率以及原版游戏不具备的新功能提供了基础。\nHarkinian",
+      "link": "https://www.ithome.com/0/983/229.htm",
+      "published_at": "2026-07-29T09:25:57+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.65,
+      "category": "模型发布"
+    },
+    {
+      "title": "Depression Markers in Speech: An Approach based on Tract Variables Dynamics",
+      "content": "This study identifies new depression biomarkers based on the dynamical properties of tract variables, which represent geometric features describing the configuration of the speech articulators. A key advantage of this approach lies in its ability to quantify aspects of the articulatory process that have not been previously explored in the context of depression, namely predictability, complexity, and randomness. These properties are respectively characterised using the Largest Lyapunov Exponent, the Correlation Dimension, and the Sample Entropy. Thorough experiments were conducted on the Androids Corpus, a publicly available dataset comprising 64 speakers diagnosed with depression by clinicians and 54 control speakers with no reported history of mental health conditions. The results indicate that the proposed biomarkers effectively discriminate between the depressed and control speakers, as evidenced by the high Cliffs delta values across both read and spontaneous speech.",
+      "link": "https://arxiv.org/abs/2607.25888v1",
+      "published_at": "2026-07-28T15:48:07+00:00",
+      "source": "arXiv (Sahar Altalhi, Tanaya Guha, Alessandro Vinciarelli)",
+      "weight": 1.0,
+      "score": 7.62,
+      "category": "技巧观点"
+    },
+    {
+      "title": "A Machine-Learning-Based Gas Lift Optimization Workflow for Unconventional Fields",
+      "content": "In this paper, we present an automated data-driven workflow using Machine Learning (ML) for gas lift optimization in unconventional fields. This workflow integrates a ML model that accurately forecasts the Gas Lift Performance Curve, and a Bayesian Optimization Framework to solve for the optimal gas injection rates under the constraints of facility capacity. The ML model leverages the historical production time series data without requiring downhole gauges or multi-rate well tests. We piloted this workflow on 30 wells across 5 well pads in Bakken and obtained >5% production uplift on average. With the success of the pilot, we have now fully-deployed this workflow in Bakken across 200+ gas lift and plunger-assisted gas lift (PAGL) wells. Moreover, the ML-based gas lift optimization workflow presented in this paper is an effective and economic solution for other assets where downhole data or multi-rate testing are not available/feasible due to cost or facility constraints.",
+      "link": "https://arxiv.org/abs/2607.25885v1",
+      "published_at": "2026-07-28T15:46:22+00:00",
+      "source": "arXiv (Sha, Miao, Alexandra Vendetti, Logan Smart, Gunta Chomchalerm, Yang Chen, Christopher Frazier, Dustin Haralson, Jeremy Sorenson, Xiao Ma, Huafei Sun, Aaron Shinn, Haining Zheng, Xiao-Hui Wu, Peng Xu)",
+      "weight": 1.0,
+      "score": 7.62,
+      "category": "技巧观点"
+    },
+    {
+      "title": "MemLens: A Value-Aware Memory Management System with Interactive Analytics for LLM-based Agents",
+      "content": "Recently, memory management has become a key infrastructure for LLM-based agents, as it directly affects long-horizon reasoning, personalized responses, and knowledge reuse. However, existing LLM memory systems typically adopt a coarse-grained (utility-agnostic) manner that treats heterogeneous user-LLM interaction records uniformly, leading to redundant and low-impact records persisting in the memory repository. To address this challenge, we present MemLens, a value-aware memory management system that takes memory records as first-class data objects. MemLens provides an end-to-end interactive analytics dashboard that exposes the complete memory lifecycle, including Shapley-style memory evaluation, value-aware storage, and memory-assisted response. Through a study-copilot application, the system enables users to inspect memory values, visualize hierarchical memory structures, and compare various memory management strategies in terms of response quality, retrieval latency, and token con",
+      "link": "https://arxiv.org/abs/2607.25992v1",
+      "published_at": "2026-07-28T17:08:56+00:00",
+      "source": "arXiv (Shuyue Wei, Chang Liu, Zimu Zhou, Yongxin Tong, Lizhen Cui)",
+      "weight": 1.0,
+      "score": 7.6,
+      "category": "模型发布"
+    },
+    {
+      "title": "dtControl2+$\\varepsilon$: Trading Optimality for Explainability in MDPs via Decision Trees",
+      "content": "Over the past decade, decision trees have been used to represent controllers (a.k.a. policies) in an explainable way, with dtControl2 as a current state-of-the-art tool. However, for systems that are large or have many corner cases, even such representations tend to be too complex and not human-comprehensible. Unfortunately, reducing the size of the decision tree is not straightforward, as missing just a single crucial case might result in an incorrect controller. We tackle this issue in the setting of Markov decision processes, extending dtControl2 by \"$\\varepsilon$\" functionality: Given an allowed imprecision $\\varepsilon \\geq 0$, we construct a smaller decision tree, distilling the essence of the controller, while still guaranteeing its $\\varepsilon$-optimality. This enables us to provide tunably simpler explanations, omitting a controllable amount of detail. Our tool constructs decision trees that are orders of magnitude smaller than the state of the art.",
+      "link": "https://arxiv.org/abs/2607.25925v1",
+      "published_at": "2026-07-28T16:15:11+00:00",
+      "source": "arXiv (Tereza Kinská, Jan Křetínský, Tobias Meggendorfer, Sabine Rieder, Maximilian Weininger)",
+      "weight": 1.0,
+      "score": 7.6,
+      "category": "技巧观点"
+    },
+    {
+      "title": "AI's Capability in Assisting Scientific Research in Physics, Astrophysics, and Cosmology II: Project Planning and Proposal Evaluation",
+      "content": "We investigate how well large language models (LLMs) can assist scientific project planning and proposal evaluation. One-page project plans were independently generated for eight expert-conceived research projects in physics, astrophysics, and cosmology by human researchers and three contemporary LLMs (ChatGPT, Claude, and DeepSeek; mid-2025 models, used with their default tool access). The resulting 32 proposals were blindly evaluated by four human reviewers and two newer frontier LLMs (Claude Opus 4.8 and ChatGPT Pro 5.5) using a four-aspect evaluation rubric. Reviewers were also asked to identify whether each proposal was written by a human or an AI. Human reviewers rated human- and AI-written proposals similarly overall, whereas both AI reviewers scored AI-written proposals about one point higher (on a five-point scale) than human-written proposals. Human reviewers correctly identified human- and AI-written proposals 72% and 79% of the time, respectively, while both AI reviewers co",
+      "link": "https://arxiv.org/abs/2607.25881v1",
+      "published_at": "2026-07-28T15:43:01+00:00",
+      "source": "arXiv (Jia Liu, Veena Krishnaraj, Kateryna Vovk, Kosuke Aizawa, Adrian E. Bayer, Linda Blot, Jessica Cowell, Suyog Garg, Jonathan Grée, Anamaria Hell, Ben Horowitz, Masaya Ichikawa, Kanyuni Iemoto, Keigo Kondo, Zacharie Lorsin, Kevin McCarthy, Jamie Robinson, Miguel Ruiz-Granda, Leander Thiele, Ievgen Vovk, Mingshen Zhou)",
+      "weight": 1.0,
+      "score": 7.6,
+      "category": "模型发布"
+    },
+    {
+      "title": "Detecting CSAM Text-to-Image LoRAs From Weights",
+      "content": "Low-rank adaptation (LoRA) fine-tuning has made it cheap and easy to customize open-weight image generation models for specific tasks, including the production of child sexual abuse material (CSAM). Existing moderation relies on metadata or generated outputs, but metadata can be deceptive and generating outputs may itself be unacceptable or illegal. We show that a safer signal lives in the weights. The top-left singular vectors of a LoRA's updates form a compact, inference-free fingerprint ($u_1$) of its strongest learned change. Using human-subject age as a benign proxy for CSAM, we find that $u_1$ identifies what a LoRA was trained on, generalizes across base models, and abstains on unrelated benign content. The signal is robust to additive weight noise, rescaling, and precision reduction. These results indicate that harmful LoRAs could be screened directly from their weights without relying on metadata or generating harmful outputs.",
+      "link": "https://arxiv.org/abs/2607.25750v1",
+      "published_at": "2026-07-28T14:12:52+00:00",
+      "source": "arXiv (David Demitri Africa, Cate Heine, Nadine Staes-Polet, Kimberly Mai)",
+      "weight": 1.0,
+      "score": 7.55,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Device Invariance using Domain Adaptation on Acoustic Scene Classification",
+      "content": "This paper explores the effectiveness of domain adaptation techniques when using convolutional neural network (CNN)-based and transformer-based feature representations for acoustic scene classification. Two well-known domain adaptation techniques, namely domain adversarial neural network (also called DANN) and conditional domain adversarial network (also called CDAN) are evaluated under various domain shifts. Our study indicates that DANN provides effective domain adaptation fairly consistently for both feature extractors. On the other hand, CDAN provides effective domain adaptation only for CNN-based feature extractors. The study gives insights into how domain adaptation methods may need to be tailored to the underlying feature representation. Experimental evaluation with multiple devices on the DCASE 2020 dataset supports the observations.",
+      "link": "https://arxiv.org/abs/2607.25887v1",
+      "published_at": "2026-07-28T15:47:37+00:00",
+      "source": "arXiv (Abhishek dileep, Shubham Sharma, Padmanabhan Rajan)",
+      "weight": 1.0,
+      "score": 7.51,
+      "category": "技巧观点"
+    },
+    {
+      "title": "印度第二大国有银行 Bank of Baroda 遭黑客入侵，1TB 数据外泄",
+      "content": "IT之家 7 月 29 日消息，印度第二大国有银行印度 Bank of Baroda（巴罗达银行）发布公告，称集团一名员工的电子邮件账号遭黑客入侵，导致银行部分数据泄露。目前，官方仍在进行调查，核心银行系统并未受到影响。\nIT之家获悉，该银行最初并未发现遭黑客入侵，直到黑客自身在暗网上公开相关数据后，才确认了此次安全事件。目前勒索组织 Triple X 声称已经收到本次入侵事件中约 1TB 机密数据，涉及 9.2 万份文件。\n第三方研究人员对相应黑客公开的数据样本和截图进行验证后发现，泄露内容包括分行审计报告、贷款评估文件、内部通信记录、监管调查资料、bobWorld 审计报告，以及来自多个分行的客户开户申请表等。其中部分数据还涉及客户个人信息，包括姓名、地址、签名以及印度身份证件号码等敏感资料。\n这也是印度近期发生的又一起大型数据泄露事件。此前印度电子制造企业巨头塔塔电子（Tata Electronics）于 6 月底确认遭遇网络攻击。导致苹果 iPhone 18 Pro/ Max 主板设计资料、A20 Pro 芯片技术文件泄露。",
+      "link": "https://www.ithome.com/0/983/121.htm",
+      "published_at": "2026-07-29T07:56:10+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.47,
+      "category": "行业动态"
+    },
+    {
+      "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
+      "content": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output distribution is already a per-token uncertainty signal: peaked mass indicates confidence, while a flat distribution indicates ambiguity. We introduce CARE (Confidence-Adaptive Routing of Experts), which admits experts in a nucleus fashion. Experts are activated in decreasing router weight until their cumulative mass reaches a threshold, with a small extension when the admitted experts disagree. A budget thermostat calibrates the threshold so that the average number of active experts matches any target. CARE is a drop-in, single-forward-pass rule with no extra parameters. Across eight commonsense benchmarks on LLaMA-3.1-8B and Qwen2.5-7B, as well as math, code, and knowledge tasks, CARE improves over fixed top-k Mo",
+      "link": "https://arxiv.org/abs/2607.26052v1",
+      "published_at": "2026-07-28T17:59:16+00:00",
+      "source": "arXiv (Tom Saliencro, Rohan Desai, Priya Nair, Maya Lindqvist, Daniel Whitmore)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams",
+      "content": "Memory is essential for LLM agents to accumulate task experience and reuse task-specific execution strategies. However, real-world deployment over boundary-agnostic and evolving task streams exposes a fundamental stability-plasticity dilemma. External retrieval-based memory can rapidly absorb new evidence, but it often fails to internalize recurring execution patterns and incurs inference-time retrieval overhead. Parametric memory enables stable and efficient execution once learned, but typically relies on explicit task boundaries and fixed parameter budgets. Inspired by the human brain, which balances plasticity and stability through complementary episodic storage and gradual consolidation, we propose UniMem, a self-routing framework for autonomous memory management. UniMem uses learnable routing tokens as memory controllers, enabling adaptive coordination between complementary memory pathways: novel or sparse tasks are retained in an episodic buffer for retrieval-augmented execution,",
+      "link": "https://arxiv.org/abs/2607.26017v1",
+      "published_at": "2026-07-28T17:28:21+00:00",
+      "source": "arXiv (Siyu Xia, Chenheng Zhang, Yanting Wu, Haoxuan Li, Jiajun Chai, Xiaohan Wang, Guojun Yin, Wei Lin, Zhouchen Lin, Haifeng Zhang, Jun Wang)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "RSIBench-Data: Benchmarking Data-Centric Research for Recursive Self-Improvement",
+      "content": "Recursive self-improvement requires turning evidence of model failures into better models. Data-centric post-training research entails diagnosing capability gaps, designing and validating training-data strategies, and learning from checkpoint feedback. Can LLM agents automate this loop? Existing benchmarks entangle research decisions with optimization, serving, evaluation, and systems implementation, obscuring agents' research capability. We introduce RSIBench-Data, a controlled benchmark of LLM agents as data-centric researchers with a fixed post-training stack. Agents iteratively revise training-data strategies for a fixed target model; training and serving use Tinker-backed services, official evaluation runs through Harbor and E2B sandboxes, and budgets are fixed across agents. We evaluate four frontier agents on six benchmarks across software engineering, terminal use, scientific question answering, and mathematics. Agents demonstrate core data-centric research capabilities: in 58.",
+      "link": "https://arxiv.org/abs/2607.25886v1",
+      "published_at": "2026-07-28T15:46:41+00:00",
+      "source": "arXiv (Fanqing Meng, Lingxiao Du, Qiguang Chen, Ziqi Zhao, Haocheng Lu, Mengkang Hu, Michael Qizhe Shieh)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "Runtime Uncertainty Monitoring for LLM-Based Multi-Agent Systems Using Bayesian Networks",
+      "content": "This paper investigates how multi-agent systems (MAS)-based on large language models (LLMs) can support actuarial risk modelling, with a particular focus on uncertainty quantification. Actuarial workflows represent a high-stakes decision-support setting where unreliable outputs may lead to incorrect risk assessment, unfair pricing, and regulatory non-compliance. To address uncertainty introduced by the probabilistic nature of LLMs and dependencies between agents, a multi-agent framework is proposed in which specialised agents perform data preparation, modelling, review, and explanation tasks under a central hub. The main contribution is a novel approach to uncertainty propagation using token-level log-probabilities and a Bayesian Network. Importantly, log probabilities are not treated as direct probabilities of correctness or task success. Instead, length-normalised log-probability summaries are transformed into calibrated task-level confidence estimates before incorporation into the B",
+      "link": "https://arxiv.org/abs/2607.25877v1",
+      "published_at": "2026-07-28T15:39:43+00:00",
+      "source": "arXiv (Bart Custers, Koorosh Aslansefat)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs",
+      "content": "Skills have become an important abstraction for enabling large language model (LLM) agents to reuse past experience in long-horizon interactive tasks. However, existing trajectory-to-skill methods often produce flat collections of high-level textual skills that are stored and retrieved independently, leaving skill relations underutilized and maintaining a gap between high-level skills and executable actions. In this paper, we propose HiSkill, a hierarchical skill graph framework that organizes interaction trajectories into a directed graph with skill nodes, AtomicOp nodes, and typed edges. Specifically, the graph connects reusable high-level skills with executable action templates, while also capturing decomposition, temporal transition, compatibility, support, and recovery relations among them. At inference time, HiSkill retrieves a compact task-relevant subgraph and performs subgraph-guided task execution, where a symbolic task state, an active skill, and the retrieved subgraph guide",
+      "link": "https://arxiv.org/abs/2607.25853v1",
+      "published_at": "2026-07-28T15:25:47+00:00",
+      "source": "arXiv (Yu Hao, Jinxuan Cai, Qi Zhang, Yawen Li, Zhiqiang Zhang, Chuan Shi, Cheng Yang)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "Food Image Segmentation with LLM-Derived Ingredient Labels and Multimodal Fusion",
+      "content": "Food image segmentation plays a vital role in health-related applications such as nutrition tracking and personalized health monitoring. However, existing models often underperform on visually similar ingredients and rare food categories. To address this issue, we propose two plug-and-play multimodal modules that enhance the segmentation performance by leveraging ingredient labels inferred from food images using large language models (LLMs). The first module, called LIM-F (Language Injection Module for Features), is designed to pair with any image encoder that produces multi-layer outputs (e.g., Swin Transformer), while the second module, LIM-Q (Language Injection Module for Queries), targets Mask2Former-style Transformer-based decoders. Both modules enable training without the need for pre-aligning images with text by directly injecting semantic ingredient information into the visual analysis pipeline. On the FoodSeg103 benchmark, the proposed method achieves state-of-the-art performa",
+      "link": "https://arxiv.org/abs/2607.25820v1",
+      "published_at": "2026-07-28T15:02:46+00:00",
+      "source": "arXiv (Jui-Feng Chi, Wei-Ta Chu, Sheng-Long Lin)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
+      "content": "Recent multimodal large language models (MLLMs), such as Qwen2.5-VL and InternVL3, generate large numbers of vision tokens for high-resolution inputs, leading to substantial computational cost. Existing vision token pruning methods either depend on cross-modal attention and cannot prune before the prefill stage, or rely on diversity estimation with high computational overhead. We observe that attention scores from both vision and text tokens peak at modality separator tokens, suggesting that these separators bridge the two modalities. Based on this observation, we propose SepPrune, an efficient, training-free, plug-and-play pruning method that uses the separator token as a unified query to rank and select informative vision tokens. SepPrune reuses the LLM's built-in projection parameters and requires no architectural changes. Experiments on Qwen2.5-VL-7B show that SepPrune achieves state-of-the-art performance, retaining 96.3% of the original accuracy while removing 80.2% of vision tok",
+      "link": "https://arxiv.org/abs/2607.25818v1",
+      "published_at": "2026-07-28T15:01:02+00:00",
+      "source": "arXiv (Yuchen Wang, Qihui Zhu, Yang Liu, Xiaoyan Sun, Siying Wu)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "Cognivia: A Cognitive Behavioral Therapy Copilot for Evidence-Based Mental Healthcare",
+      "content": "Cognitive distortion amplifies negative emotions and contributes to mental health disorders. Cognitive Behavioral Therapy (CBT) is an effective way to address cognitive distortions, but its large-scale application is limited by the shortage of professional therapists. Although large language models (LLMs) have recently been explored for mental health applications, existing methods still suffer from limited domain specificity, overly flattering responses, and the absence of well-defined annotations for cognitive distortions. This paper proposes Cognivia, an evidence-based artificial intelligence therapist that integrates automatic cognitive distortion identification and rational response generation. Our framework is built on authoritative CBT texts widely regarded as core paradigms and standard references. It is further augmented with mental health question-answer (Q and A) data, and employs multi-stage prompting and structured generation strategies under the supervision of behavioral s",
+      "link": "https://arxiv.org/abs/2607.25681v1",
+      "published_at": "2026-07-28T12:56:06+00:00",
+      "source": "arXiv (Qi Chen, Siria Xiyueyao Luo, Jian Wang, Yuan Shi, Haocong Rao, Xuejiao Zhao)",
+      "weight": 1.0,
+      "score": 7.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "联电 2026H1 营业总收入同比增长 11.28%，Q2 产能利用率达 85%",
+      "content": "IT之家 7 月 29 日消息，联电今日发布 2026 年上半年与第二季度财务数据。\n2026H1\n营业总收入\n：1297.7 亿元新台币\n（现汇率约合 271.61 亿元人民币）\n，同比增长 11.28%\n毛利润\n：401.4 亿元新台币\n（现汇率约合 84.01 亿元人民币）\n毛利率\n：30.9%\n归母净利润\n：584.3 亿元新台币\n（现汇率约合 122.29 亿元人民币）\n基本每股收益\n：4.68 元新台币\n2026Q2\n营业总收入\n：687.3 亿元新台币\n（现汇率约合 143.85 亿元人民币）\n，同比增长 17.0%、环比增长 12.6%\n毛利率\n：32.5%\n归母净利润\n：422.6 亿元新台币\n（现汇率约合 88.45 亿元人民币）\n普通股每股收益\n：3.39 元新台币\n晶圆出货量\n：环比增长 10.6%\n产能利用率\n：85%\n截至 2026 年 6 月 30 日\n资产负债率\n：33.34%\nAI 解读\n本次联电 2026 财年上半年营收表现超市场预期，上半年累计营收显著高于此前行业普遍预估水平。\n财报亮点\n2026 年上半年累计实现营业收入\n1297.7 亿元新台币\n，同比增长\n11.28%\n，受益于成熟制程领域的强劲市场需求支撑。\n上半年实现营业毛利\n401.4 亿元新台币\n，对应毛利率达\n30.93%\n，盈利能力维持在较高水平。\n上半年归属于母公司业主净利润达\n584.3 亿元新台币\n，基本每股收益为\n4.68 元新台币\n，盈利表现亮眼。\n截至报告期末，公司资产负债率为\n33.34%\n，整体财务结构保持稳健，抗风险能力充足。\n后续业务展望\n公司计划于 2026 年下半年针对部分产品调涨价格 5%~10%，2027 年初有望进一步扩大涨价覆盖范围，预计将持续优化后续盈利表现。\n新加坡晶圆厂已成功交付首批量产硅光子晶圆，可支持 1.6Tbps 高速光互连需求，后续将携手合作方开发下一代 400Gbps 平台，2027 年前将对外开放自有 12 英寸硅光子平台，新业务布局逐步落地。\n机构评级情况\n汇丰、瑞银等多家外资机构给予联电“买进”评级，对应目标价分别上调至 235 元新台币、230 元新台币，机构对公司后续发展保持乐观预期。\n相关阅读：\n《\nSK 海力士 2026 财年第二财季归母净利润 93.82 万亿韩元，同比增长 1240.8%\n》\n《",
+      "link": "https://www.ithome.com/0/983/188.htm",
+      "published_at": "2026-07-29T09:02:44+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.4,
+      "category": "行业动态"
+    },
+    {
+      "title": "SK 海力士创季度营业利润新高但仍不及预期，股价大跌近 10%",
+      "content": "IT之家 7 月 29 日消息，韩国存储芯片制造商 SK 海力士今日公布了创纪录的季度业绩，但仍未达到投资者极高的预期，加剧了市场对大型科技公司 AI 支出放缓的担忧。为了应对行业需求周期波动，公司正加快签署长期供货协议，以增强业绩稳定性。\n作为英伟达的重要供应商，SK 海力士本季度营业利润同比增长逾六倍，创下历史新高。不过，公司表示，部分先进产品出货延迟，限制了主营 DRAM 产品的价格涨幅。\n受业绩不及预期影响，SK 海力士股价今日收盘大跌 9.6%，进一步加剧了市场对科技企业大规模 AI 投资可持续性的担忧，韩国综合股价指数（KOSPI）当天也下跌了 6%。\nBNK Investment & Securities 分析师李敏熙表示：“市场担心科技公司可能会放缓基础设施投资节奏。”\n分析师认为，投资者情绪还受到另外两方面因素打击：一是公司未能公布更明确的股东回报计划，让投资者分享 AI 热潮带来的收益；二是公司推动长期供货协议，可能限制未来存储芯片价格上涨空间。\nSK 海力士股价自上个月创下历史新高以来已累计回落逾一半，但今年以来仍上涨约 115%。\n尽管市场出现抛售，SK 海力士表示，AI 存储芯片需求依然强劲。\nSK 海力士总裁宋贤钟（Song Hyun-jong）在财报电话会上表示：“主要客户仍在要求增加存储器供应。”他补充称，公司正寻求签署更多长期供货协议，以更好地管理芯片价格波动风险。\n这一举措反映出，在市场担忧 AI 基础设施投资未来可能降温的背景下，芯片制造商正努力将当前 AI 热潮转化为更长期、更确定的需求。\nSK 海力士表示，这类长期协议通常为期五年，并包含保证金等财务保障机制，以确保合同能够顺利履行。目前，公司已完成约 10 份此类协议的谈判，并仍在与其他大型行业客户继续协商。\n近期，由于市场担心微软、Alphabet、亚马逊、Meta 和甲骨文等超大规模云服务商是否有能力支撑数千亿美元的 AI 基础设施投资计划，全球芯片股持续承压，SK 海力士签署长期合同也正是在这一背景下推进。\n基于对未来需求的信心，SK 海力士表示，今年资本支出计划将提高至 40 多万亿韩元区间，高于 2025 年的 30.2 万亿韩元（IT之家注：现汇率约合 1394.33 亿元人民币）。\n对于市场担心扩产可能导致产能过剩，公司回应称，将根据市场需求灵活调整投资节奏。",
+      "link": "https://www.ithome.com/0/983/141.htm",
+      "published_at": "2026-07-29T08:17:46+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.4,
+      "category": "行业动态"
+    },
+    {
+      "title": "AI 重塑亚洲航空货运格局，取代跨境电商成为增长新引擎",
+      "content": "IT之家 7 月 29 日消息，据路透社报道，全球人工智能（AI）竞赛正在重塑亚洲航空货运格局。随着跨境电商增长放缓，航空公司开始围绕不断壮大的半导体制造中心重新规划航线网络。\n航空公司和物流企业表示，与疫情后包裹运输热潮不同，AI 基础设施带来的货运需求建立在先进存储芯片、处理器未来数年的订单，以及全球数千亿美元数据中心投资计划之上，因此需求更加稳定、持续。\n与此同时，美国和欧洲收紧低价值商品进口政策，正在抑制此前推动航空货运快速增长的跨境电商业务。\n货运数据分析公司 Xeneta 首席航空货运官尼尔 · 范德沃（Niall van de Wouw）在本月发布年中展望报告时表示：“电商曾是航空货运最大的增长引擎，但如今情况已经发生了变化。”\n大韩航空就是这一转变最典型的例子之一。\n今年第二季度，大韩航空货运收入同比增长 46%，达到 1.54 万亿韩元（IT之家注：现汇率约合 71.1 亿元人民币）。公司表示，AI 芯片、服务器机架以及数据中心基础设施运输已取代来自中国的跨境电商货物，成为货运业务增长的主要动力。\n大韩航空货运业务负责人、执行副总裁严在东（Jaedong Eum）表示，高端科技货物运输已迅速成长为公司的核心增长引擎。他指出，目前市场需求具有很高的可预测性，先进高带宽存储器（HBM）芯片和处理器的订单已经排到未来两到三年，且需求仍然持续超过供应。\n根据 Xeneta 数据，今年 4 月，全球半导体销售额同比增长超过一倍，创下自 1986 年有记录以来的最大增幅。相比之下，中国低价值商品和跨境电商出口在 5 月同比下降 7%，已连续第六个月下滑。\n美国去年取消了来自中国低价值进口商品的免税政策，欧盟本月也正式废除了类似的免税门槛。\n快时尚零售商 Shein 周日表示，这些政策变化已经影响了其美国业务，并预计未来还将对欧洲市场带来进一步压力。日本全日空（ANA）也表示，欧盟的新政策将成为整个航空货运市场的风险因素，不过半导体相关货运需求依然保持强劲。\n货物结构的变化也正在重塑亚洲贸易运输路线。\n日本负责出口半导体制造设备，韩国生产先进存储芯片，中国台湾地区则是全球先进芯片制造中心。\n与此同时，越南、马来西亚、泰国和新加坡正迅速成长为面向北美和欧洲市场的 AI 服务器制造和组装基地。\n新加坡樟宜机场集团航空枢纽与货运发展执行副总裁林清杰（Lim Ching",
+      "link": "https://www.ithome.com/0/983/091.htm",
+      "published_at": "2026-07-29T06:59:30+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.4,
+      "category": "行业动态"
+    },
+    {
+      "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
+      "content": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that elicit unreliable supervision and waste compute. We identify a teacher-student continuation asymmetry on failed prefixes, where the teacher tends to redirect while the student continues along the original direction, and convert it into a label-free handoff trigger in Relay On-Policy Distillation (Relay-OPD). During training, Relay-OPD constructs relay trajectories by letting the teacher briefly take over at detected trigger points to produce a teacher leg, after which the student resumes and is optimized on the resulting trajectory. A limited relay budget concentrates intervention on critical early positions while limiting departure from the student policy. With a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B",
+      "link": "https://arxiv.org/abs/2607.26057v1",
+      "published_at": "2026-07-28T17:59:46+00:00",
+      "source": "arXiv (Haolei Xu, Xiaowen Xu, Haiwen Hong, Zixuan Ni, Hongxing Li, Yiwen Qiu, Weiming Lu, Yongliang Shen)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
+      "content": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classification. The system separates agent interaction from workflow orchestration: OpenClaw provides scheduling, tool access, user interaction, and notification services on the edge device, while LangGraph manages the stateful screening workflow, including input validation, image transmission, model invocation, safety checks, conditional routing, failure handling, and structured logging. This design moves beyond static image classification by enabling the system to collect visual evidence, invoke external models, apply deterministic safety rules, and generate diagnostic-support alerts. Results show that image-only VLM prediction remains limited, whereas symptom-guided and multimodal inputs improve ze",
+      "link": "https://arxiv.org/abs/2607.26042v1",
+      "published_at": "2026-07-28T17:50:25+00:00",
+      "source": "arXiv (Syed Mhamudul Hasan, Anas AlSobeh, Hussein Zangoti, Abdur R. Shahid)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?",
+      "content": "Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observation may be delayed, occluded, transient, or unrelated, then misread as progress and carried into subsequent planning. We introduce Desktop-Delta Bench (DDB), an offline step-level benchmark with 2,013 human-verified instances from novel, multi-app Linux trajectories across ~15 applications and 50 task domains. DDB trajectories targets 3 failure dimensions- state verification, source tracking, and context-aware control- through 2 complementary tasks: 463 3-frame temporal-ordering instances, inc",
+      "link": "https://arxiv.org/abs/2607.26041v1",
+      "published_at": "2026-07-28T17:49:51+00:00",
+      "source": "arXiv (Abhishek Pillai, Samir Kumar Nayak, Yuan Chen)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
+      "content": "Graph foundation models (GFMs) have emerged as a promising paradigm for transferring knowledge across graph domains and tasks. Real-world graphs associate nodes with text, images, and other modalities, making multimodal graphs essential for representing complex entities and relations. Moreover, collecting labels and adapting models for every new graph domain is costly and often infeasible, motivating zero-shot transfer. Unfortunately, zero-shot transfer on multimodal graphs remains underexplored. Existing GNN-based graph foundation models typically require downstream adaptation, whereas LLM-based graph methods mainly address unimodal graphs or tasks within a single domain. This setting presents two key challenges. First, models must generalize knowledge from individual modalities while capturing transferable cross-modal relations. Second, without target-domain fine-tuning, node representations remain entangled with domain-specific structures and modality-specific characteristics, obscu",
+      "link": "https://arxiv.org/abs/2607.26023v1",
+      "published_at": "2026-07-28T17:35:26+00:00",
+      "source": "arXiv (Ankang Yang, Jitao Zhao, Di Jin, Yuxiao Huang, Dongxiao He)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
+      "content": "Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product units due to active phase-shifter components, thus making their approach inefficient and impractical. To address this, we propose MDTransformer, a novel hardware-software co-design of PTA based on mode-division optical dataflow and operations. Specifically, MDTransformer performs complex matrix operations using spatial-mode interference, that leverages the inverse-designed multi-mode couplers, crossings, and Mach-Zehnder IQ modulators into a compact mode-division photonic tensor core (MPTC), capable of executing matrix multiplications in the optical domain. Its each guided mode (i.e., TE0-TE3) acts as an independent computational lane, enabling four-fold parallelism-per-waveguide without spe",
+      "link": "https://arxiv.org/abs/2607.26016v1",
+      "published_at": "2026-07-28T17:27:49+00:00",
+      "source": "arXiv (Solomon Micheal Serunjogi, Rachmad Vidya Wicaksana Putra, Ayat Taha, Muhammad Shafique, Mahmoud Rasras)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Instruction-Tuned Models Locally Reuse Human Syntax More Than Humans Do",
+      "content": "Syntactic convergence (the tendency of speakers to adapt in language towards the grammatical profiles of their interlocutors) is a well-documented feature of human dialogue widely considered to operate below conscious awareness. Whether large language models exhibit analogous syntactic convergence toward human users relative to human baselines and across a broad range of syntactic constructions remains an open question. Using substitution-paradigm data in which model generations replace one speaker's turns in pre-existing human dialogues, this study measures turn-adjacent reuse of context-free grammar (CFG) rules across sixteen open-weight Llama and Gemma models (1B-70B, pretrained and instruction-tuned) at 1,901 matched positions per model. Every model showed greater CFG-rule overlap with the preceding human turn than with a sampled unrelated human prime, and in every model this actual-versus-random difference was larger for lower-frequency rules. Each instruction-tuned model also sho",
+      "link": "https://arxiv.org/abs/2607.26015v1",
+      "published_at": "2026-07-28T17:27:47+00:00",
+      "source": "arXiv (Zandi Eberstadt)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Pictura: Perspective-View Self-Play at Scale for Driving",
+      "content": "Self-play in simulation produces robust driving policies at scale. Demonstrations of such behavior have been made using privileged vectorized observations such as exact poses and velocities, even for occluded agents. This assumes that perception is solved and introduces a representation gap with the partial observation of a deployed agent driving from the perspective view of egocentric cameras. A common fix, distilling the privileged policy into a camera-input student, leaves the student imitating decisions its own view cannot justify. Instead, we establish perspective-view self-play as a practical training regime. We introduce Pictura, a GPU-accelerated multi-agent driving simulator that renders each agent's egocentric view at every step, mitigating the representation gap at its source. Pictura sustains up to 500K agent-steps/s (2M images/s) on a single H100. Using Pictura, we train Alberti by self-play with plain PPO. It is the first large-scale driving self-play policy trained direc",
+      "link": "https://arxiv.org/abs/2607.26005v1",
+      "published_at": "2026-07-28T17:20:39+00:00",
+      "source": "arXiv (Yuan Yin, Elias Ramzi, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, Éloi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, Matthieu Cord)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Does Runtime Topology Context Improve LLM-Generated Kubernetes Security Patches?",
+      "content": "Kubernetes is central to the cloud-native ecosystem, orchestrating containerised workloads. Recent work suggests that large language models (LLMs) can automate cluster security remediation, generating configuration patches from Kubernetes Security Posture Management (KSPM) findings without human authoring. Such systems, however, prompt the model with each finding in isolation from the live service call graph, assuming general hardening knowledge suffices. This assumption breaks down whenever a patch must preserve a runtime service dependency invisible to the model: an otherwise compliant fix then carries a destructive functional blast radius, crashing downstream callers or silently severing call edges across the cluster. Whether live cluster context improves patch correctness has not been measured under controlled conditions across multiple dependency classes. We introduce KuTIE (Kubernetes Topology Intelligence Engine), which builds a live cluster context from Istio call edges, Trivy ",
+      "link": "https://arxiv.org/abs/2607.25995v1",
+      "published_at": "2026-07-28T17:12:12+00:00",
+      "source": "arXiv (Farooq Shaikh)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Beyond Zooming: Learning Multi-Tool Visual Reasoning for Ultra-High-Resolution Remote Sensing",
+      "content": "Ultra-high-resolution (UHR) remote-sensing (RS) imagery provides fine-grained Earth-observation evidence over city-scale scenes, but poses a fundamental challenge for multimodal large language models (MLLMs): task-relevant evidence is often sparse, local, and spatially dispersed across extremely large visual contexts. A natural solution is to equip MLLMs with zoom-in tools for active local inspection. However, through a pilot study on XLRS-Bench, we find that zoom-in is only partially effective: it resolves easy and medium-level tasks with locally recoverable evidence, but saturates on hard cases requiring global search, multi-region comparison, path planning, or dispersed-evidence reasoning. Motivated by this finding, we move beyond single-tool zoom-in and introduce GeoMTVR, a large-scale Geospatial Multi-Tool Visual Reasoning dataset built from wide-area satellite imagery. GeoMTVR contains 13K UHR VQA samples with interleaved reasoning trajectories, diverse visual tool calls, and ret",
+      "link": "https://arxiv.org/abs/2607.25993v1",
+      "published_at": "2026-07-28T17:09:16+00:00",
+      "source": "arXiv (Fengxiang Wang, Jiangnan Huang, Mingshuo Chen, Yueying Li, Yang Shi, Junwei Luo, Haoyu Wang, Yansheng Li, Jing Zhang, Haiyan Zhao, Wenjing Yang)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Detecting Knowledge Inconsistencies Across Text, Tables, and Knowledge Graphs",
+      "content": "Wikipedia and Wikidata are widely used for information access, LLM pre-training, and retrieval-augmented generation. Their knowledge is deeply connected but scattered across text, tables, and knowledge graphs. This raises a practical question: when these modalities disagree, how can we detect and explain the conflict? We study this problem as \\emph{modality-level inconsistency detection}. We first introduce a taxonomy of cross-modal knowledge inconsistencies, covering information granularity differences, direct conflicts, temporal changes, and KG incompleteness. We then present \\textsc{Kontrast}, an automatic framework that uses Text-to-SPARQL and LLM reasoning to compare table-based answers with KG evidence and categorize the resulting inconsistencies. Experiments on various Table-QA datasets show that cross-modal inconsistencies are common and informative. They reveal not only true knowledge conflicts, but also missing KG structure and temporal mismatches while being limited by Text-",
+      "link": "https://arxiv.org/abs/2607.25959v1",
+      "published_at": "2026-07-28T16:43:56+00:00",
+      "source": "arXiv (Fanfu Wei, Thibault Ehrhart, Raphaël Troncy)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Large Language Model for Operations Research Formulation Selection in Multi-Warehouse Inventory Allocation",
+      "content": "Multi-warehouse inventory allocation is typically formulated as a mixed-integer programming (MIP) problem, yet no single formulation consistently matches heterogeneous instance-level regimes induced by demand concentration, inventory imbalance, replenishment scale, service constraints, and forecast volatility. We study this issue as instance-wise operations research (OR) formulation selection, where each allocation instance is assigned to a solver-executable formulation from a candidate OR expert library. We propose a solver-guided large language model (LLM) framework for OR formulation selection, in which each OR expert corresponds to a MIP formulation encoding a distinct allocation priority. To train the selector, the framework first constructs balanced expert-conditioned supervised fine-tuning (SFT) records for schema learning, and then uses MIP solver evaluation on historical instances to convert solver-evaluated allocation-quality gaps into margin-weighted identity preference opti",
+      "link": "https://arxiv.org/abs/2607.25956v1",
+      "published_at": "2026-07-28T16:41:54+00:00",
+      "source": "arXiv (Jintao Xu, Yingzheng Ma, Jiong Dong, Yongzhi Qi, Jianshen Zhang)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Polistemics: Evaluating LLMs as Information Mediators in Politics & Elections",
+      "content": "As LLMs increasingly mediate the political information citizens rely on, there is still no standardized way to assess whether they do so responsibly. We introduce Polistemics, a theory-grounded benchmark for evaluating LLMs as mediators of political information in elections. Prior work has treated this task as reproduction rather than mediation, leaving its epistemic dimensions and interaction with imperfect information unaddressed. We ground the evaluation in Epistemic Modesty, a normative standard derived from citizens' epistemic agency, and test it across controlled settings that vary informational properties such as clarity, noise, and consistency. Applying the benchmark to three state-of-the-art LLMs on the 2025 German and Dutch elections, we find that high aggregate scores mask systematic failures. Models mediate reliably under clear evidence but break down under absent, vague, or contradictory information, while flattening the intensity of political language. These failures are ",
+      "link": "https://arxiv.org/abs/2607.25953v1",
+      "published_at": "2026-07-28T16:40:18+00:00",
+      "source": "arXiv (Baran Peters)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
+      "content": "Question answering (QA) over irregular clinical time series (ICTS) plays a pivotal role in a wide range of healthcare applications. Although recent multimodal time-series large language models (LLMs) have shown considerable promise in general-purpose time-series QA, they remain poorly equipped to model the sparsity, asynchrony, and irregular sampling patterns of clinical observations. To fill this gap, we propose ClinPRISM, a cost-effective multimodal LLM reasoning framework for question answering over ICTS data. First, we devise an irregularity-aware multi-scale encoder to capture sparse clinical evidence at diverse temporal scales. Then, we propose a temporal evidence distiller to integrate representations across these scales and compress them into a small number of LLM-compatible tokens. Moreover, we introduce a progressive alignment strategy that sequentially aligns the irregular trajectories with the LLM's textual embedding space. To facilitate training, we construct 30,000 clinic",
+      "link": "https://arxiv.org/abs/2607.25947v1",
+      "published_at": "2026-07-28T16:33:41+00:00",
+      "source": "arXiv (Frank Nie, Ethan B Liu, Yuan Zhu, Wei Fan, Jindong Han)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases",
+      "content": "Clinical diagnostic evaluation should not only assess whether models can provide correct diagnoses, but also reflect the realities of clinical practice, including progressive disclosure of multimodal information, dynamic updating of diagnostic hypotheses, and continuous refinement of clinical reasoning. However, existing evaluations of multimodal large language models (MLLMs) typically rely on single-turn or isolated tasks, making it difficult to fully capture the complexity of real-world clinical diagnosis. To bridge this gap, we developed ClinMM-Bench, the largest multi-turn multimodal clinical diagnostic evaluation benchmark to date. ClinMM-Bench contains 1,089 challenging real-world clinical cases and 3,760 medical images across eight specialties. We systematically evaluated 15 representative MLLMs using a two-level evaluation framework that assessed both diagnostic accuracy and diagnostic reasoning quality. Results showed that proprietary models achieved the highest overall diagno",
+      "link": "https://arxiv.org/abs/2607.25933v1",
+      "published_at": "2026-07-28T16:19:03+00:00",
+      "source": "arXiv (Rui Yang, Weihao Xuan, Yi Lin, Zhuhan Bao, Jonathan Chong Kai Liew, Matthew Yu Heng Wong, Nicolás Lescano, Nikita R. Paripati, Emily Ling-Lin Pai, Jiarui Liu, Heli Qi, Heng-Jui Chang, Benny Kai Guo Loo, Huitao Li, Kunyu Yu, Yufan Wang, Chuan Hong, Shijian Lu, Douglas Teodoro, Naoto Yokoya, Ross Koppel, Mona Diab, Hua Xu, David W. Bates, Nan Liu, Yifan Peng)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Penelope: Localized Latent Recurrence for Efficient Structured Reasoning",
+      "content": "Complex structured reasoning tasks often require additional computation, yet current language models obtain it mainly by increasing parameter scale or by serializing intermediate steps as chain-of-thought (CoT) tokens. The former raises training and deployment costs, while the latter ties reasoning computation to autoregressive output length. We introduce Penelope, an efficient latent-reasoning framework for pretrained decoder-only Transformers that localizes recurrent computation to a selected decoder interval. The lower decoder prefix is evaluated once to construct a problem-conditioned boundary memory, which is then iteratively refined through time-modulated GRU dynamics and recurrent readout states before answer generation. A progressive CoT-to-latent curriculum transfers visible reasoning into this internal recurrent path, allowing additional computation to be allocated in latent space without repeatedly executing the complete decoder or generating a long intermediate trace. Exper",
+      "link": "https://arxiv.org/abs/2607.25915v1",
+      "published_at": "2026-07-28T16:06:46+00:00",
+      "source": "arXiv (Yutong Chen, Shouqian Shi, Xinran Liu, Haochen Wang, Jiaying Wang, Tianxing Xu, Yuanxi Wang, Zirui Ding)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Toward Standardized Cross-Vendor Agent Tool Trust Management in Autonomous Networks",
+      "content": "Autonomous Network Levels 4-5 require AI agents to invoke tools across vendor boundaries without human oversight, yet existing management standards lack a standardized mechanism for cross-vendor trust visibility. When a tool from Vendor B is compromised, agents from Vendor A continue invoking it -- unaware of the trust degradation -- causing cascading service impact. We present AgentToolMO, a proposed 3GPP NRM information model for agent tool trust management. The model comprises: a formally defined trust state machine with provable graduated enforcement, damped cascade propagation with bounded convergence, cross-vendor trust notifications via existing Management Services (MnS) interfaces, and retroactive impact assessment through NRM dependency graph traversal. Simulation-based evaluation across multi-vendor topologies shows that standardized cross-vendor notifications reduce blast radius from hours-scale undetected propagation to near-real-time containment bounded by MnS notification",
+      "link": "https://arxiv.org/abs/2607.25914v1",
+      "published_at": "2026-07-28T16:06:41+00:00",
+      "source": "arXiv (Ravi Kant Sharma, Ashutosh Uttam, Ajay Kumar)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Interactive Reward Agent: GUI Task Evaluation via Environment-State Verification",
+      "content": "Graphical user interface task evaluation aims to determine whether a GUI agent has successfully completed a user instruction. Automated GUI task evaluation has received increasing attention because the evaluation results can serve as reward signals for both test-time scaling and post-training. However, reliable GUI task evaluation remains challenging because the judgments often require access to environment states, such as system configurations, file data, and application settings, beyond the screenshots of execution trajectories. In this paper, we propose an interactive reward agent (IRA) based on a propose-then-verify framework to acquire and verify evidence from the post-execution environment. Given a task instruction and a GUI environment after the GUI agent execution, IRA first proposes the task completion conditions and then verifies them by invoking system tools, application tools, and GUI tools. This design combines evidence from both visible interfaces and the environment stat",
+      "link": "https://arxiv.org/abs/2607.25904v1",
+      "published_at": "2026-07-28T16:01:38+00:00",
+      "source": "arXiv (Chenrui Shi, Yuwei Wu, Yang Liu, Ruining Feng, Zirui Shang, Zhi Gao, Lifeng Fan, Che Sun)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Messier: A High-Resolution Corpus for Cross-Benchmark Agent Evaluation",
+      "content": "Evaluating AI agents in interactive environments is hindered by fragmented tasks, scaffolds, verifiers, and scoring rules. Existing efforts focus on narrow settings, remain limited in scale, or require costly reruns, leaving much of the empirical record incomparable. We introduce Messier, a unified corpus of 957,253 records that span 30 benchmarks, 714 agents, 11,891 tasks, and 74,205 verifiers. Messier consolidates public benchmark scores and supplements them with five-agent runs across six underrepresented professional and scientific domains, including a recent legal benchmark. Each record is standardized by model, scaffold, environment, task, verifier, and aggregation rule, with SOC/NAICS classifications for occupational and industry analysis. Using this corpus, we show frontier progress is uneven across benchmark types, with \"function calling\" saturated, \"programming\" improving the fastest, and \"enterprise workflows\" remaining the most challenging. Furthermore, counterfactual resco",
+      "link": "https://arxiv.org/abs/2607.25891v1",
+      "published_at": "2026-07-28T15:50:19+00:00",
+      "source": "arXiv (Stefan Krsteski, Charlotte Meyer, Guillaume Allegre, Tony O'Halloran, Alexandre Sallinen)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Distributing Security Controls Through Harness Engineering",
+      "content": "AI coding agents are being adopted at historic speed, yet security and risk concerns remain the primary barrier to scaling agentic AI across organizations. Existing security controls for coding agents are not systematically distributed to engineering teams, and vendor-native solutions introduce ecosystem dependencies that may not suit every deployment context. This paper investigates whether off-the-shelf security controls can be implemented on commercial AI coding agents and scaled to a distributed user base via a custom agent harness. A phased testing methodology was applied across four agent configurations --- two commercial agents with and without controls, a baseline harness, and a security-hardened harness --- using a 23-test suite derived from the OWASP Top 10 for Agentic Applications. SHarD (Secure Harness Distribution), a distributable harness built on the Pi agent harness, demonstrated that three categories of security controls --- OS sandboxing, skill scanning, and tool rest",
+      "link": "https://arxiv.org/abs/2607.25890v1",
+      "published_at": "2026-07-28T15:50:16+00:00",
+      "source": "arXiv (William Robert Gore)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Stemma: Induced Decision Regions Reveal LLM Provenance",
+      "content": "LLM provenance testing asks whether a suspect LLM belongs to the same lineage as a source. Existing black-box methods largely infer this relationship from response-level characteristics, but these characteristics may shift under adaptation or deployment even when the underlying meaning remains unchanged, weakening the reliability of provenance evidence. To address this limitation, we introduce induced decision regions by mapping open-ended outputs into a finite decision space, thereby abstracting away surface-form variation and reframing provenance testing as measuring the inheritance of decision regions. Empirical analysis shows that the source's induced regions are preserved more strongly in related models than in unrelated models. Building on this signal, we propose Stemma, a practical black-box LLM fingerprinting method that operationalises stability, robustness, and specificity as complementary probe-selection principles for reliably estimating induced decision region inheritance.",
+      "link": "https://arxiv.org/abs/2607.25880v1",
+      "published_at": "2026-07-28T15:42:53+00:00",
+      "source": "arXiv (Keyu Zhang, Vadim Safronov, Andrew Martin)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "How Do LLMs Read Bug Reports? An Empirical Study of Attention in LLMs for Automated Program Repair",
+      "content": "Large Language Model (LLM)-based Automated Program Repair systems are advancing rapidly, yet their performance remains inconsistent. Even when provided with the same contextual information, an LLM may generate a correct patch for one bug but fail on another closely related bug. Why this happens remains poorly understood, and it is unclear how LLMs prioritize the diverse information in bug reports and whether model attention affects repair success. In this paper, we present the first empirical study of attention patterns in LLM-based program repair, providing interpretable insights into how models process bug reports and where their attention is concentrated during repair. We analyze 319 real-world Python and Java bugs from SWE-bench Verified and Multi-SWE-bench to study (RQ1) how model attention is distributed across bug report sections, (RQ2) how attention patterns within each section differ between successful and unsuccessful repairs, and (RQ3) how these patterns compare to informati",
+      "link": "https://arxiv.org/abs/2607.25873v1",
+      "published_at": "2026-07-28T15:38:12+00:00",
+      "source": "arXiv (Ramtin Ehsani, Irene Manotas, Saurabh Pujar, Luca Buratti, Preetha Chatterjee)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "OmniQEC: discovering practical quantum error-correcting codes by an AI scientist",
+      "content": "Quantum error correction (QEC) is indispensable for scalable fault-tolerant quantum computing. However, discovering QEC codes that remain effective is challenging, as logical performance depends on the interplay between code structure, hardware, syndrome extraction, and decoding, which often impose competing requirements. Here we introduce OmniQEC, an efficient AI scientist for discovering QEC codes suited to deployment on modern quantum processors. OmniQEC formulates QEC design as an iterative discovery process in which an orchestrator, implemented by advanced large language models (LLMs), coordinates code generation, code-level screening, syndrome-extraction synthesis, and decoder-based circuit evaluation. At its core, OmniQEC combines a self-evolving reasoning mechanism with a slow--fast synergistic workflow: a fast loop explores candidates using inexpensive code-level proxies, whereas a slow loop performs physically grounded circuit-level evaluation and feeds the resulting evidence",
+      "link": "https://arxiv.org/abs/2607.25865v1",
+      "published_at": "2026-07-28T15:31:26+00:00",
+      "source": "arXiv (Ge Yan, Shanchuan Li, Pengyue Ma, Qixin Zhang, Pingchuan Ma, Jianping Wang, Min-Hsiu Hsieh, Yuxuan Du)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "DRIFT: Direct-Recursive Intervention-Conditioned Forecasting of ICU Physiological Trajectories",
+      "content": "Many time-series forecasts depend not only on prior observations but also on actions specified during the forecast period. In intensive care units (ICUs), future vital signs and laboratory values are influenced by treatments such as vasopressors. However, models that predict the full future sequence all at once make little use of these treatments, whereas autoregressive models can accumulate errors. We introduce DRIFT, a hybrid framework in which a direct model produces the primary forecast and a recursive, action-conditioned model contributes constrained corrections. We evaluate DRIFT on 6,046 admissions from MIMIC-IV and 8,345 admissions from eICU-CRD. Averaged across the 8-, 24-, and 48-hour forecast endpoints, DRIFT reduces mean absolute error for mean arterial pressure (MAP) by 0.673% relative to an action-conditioned Temporal Fusion Transformer (TFT-action) on MIMIC-IV and achieves the lowest corresponding error among the compared models on eICU-CRD. Although the overall accuracy",
+      "link": "https://arxiv.org/abs/2607.25864v1",
+      "published_at": "2026-07-28T15:31:22+00:00",
+      "source": "arXiv (Weixin Liu, Juming Xiong, Congning Ni, Yanfan Zhu, Xingtao Lin, Bradley A. Malin, Zhijun Yin)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Lowering the implementation barrier of neutral-atom quantum computing with agentic workflows",
+      "content": "Quantum computers are moving from research laboratories to industrial machines accessible via the cloud and integrated into high-performance computing facilities. However, translating theoretical quantum protocols into hardware experiments remains a major bottleneck, requiring expertise across protocol design, compilation, simulation, and cloud execution. Here, we introduce an agentic workflow that automates this pipeline on neutral-atom quantum processors (here two Pasqal QPUs available on the cloud) while keeping the researcher in the loop for critical validation. In three case studies from many-body physics and optimization, the agent went from published paper or patent to a QPU campaign run overnight. In particular, human intervention was crucial to ensure scientific validity: the agent selected an inadequate observable in one experiment and constructed a plausible but incorrect hardware diagnosis in another, with both failures detected only through domain-expert review. Finally, w",
+      "link": "https://arxiv.org/abs/2607.25834v1",
+      "published_at": "2026-07-28T15:13:14+00:00",
+      "source": "arXiv (Constantin Dalyac, Alexandre Dauphin, Loïc Henriet, Christophe Jurczak)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL",
+      "content": "Large language model agents often spend substantial wall-clock time waiting for tool call results. Tool-call speculation can hide this latency by predicting and pre-executing an agent's next tool call if the prediction matches the agent's eventual tool call, but existing speculators are typically separate draft models or cached traces that are poorly aligned with the deployed agent's own behavior. We identify this speculator-agent gap and show that the target agent itself is a strong next-call speculator. This points to a simpler design: unifying the agent and speculator within the same model. In this paper, we introduce the self-speculating agent, a single model that both solves tasks in agent mode and predicts its next tool call from partial trajectories in speculator mode, fully reusing prefix KV cache. To enable this dual-mode agent without degrading performance, we propose a joint agent-speculator reinforcement learning method, which derives speculation targets from the agent's ow",
+      "link": "https://arxiv.org/abs/2607.25816v1",
+      "published_at": "2026-07-28T15:00:10+00:00",
+      "source": "arXiv (Jiabao Ji, Yujian Liu, Li An, Rohit Jain, Gungor Polatkan, Siyu Zhu, Shiyu Chang)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Freq-RemoteVAR: Next-Frequency Autoregressive Modeling for Remote Sensing Change Detection",
+      "content": "Remote sensing change detection aims to identify land-cover changes from bi-temporal images. Most existing methods follow a one-shot dense prediction paradigm, directly regressing a change mask from fused features. However, such approaches overlook the intrinsic frequency characteristics of change patterns. We propose Freq-RemoteVAR, a frequency autoregressive framework that reformulates change detection as a structured generation problem in the frequency domain. Instead of predicting the change mask in a single step, we introduce a next-frequency prediction paradigm, where change information is progressively generated from coarse to fine. We design a frequency-aware mask tokenization strategy that decomposes change supervision into multi-frequency token targets via Fourier transformation and quantization. We develop a Frequency VAR Transformer, which performs causal autoregressive modeling over frequency tokens. The model starts from learned mask queries and progressively predicts fre",
+      "link": "https://arxiv.org/abs/2607.25815v1",
+      "published_at": "2026-07-28T14:59:56+00:00",
+      "source": "arXiv (Luqi Gong, Rui Xu, Yue Chen, Chao Li, Jingqi Hong, Xuefeng Zhao)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "FLASH: Efficient Impact Fall Detection with Unified Hypergraph State-Space Model",
+      "content": "Falls represent a critical public health challenge, and accurate detection of the impact moment when an individual hits the ground is crucial for timely intervention. Existing skeleton-based methods rely on graph neural networks modeling only pairwise joint connections, failing to capture multi-joint coordination characteristic of fall impacts, while transformer-based temporal models suffer from quadratic complexity limiting real-time deployment. We propose FLASH, a novel framework integrating single-matrix hypergraph representations with Mamba's selective state-space models through adaptive feedback mechanisms for efficient impact detection. Our approach constructs biomechanically-grounded hyperedges to model functional joint coordination while leveraging Mamba's linear-time complexity to capture temporal dynamics. Experiments on UP-Fall and UMAFall datasets demonstrate that FLASH achieves state-of-the-art accuracy with real-time inference capability and strong zero-shot cross-dataset",
+      "link": "https://arxiv.org/abs/2607.25791v1",
+      "published_at": "2026-07-28T14:43:07+00:00",
+      "source": "arXiv (Tresor Y. Koffi, Youssef Mourchid, Yohan Dupuis)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Towards Faithful Sentimental Image Captioning via Evidence-Aware Multi-Agent Reasoning",
+      "content": "Sentimental Image Captioning (SIC) requires balancing emotional expression with visual fidelity. Existing methods often struggle with this trade-off, leading to hallucinations due to insufficient local grounding and the lack of sentimental verification mechanisms. To address these limitations, we propose SEA-Cap, a Sentiment-Evidence-Aware Multi-Agent System for faithful and evidence-grounded sentimental image captioning. SEA-Cap incorporates a Sentiment Evidence Miner that extracts structured, local affective cues to shift sentiment control from global attributes to verifiable object-level evidence. Leveraging this evidence, our framework orchestrates a collaborative workflow where a Generator, Hallucination Checker, and Arbitrator iteratively refine captions via a shared blackboard. By explicitly auditing generated content against mined visual evidence, SEA-Cap ensures both sentiment accuracy and factual consistency. Extensive experiments on two benchmark datasets demonstrate that SE",
+      "link": "https://arxiv.org/abs/2607.25789v1",
+      "published_at": "2026-07-28T14:42:00+00:00",
+      "source": "arXiv (Tiecheng Cai, Zexian Yang, Chao Chen, Shanshan Lin, Xiangwen Liao)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "WorkSurface-Bench: Benchmarking Enterprise Agents on Multi-Surface Knowledge Routing",
+      "content": "Enterprise agents often need to integrate heterogeneous knowledge sources: documents for narrative facts, tables for computation, and dependency graphs for file relationships. Existing benchmarks typically evaluate retrieval or tool use without distinguishing whether an agent first selects the appropriate knowledge sources. We introduce WorkSurface-Bench, a benchmark for evaluating this capability as surface routing. It contains 1,151 atomic tasks derived from persona-scoped Workspace-Bench-Lite workspaces, spanning document, table, graph, and cross-surface questions. Its reference answers are auditable: table answers are reproduced through executed DuckDB queries, document answers are grounded in verified text spans, and graph answers are traced to source dependency annotations. We evaluate four model backbones across six controlled agent settings, yielding 27,624 protocol-error-free trajectories. Under gold-constrained tool access, agents achieve 98.7-99.8 Route F1, while Answer rema",
+      "link": "https://arxiv.org/abs/2607.25765v1",
+      "published_at": "2026-07-28T14:19:59+00:00",
+      "source": "arXiv (Hao Liang, Meiyi Qiang, Sizhe Qiu, Linzhuang Sun, Wentao Zhang)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Loss Invariance Determines What Concept Layers Encode: Volume Grounding in Echocardiography",
+      "content": "Objective: Concept bottleneck models route prediction through interpretable intermediate variables, and their validity is normally judged by how accurately those variables are predicted. We ask whether that judgement is sufficient, using left ventricular volumes as the concepts underlying ejection fraction estimation from echocardiographic video.\nMethods: A video transformer encoder was trained on a publicly available echocardiography dataset. End-systolic and end-diastolic volumes formed a concept layer from which ejection fraction was computed analytically, with no residual path to the output. We compared training under an ejection fraction objective alone against training with additional supervision of the volumes in millilitres, and evaluated both on 1276 held-out studies.\nResults: The concept bottleneck did not increase ejection fraction error relative to direct regression, at 6.89 against 7.13 mean absolute error. Without volume supervision, however, the spread of predicted volum",
+      "link": "https://arxiv.org/abs/2607.25748v1",
+      "published_at": "2026-07-28T14:11:10+00:00",
+      "source": "arXiv (Hyunkyung Han, Min Jung Kim)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Shared Voxel-Map-Based Cooperative Indoor UAV Guidance with a Multi-Agent Soft Actor-Critic Controller",
+      "content": "This paper presents a cooperative indoor UAV guidance framework that combines a shared voxel-map world model with a multi-agent Soft Actor-Critic (MASAC) controller. Multiple drones fuse 360 LiDAR observations into a common world-frame occupancy map, which is converted into a compact bird's-eye-view (BEV) representation and provided to each agent as an ego-aligned local crop. This integrate-in-world, act-in- ego design enables consistent multi-UAV spatial fusion whilst retaining decentralised continuous control. The policy combines BEV map features, near-field obstacle observations, and compact goal and peer-state information within a centralised-training, decentralised-execution framework. In simulation, the learned controller achieves a 90.3% success rate in corridor navigation, outperforming Astar planning, an artificial potential field controller, and a prior guidance method. To address residual sim-to-real mismatch, the simulation-trained policy is further adapted using offline im",
+      "link": "https://arxiv.org/abs/2607.25728v1",
+      "published_at": "2026-07-28T13:52:12+00:00",
+      "source": "arXiv (Thomas Hickling, Dylan Wynne, Yu Su, Nabil Aouf)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "论文研究"
+    },
+    {
+      "title": "Nudging Sustainable Choices through LLM-Generated Recommendation Explanations",
+      "content": "Recommender systems mediate everyday consumption, offering a promising channel for encouraging sustainable choices. Prior research shows that explanations influence users' perceptions of recommendations and can support more informed decisions. We argue that explanations can also serve as behavioral nudges by foregrounding sustainability information at the moment of choice. This study investigates how different behavioral framings of sustainability information in recommendation explanations affect user choices and perceptions. Using generative AI, we generate sustainability-aware explanations by drawing on nudge theory and validate them through human evaluation and LLM-as-a-judge audits. Building on this foundation, we conduct two randomized studies ($N = 529$) in a low involvement domain (instant coffee) and a high involvement domain (hotel bookings), in which participants choose among preference matched recommendations accompanied by these explanations. Our results show that, across b",
+      "link": "https://arxiv.org/abs/2607.25726v1",
+      "published_at": "2026-07-28T13:49:51+00:00",
+      "source": "arXiv (Haya Halimeh, Dietmar Jannach, Oliver Müller)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Tools Are Not Islands: Set-Level Tool Retrieval for LLM Agents via Query-Conditioned Hyperedge Prediction",
+      "content": "Large language model (LLM) agents increasingly rely on invoking external tools to complete real-world tasks. Tool retrieval, which selects a small task-relevant subset from a library of thousands of tools before the agent acts, has therefore become a critical component of LLM agent pipelines. However, existing retrievers either score each tool in isolation or assemble the tool set sequentially, so the joint utility of a candidate set is never evaluated as a whole. In this paper, we propose HYSET, short for HYperedge-based SEt-level Tool retrieval. Our contributions are threefold: (i) we formulate tool retrieval as query-conditioned hyperedge prediction on a tool co-invocation hypergraph, under which the tool set itself becomes the unit of scoring and most existing retrieval paradigms reduce to restricted instances; (ii) we capture size-dependent tool compatibility through cardinality-specific interactions; and (iii) we design HYSET as a pre-selection module requiring no modification to",
+      "link": "https://arxiv.org/abs/2607.25718v1",
+      "published_at": "2026-07-28T13:45:08+00:00",
+      "source": "arXiv (Xinyi Hong, Pinjun Dong, Xinyang Yu, Binyan Jiang)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "SpeechLLM Meets Federated Learning for End-to-End ASR: English and Italian Case Studies",
+      "content": "Federated learning (FL) enables privacy-preserving training of automatic speech recognition (ASR) systems across distributed data sources, yet its application to large-scale speech language models (SpeechLLMs) remains unexplored. This paper presents the first systematic study of federated training for SpeechLLM-based end-to-end ASR systems. We design a communication-efficient federated optimization strategy tailored to the unique challenges of SpeechLLM architectures, addressing high-dimensional parameter spaces, gradient communication overhead, and computational constraints in distributed settings. Through extensive empirical evaluation on monolingual ASR tasks in English and Italian, we demonstrate the effectiveness and stability of our federated approach compared to centralized training baselines across diverse acoustic conditions and speaking styles. Additionally, we conduct a comprehensive ablation study analyzing the impact of different speech encoder architectures on monolingual",
+      "link": "https://arxiv.org/abs/2607.25716v1",
+      "published_at": "2026-07-28T13:43:04+00:00",
+      "source": "arXiv (Mohamed Nabih Ali, Daniele Falavigna, Alessio Brutti)",
+      "weight": 1.0,
+      "score": 7.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "VAD to the Bone: Ultra-Tiny Speech Activity Detection for Edge Deployment",
+      "content": "Voice activity detection (VAD) triggers downstream speech processing in always-on systems under strict memory, latency, and compute constraints. Recent compact models report strong accuracy but rely on components that are not widely supported: learnable filterbanks, recurrent layers, or non-causal post-processing. We propose kiloVAD, designed for embedded inference using standard Mel features, CNN-only layers, and tunable context/spectral parameters. We introduce per-layer structured pruning with self-distillation and angle-based quantization-aware training (QAT) that outperforms standard QAT by 1-4%. Evaluated per-frame under causal conditions, kiloVAD achieves 0.850 AUC on AVA-Speech with 2.1 k parameters and 200 ms context, establishing a new state of the art for causal, deployment-ready VAD.",
+      "link": "https://arxiv.org/abs/2607.25870v1",
+      "published_at": "2026-07-28T15:37:44+00:00",
+      "source": "arXiv (Stephen Bauer, Sheila Seidel, Shanza Iftikhar, Scott Veidenheimer, Gorkem Ulkar)",
+      "weight": 1.0,
+      "score": 7.26,
+      "category": "技巧观点"
+    },
+    {
+      "title": "微星 MEG CORELIQUID E15 超神 360 一体式水冷体验：给 CPU 装个“冰箱”",
+      "content": "微星作为 PC 硬件大厂，除去知名度最高的主板和显卡外，其他硬件走的大多是定位主流的亲民路线。就拿装机搭配中非常重要的水冷散热器来说，微星此前推出的 P13、P22 等型号，价格都在千元以内，而且都有着不错的设计亮点，如无螺丝全铜底座、复合式扣具、简易盖板等，对于追求微星全家桶的用户来说相当友好。\n不过今天，IT之家将给大家带来一款售价来到 2699 元的旗舰水冷新品，微星 MEG CORELIQUID E15 360 一体式水冷散热器。它最大的亮点就是搭载了一块裸眼 3D 曲面屏，既能散热也能提供情绪价值，那么它的实际表现究竟如何？一起来看看吧。\n一、设计用料\n从开头的包装就可以看出，微星 MEG CORELIQUID E15 水冷采用了经典的奢华黑金配色，搭配黑色硬件能让整体的装机风格充满高级感。\n拆开包装后，内部摆放也很讲究，通过规整的小盒子和硬纸板进行隔断，增强了开箱时的仪式感。\n水冷主体出厂就已经装好了冷排风扇，磁吸式设计的曲面屏单独放置，配件盒里提供了一片冷头简易磁吸装饰盖、一套复合金属扣具 + 主板辅助扣具、一支 AS50 高性能导热硅脂、一张具有 NFC 功能的 MEG 会员卡、一个三角 MEG 徽章以及一张黑色的擦镜软布。\n除此之外，另有一些配件采用独立绝缘带包装，包括四个扣具螺柱、一包水冷固定螺丝、一对 90° 管线固定夹、一根 EZConn 技术连接线、一条 USB-C to PUMP + ARGB + 风扇复合线。只能说不愧是旗舰水冷，配件丰富程度和包装规格相比自家百元级水冷高出了几个档次。\n根据官方说法，微星 MEG CORELIQUID E15 水冷采用了 30mm 加厚冷排，结合精密气流设计，可带来出色的散热性能。IT之家实测，冷排部分厚度达到了 30.5mm，冷排 + 排扇整体厚度则达到了 58.6mm，冷排整体尺寸 397×124.5×30mm。\n冷排标配 12 组加宽水道，冷水、热水各 6 条，配合高密度散热排设计，最大程度提升空气热交换面积。三风扇排扇尺寸为 362×125×28.4mm，也就是说风扇直径也非常接近 30mm，风扇转速区间为 800~2300 ± 230 RPM，设计风量为 217.91 CFM，虽然没有 3000 转暴力扇那么夸张，但放在冷排扇里也是第一梯队水平。\n扇叶部分为白色设计，可以更好展现 ARGB 灯",
+      "link": "https://www.ithome.com/0/983/217.htm",
+      "published_at": "2026-07-29T09:21:18+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.25,
+      "category": "产品更新"
+    },
+    {
+      "title": "商用航天器失控翻滚，NASA 望远镜轨道抬升任务遇挫",
+      "content": "IT之家 7 月 29 日消息，一家名为 Katalyst Space 的公司发射了一艘用于提升太空望远镜轨道高度的机器人飞船，但由于接连发生故障，该机器人失控翻滚。美国国家航空航天局（NASA）和该公司于今日表示，目前他们正在尝试利用备用系统稳定航天器，之后 NASA 将决定这项任务是否还能继续执行。\n这是 NASA 首次雇佣私人公司，将其一台太空望远镜提升至更高轨道，以帮助该天文台在原定寿命结束后继续运行。\n尼尔 · 格雷尔斯 · 斯威夫特天文台（Neil Gehrels Swift Observatory）于 2004 年发射升空，能够快速指向伽马射线暴等短暂出现的宇宙现象。由于该航天器的轨道逐渐下降并靠近地球，需要被重新推升至更高轨道，才能继续执行观测任务。\n名为 LINK 的航天器于 7 月 3 日搭载诺斯罗普 · 格鲁曼公司的飞马座（Pegasus）火箭进入太空。在过去几周里，地面飞控人员一直在对该航天器进行调试，逐步启动各项系统，为之后与 Swift 天文台会合做准备。\n然而，该航天器随后出现姿态控制问题，并在周末开始失控旋转。据 NASA 介绍，这种旋转导致卫星出现“间歇性通信”问题，原因可能是其通信天线不断偏离地球方向。负责控制航天器姿态的三个反作用轮中已有两个失效，同时其中一套推进系统也出现故障。\n目前，飞控团队正在利用航天器上的另一组推进器尝试恢复控制，通过减缓旋转速度来稳定飞船。NASA 在声明中表示：“我们已经开始进行这一系列推进操作，并且看到了预期效果。”\nKatalyst 则向 TechCrunch 表示：“这仍然是一项正在进行中的任务，我们仍将继续推进与 Swift 会合的计划。”\nKatalyst 任务首席研究员基兰 · 威尔逊（Kieran Wilson）在任务发射前接受采访时曾表示，由于 Swift 望远镜迫切需要在未来几个月内提升轨道，这艘航天器的研发速度非常快。\n“这一切都充满挑战，也存在风险，”他说道。“很多航天器拥有更长的研发周期和更多资金支持，但最终也可能因为一些普通原因而失败。”\n今年 6 月，Katalyst 完成了一轮 1200 万美元（IT之家注：现汇率约合 8134.2 万元人民币）融资，用于支持此次任务，投资方包括 Fortitude Ventures 和 Geodesic Capital。该公司还获得了美",
+      "link": "https://www.ithome.com/0/983/099.htm",
+      "published_at": "2026-07-29T07:19:04+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.25,
+      "category": "行业动态"
+    },
+    {
+      "title": "Shieldstral",
+      "content": "We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7$\\times$ its size on text safety benchmarks and sets a new state of the art on multimodal safety classification. Shieldstral formulates content moderation as a binary question-answering task. This simple formulation unifies diverse moderation tasks into a single yes/no problem, enabling heterogeneous safety datasets with divergent taxonomies to be consolidated under one training framework. We present the data construction recipe, covering curation and generation of approximately 54.1M samples and a fine-grained evaluation set to evaluate policy adaptability. Together, these enable a small adaptive model to match or outperform much larger models.",
+      "link": "https://arxiv.org/abs/2607.25857v1",
+      "published_at": "2026-07-28T15:27:53+00:00",
+      "source": "arXiv (Antonia Calvi, Avinash Sooriyarachchi, Giada Pistilli, Guillaume Lample, Maarten Buyl, Maximilian Augustin, Maximilian Müller, Pierre Stock, Tom Bewley, Wassim Bouaziz, Yimu Pan)",
+      "weight": 1.0,
+      "score": 7.21,
+      "category": "技巧观点"
+    },
+    {
+      "title": "让 32GB 内存能跑 GPT-OSS-120B：Nextorage 将推外接式 AI 加速硬件",
+      "content": "IT之家 7 月 29 日消息，群联 (Phison) 旗下日本存储模组企业 Nextorage 今日宣布将开发一款名称暂定为 aiDAPTIV Station 的外接式硬件设备，\n让仅配备 32GB 内存的 AI 笔记本电脑也能运行 OpenAI GPT-OSS-120B 这样的大型人工智能模型\n。\n从名称上来看，Nextorage aiDAPTIV Station 自然支持群联的 aiDAPTIV 技术方案，\n能实现本机 DRAM 和外接高耐久 NAND 存储介质间的动态资源调配\n，从而在实际上扩充内存。其采用便携式设计，配备 USB-C 接口，支持 Windows 操作系统和 Linux 操作系统的 Ubuntu 发行版。\nIT之家获悉，Nextorage 目标今年内面向日本市场推出 aiDAPTIV Station，还规划了配套的预构建软件包方案。\n相关阅读：\n《\nOWC Stack AI 揭开神秘面纱，实为外置式群联 aiDAPTIV 内存化闪存方案\n》",
+      "link": "https://www.ithome.com/0/983/168.htm",
+      "published_at": "2026-07-29T08:47:05+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.19,
+      "category": "模型发布"
+    },
+    {
+      "title": "微软推进 Win10/Win11 新旧 Outlook 迁移，计划修复自动映射日历问题",
+      "content": "IT之家 7 月 29 日消息，科技媒体 Windows Latest 今天（7 月 29 日）发布博文，报道称微软正推进 Windows 10、Windows 11 经典版 Outlook 迁移到新版 Outlook，\n并计划在未来几周内修复自动映射日历问题。\nIT之家注：自动映射日历（Automapped calendars）是基于 Exchange 服务器与 Outlook 客户端的一项集成功能，当管理员为用户授予某个共享邮箱或他人邮箱的“完全访问权限（Full Access）”后，系统会自动将对应的日历“映射”并显示在用户的 Outlook 日历面板中。\n在现有新旧 Outlook 迁移过程中，自动映射日历无法自动迁移，导致部分用户切换后无法访问相关日历，必须联系管理员完成手动迁移。微软对此计划在未来几周内修复。\n功能生效后，用户可在 Outlook 的 Calendar（日历）页面打开 My Calendars（我的日历），查看自动映射日历。微软同时确认，\n2027 年 3 月推动用户转向新版 Outlook 的计划没有改变\n。\n此外，微软计划将 Outlook 与 Exchange Online（Exchange Online）中的共享日历从旧版 MAPI（消息应用程序编程接口）模型迁移至现代 REST（表述性状态转移）模型。\n微软称，服务器端迁移将提升共享日历的同步可靠性、性能与一致性，委派用户和共享日历访问者均无需操作。",
+      "link": "https://www.ithome.com/0/983/092.htm",
+      "published_at": "2026-07-29T07:00:41+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.16,
+      "category": "模型发布"
+    },
+    {
+      "title": "Open-Ended CT Volume Segmentation with Weak Supervision from Language",
+      "content": "We introduce a method for training a text-conditioned segmentation model for CT scans, which combines voxel-level supervision with coarse but scalable slice-level supervision from reports. We extract, from a large database of scan-report pairs, descriptions of findings with indices of slices where those findings occur. We then finetune a general-purpose 2D image segmentation model, SAM3, with standard segmentation losses from strongly labeled data and with a slice-level classification loss from the extracted weak supervision. Our results on the ReXGroundingCT dataset illustrate that this strategy improves the segmentation dice score: from an 8% relative gain when there are 1000 fully labeled volumes to 22% when there are 250 fully labeled volumes.",
+      "link": "https://arxiv.org/abs/2607.25860v1",
+      "published_at": "2026-07-28T15:29:12+00:00",
+      "source": "arXiv (Sanjay Subramanian, Junwei Yu, Zirui Wang, Rohil Malpani, Maggie Chung, Adam Yala, Dan Klein, Trevor Darrell)",
+      "weight": 1.0,
+      "score": 7.16,
+      "category": "技巧观点"
+    },
+    {
+      "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
+      "content": "Generalist manipulation policies increasingly take the form of action-chunking flow policies built on large pretrained backbones. Such chunks run open-loop, so the policy cannot react to sensory input arriving mid-execution, sacrificing \\emph{reactivity}. Replanning more often would restore it, but the perception-to-action pipeline (a large backbone plus multiple denoising steps) is too slow: this \\emph{latency} forbids frequent replanning and leaves committed actions stale, making such policies ill-suited for dynamic, closed-loop control. We present $π\\mathbf{R}^2$, which makes these policies reactive and real-time while retaining large backbones, expressive multi-modal policies, and multi-action prediction. Built on the per-position noise schedule of diffusion forcing, $π\\mathbf{R}^2$ contributes two ideas. First, it splits conditioning into a fast channel (proprioception, fresh every tick) and an asynchronously updated slow channel (vision-language features), so the policy reacts to",
+      "link": "https://arxiv.org/abs/2607.26055v1",
+      "published_at": "2026-07-28T17:59:31+00:00",
+      "source": "arXiv (Sungjae Park, Shubham Tulsiani)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
+      "content": "Enhancing classification performance in mammography remains a persistent challenge across both small curated datasets and large-scale clinical cohorts. Conventional transfer learning approaches often neglect dataset-specific characteristics, while recent neighborhood-informed methods have been restricted to narrow tasks with rigid formulations, limiting their scalability to population-level datasets. To address these challenges, we propose the Dataset-Informed Transfer Learning (DITL) framework, which integrates dataset-derived difficulty signals with neighborhood-based triplet supervision in a unified objective. DITL introduces two adaptive components: (i) Adaptive Difficulty-Weighted Cross-Entropy (A-DWCE), which assigns per-sample weights based on k-nearest neighbor label purity in a self-supervised feature space, and (ii) Adaptive Neighborhood Representation Triplet (A-NR-Triplet), which enforces intra-class compactness and inter-class separation using a learnable margin. Unlike fo",
+      "link": "https://arxiv.org/abs/2607.26043v1",
+      "published_at": "2026-07-28T17:52:36+00:00",
+      "source": "arXiv (Adarsh Bhandary Panambur, Siming Bayer, Andreas Maier)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
+      "content": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. This learning paradigm has proven effective under partial observability when additional state information is available, but also under full observability when more refined state information is available. Focusing on model-based reinforcement learning, we study the effect of asymmetric learning on observation representations and on privileged information representations. First, we identify a limitation in the privileged information representations learned by an asymmetric model-based algorithm known as the Informed Dreamer. Then, we propose a novel asymmetric representation learning objective using latent guidance, resulting in a new algorithm called the Reinformed Dreamer. Experiments across s",
+      "link": "https://arxiv.org/abs/2607.26040v1",
+      "published_at": "2026-07-28T17:49:29+00:00",
+      "source": "arXiv (Gaspard Lambrechts, Adrien Bolland, Daniel Ebi, Damien Ernst)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Wonder: Video World Model Done Better",
+      "content": "We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop sev",
+      "link": "https://arxiv.org/abs/2607.26037v1",
+      "published_at": "2026-07-28T17:45:25+00:00",
+      "source": "arXiv (Jiacong Xu, Hanwen Jiang, Zhixin Shu, Kalyan Sunkavalli, Vishal M. Patel, Yiqun Mei)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Falling Behind Drives Unsafe Development in an Idealised AI Race Experiment",
+      "content": "Technological races create tension between speed and safety: actors may gain by moving faster than competitors, even when risky development is harmful. This is prominent in debates about artificial intelligence (AI), where competitive pressure is often argued to incentivise riskier, less safety-conscious development. We study this using a framed behavioural experiment based on an idealised AI race, in which paired participants repeatedly chose between Safe and Unsafe development under an uncertain time horizon. Unsafe development gave faster progress and higher immediate payoffs but accumulated private risk up to a treatment-specific maximum of 10\\%, 60\\%, or 90\\%; the race's competitive structure was held constant, and only this maximum risk varied. Neither the pre-registered comparison between risk levels nor the role of elicited risk preferences was supported by the data. Instead, exploratory analyses motivated by the task's repeated structure show that Unsafe behaviour is shaped le",
+      "link": "https://arxiv.org/abs/2607.26034v1",
+      "published_at": "2026-07-28T17:44:03+00:00",
+      "source": "arXiv (Elias Fernández Domingos, The Anh Han)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Parallel Decoding Distillation for Fast Image and Video Generation",
+      "content": "Generation in video diffusion or flow models is computationally expensive due to the slow and iterative sampling process. Current state-of-the-art (SOTA) acceleration methods heavily rely on variational score distillation (VSD) and adversarial losses to distill diffusion models into few-step generators. Albeit achieving high-quality video generation, these training losses are notoriously hard to optimize and suffer from mode collapse, leading to loss of video diversity and lack of motion. In this paper, we introduce Parallel Decoding Distillation (PDD), a simplified and scalable trajectory-based distillation method for fast inference of diffusion and flow matching models. Our architecture and training procedure are compatible with any pre-trained model and support sampling with a varying number of function evaluations (NFE). PDD accelerates generation by predicting multiple denoising steps per network evaluation. Conceptually, it learns a representation of the mean velocity without reg",
+      "link": "https://arxiv.org/abs/2607.26004v1",
+      "published_at": "2026-07-28T17:20:00+00:00",
+      "source": "arXiv (Neta Shaul, Chao Liu, Arash Vahdat, Julius Berner)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Sharpness-Aware Minimization and Muon: Robustness under the Spectral Norm",
+      "content": "Sharpness-Aware Minimization (SAM) aims to improve generalization by encouraging insensitivity to small, worst-case parameter perturbations. However, the notion of a \"small\" perturbation is inherently geometry-dependent: while existing SAM variants have explored a wide range of choices, a clear perspective on which geometries are most effective in practice remains elusive. Recent work on matrix-aware optimization, particularly the Muon optimizer, suggests that respecting the matrix structure of hidden-layer weights can lead to strong empirical performance. Motivated by this, we study matrix-aware geometry in both stages of SAM: we introduce a layerwise spectral inner perturbation for matrix-valued hidden-layer parameters and combine it with either AdamW/SGDW or Muon in the outer update. Across ImageNet-1K experiments on ViT-Small/16 and ResNet-50, we find that the combination of a spectral inner step with a Muon outer step performs consistently strongly, achieving the best validation a",
+      "link": "https://arxiv.org/abs/2607.26001v1",
+      "published_at": "2026-07-28T17:18:11+00:00",
+      "source": "arXiv (Wenzhi Zhong, Edward Milsom, Michael Murray)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "产品更新"
+    },
+    {
+      "title": "Empirical Evaluation of Out-Of-Distribution Performance of Tabular Foundation Models",
+      "content": "Tabular Foundation Models (TFMs) have emerged as novel approaches for tabular predictive tasks, demonstrating competitive predictive performance to ensemble tree-based models. Most TFMs are trained and evaluated on independent and identically distributed data, but this assumption changes in real-world scenarios due to distribution shifts, which compromise the robustness of models. Limited research has been conducted of TFMs under distribution shifts. We present an empirical evaluation of Out-Of-Distribution (OOD) performance of nine TFMs, spanning diverse pre-training strategies and architectures: TabPFNv2, TabPFNv2.5, TabPFNv2.6, TabPFNv3, TabICL, TabICLv2, Mitra, LimiX and TabFM. Three real-world datasets from the TableShift study were considered (HELOC, Voting, Childhood Lead), covering label, socioeconomic, and geographic shift types. Our results show that all evaluated TFMs degrade systematically under distribution shift regardless of pre-training strategy, with shift gaps ranging",
+      "link": "https://arxiv.org/abs/2607.26000v1",
+      "published_at": "2026-07-28T17:16:01+00:00",
+      "source": "arXiv (Malena Loza, David Chushig-Muzo, Eva Milara, Luis Bote-Curiel, Luis Estrada-Petrocelli, Felipe Grijalva)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Untangling Co-Drift: Proactive Multi-Intent Failure Prediction and Root-Cause Disambiguation for Self-Driving Networks",
+      "content": "The vision of self-driving networks that monitor, reason, and act upon themselves with minimal human intervention relies on tightly coupled monitoring, analytics, and actuation functions. In this work, we treat these functions as three operational macro-intents: continuous telemetry, real-time analytics, and programmatic actuation, and formalize the health of each function as an intent that the network must continuously satisfy. A critical, yet underexplored, challenge stems from the causal coupling among these intents, where a singular fault within one macro-intent propagates as a co-drift and subsequently triggers cascading, symptomatic anomalies across the remaining intents. This ambiguity makes it exceedingly difficult for existing, reactive approaches to distinguish the true root-cause intent from symptomatic victim intents, and their reliance on threshold-crossing detection leaves insufficient time for proactive remediation. We introduce MILD, a novel framework that reformulates ",
+      "link": "https://arxiv.org/abs/2607.25989v1",
+      "published_at": "2026-07-28T17:06:24+00:00",
+      "source": "arXiv (Md. Kamrul Hossain, Walid Aljoby)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Generator-Aligned Representation Interfaces for Diagnostic Soft Equivariance",
+      "content": "Exact-equivariant architectures typically encode prescribed group actions in specialized operators, which can complicate their reuse with generic backbones and across data modalities. We introduce the Generator-Aligned Representation Interface (GARI), a representation-level design principle that exposes selected transformation generators to a generic sequence backbone through aligned canonical and generator-induced views. We formalize the resulting behavior using a probe-specific soft-equivariance residual defined over declared data and transformation distributions. This framework distinguishes representation consistency from task robustness and exact equivariance, and localizes residual mismatch to interface construction, shared stream processing, and terminal fusion. We instantiate the interface as GARI-Net, which constructs generator-indexed streams, converts them into a common interaction frame, processes them with shared parameters, repairs ordering-induced context mismatch, enabl",
+      "link": "https://arxiv.org/abs/2607.25988v1",
+      "published_at": "2026-07-28T17:06:21+00:00",
+      "source": "arXiv (Weitao Li, Gong Cheng)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Physics-Aware End-to-End Deep Reinforcement Learning for Quadcopter Control with Actuator Dynamics",
+      "content": "Unmanned aerial vehicles (UAVs), particularly quadcopters, present unique challenges for autonomous control due to their underactuated dynamics: only four available control inputs must govern six degrees of freedom. This paper investigates a physics-aware, end-to-end deep reinforcement learning (DRL) approach that acts directly on low-level body inputs, total thrust and body torques $(T, τ_x, τ_y, τ_z)$, and closes the loop through a high-fidelity Simulink environment. Our simulator integrates a 12-state rigid-body model (MATLAB Level-2 S-Function) with (i) an Action2RPM allocation based on the Moore-Penrose pseudo-inverse of a coefficient matrix derived from thrust and drag terms, and (ii) first-order actuator dynamics for each motor (time constant $T_m = 0.076$ s), including rotor gyroscopic coupling. A shaped reward balances goal-reaching and stability using an exponential position well, attitude penalties, and quadratic velocity costs. Four DRL algorithms, DDPG, TD3, PPO, and SAC, ",
+      "link": "https://arxiv.org/abs/2607.25985v1",
+      "published_at": "2026-07-28T17:05:47+00:00",
+      "source": "arXiv (Ya-Chia Shen, Woei-Leong Chan)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Schrödinger's Cat: Probabilistic Representation and Prediction of Potential Scene Kinematics",
+      "content": "Predicting how a scene may evolve from partial observations requires reasoning about multiple possible futures rather than committing to a single trajectory. Existing approaches either generate appearance-dominated video predictions or sample a small number of trajectories without explicitly modeling the distribution of possible motion. We introduce Goal-Aware Representations of Future kInEmatic Latent Distributions (GARFIELD), a probabilistic model of scene kinematics that learns a structured spatio-temporal latent representation of the distribution over possible futures given an image and optional spatio-temporally sparse constraints. The same latent representation enables both joint sampling of all trajectories and direct access to the underlying motion distribution through an efficient deterministic density decoder. As a result, uncertainty about future motion can be localized to specific scene elements and timesteps and progressively refined through additional constraints. Experim",
+      "link": "https://arxiv.org/abs/2607.25984v1",
+      "published_at": "2026-07-28T17:05:39+00:00",
+      "source": "arXiv (Timy Phan, Jannik Wiese, Björn Ommer)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Reinforcement Learning for Code Optimization",
+      "content": "RL for code correctness is now established: have the model generate a program, run it against hidden test cases, and reward solutions that pass. Extending this to code optimization seems straightforward: just add execution time to the reward. But in practice, once timing drives the reward, small problems in measurement noise, reward sparsity, or GRPO instability overwhelm the signal and make RL fail: generated solutions are barely faster, and more of them can fail. We make execution time learnable through three stages: (1) how code is tested, by building DMC-Optim with large optimization tests and a calibrated sandbox; (2) how speed is turned into reward, by composing correctness and speed in the RL environment and using an offline simulator to predict the most promising configurations; and (3) how the model learns from that reward, by adapting GRPO and evaluation to the sparser, noisier timed-execution setting. On DMC-Optim, the strongest optimization-aware configurations improve stri",
+      "link": "https://arxiv.org/abs/2607.25970v1",
+      "published_at": "2026-07-28T16:52:31+00:00",
+      "source": "arXiv (Pierre Chambon, Kunhao Zheng, Juliette Decugis, Benoit Sagot, Gabriel Synnaeve)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Quasi-SVD: Learning a Lie-constrained matrix factorisation for real-time imaging",
+      "content": "Singular Value Decomposition (SVD) underlies matrix factorisation tasks across computational imaging, with medical applications increasingly demanding real-time processing. Yet SVD algorithms are inherently sequential, constraining real-time GPU throughput and limit online deployment in clinical pipelines. This study introduces Quasi-SVD, a differentiable, fully parallelized matrix factorization framework for GPUs. Rather than enforcing orthogonality on both factors, it guarantees exact orthogonality for a single Lie-parameterized factor while recovering the remaining components through soft constraints, enabling efficient parallel decomposition without iterative singular-vector optimization. This asymmetric design, provably sufficient for valid factorisation, achieves reconstruction fidelity of SSIM = 0.89-0.94 and accelerates computation by 3-20x relative to cuSOLVER and randomised SVD, enabling throughput above 25 FPS. Performance is evaluated on two medical imaging tasks spanning c",
+      "link": "https://arxiv.org/abs/2607.25967v1",
+      "published_at": "2026-07-28T16:47:59+00:00",
+      "source": "arXiv (Christopher Hahne)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "MODUS: Decoder-Only Any-to-Any Modeling of Diverse Modalities",
+      "content": "Any-to-any models predict any modality from any combination of others within a single network, a formulation used in multimodal vision and vision-language models, and increasingly in scientific domains such as ecology and astronomy. Existing any-to-any models are typically trained from scratch using encoder-decoder or diffusion architectures, impacting their performance and preventing them from using strong pre-trained decoder-only models as a prior. In this work, we investigate decoder-only any-to-any multimodal modeling, which treats all modalities symmetrically and supports arbitrary modalities as inputs and outputs without modality-specific heads, losses, or task pipelines. Because every modality is both an input and an output of the same model, the resulting model, named Modus, can support a range of applications, such as chained generation through intermediate modalities or cross-modal self-verification by scoring the model's own outputs with another generated modality. Modus dem",
+      "link": "https://arxiv.org/abs/2607.25948v1",
+      "published_at": "2026-07-28T16:34:23+00:00",
+      "source": "arXiv (Mingqiao Ye, Zhaochong An, Zhitong Gao, Xian Liu, François Fleuret, Chuan Li, Amir Zadeh, Serge Belongie, Afshin Dehghan, Jesse Allardice, David Mizrahi, Oğuzhan Fatih Kar, Roman Bachmann, Amir Zamir)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Can Deep Generative Models Reproduce Non-Stationary Gaussian Random Fields?",
+      "content": "Deep generative models (DGMs) are widely used for complex high-dimensional data and increasingly applied to spatial and spatio-temporal modeling. Their generated samples implicitly represent the learned data distribution and associated uncertainty. However, for real-world data, assessing whether DGMs have learned the underlying process is difficult because the ground truth is unknown and evaluation often relies on observations alone. We evaluate representative DGMs, flow matching (FM), DDPM, score-SDE, and VAE, on a known non-stationary Gaussian random field. This paper provides comprehensive metrics to assess recovery of the ground-truth mean and covariance structures, with oracle samples and a stationary control as references. All four models recover the mean surface, while their covariance recovery differs across model families: DDPM and score-SDE recover the covariance structure reasonably well, FM exhibits mildly attenuated non-stationarity and slight variance under-dispersion, an",
+      "link": "https://arxiv.org/abs/2607.25929v1",
+      "published_at": "2026-07-28T16:15:39+00:00",
+      "source": "arXiv (Daniel Kua, Yan Song)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "论文研究"
+    },
+    {
+      "title": "Face De-Identification: A Domain-Centric Survey from Capture to Processing",
+      "content": "Face de-identification (De-ID) aims to remove or conceal personally identifiable facial features in images or videos to prevent identity recognition while preserving utility for downstream tasks. With the rising emphasis on data privacy and responsible AI, face De-ID has emerged as an active research area spanning computer vision and privacy-preserving communities. Early approaches, and many contemporary ones, operate in the digital domain by modifying pixel-level or appearance-level features through post-capture processing. Recent advances extend face De-ID beyond post-processing by integrating privacy mechanisms directly into sensors during image acquisition, bridging sensing systems and downstream vision algorithms. In parallel, physical-domain methods explore wearable accessories and materials that conceal identity information in real-world environments prior to capture. In this survey, we present the first unified overview that spans the full data acquisition pipeline, encompassin",
+      "link": "https://arxiv.org/abs/2607.25926v1",
+      "published_at": "2026-07-28T16:15:12+00:00",
+      "source": "arXiv (Hui Wei, Hao Yu, Guoying Zhao)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models",
+      "content": "Vision-Language-Action (VLA) models have shown strong potential for general robot manipulation, but most existing models rely on 2D visual-language backbones and lack fine-grained 3D understanding of target objects, especially under occlusion, pose variation, scale changes, and precise spatial interaction. We propose an object-centric 3D representation alignment framework built upon $π_0$, using SAM3D as a frozen 3D teacher to provide target-object 3D priors during training. Specifically, we localize task-relevant objects with object recognition models, generate corresponding object masks, and use SAM3D to extract dense object-level 3D representations, which are aligned with intermediate visual features of $π_0$. This enables the policy to internalize target-object 3D information while preserving the original RGB-language-to-action inference pipeline without requiring depth, point clouds, masks, SAM3D, or additional 3D modules at test time. Simulation experiments show consistent improv",
+      "link": "https://arxiv.org/abs/2607.25912v1",
+      "published_at": "2026-07-28T16:05:32+00:00",
+      "source": "arXiv (Zonghe Liu, Shanyuan Jie, Xiaoquan Sun, Chen Cao, Zetian Xu, Zongsheng Liu, Jiayu Chen)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "AnnoBench: A Benchmark for Visualization Annotation Generation",
+      "content": "Annotation is among the most demanding visualization tasks to automate, as it simultaneously requires correctly navigating visual, semantic, and stylistic constraints. Failure to meet any of these conditions severely undermines the utility of an annotation, rendering it challenging to read, inaccurate, or visually discordant. Despite a growing body of annotation tools and automations, no existing benchmark or evaluation framework tests whether these conditions are met because of their scope and annotation not being the focus of their studies. We introduce AnnoBench, a benchmark for visualization annotation that materializes the inherent challenges of this domain in a structured and testable manner. AnnoBench pairs visualizations from professional data journalism and visualization galleries with annotation tasks, spanning four representation formats, five chart description conditions, and two prompt specification levels. The benchmark is executed via VLM-as-a-judge, using models aligned",
+      "link": "https://arxiv.org/abs/2607.25911v1",
+      "published_at": "2026-07-28T16:04:39+00:00",
+      "source": "arXiv (Md Rahat-uz-Zaman, Md Dilshadur Rahman, Andrew McNutt, Paul Rosen)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Minimizing Targeted Activations: Input-Only Suppression of Evaluation-Awareness Latents in Large Language Models",
+      "content": "Activation steering controls model behavior by editing internal activations at inference time. We study its input-side dual: optimizing a fluent prompt so that a chosen internal latent is driven toward zero, with no inference-time model access. Our target is an \"evaluation-awareness\" latent-linearly readable and steerable in recent work-whose control would threaten the validity of safety evaluations if models behave differently when they detect being tested. Adapting Fluent Dreaming / EPO with a negated feature term (GCG-style token optimization plus a self-cross-entropy fluency regularizer, swept over a fluency weight), we suppress the latent under five target constructions-a CAA direction, a subspace norm, an SAE feature, a single MLP neuron, and a behavioral logit-on Llama-3.2-3B and Llama-3.1-8B. The latent is robustly suppressible ($z\\approx-7$), and a causally-validated Llama Scope SAE feature can be fully and selectively turned off. But our controls tell a cautionary story about",
+      "link": "https://arxiv.org/abs/2607.25907v1",
+      "published_at": "2026-07-28T16:01:48+00:00",
+      "source": "arXiv (Deepanshu Mody, Samarth Agarwal, Utkarsh Mittal, Dipesh Mahato)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+      "content": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capture scales readily, and current practice uses the resulting data mainly for pre-training, adding a small real-robot \"anchor\" at post-training. We ask whether raising the fidelity of robot-free UMI data, rather than shrinking the real-robot fraction, can remove that anchor. We present HiFi-UMI, a portable UMI data-production system co-designed for trajectory accuracy, inter-gripper relative pose, synchronization, and field of view: head-mounted offline stereo-inertial SLAM, native rather than reconstructed relative pose, a shared microsecond GPIO trigger, and two wide-angle cameras per hand covering ~200 degrees. It reaches 3 mm workspace-local end-effector accuracy without external tracking infrastructure. Using this corpus, we demonstrate zero-robot post-training: a policy post-trained so",
+      "link": "https://arxiv.org/abs/2607.25895v1",
+      "published_at": "2026-07-28T15:52:02+00:00",
+      "source": "arXiv (Simple AI, :, Yuteng Wei, Jinming Ma, Jiawei Wang, Weitao Zhou, Yushen Zuo, Ke Rui, Minglei Li, Jinhao Zhang, Zhikang Pan, Xiang Wang, Haoran Jia, Huan Du, Zicheng Zeng, Jun Ma, Guiyu Qin, Di Zhang, Xiaofei Li)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "TIGA: Trajectory-Injected Generative Attack against Black-box AIGC Detectors",
+      "content": "Recent diffusion models have achieved remarkable realism in facial image synthesis, posing growing challenges to artificial intelligence-generated content (AIGC) forensic detectors.Existing evasion methods typically perturb pre-generated images or require detector-aware training, which may introduce visible or statistical artifacts and limit applicability when the diffusion model must remain frozen and the target detector is accessible only through black-box queries. We propose Trajectory-Injected Generative Attack (TIGA), a source-image-free and training free framework that generates detector-evasive images within a single diffusion sampling trajectory. TIGA steers the latent Denoising Diffusion Implicit Model (DDIM) trajectory so that adversarial properties emerge during generation rather than being added afterward. TIGA first aggregates gradients from multiple white-box surrogate detectors to form a transferable, sign-aware prior, and then performs anisotropic directional search wit",
+      "link": "https://arxiv.org/abs/2607.25894v1",
+      "published_at": "2026-07-28T15:51:39+00:00",
+      "source": "arXiv (Xia Du, Zhuosen Bao, Zheng Lin, Jizhe Zhou, Jiawei Lian, Chi-man Pun, Jun Luo, Wei Ni, Symeon Chatzinotas)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "A2TTA: Anchored-and-Agile Test-Time Adaptation for Evolving Traffic Sensor Networks",
+      "content": "Traffic forecasting is important for efficient traffic management and route planning in smart cities. Existing traffic forecasting studies typically assume fixed sensor graphs, overlooking the continuous evolution of real-world traffic networks, e.g., ongoing road network construction and evolving human mobility patterns. These dynamic changes can substantially degrade conventional forecasting models, motivating test-time adaptation (TTA) to efficiently adapt pretrained models during deployment. However, applying TTA to evolving traffic sensor networks remains challenging in two aspects. First, topology expansion introduces new sensors and connections, continuously reshaping the sensor graph. Second, tem- poral shifts vary in time scale and stability, requiring differentiated adaptation to long-term and short-term shifts. In this study, we address these challenges by proposing A2TTA, an Anchored-and-Agile Test-Time Adaptation framework for evolving traffic sensor networks, which transf",
+      "link": "https://arxiv.org/abs/2607.25875v1",
+      "published_at": "2026-07-28T15:38:27+00:00",
+      "source": "arXiv (Du Yin, Xiachong Lin, Yue Tan, Jinliang Deng, Estrid He, Hao Xue, Flora D. Salim)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Bias-corrected Cox regression with AI-extracted covariates via calibration summary statistics",
+      "content": "Large-scale observational studies increasingly rely on AI pipelines to extract structured variables from unstructured clinical records. A common workflow separates the data vendor, who validates extraction accuracy with a gold-standard sample, from the downstream researcher, who receives only the extracted dataset and summary accuracy statistics. We develop a bias-correction framework for the Cox proportional hazards model when covariates are subject to AI extraction error. Within a unified multivariate calibration framework, we show that the naive Cox estimator's bias decomposes into a leading-order calibration term and a second-order residual that vanishes as extraction accuracy improves. The leading-order term yields a corrected estimator that operates as a post-hoc matrix multiplication on the output of any standard Cox software. We further derive bias-adjusted confidence intervals that incorporate calibration uncertainty and a sensitivity diagnostic for assessing whether the negle",
+      "link": "https://arxiv.org/abs/2607.25868v1",
+      "published_at": "2026-07-28T15:35:52+00:00",
+      "source": "arXiv (Arjun Sondhi)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
+      "content": "Speculative decoding accelerates large language model inference without changing the target distribution, but no single drafting structure performs best across real-world workloads. Autoregressive multi-token prediction (MTP) is a lightweight, stable proposal mechanism, whereas block-parallel diffusion amortizes drafting latency over much longer candidate sequences; the better choice depends strongly on the output distribution. We present AngelSpec, a unified training framework for MTP and block-parallel speculative decoding that addresses this heterogeneity at three levels. At the training level, rather than fitting one universal drafter to a uniform data mixture, we co-specialize structure and data: the MTP drafter is trained on diverse conversational data for high-entropy open-ended chat, and the block-diffusion drafter on code and mathematics data for longer predictable continuations. At the architecture level, we propose DFly, a block-diffusion framework combining a hybrid target-",
+      "link": "https://arxiv.org/abs/2607.25852v1",
+      "published_at": "2026-07-28T15:25:05+00:00",
+      "source": "arXiv (Hong Liu, Rui Cen, Junhan Shi, Guangshuo Qin, Jiebin Zhang, Tianyu Liu, Runzhi Fan, Guoliang Zhao, Ruobing Xie, Kai Zhang, Song Liu, Guanghua Yu, Jianchen Zhu)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Adversarial Deepfake Generation and an Investigation of Purification-Based Adversarial Detection",
+      "content": "This paper describes the participation of team \"Go To Germany\" in the ImageCLEF 2026 Deepfake Detection and Generation Task. For the image generation task, we employ FLUX.1-dev with PuLID for identity-preserving face synthesis, combined with a multi-model PGD adversarial attack targeting 12 detectors simultaneously (DiffJPEG-in-loop, MI/DI/EoT, adaptive weighting, two-stage warm-start). Our approach achieved 90% evasion against organizer detectors and 57.6% against participant detectors, with a final generation score of 0.4170. For the image detection task, we combine two complementary detectors - SigLIP+DINOv2 for AI-generated images and GenD-DINOv3 for face manipulations - in a max-probability ensemble, achieving 99.4% accuracy on baseline deepfakes but suffering from high false-positive rates on real images, resulting in a final detection score of 0.6986. Beyond the official submission, we conducted a self-initiated investigation of purification-based adversarial detection, comparin",
+      "link": "https://arxiv.org/abs/2607.25842v1",
+      "published_at": "2026-07-28T15:19:16+00:00",
+      "source": "arXiv (Junghyun Kim, Seunghyun Kim, Jiyoung Woo)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Distributed Constraint Optimization via Online Learning and Iterative Pricing with Application to Large-Scale Satellite Scheduling",
+      "content": "Distributed constraint optimization problems (DCOPs) provide a popular framework for distributed decision making under limited communication, but many real-world instances are too large to solve monolithically. We address this challenge from two complementary directions. We revisit the connection between DCOPs and potential games, and adapt modern online learning algorithms for equilibrium finding to DCOPs. We show that these algorithms are competitive with representative incomplete DCOP algorithms. We then turn to decomposition frameworks for large-scale DCOPs, motivated by large-scale decentralized satellite scheduling. We propose a new framework that separates a DCOP into two interacting subproblems: a high-level meta-DCOP for task allocation, and independent local optimization problems for scheduling. To couple the two levels, we develop a novel iterative pricing method that updates the meta-level utilities using feedback from the local optimizers. Combining our online learning met",
+      "link": "https://arxiv.org/abs/2607.25835v1",
+      "published_at": "2026-07-28T15:15:43+00:00",
+      "source": "arXiv (Itai Zilberstein, Pranav Rajbhandari, Steve Chien, Tuomas Sandholm)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Beyond Static Costs: Learning-Dynamics Aware Loss Functions for Long-Tailed Classification",
+      "content": "Deep learning models in computer vision face significant challenges when trained on long-tailed datasets, where a few majority classes dominate while many minority classes are severely underrepresented. Such imbalances frequently arise in real-world scenarios such as rare species recognition, manufacturing fault detection, and medical image understanding, leading to biased models that underperform on tail classes. Existing reweighting methods typically rely on static class frequencies to penalize the model, ignoring the dynamic nature of how effectively a network actually learns a class over time. We address this by introducing a novel Learning-Dynamics Aware Loss (LDAL) function that shifts the focus from static sample counts to dynamic learning progress. LDAL framework adjusts class weights continuously by leveraging: (i) the strength of learned feature representations (semantic scale), (ii) the intrinsic learning difficulty of each class, measured via the Shannon entropy of its pred",
+      "link": "https://arxiv.org/abs/2607.25830v1",
+      "published_at": "2026-07-28T15:10:33+00:00",
+      "source": "arXiv (Varad Shinde, Nikhil Kumar Shrey, Magesh Rajasekaran, Md Saiful Islam Sajol, Harshil Bhargava, Subhajit Sidanta, Supratik Mukhopadhyay, Yimin Zhu)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Prototype Adaptation for Zero-Shot sEMG Movement Classification",
+      "content": "Surface electromyography (sEMG) enables the control of prostheses, allowing upper-limb amputees to re-gain some hand function. Most current research focuses on recognizing basic movements for prosthesis control. However, in most daily activities, such as opening a door, combined movements are essential. However, collecting training data for all possible combined movements is time-consuming and requires re-training of the model for any new combination. We propose two novel recognition approaches, Compositional Prototype Interpolation (CPI) and Synthetic Adaptation for Prototypes (SAP), that enable zero-shot learning of combined, novel and unseen movements in Prototype Networks after training only with basic movements. Our methods rest on a linear interpolation assumption in the embedding space, which we study by inspecting the geometry of combined motions in signal and embedding space. In experiments on the NearLab and NinaPro DB3 data sets as well as our newly recorded BasCom dataset, ",
+      "link": "https://arxiv.org/abs/2607.25826v1",
+      "published_at": "2026-07-28T15:06:24+00:00",
+      "source": "arXiv (Rui Liu, Benjamin Paassen)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Evaluation of Adversarial Robustness in Arabic Language Models",
+      "content": "The emergence of the recent outstanding capabilities of Arabic Language Models has opened doors for exposing their vulnerabilities. One of the major security risks associated with such Natural Language Processing models is adversarial attacks. These attacks can deceive the model into the wrong prediction, raising critical model security and safety concerns. This study aims to assess the robustness of five state-of-the-art Arabic Language Models under a distinct set of Arabic adversarial attacks applied at various levels of granularity and using different example generation strategies. We also explore a defense technique based on adversarial training to enhance model robustness. The results show that insertion of diacritics can reduce the accuracy of some models by 92% while maintaining a low perturbation distance. For word-level attacks, manipulating Arabic conjunctions preserves high semantic similarity scores, low perturbation distance, and leads to an accuracy degradation of up to 5",
+      "link": "https://arxiv.org/abs/2607.25814v1",
+      "published_at": "2026-07-28T14:58:28+00:00",
+      "source": "arXiv (Anwar Alajmi, Ayed Salman, Imtiaz Ahmad)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Explicit Layer Modeling for Video Object Insertion and Layer Decomposition",
+      "content": "Most video editing systems still lack explicit layered video representations, limiting their ability to perform realistic compositing, object reuse, and consistent manipulation. This limitation is especially pronounced in video object insertion and video layer decomposition, where existing methods rely on implicit inference or per-scene optimization due to the absence of explicit foreground-layer supervision. We introduce TriLayer, a large-scale triplet video dataset containing aligned composite, background, and foreground videos, where the foreground layers include both object appearance and associated visual effects. This explicit supervision enables models to learn layered video representations directly rather than inferring them implicitly. Building on this dataset, we propose DBL-Diffusion, a dual-branch diffusion framework that jointly models RGB composites and RGBA foreground layers through shared denoising and cross-branch interaction. We instantiate the framework in two tasks:",
+      "link": "https://arxiv.org/abs/2607.25802v1",
+      "published_at": "2026-07-28T14:48:30+00:00",
+      "source": "arXiv (Kyujin Han, Seungjoo Shin, Sunghyun Cho)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Fine-Grained Food Image Understanding via Target-Aware Data Alignment",
+      "content": "Fine-grained food visual--semantic understanding requires models to capture subtle distinctions across ingredients, cooking methods, doneness, color, texture, and plate composition. Although CLIP-style vision-language models provide a natural framework for this task, their effectiveness is limited when training relies on heterogeneous web-collected image--text pairs. Such data often exhibit a web-to-target domain gap and cross-modal misalignment, where images differ from the target distribution and captions are noisy, multilingual, or weakly grounded in visual content. We propose a data-centric multimodal alignment method for fine-grained food description and recognition. Our method first performs target-aware data selection to identify visually relevant training subsets, then applies VLM-based caption refinement to generate visually grounded, target-style descriptions. Using these curated image--caption pairs, we train complementary CLIP-style retrieval experts and further combine the",
+      "link": "https://arxiv.org/abs/2607.25794v1",
+      "published_at": "2026-07-28T14:44:56+00:00",
+      "source": "arXiv (Jui-Feng Chi, Wei-Lun Chu, Bruce Coburn, Jinge Ma, Fengqing Zhu)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "SpectONet: A Physics-Guided Spectral Deep Operator Network for Euler-Bernoulli Beam Dynamics",
+      "content": "This paper proposes a novel physics-guided spectral deep operator network, termed SpectONet, for solving Euler-Bernoulli beam (EBB) vibration problems. The proposed framework integrates the operator-learning capability of DeepONet with physics-informed constraints and Chebyshev-Gauss-Lobatto (CGL) sensor placement. Unlike conventional DeepONet frameworks, which commonly employ uniformly distributed sensors, SpectONet uses nonuniform spectral sensor locations with a higher concentration of points near the domain boundaries. This sampling strategy improves the finite-dimensional representation of boundary-sensitive structural responses while requiring only a limited number of branch-network inputs. The governing beam equation, together with the associated initial and boundary conditions, incorporated into the training objective to promote physically consistent and generalizable predictions. Numerical experiments on three synthetic EBB vibration problems and a real-world bridge vibration ",
+      "link": "https://arxiv.org/abs/2607.25790v1",
+      "published_at": "2026-07-28T14:42:04+00:00",
+      "source": "arXiv (Shivani Saini, Ramesh Kumar Vats, Arup Kumar Sahoo)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "GeoMFD: Continual Drone-View Geo-Localization with Geometry-Aware Adapter and Margin-Field Distillation",
+      "content": "Existing drone-view geo-localization (DVGL) methods are mainly developed under a static training paradigm, where models are optimized for fixed environments with all training data available in advance. However, this paradigm is difficult to extend to real-world deployment, where drones may encounter diverse environments and require multiple environment-specific models, resulting in additional storage and model-selection costs. Directly adapting a single model to new environments also risks distorting previously learned cross-view embedding geometry and causing forgetting. To address these challenges, we formalize the continual drone-view geo-localization (C-DVGL) setting and propose GeoMFD, a geometry-aware continual adaptation method for DVGL. GeoMFD combines a cold-start bootstrapping strategy (CBS), a geometry-aware adapter (Geo-Adapter), and margin-field distillation (MFD) to balance adaptation and cross-view geometry preservation. CBS initializes a stable embedding space, Geo-Adap",
+      "link": "https://arxiv.org/abs/2607.25788v1",
+      "published_at": "2026-07-28T14:41:38+00:00",
+      "source": "arXiv (Zhongwei Chen, Hai-jun Rong, Tao Zhang, Xianfeng Nie, Xiangbao Zhang, Guoqi Li, Zhao-Xu Yang)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Variance-Reduced Conditional Gradient Methods under Markovian Sampling for Nonconvex Composite Optimization",
+      "content": "We study stochastic composite nonconvex optimization over a compact convex set when gradient samples arrive along a single trajectory of a fixed ergodic Markov chain. Existing single-trajectory variance-reduction theory covers smooth unconstrained objectives; we address the projection-free composite setting using the generalized Frank-Wolfe gap. We propose MC-ALFCG, which combines a momentum conditional-gradient method with coupled capped multilevel Monte Carlo estimation and per-iteration clipping. The deepest nested average uses consecutive states from the same trajectory, yielding conditional bias $O(τ_{\\mathrm{mix}}/T)$ uniformly over the starting state, while coupling controls the gradient-difference second moment through the iterate displacement. Clipping enforces the pathwise bounds needed by the adaptive analysis. We reduce the Markovian recursion to its independent-sampling counterpart under $σ^2\\mapsto 2ΛG_σ^2$ and $L^2\\mapsto 2ΛL^2$, where $Λ=O(τ_{\\mathrm{mix}}\\log T)$. For ",
+      "link": "https://arxiv.org/abs/2607.25785v1",
+      "published_at": "2026-07-28T14:37:47+00:00",
+      "source": "arXiv (Zhaojun Peng)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "A Unified Benchmark and Modality-Adaptive Network for Day-and-Night Drone-View Geo-Localization",
+      "content": "Most existing drone-view geo-localization (DVGL) benchmarks contain drone imagery captured under a single illumination condition and lack geographically aligned visible drone images, infrared drone images, and satellite images from the same locations. To evaluate the generalization capability of DVGL methods under challenging illumination conditions, some methods train models on a visible benchmark and test them on an independent infrared benchmark. This protocol essentially constitutes transfer between datasets, which makes it difficult to systematically evaluate DVGL across daytime and nighttime conditions within a unified benchmark. To address this limitation, we construct IRCHN,a real-world DVGL benchmark designed for localization across different illumination conditions. IRCHN contains 26,460 images collected from 8,820 geographic locations across four representative scene categories, including farmland, coastline, forest, and urban areas. Each location provides one visible drone ",
+      "link": "https://arxiv.org/abs/2607.25778v1",
+      "published_at": "2026-07-28T14:34:57+00:00",
+      "source": "arXiv (Songtianhao Xu, Zhongwei Chen, Zhao-Xu Yang, Weifeng Wang)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "An Embarrassingly Simple Rule-based Visiting Circulation Approach to Trip Destination Prediction",
+      "content": "In this paper, we propose the Rule-based Visiting Circulation (RVC) model in tackling the challenge in the IEEE Big Data Cup 2022: Trip Destination Prediction. Given trips containing travel information, personal attributes, origin zones, and their features in the training metropolitan areas, the task is to predict the destination of every trip in a targeted metropolitan area whose destinations are not given at all at the training stage. We highlight the challenges in this destination prediction task -- having no knowledge of the destinations in the targeted metropolitan area. We provide insights from the datasets, in which revisiting behaviors and the relationships between origins and destinations play a crucial role in individuals' trips. Hence, we design a simple but comprehensive method, rule-based visiting circulation, which directly utilizes the origin information and individuals' trip behaviors to determine the destinations in the targeted metropolitan area, i.e., requiring no le",
+      "link": "https://arxiv.org/abs/2607.25751v1",
+      "published_at": "2026-07-28T14:13:04+00:00",
+      "source": "arXiv (Eng-Shen Tu, Yong-Han Chen, En-Chao Liu, Hao-Yun Keng, Cheng-Te Li)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Image Quality Dependent Degradation for AI Systems",
+      "content": "Perception is one of the primary applications where neural networks outperform conventional algorithms. One example is AI systems for automated driving, which can detect pedestrians based on image data and avoid them accordingly. A substantial challenge with these AI systems is that their output depends heavily on the quality of the input images. For example, if an image is of inferior quality due to heavy contamination, such as noise or darkness, accurate predictions are hardly feasible. Additionally, various types of errors can occur, each with varying relevance to the trustworthiness of the underlying AI system. In particular, it may be more critical not to detect an existing person than to detect a person where there is none. Therefore, we want to show that we can still avoid the most critical errors in situations of inferior image quality. To achieve this, we aim to establish a fail-degraded system by lowering the network's confidence threshold based on the estimated image quality",
+      "link": "https://arxiv.org/abs/2607.25736v1",
+      "published_at": "2026-07-28T14:00:38+00:00",
+      "source": "arXiv (Yannick Kees, Elena Hoemann, Frank Köster, Sven Hallerbach)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "A systematic evaluation of machine learning classifiers for event-by-event background rejection in LAFOV PET scanners",
+      "content": "The introduction of LAFOV PET scanners brings significant sensitivity gains but also a substantial increase in the background rate from accidental coincidences, phantom-scattered and detector-scattered photons. While machine learning methods have been applied to background reduction in PET imaging, they target specific background components in post-processing rather than event-by-event classification on the raw data. In this work, we formulate coincidence classification as a supervised multi-class problem and evaluate XGBoost, AdaBoost and Neural Network classifiers as pre-reconstruction filters, using Monte Carlo simulations of the Siemens Biograph Vision Quadra scanner with NEMA IEC and anthropomorphic XCAT phantoms. We investigate two feature sets: a 4-feature representation based on the Attenuation Factor, photon time difference, energy sum, and energy difference, and an extended 6-feature set that incorporates topology-based variables. A systematic robustness study via cross-phant",
+      "link": "https://arxiv.org/abs/2607.25732v1",
+      "published_at": "2026-07-28T13:57:20+00:00",
+      "source": "arXiv (Konrad Klimaszewski, Michał Obara, Mateusz Bala, Beatrix C. Hiesmayr, Lech Raczyński, Roman Y. Shopa, Wojciech Zdeb, Wojciech Krzemien)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Impact Detection in Fall Events: Leveraging Spatio-Temporal Graph Convolutional Networks and Recurrent Neural Networks Using 3D Skeletons Data",
+      "content": "Fall represents a significant risk of accidental death among individuals aged over 65, presenting a global health concern. A fall is defined as any event where a person loses balance and moves to an off-position, which may or may not result in an impact where the person hits the ground. While fall detection systems have achieved good results in general, impact detection within falls remains challenging. This study proposes an efficient methodology for accurately detecting impacts within fall events by incorporating 3D joints skeleton data treated as a graph using Spatio-Temporal Graph Convolutional Networks (STGCN), Gated Recurrent Unit (GRU), and Bidirectional Long Short-Term Memory (BiLSTM) layers. By pinpointing impact moments, our approach enhances precision by distinguishing between false falls and actual impacts, contributing to better healthcare resource allocation. Our methodology, evaluated using the improved 3D skeletons UP-Fall dataset, achieves accuracy exceeding 90\\% acros",
+      "link": "https://arxiv.org/abs/2607.25710v1",
+      "published_at": "2026-07-28T13:33:57+00:00",
+      "source": "arXiv (Tresor Y. Koffi, Youssef Mourchid, Mohammed Hindawi, Yohan Dupuis)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "From Deterministic to Generative Deep Learning for Urban Air Quality Reconstruction from Sparse Observations",
+      "content": "Full-field reconstruction of air pollution is essential for evaluating pollution exposure and supporting public health decision-making. However, the complex interactions among pollutants, hard-to-predict weather patterns, and limited monitoring station coverage make this a complex task. We apply deep learning techniques to provide fast and accurate reconstructions from sparse observations of four key pollutants: NO2, O3, PM2.5 and PM10. Models are trained on full-field simulation data and evaluated on real-world observations collected from 9 to 28 monitoring stations in the city of Paris. We introduce a diffusion-based generative framework for multi-pollutant reconstruction and benchmark its performance against deterministic deep learning models. Despite noisy observations and strong spatial variability, the models achieve high structural similarity on simulated validation data and produce realistic spatial patterns on real-world observations, as indicated by power-spectrum analysis. W",
+      "link": "https://arxiv.org/abs/2607.25687v1",
+      "published_at": "2026-07-28T13:03:09+00:00",
+      "source": "arXiv (Abhishek A. Sabnis, Mihai Mitrea, Lya Lugon, Karine Sartelet, Marc Bocquet, Xiaoyuan Cheng, Shupeng Zhu, Sibo Cheng)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "模型发布"
+    },
+    {
+      "title": "Rashomon Alignment",
+      "content": "We propose Rashomon Alignment (RA), a new measure to assess functional similarity between two models. Existing functional similarity measures are distributional, quantifying differences between outputs of models applied to real-world data. However, these measures can be regarded as ecologically valid only for regions in the input space represented by the available data. We introduce a geometrical perspective on functional model similarity, which estimates it across the entire data space, offering a comprehensive view of decision boundary alignment independent of any specific data distribution. We also propose geometric Rashomon Alignment as a measure of geometrical similarity, which is computed using data uniformly sampled from the instance space. We perform an experimental analysis on more than 90 datasets, examining critical cases where model alignment diverges from predictive accuracy. Our results show that geometrical and distributional alignment provide different and complementary",
+      "link": "https://arxiv.org/abs/2607.25680v1",
+      "published_at": "2026-07-28T12:55:57+00:00",
+      "source": "arXiv (Moisés Santos, Peter van der Putten, Bernhard Pfahringer, Carlos Soares)",
+      "weight": 1.0,
+      "score": 7.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "日本熊本县发生 6.8 级地震，台积电、索尼、TEL 等十余家半导体工厂停工",
+      "content": "IT之家 7 月 29 日消息，据央视财经今日报道，当地时间 28 日下午，\n日本熊本县发生 6.8 级地震\n，不少地区出现道路塌陷、房屋受损、停电等情况。据日本气象厅发布的消息，截至目前，熊本县已发生超过 100 次余震。\nIT之家获悉，熊本县是日本半导体产业核心聚集地。地震发生后，台积电、索尼、TEL 等十余家半导体企业厂区紧急疏散人员、停工排查。\n据共同社消息，索尼集团半导体子公司位于熊本县菊阳町的工厂在地震发生后不久暂停生产，据悉复工尚无眉目。\n半导体巨头瑞萨电子位于熊本市和该县锦町的两家工厂停工。半导体制造设备巨头 TEL 位于熊本县内的两家工厂也已停工。荏原制作所宣布位于熊本县南关町的半导体制造设备工厂已经停工。\n此外，本田进行摩托车等生产的熊本制作所（熊本县大津町）中止生产活动。丰田汽车旗下的零部件厂商爱信（AISIN）子公司爱信九州（熊本市）也一度暂停生产。位于福冈县的丰田汽车九州三家工厂从 29 日早晨起恢复生产。\n相关阅读：\n《\n台积电：日本地震未对 JASM 熊本晶圆厂人员与建筑安全造成影响\n》",
+      "link": "https://www.ithome.com/0/983/167.htm",
+      "published_at": "2026-07-29T08:46:16+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.08,
+      "category": "模型发布"
+    },
+    {
+      "title": "比亚迪汽车：深度参与 L2 辅助驾驶新国标起草工作并首批通过认证，天神之眼全系车型性能均优于新国标",
+      "content": "IT之家 7 月 29 日消息，比亚迪汽车官方今日宣布，比亚迪深度参与 L2 辅助驾驶新国标起草工作，并\n首批通过认证\n。\n官方今日公布了于 7 月 28 日注册的《\n汽车生产组织 组合驾驶辅助安全管理体系认证证书\n》，并表示\n天神之眼全系车型性能均优于新国标\n，推动中国辅助驾驶产业新发展。\n据IT之家此前报道，7 月 2 日，工信部正式发布《\n智能网联汽车 组合驾驶辅助系统安全要求\n》（\nGB 47955—2026\n）强制性国家标准，\n拟于 2027 年 1 月 1 日起正式实施\n。\n与国际法规 UN R171 相比，我国标准对系统设计运行范围、功能要求、驾驶员状态检测、用户告知等提出了更加详细的技术要求，同时增加了部分场地试验场景及相应的试验过程和通过条件，并明确了所提技术要求配套的检验与试验方法，\n在保持核心技术内容协调一致的基础上，更加契合我国复杂道路交通环境和行业管理实际需要\n。\n相关阅读：\n《\n国内首个针对 L2 级辅助驾驶的强制性国家标准正式发布，华为引望、小米、比亚迪、特斯拉、蔚小理等联合起草\n》",
+      "link": "https://www.ithome.com/0/983/130.htm",
+      "published_at": "2026-07-29T08:07:21+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.06,
+      "category": "模型发布"
+    },
+    {
+      "title": "华为全新鸿蒙折叠电脑 MateBook Fold 非凡大师亮相，首搭麒麟 X90 Plus 处理器",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为 MateBook Fold 非凡大师全新鸿蒙折叠电脑也迎来了首次亮相，主打非凡显示、非凡科技、非凡设计、非凡系统和非凡体验。\n据介绍，\n华为全新 MateBook Fold 非凡大师将搭载 18 英寸全球最大双层 OLED 柔性屏\n，拥有 92% 屏占比，支持 1600nits HDR 峰值亮度、3.3K 分辨率、2,000,000:1 对比度、HDR Vivid 自适应色调映射、P3 广色域自适应色彩管理。\n该机还拥有全球最大 UTG 非牛顿流体增韧叠层，\n行业首发非牛顿流体 UTG 复合结构\n，采用独家专利技术，抗冲击能力提升 90%、抗弯曲形变提升 10 倍、手写笔点击耐久可达 50 万次。\nIT之家从华为鸿蒙电脑新品技术沟通会现场了解到，华为早在 2023 年 11 月便开启了大尺寸 UTG 预研，经过纳米边缘工艺实施（2024 年 7 月）、首次试制（2025 年 2 月）、二轮试制（2025 年 4 月）、三轮试制（2025 年 11 月），\n在今年 5 月才启动量产\n。\n华为 MateBook Fold 非凡大师还获得了全球首个 SGS 金标五星整机屏幕抗跌落冲击认证；同时首搭麒麟 X90 Plus 处理器，通过软硬芯云协同，整机性能可提升 25%；支持超空间内存技术，相比传统方案，内存压缩速度提升 50%、大文件打开数量提升 40%。\n在交互方面，该机支持两种形态自由书写：双屏便捷记录和大屏沉浸创作；支持系统级手写能力，提供全局批注、提笔即写、小艺圈选功能；可用华为笔记 App，支持无界笔记、全景智记、高光秒创；支持天生会画 App，可提供 18 英寸超大画板，也可分屏参考画创作。\n华为 MateBook Fold 非凡大师还适配支持了东方财富、悟空图像、博思白板等 App；内置方舟引擎，WPS Office 大文件打开速度提升 30%、悟空图像处理速度提升 25%、剪映专业版视频剪辑速度提升 23%。\n另外，该机依旧采用玄武水滴铰链技术；支持显示器模式，用户可连接主机进行大屏游戏；适配音悦家 App，可使用大屏进行乐曲编创。\n华为 MateBook Fold 非凡大师还号称“信号充电宝”，支持强力搜网然后进行共享；支持移动全景声，可搭配 FreeClip 系列耳夹耳机联合发",
+      "link": "https://www.ithome.com/0/983/233.htm",
+      "published_at": "2026-07-29T09:32:27+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.05,
+      "category": "产品更新"
+    },
+    {
+      "title": "消息称微软 XBOX Series X｜S 涨价难抵硬件亏损，下一代主机“Project Helix”面临商业模式抉择",
+      "content": "IT之家 7 月 29 日消息，外媒 Windows Central 发文，对微软下一代 XBOX 主机“Project Helix”的商业模式进行分析，并透露微软 XBOX Series X|S 主机目前每销售一台可能亏损约 150 美元（IT之家注：现汇率约合 1017 元人民币）。\n公开信息显示，微软 XBOX 系列游戏机将在下月进行第三次涨价，但 Windows Central 认为，即使提高售价，仍然难以完全弥补硬件亏损。目前 XBOX Series X|S 的新售价如下：\n产品\n原售价（美元）\n新售价（美元）\n涨幅\nXBOX Series S 512GB\n399.99 美元（现汇率约合 2711 元人民币）\n499.99 美元（现汇率约合 3389 元人民币）\n100 美元（现汇率约合 677.8 元人民币）\nXBOX Series S 1TB\n449.99 美元（现汇率约合 3050 元人民币）\n599.99 美元（现汇率约合 4067 元人民币）\n150 美元（现汇率约合 1017 元人民币）\nXBOX Series X 数字版\n599.99 美元（现汇率约合 4067 元人民币）\n749.99 美元（现汇率约合 5084 元人民币）\n150 美元（现汇率约合 1017 元人民币）\nXBOX Series X\n649.99 美元（现汇率约合 4406 元人民币）\n799.99 美元（现汇率约合 5423 元人民币）\n150 美元（现汇率约合 1017 元人民币）\nXBOX Series X 2TB 银河黑\n799.99 美元（现汇率约合 5423 元人民币）\n已取消\n—\n外媒同时分析了微软下一代 XBOX 主机“Project Helix”的盈利模式，如果微软希望避免硬件亏损，就必须采取类似 Steam Machine 的路线。Steam Machine 确实允许用户高度自定义，但代价是产品售价较高，而游戏性能远低于 PS5 和 XBOX Series X。\n此外，在当前 RAM 内存等硬件成本持续上涨的情况下，Windows Central 担心，高昂的主机价格可能成为整个游戏主机产业发展的最大阻碍。如今越来越多家长更愿意拿旧 iPad 给孩子游玩免费游戏，而不是购买专门游戏主机。报道称，\n目前免费游戏《Roblox》的整体规模甚至已经超过 Ste",
+      "link": "https://www.ithome.com/0/983/112.htm",
+      "published_at": "2026-07-29T07:42:15+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.05,
+      "category": "产品更新"
+    },
+    {
+      "title": "Optimization with Dynamic Constraint Learning (DCL)",
+      "content": "We propose Dynamic Constraint Learning (DCL), a data-driven framework for constrained optimization when constraint functions are unknown and cannot be queried during optimization. At each iteration, the method learns a local surrogate from nearby data and solves a subproblem within a data-supported trust region. Compared with offline global constraint learning, the approach uses local surrogates that adapt to the data distribution during optimization and can achieve solution quality comparable to that of global models while using simpler local models and smaller optimization subproblems. We demonstrate the performance of DCL on a synthetic test problem and two case studies from the literature.",
+      "link": "https://arxiv.org/abs/2607.25719v1",
+      "published_at": "2026-07-28T13:45:13+00:00",
+      "source": "arXiv (Ezgi Oztekin, Figen Oztoprak, S. Ilker Birbil)",
+      "weight": 1.0,
+      "score": 7.05,
+      "category": "技巧观点"
+    },
+    {
+      "title": "The Barron-Lipschitz Energy Gap and Depth Separation Phenomena in Scientific Machine Learning",
+      "content": "We illustrate in several examples that even neural networks of infinite width (specifically, Barron functions) may encounter substantial obstacles when used as a model class for problems in the calculus of variations. An instance of practical relevance concerns the bending, stretching and folding of a thin elastic shell with anchored or clamped boundary conditions where elastic energy could be reduced by folding along a circular line, but the neural networks can only describe straight folds along entire lines. Conversely, we show that there is no gap between the energy that Barron functions and Lipschitz functions can achieve for a large class of integral first-order functionals.",
+      "link": "https://arxiv.org/abs/2607.25905v1",
+      "published_at": "2026-07-28T16:01:41+00:00",
+      "source": "arXiv (Nima Rezaei, Stephan Wojtowytsch)",
+      "weight": 1.0,
+      "score": 7.03,
+      "category": "论文研究"
+    },
+    {
+      "title": "华为鸿蒙电脑全新麒麟 XE90 / X90 Plus 处理器亮相，主打高能效 / 高性能",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为终端 BG 平板与 PC 产品线总裁朱懂东分享了鸿蒙电脑最新取得的成绩。据介绍，全新 MateBook 电脑今年蓄势待发。\nIT之家在沟通会现场了解到，华为鸿蒙电脑接下来将持续投入桌面级处理器布局，后续还将发布麒麟 XE90 / X90 Plus 处理器。\n其中，\n麒麟 X90 Plus 是一款定位高性能的 PC 处理器\n。\n而\n全新麒麟 XE90 则是一款定位高能效的处理器\n。\n朱懂东表示，将依托鸿蒙系统统一底座，覆盖全用户场景，产品主要包括鸿蒙平板、鸿蒙商用平板、鸿蒙电脑和鸿蒙商用电脑。\n值得一提的是，华为今日官宣两款全新电脑产品，包括全新鸿蒙折叠电脑 MateBook Fold 非凡大师和华为史上最轻笔记本电脑 MateBook Pro S。两款新品将在 8 月 5 日正式亮相。",
+      "link": "https://www.ithome.com/0/983/094.htm",
+      "published_at": "2026-07-29T07:07:07+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 7.02,
+      "category": "模型发布"
+    },
+    {
+      "title": "LaP-Forensics: Latent-Pixel Consistency Guided Multimodal Reasoning for Deepfake Detection",
+      "content": "Recent generative models can produce images with few obvious visual artifacts, weakening detectors and explanations that rely only on surface appearance. We present LaP-Forensics, a multimodal framework that augments RGB semantics with reconstruction-based forensic evidence. A frozen Stable Diffusion DDIM inversion-reconstruction model provides a fixed reconstruction reference, and its residual map measures local compatibility with that reference. Independent projectors encode the RGB image and residual map before a structured Where-What-Why model predicts a textual analysis and an artifact mask.Supervised fine-tuning is followed by Group Relative Policy Optimization (GRPO), whose reward combines mask overlap with output-structure and evidence-reference terms. These text-side terms encourage the model to refer to the consistency map but do not constitute a verifier of free-form textual truth. A separate image-level head fuses RGB and DDIM-residual class features. Experiments show cross",
+      "link": "https://arxiv.org/abs/2607.25962v1",
+      "published_at": "2026-07-28T16:45:52+00:00",
+      "source": "arXiv (Can Wang, Yuhao Wang, Yushe Cao, Canran Xiao, Fei Shen)",
+      "weight": 1.0,
+      "score": 7.0,
+      "category": "模型发布"
+    },
+    {
+      "title": "WALoMA: A Multitask Wireless Foundation Model via Adaptive Low-Rank Masked Autoencoders",
+      "content": "This paper proposes a multitask wireless foundation model via adaptive low-rank masked autoencoders (WALoMA), a unified multi-task foundation model for sixth-generation (6G) wireless physical layer architectures, to address the limitations of specialized, task-specific deep learning models and the practical challenge of scarce labeled wireless datasets. By leveraging concepts inspired by foundation models, the proposed framework adopts a masked autoencoder (MAE) paradigm to learn from unlabeled channel data, to significantly reduce reliance on extensive annotations. The model treats wireless channel state information (CSI) as a universal modality and learns transferable representations through self-supervised channel reconstruction. Key architectural novelties include the use of 2D positional encoding (PE) to explicitly preserve the spatial-frequency relationships between antennas and subcarriers, and low-rank adaptation (LoRA) for parameter-efficient fine-tuning. The framework's effic",
+      "link": "https://arxiv.org/abs/2607.25763v1",
+      "published_at": "2026-07-28T14:18:22+00:00",
+      "source": "arXiv (Madi Makin, Asmaa Abdallah, Abdulkadir Celik, Ahmed M. Eltawil)",
+      "weight": 1.0,
+      "score": 7.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "国内 PC 产品首个：华为鸿蒙电脑全链路通过整机、OS、芯片 CC EAL5+ 认证",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为终端鸿蒙安全部部长郭昌盛分享了鸿蒙电脑在安全方面的进展。\n据介绍，\n鸿蒙电脑是国内首个整机、OS、芯片全链路通过 CC EAL5+ 认证的 PC 产品，其搭载的鸿蒙系统也是首个通过国测 Ⅱ 级的电脑 OS\n。依托软硬芯云深度协同的星盾安全架构与原生 AI 安全底座，聚焦智能体安全、金融安全、企业办公安全三大核心场景。\n据IT之家此前报道，今年 1 月，\n中国信息安全测评中心公布了 2026 年第 1 批安全可靠测评结果名单\n。公告显示，鸿蒙桌面操作系统获得最高安全可靠等级 Ⅱ 级，也是首个突破 Ⅰ 级的操作系统，目前暂时没有其他桌面操作系统、服务器操作系统获得过 Ⅱ 级认证。",
+      "link": "https://www.ithome.com/0/983/125.htm",
+      "published_at": "2026-07-29T07:59:54+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.84,
+      "category": "产品更新"
+    },
+    {
+      "title": "网传智驾车辆“小蓝灯”不符合国标要求，后续将禁止乘用车安装",
+      "content": "IT之家 7 月 29 日消息，博主 @孙少军09 今日分享了一张公告局部截图。页面显示，针对智驾车辆安装的“小蓝灯”，收到工信部管理要求：\n因“小蓝灯”不符合 GB4785 要求，即日起，禁止乘用车安装小蓝灯\n。\n具体管理措施如下：\n1、自本月工信部第 410 批产品公告申报起，要求所有检测机构对企业提供的检测样车进行认真核查，如安装了“小蓝灯”，则不予申请产品公告。\n2、由于小蓝灯不符合 GB4785，国家汽标委后续将会发布 GB4785 补充要求。\n3、针对企业已售带小蓝灯车辆，工信部下一步研讨处理措施。\n作为参考，“小蓝灯”是车企用于标识辅助驾驶工作状态的车身外部蓝色指示灯。IT之家查询获悉，国家标准 | GB 4785-2019 的中文标准名称是《汽车及挂车外部照明和光信号装置的安装规定》，其中对灯具及其光色有着较明确的用途标记。\n具体来看，清单中仅提及了白色、黄色、红色和琥珀色四种颜色。也就是说，小蓝灯确实不在国标光色范围内。\n另外，据第一财经报道，吉利汽车方面向记者表示：“我们已知晓了该消息，将严格遵循国家的规定，等待国家的进一步要求。”另外，也有车企内部人士向第一财经记者确认，从 2026 年 7 月 27 日起，国家对新认证车型禁用“小蓝灯”。",
+      "link": "https://www.ithome.com/0/983/089.htm",
+      "published_at": "2026-07-29T06:55:51+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.83,
+      "category": "模型发布"
+    },
+    {
+      "title": "ONIX 欧尼士 Tocata 播放器“黑金限定版”发售：搭 CS4308P 八通道 DAC 芯片，2298 元",
+      "content": "IT之家 7 月 29 日消息，ONIX 欧尼士旗下 Tocata 播放器新增的“黑金限定版”现已在京东发售，\n定价为 2298 元\n，限量 500 台。\n京东\nONIX 欧尼士 Tocata XM2 黑金限定版\n2298 元\n点此访问\n该机搭载 3 英寸 OLED 面板，内置 Cirrus Logic CS4308P 八通道 DAC 芯片，配合自研“布莱顿”I/V 转换架构（双 OPA1612+ 双 SGM8262-2 运放），输出功率达 800mW（32Ω），支持两档增益调节，兼顾低失真与动态响应。\n该机支持蓝牙 5.2（双向 LDAC / aptX）、USB-DAC、AirPlay / DLNA 串流，并可通过 Eddict Player 应用实现手机控制，播放器内置 3000mAh 电池，提供至高 8.5 小时续航。\nIT之家附产品参数：",
+      "link": "https://www.ithome.com/0/983/155.htm",
+      "published_at": "2026-07-29T08:33:11+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.74,
+      "category": "产品更新"
+    },
+    {
+      "title": "Anthropic首席执行官等多位AI大牛签署联名信，呼吁控制人工智能发展步伐",
+      "content": "超过1100名来自领先人工智能公司的高管及员工联名签署了一封公开信，呼吁美国政府 “支持国际社会共同打造技术与治理工具，以此对前沿自动化人工智能的发展节奏实施有序管控”。这封信于当地时间周二发布，并获得了Anthropic与OpenAI 的支持，签��者包括Anthropic首席执行官达里奥・阿莫代伊、OpenAI首席科学家雅各布・帕霍茨基、谷歌安全与对齐副总裁安卡・德拉根，以及Meta AI首席科学家赵晟佳。上周，在一场网络安全测试中，OpenAI模型突破内部测试系统，并入侵模型代码库平台 Hugging Face，引发人工智能行业从业人员警觉。（新浪财经）",
+      "link": "https://36kr.com/newsflashes/3916455460679298?f=rss",
+      "published_at": "2026-07-29T16:38:26+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.7,
+      "category": "模型发布"
+    },
+    {
+      "title": "中国企业首次，Momenta 获德国全境 L4 级自动驾驶测试许可",
+      "content": "IT之家 7 月 29 日消息，Momenta 今天（29 日）通过公众号宣布，近日，Momenta 正式获得德国联邦机动车运输管理局（KBA）颁发许可，\n可在德国全国范围内的城市道路进行 L4 级自动驾驶测试\n。\n全球范围内，Momenta Robotaxi 已与 Uber、Grab、Lumo、享道出行等出行平台建立战略合作，共同推动自动驾驶服务的规模落地。\n此外，Momenta 已与梅赛德斯-奔驰、宝马、奥迪和大众集团等德国车企建立了长期、深度的战略合作。\nIT之家从官方介绍获悉，KBA 是全球标准最严格的交通安全监管机构之一。该许可的授予，充分体现了对 Momenta 技术成熟度及安全性的认可。这也是\n中国企业首次在德国获得覆盖全国城市道路的 L4 测试资质。\n此次许可意味着 Momenta\n无需逐城申报\n，即可在德国全国城市道路开展 L4 级自动驾驶测试，其安全验证标准与欧盟框架直接对接。\n据了解，L4 级高度自动驾驶，指在限定的设计运行域（ODD，即特定区域、特定道路、特定天气等条件）内，系统可全程独立执行全部动态驾驶任务（包括加减速、转向、环境感知、应急处置等），并能在系统失效时自主执行最小风险策略（如自动靠边停车），全程无需人类驾驶员接管，车内人员仅以乘客身份存在。",
+      "link": "https://www.ithome.com/0/983/103.htm",
+      "published_at": "2026-07-29T07:25:56+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.65,
+      "category": "行业动态"
+    },
+    {
+      "title": "微软第一方游戏《光环: 战役进化》发售，Steam 国区 298 元起",
+      "content": "IT之家 7 月 29 日消息，微软旗下《光环：战役进化（Halo：Campaign Evolved）》现已正式发售，登陆 Xbox Series  X｜S、PC 和 PS5 平台，游戏首发加入 XGP。\n价格方面，本作在 Steam 国区标准版 298 元，高级版定价为 398 元，高级版额外附带阿尔法光环军械库礼包、数字画册、数字短篇小说、数字游戏手册，IT之家附游戏 Steam 商品页（\nhttps://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/\n?l=tchinese\n）。\n游戏特性：\n玩家可选择单人模式，或者最多 4 人玩家在线合作，支持完整跨平台联机与跨平台进度同步。\n原版任务全面重制，配备高清画面、更新过场动画与优化关卡设计；\n采用全新画面与动画效果，搭配重制原声带及完全重构的音效设计，带来更强沉浸感；\n经典战斗体验更具冲击力，武器库新增 9 款来自全系列的标志性武器；\n在“陨石行动”中操控士官长，与约翰逊中士并肩作战，这是一场独立的战斗行动，包含全新地图场景、玩法机制与敌人类型；通过可选“骷髅头”修改器自定义任意任务，随机武器、敌人与场景为游戏增添多样性与挑战。\n游戏图赏：",
+      "link": "https://www.ithome.com/0/983/192.htm",
+      "published_at": "2026-07-29T09:10:26+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.63,
+      "category": "产品更新"
+    },
+    {
+      "title": "拓竹 3D 打印机入驻苹果 Apple 授权专营店",
+      "content": "IT之家 7 月 29 日消息，拓竹科技今日宣布，自 7 月初以来，\n拓竹 3D 打印机已陆续入驻全国 60 余家 Apple 授权专营店\n，这也是消费级 3D 打印品牌首次进入 Apple 授权专营店。\n首批上架产品包括拓竹 P2S 多色打印套装及官方基础 PLA 耗材，相关产品已在全国门店陆续展示与销售，具体上架情况以门店现场为准。\n综合IT之家此前报道，拓竹科技成立于 2020 年，首款产品于 2022 年面向市场发售。2024 年 11 月底，在 Formnext 2024 展会上，拓竹创始人兼 CEO 陶冶曾对外透露，公司当时全球累计销量已达约 100 万台。\n截至 6 月 17 日，\n拓竹消费级 3D 打印机国内累计销量已突破 100 万台\n，距其首款产品上市仅约 4 年。拓竹方面确认，2025 年公司营收已突破百亿元。",
+      "link": "https://www.ithome.com/0/983/215.htm",
+      "published_at": "2026-07-29T09:21:12+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.61,
+      "category": "行业动态"
+    },
+    {
+      "title": "小米 REDMI Watch 6 手表新版本先锋计划开启招募：微信增加语音转文字发送消息、会话标记等功能",
+      "content": "IT之家 7 月 29 日消息，小米集团手机部副总裁、可穿戴部总经理张雷今日宣布，小米 REDMI Watch 6 全新版本先锋计划正式开启。\n本次“先锋体验计划”特邀招募\n500 名\n用户，IT之家附本次更新内容如下：\n支持在表盘市场下载游戏表盘，点击可快速进入游戏；\n设置图标迎来视觉换新；\n优化睡眠算法，提升准确性；\n优化亮度调节策略，提升调节速度；\n微信新版本上线，新增语音转文字发送消息、会话标记等功能\n；\n支持远程查找手表功能；\n适配更多型号的车钥匙；\n修复已知问题。\n报名方式：前往小米社区 App - 内测中心，报名“REDMI Watch 6 新版本内测”项目；\n报名时间：2026 年 7 月 29 日，内测名额有限，报满后将暂停报名；\n活动时间：2026 年 7 月 29 日 - 2026 年 8 月 6 日；\n审核时间：将于 7 月 30 日完成审核，审核通过后新版本将陆续推送，请耐心等待。",
+      "link": "https://www.ithome.com/0/983/230.htm",
+      "published_at": "2026-07-29T09:29:05+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.6,
+      "category": "产品更新"
+    },
+    {
+      "title": "总投资 1468.6 亿新台币：联华电子宣布新加坡扩产、台南建厂计划",
+      "content": "IT之家 7 月 29 日消息，中国台湾地区晶圆代工企业联华电子（联电，UMC）今日宣布计划合计投资 1468.6 亿新台币（IT之家注：现汇率约合 307.38 亿元人民币），\n分阶段在新加坡现有晶圆厂扩产并在台南建设新的晶圆厂\n。\n联电在新加坡拥有已完工但空置的 P4 厂区建筑，此番将进行相应的无尘室建设和设备采购，以满足客户日渐增长的硅光子 (SiPh) 需求。而在台南科学园区，联电则将兴建一座全新晶圆厂房，作为未来 P7、P8 两期厂区的基地。\n联电董事长洪嘉聪表示：\n生成式 AI 的崛起与快速发展从根本重塑科技产业格局，加速推升市场对高效能、高频宽及高度系统整合技术的需求。联电此项扩产计画，意在透过兼顾速度、弹性与资本纪律的分阶段策略，确保我们持续满足市场需求。",
+      "link": "https://www.ithome.com/0/983/232.htm",
+      "published_at": "2026-07-29T09:32:01+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.55,
+      "category": "行业动态"
+    },
+    {
+      "title": "Ozlo 推出 Sleepbuds 2，号称全球最小睡眠耳机",
+      "content": "IT之家 7 月 29 日消息，睡眠耳机制造商 Ozlo 当地时间 28 日发布了新一代型号 Sleepbuds 2，宣称其是同类别中最小巧的产品。Sleepbuds 2 定价 279 美元（IT之家注：现汇率约合 1891 元人民币）。\nOzlo 表示 Sleepbuds 2 在细节设计上经过了精心打磨，以提升睡眠质量。其采用低矮硅胶耳塞，\n侧睡者也能轻松佩戴\n，本体续航 14hr，蓝牙连接能力得到了增强，支持 5 种个性化睡眠模式，提供抗干扰睡眠防护功能，拥有私人闹钟功能，支持独立控制。\nSleepbuds 2 拥有针对睡眠场景优化的声学结构，提供专业音频预设。其并未使用 ANC 技术来减少打鼾等各类夜间噪声的干扰，而是\n采用了噪音掩蔽技术\n。",
+      "link": "https://www.ithome.com/0/983/105.htm",
+      "published_at": "2026-07-29T07:28:47+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.54,
+      "category": "产品更新"
+    },
+    {
+      "title": "乔思伯 CR-3000V2 双塔双风扇六热管 CPU 风冷散热器发售，黑白双色均售 169 元",
+      "content": "IT之家 7 月 29 日消息，乔思伯旗下 CR-3000V2 双塔双风扇六热管 CPU 风冷散热器现已在天猫发售，该产品提供了黑白双色可选，\n定价均为 169 元\n。\n该散热器整体尺寸为 120 mm x 135 mm x 160 mm，带有千层幻境 ARGB 顶盖，匹配 6 根 6mm 直径热管，解热能力达 260W。\n这款风冷搭载两颗 120mm 风扇，其中塔体外部风扇额定转速至高 1800 RPM，标称风量至高 77.10 CFM，最大噪声 31 dB(A)；塔体内部风扇额定转速 1500 RPM，标称风量 65.24 CFM，最大噪声 29 dB(A)。\n其他方面，散热器兼容英特尔 1700/1200/115X/1851 与 AMD AM5 / AM4 插槽，提供 3 年质保。\nIT之家附产品参数：\n天猫\n乔思伯 CR-3000V2 散热器\n169 元\n直达链接",
+      "link": "https://www.ithome.com/0/983/095.htm",
+      "published_at": "2026-07-29T07:08:09+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.51,
+      "category": "产品更新"
+    },
+    {
+      "title": "号称“复刻经典 Lumia 设计”，469 元 HMD Touch AI 小触屏手机国行上市",
+      "content": "IT之家 7 月 29 日消息，HMD Global 旗下 HMD Touch 国行版本目前已在京东发售，\n定价为 469 元\n。\n京东\nHMD Touch 手机\n469 元\n直达链接\n官方声称该机外观复刻了经典的 Lumia 设计，可选多彩配色。具体来看，该机整体厚度 10.85mm，正面配备一块 3.2 英寸 240×320 分辨率 TFT 屏幕（匹配 0.3Mp 自拍摄像头），机身顶部配备一枚自定义实体按键，可设置为 SOS 紧急求助键。手机背面配备 2Mp 主摄。\n该机配备紫光展锐 T127 处理器，搭载 64MB RAM 和 128MB 存储空间，内置 1950mAh 电池（支持 4W 充电）。手机支持 4G 全网通，国行版本搭载豆包 AI、支付宝、咪咕音乐、贪吃蛇等应用。",
+      "link": "https://www.ithome.com/0/983/163.htm",
+      "published_at": "2026-07-29T08:41:58+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.43,
+      "category": "技巧观点"
+    },
+    {
+      "title": "消息称月之暗面完成 35 亿美元超预期融资，投后估值达 350 亿美元",
+      "content": "IT之家 7 月 29 日消息，据彭博社报道，得益于其突破性模型 Kimi K3 在硅谷引发的轰动效应，总部位于北京的初创公司月之暗面（Moonshot AI）在刚刚完成的一轮融资中筹集了 35 亿美元（IT之家注：现汇率约合 237.25 亿元人民币），这一金额远超预期，融资完成后公司估值达到 350 亿美元（现汇率约合 2372.46 亿元人民币）。\n据知情人士透露，月之暗面原本计划融资 10 亿至 20 亿美元，但最终募资规模远超预期。\n知情人士还表示，月之暗面目前已开始接触潜在投资者，计划启动新一轮融资，融资前估值目标为 500 亿美元（现汇率约合 3389.24 亿元人民币）。这将是公司赴香港 IPO 前的最后一轮融资，最快有望于今年完成上市。",
+      "link": "https://www.ithome.com/0/983/170.htm",
+      "published_at": "2026-07-29T08:49:02+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.41,
+      "category": "行业动态"
+    },
+    {
+      "title": "谷歌解散 AlphaFold 团队，将重心放在 Gemini",
+      "content": "据媒体报道，谷歌旗下 AI 实验室 DeepMind 已经解散了 AlphaFold 背后的团队——正是这套预测蛋白质三维结构的系统，把 CEO 哈萨比斯与工程研究员江珀送上了 2024 年诺贝尔化学奖的领奖台。 过去一年里，这场静默的拆解沿着人事变动一点点展开。AlphaFold 论文的大多数原始作者，已被重新分配到别的团队；在仍属 DeepMi...",
+      "link": "https://www.oschina.net/news/482258",
+      "published_at": "2026-07-29T16:52:46+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.4,
+      "category": "论文研究"
+    },
+    {
+      "title": "华为全新小艺任务登场：4 大类 2300+ 项技能，鸿蒙电脑 9 月 OTA 升级支持",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为终端云服务小艺业务部总裁贾永利分享了鸿蒙自主决策 Agent PC 新体验，\n并带来了全新小艺任务\n。\n据介绍，华为全新小艺任务将实现“从能说到能干”的转变，支持多智能体协同架构，\n拥有 4 大类 2300+ 项技能\n，可自主规划按需组合。\n另外，小艺任务将支持定制邮件、浏览器控制等功能，可提供分析任务、生成表格、本地搜索、汇总确认、桌面文件解析、信息获取等能力。同时，\n端侧运行 WebAgent 任务成功率持平人类水平\n。\nIT之家从华为鸿蒙电脑新品技术沟通会现场了解到，\n鸿蒙电脑将在 9 月通过 OTA 支持全新小艺任务\n。",
+      "link": "https://www.ithome.com/0/983/113.htm",
+      "published_at": "2026-07-29T07:48:20+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.37,
+      "category": "产品更新"
+    },
+    {
+      "title": "苹果系统更新点名感谢 AI：Claude、Codex 揪出多项漏洞",
+      "content": "在最新发布的iOS、iPadOS、watchOS、tvOS、visionOS及macOS Tahoe系统更新中，官方修复了大量安全漏洞，而相当一部分修复成果归功于AI辅助安全研究——这是苹果首次在官方CVE漏洞归因列表中直接提及AI模型的名字。 根据苹果官方安全公告，Anthropic的Claude模型与OpenAI的Codex Security各自协助发现了 3 项漏洞，NVIDI...",
+      "link": "https://www.oschina.net/news/482125",
+      "published_at": "2026-07-29T14:26:45+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "首款鸿蒙台式机：华为擎云 HM650 系列官宣 10 月上市，搭载自研麒麟 X90 芯片",
+      "content": "IT之家 7 月 29 日消息，华为终端平板与 PC 产品线总裁朱懂东今日发布预告，首款鸿蒙台式机 ——\n华为擎云 HM650 系列将于今年 10 月上市\n，鸿蒙电脑产品矩阵将进一步完善。\nIT之家从华为方面获悉，华为擎云 HM650 系列台式机搭载\n华为自研麒麟 X90 芯片\n。依托创新双层散热架构，以及软件、硬件、芯片、云端的深度协同，华为擎云 HM650 系列可用于日常综合办公，以及工程设计、仿真建模、编程等专业场景。\n华为还透露，\n鸿蒙电脑生态应用数量突破 19000 款\n，全面覆盖办公、娱乐、创作、游戏等核心场景，以及金融、工业设计、科学计算等行业垂直领域。",
+      "link": "https://www.ithome.com/0/983/162.htm",
+      "published_at": "2026-07-29T08:41:11+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 6.25,
+      "category": "模型发布"
+    },
+    {
+      "title": "SpaceX空头持仓超260亿美元，账面获利超70亿",
+      "content": "随着AI热潮高涨，市场泡沫忧虑升温，做空者看到了逆势押注的机会。其中，做空马斯克旗下SpaceX的交易收益尤为丰厚。市场研究公司S3 Partners的预测分析主管伊霍尔·杜萨尼夫斯基周二表示，自6月SpaceX首次公开募股以来，空头投资者已套利约73亿美元。（新浪财经）",
+      "link": "https://36kr.com/newsflashes/3916490361433473?f=rss",
+      "published_at": "2026-07-29T17:18:51+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.2,
+      "category": "行业动态"
+    },
+    {
+      "title": "九部门：开展科技金融可信数据空间创新发展试点，鼓励有条件的地区加强企业收支流水数据开放利用",
+      "content": "36氪获悉，中国人民银行等九部门联合印发《关于加强科技金融领域数据开发利用的通知》。《通知》坚持加强科技金融领域数据开放共享和融合运用，支持科技信息使用机构规范运用科技公共数据，鼓励地方向科技型企业提供授权开放信息渠道，推广信息查询、联合建模等模式。开展科技金融可信数据空间创新发展试点，鼓励有条件的地区加强企业收支流水数据开放利用，搭建行业研究信息交流平台，实现科技金融领域数据资源跨域共享和高效对接。支持市场化征信机构建设科技型企业数据库，丰富征信产品和服务供给。",
+      "link": "https://36kr.com/newsflashes/3916498524515973?f=rss",
+      "published_at": "2026-07-29T17:08:19+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.2,
+      "category": "行业动态"
+    },
+    {
+      "title": "Kimi K3 架构拆解——本质上是 Kimi Linear 的规模化生产版本",
+      "content": "Kimi K3 开源完整权重之后，社区的动作比预想的快。不到 48 小时，Sebastian Raschka 就发了一篇架构拆解笔记。 如果你不知道 Raschka 是谁——他写过《Build a Large Language Model (From Scratch)》，在 Lightning AI 做研究，长期以独立视角分析各家模型架构。他的判断通常不站队，只讲技术。这篇 K3 笔记也不例外，...",
+      "link": "https://www.oschina.net/news/482012/kimi-k3-architecture-notes",
+      "published_at": "2026-07-29T11:23:05+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.2,
+      "category": "模型发布"
+    },
+    {
+      "title": "阿里云 SysOM 巡检 Skill 正式开源",
+      "content": "基于这一理念，今天，阿里云操作系统控制台接着将 SysOM 巡检 Skill 一同开源。后续它将与 SysOM 诊断 Skill 一同纳入即将发布的 SysOM 技能包，形成 \" 巡检发现问题 → 诊断定位根因 → 给出处置建议 \" 的完整闭环，让 Agent 既能事后止损，更能事前预防。",
+      "link": "https://my.oschina.net/u/3874284/blog/19729315",
+      "published_at": "2026-07-29T17:30:39+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.1,
+      "category": "模型发布"
+    },
+    {
+      "title": "重磅开源！UNICUT —— 纯 Web 端在线视频编辑器，功能比肩桌面端",
+      "content": "重磅开源！UNICUT——纯 Web 端在线视频编辑器，功能比肩桌面端 在视频创作全民化的今天，市面上的视频编辑工具要么需要下载安装（如剪映、PR），要么功能阉割严重（如各类轻量在线编辑器）。有没有一款工具，既能像桌面软件一样强大，又能打开浏览器即开即用？ 今天，我们将内部打磨已久的在线视频编辑器 UNICUT 正式开...",
+      "link": "https://www.oschina.net/news/482055",
+      "published_at": "2026-07-29T12:49:53+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.1,
+      "category": "模型发布"
+    },
+    {
+      "title": "扎克伯格反对‌美国政府封禁中国 AI 模型‌",
+      "content": "扎克伯格昨天罕见地接受了两家传统媒体的采访：《纽约时报》和《金融时报》。两场谈话指向同一件事——他对 AI 行业正在形成的权力结构感到不满。 不过他没有直接点名。 他批评的是「领先研究实验室以高度受控的方式开发 AI」。在《纽约时报》的采访中，他说这种做法等同于在美国技术发展中「放弃我们的价值观」，会扼杀...",
+      "link": "https://www.oschina.net/news/482309",
+      "published_at": "2026-07-29T17:31:10+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.05,
+      "category": "论文研究"
+    },
+    {
+      "title": "OpenAI 发布开源版 Codex Security CLI",
+      "content": "OpenAI 发文称，已发布开源版 Codex Security CLI，采用 Apache-2.0 协议。 该项目目前仍处于早期发布阶段，未来将根据用户反馈持续改进。用户现可利用其扫描代码仓库、跨多次运行追踪发现的问题、验证修复结果，并将安全检查纳入 CI/CD 流程。 Codex Security 基于轻量级 Codex coding agent 构建，于 2026 年 3 月进入...",
+      "link": "https://www.oschina.net/news/481986",
+      "published_at": "2026-07-29T10:55:55+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 6.05,
+      "category": "模型发布"
+    },
+    {
+      "title": "瓴羊AgentOne“四名AI员工”正式上岗，覆盖销售、客服、运营、营销四大场景",
+      "content": "7月29日，瓴羊AgentOne四名AI员工正式上岗，分别覆盖AI销售、AI客服、AI运营和AI营销四个场景。企业也可以根据自身业务需求，基于AgentOne的能力，和瓴羊FDE（前沿部署工程师）团队一起打造专属场景的X员工。“瓴羊AgentOne以业务效果为导向，以企业数据为基座，以岗位标杆为预设，真正帮助企业在AI时代获得增长。”阿里云智能集团瓴羊CEO朋新宇表示。",
+      "link": "https://36kr.com/newsflashes/3916517149994377?f=rss",
+      "published_at": "2026-07-29T17:35:14+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 6.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "OpenAI says the rogue agent that hacked Hugging Face also breached other services",
+      "content": "OpenAI's investigation starts shedding light on the activities of its rogue agent that hacked Hugging Face.",
+      "link": "https://www.engadget.com/2225812/openai-rogue-agent-hacked-hugging-face-breached-other-services/",
+      "published_at": "2026-07-29T08:40:56+00:00",
+      "source": "Engadget",
+      "weight": 0.9,
+      "score": 6.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "华为鸿蒙电脑外设支持数量再增加，涵盖 1700+ 通用 / 1600+ 专业设备",
+      "content": "IT之家 7 月 29 日消息，在今天的华为鸿蒙电脑新品技术沟通会上，华为终端 BG 平板与 PC 产品线总裁朱懂东分享了鸿蒙电脑最新取得的成绩。\n据介绍，鸿蒙电脑外设生态日趋繁荣，\n目前已支持 1700+ 通用设备\n（键盘 / 鼠标 / 显示器 / 耳机……）、\n1600+ 专业设备\n（打印机 / 扫描仪 / 手写板 / 柜外清……）。\n作为参考，华为终端官网去年 5 月上线了鸿蒙电脑外设兼容清单查询，总数达到 158 页，涵盖超过 1500 款不同设备。IT之家今日再次查看，\n该清单已更新至 1177 页\n。",
+      "link": "https://www.ithome.com/0/983/101.htm",
+      "published_at": "2026-07-29T07:21:42+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 5.9,
+      "category": "产品更新"
+    },
+    {
+      "title": "追觅在济南成立新公司，注册资本100万",
+      "content": "36氪获悉，天眼查App显示，近日，济南追创信息技术有限公司成立，法定代表人为查君平，注册资本100万人民币，经营范围包括软件开发、家用电器研发、家用电器制造、信息技术咨询服务等，由追觅创新科技（苏州）有限公司全资持股。",
+      "link": "https://36kr.com/newsflashes/3916504172359305?f=rss",
+      "published_at": "2026-07-29T17:23:58+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "行业动态"
+    },
+    {
+      "title": "联电：将在台南新建晶圆厂，以满足AI需求",
+      "content": "联电7月29日宣布，将扩建新加坡厂区无尘室产能，并同步于台南科学园区展开新厂外壳工程。此项扩产计划，旨在满足客户近期需求。联电表示，将在台湾兴建一座全新晶圆厂房，作为未来第七期（P7）及第八期（P8）厂区基地。台南新厂将扩大公司在先进封装领域的布局。（界面）",
+      "link": "https://36kr.com/newsflashes/3916489602198917?f=rss",
+      "published_at": "2026-07-29T17:14:08+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "行业动态"
+    },
+    {
+      "title": "九部门：引导金融机构依托科技金融领域数据库，打造特色的科技型企业风控投研模型",
+      "content": "36氪获悉，中国人民银行等九部门联合印发《关于加强科技金融领域数据开发利用的通知》。《通知》围绕完善数据赋能科技金融全链条，聚焦融资对接、智能风控、产品创新等环节，引导金融机构依托科技金融领域数据库，构建科技型企业数字信用画像，打造特色的科技型企业风控投研模型，开发契合细分行业企业融资需求的科技金融产品。鼓励金融机构与相关部门合作，运用交易集中度、交易对手分布、交易对手稳定性等数据，开展产业链资金流动分析，绘制重点产业链图谱，“一链一策”精准匹配金融资源。",
+      "link": "https://36kr.com/newsflashes/3916498262699394?f=rss",
+      "published_at": "2026-07-29T17:08:03+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "行业动态"
+    },
+    {
+      "title": "韩国将召开紧急会议讨论市场形势，此前韩股连续两日触发熔断",
+      "content": "韩国将于当地时间7月29日晚间召开紧急会议，讨论股市暴跌后的市场形势，跌势已令投资者持仓市值蒸发数十亿美元。韩国议员柳东秀表示，会议将由财政部长具润哲主持，韩国主要金融监管部门负责人都将参加，会议定于当地时间下午6时开始。韩国Kospi指数较6月高点已暴跌约40%。SK海力士公布的业绩弱于预期后，加剧了市场跌势，并引发投资者对人工智能投资热潮的质疑，同时散户抛售加速。此次下跌导致韩国股市连续第二个交易日触发全市场熔断机制。（界面）",
+      "link": "https://36kr.com/newsflashes/3916476052188547?f=rss",
+      "published_at": "2026-07-29T16:58:24+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "行业动态"
+    },
+    {
+      "title": "Valve says Steam Machine reservation-holders aren't being leapfrogged",
+      "content": "Valve says that no one on its Steam Machine waitlist is leapfrogging over anyone currently holding a reservation.",
+      "link": "https://www.engadget.com/2225806/valve-steam-machine-reservation-holders-not-being-leapfrogged/",
+      "published_at": "2026-07-29T08:26:15+00:00",
+      "source": "Engadget",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "技巧观点"
+    },
+    {
+      "title": "xAI is challenging a new Minnesota law banning 'nudify' apps",
+      "content": "Elon Musk's xAI has filed a lawsuit to block Minnesota's new law that would ban apps that can generate nonconsensual intimate imagery from being enforced.",
+      "link": "https://www.engadget.com/2225792/xai-challenging-new-minnesota-law-banning-nudify-apps/",
+      "published_at": "2026-07-29T06:35:11+00:00",
+      "source": "Engadget",
+      "weight": 0.9,
+      "score": 5.85,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Kimi K3 能在本地 Mac 上跑起来，答案在架构里",
+      "content": "月之暗面放出 Kimi K3 完整权重之后，社区的动作比预想快——「在 M1 Max 上跑 Kimi K3」的帖子今天登上了 Hacker News 首页。 具体来看，这是一个名为「Deltafin」的小型研究项目，支持在 Apple Silicon Mac 上本地运行 Kimi K3（2.8 万亿参数）。 HN 讨论帖的评论两极分化得很厉害。一边说「0.3 token 每秒，这东西有什...",
+      "link": "https://www.oschina.net/news/482218",
+      "published_at": "2026-07-29T16:06:38+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.75,
+      "category": "论文研究"
+    },
+    {
+      "title": "SeaMonkey 2.53.24 发布，Mozilla 浏览器套件",
+      "content": "SeaMonkey 2.53.24 现已发布，一个 2.53.x 分支的增量更新版本，包含对应用程序及其底层平台代码的多项增强、更改和修复。还添加了许多修复和向后移植功能，以提高平台的整体稳定性。 注意：2.53.21 是最后一个提供 Windows 和 Linux 32 位版本的版本，此版本仅提供 64 位版本。 Windows 签名密钥已过期，新密钥的分发方...",
+      "link": "https://www.oschina.net/news/482140/seamonkey-2-53-24-released",
+      "published_at": "2026-07-29T14:43:11+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.75,
+      "category": "产品更新"
+    },
+    {
+      "title": "掌阅预热 iReader Air 3 Pro 电纸书 8 月 6 日上市，搭 8.2 英寸 Carta1300 黑白墨水屏",
+      "content": "IT之家 7 月 29 日消息，掌阅现已官宣旗下 iReader Air 3 Pro 黑白墨水屏电纸书，该机将于 8 月 6 日 19:00 上市，主打“默白”配色。\n京东\n掌阅 Air 3 Pro 阅读器\n待发布\n直达链接\n该机使用“云砚”架构，采用一体金属中框，边缘圆润，正面配备一块 8.2 英寸 Carta1300 面板（可实现每秒 50 帧刷新率），屏幕一侧带有实体交互按键。\n同时，该机取消前光，强调阅读清晰度。机身搭载“6 纳米 8 核 CPU”，支持 2TB microSD 存储卡扩展。",
+      "link": "https://www.ithome.com/0/983/152.htm",
+      "published_at": "2026-07-29T08:29:56+00:00",
+      "source": "IT之家AI频道",
+      "weight": 0.8,
+      "score": 5.75,
+      "category": "模型发布"
+    },
+    {
+      "title": "陕北看海，黄土难寻",
+      "content": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...\n查看全文",
+      "link": "https://sspai.com/post/112761",
+      "published_at": "2026-07-29T15:00:51+08:00",
+      "source": "少数派",
+      "weight": 0.85,
+      "score": 5.7,
+      "category": "技巧观点"
+    },
+    {
+      "title": "推荐系统体验的数字化突破：得物自动化评测平台的技术实践",
+      "content": "在推荐系统中，CTR 和 CVR 等硬性指标往往容易通过实时数据进行观测，但新颖性、相关性等评价维度由于主观性强、反馈周期长，长期处于量化黑盒状态。本文将介绍得物自动化评测平台的建设方案。该平台通过引入大模型评测能力，将评测反馈周期从周级缩短至小时级，并在支撑单周百万级审计需求的背景下，实现了 91% 的资源成...",
+      "link": "https://my.oschina.net/u/5783135/blog/19728170",
+      "published_at": "2026-07-29T11:22:01+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.7,
+      "category": "模型发布"
+    },
+    {
+      "title": "Apple 操作系统安全更新公告出现一串 AI 名字",
+      "content": "Apple 昨天推送了一批安全更新，iOS 26.6、macOS Tahoe 26.6、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、tvOS 26.6、watchOS 26.6、visionOS 26.6 全线上新。安全公告一共列了 155 个 CVE，单次更新数量的新纪录。 但最值得注意的不是数量。 漏洞致谢名单里出现了一串 AI 的名字。Claude。OpenAI Codex Security。Z.A...",
+      "link": "https://www.oschina.net/news/482025",
+      "published_at": "2026-07-29T11:50:46+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.55,
+      "category": "产品更新"
+    },
+    {
+      "title": "Firefox 153.0.1 发布",
+      "content": "Firefox 153.0.1 现已发布，具体更新内容如下： Fixed 修复了在 Windows 系统上更新 Firefox 后可能发生的启动崩溃问题，该问题是由于应用程序的某些内部文件无法加载造成的。现在，Firefox 在这些情况下应该可以正常启动，但界面的某些部分可能无法正确显示，直到完成进一步的更新（Bug 2056926）。 修复了在某些音乐和...",
+      "link": "https://www.oschina.net/news/481973/firefox-153-0-1-released",
+      "published_at": "2026-07-29T10:41:14+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.55,
+      "category": "模型发布"
+    },
+    {
+      "title": "跑一个 3T 开源模型，到底要多少显卡？",
+      "content": "月之暗面开源 Kimi K3 完整权重的第二天，Hacker News 上最热的那条评论不是 \"恭喜\" 也不是 \"历史性时刻\"—— 是一条算数题。 \"MXFP4 原生精度，光权重就要 1.5TB 显存。8 块 B200 勉强装下，实际部署至少 16 块。\" 下面立刻有人接着算：一台二手四路至强服务器，插满 3TB DDR5 内存，不到三万美元，能不能跑？回答是大概...",
+      "link": "https://www.oschina.net/news/481937",
+      "published_at": "2026-07-29T10:07:35+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 5.55,
+      "category": "模型发布"
+    },
+    {
+      "title": "扎克伯格：美国不应为了在竞赛中占据优势，而封禁中国AI模型",
+      "content": "据英国《金融时报》、路透社7月29日报道，美国元公司首席执行官扎克伯格在接受媒体采访时表示，美国不应为了在人工智能（AI）竞赛中占据优势，而封禁中国AI模型。（环球网）",
+      "link": "https://36kr.com/newsflashes/3916473736015232?f=rss",
+      "published_at": "2026-07-29T16:54:02+08:00",
+      "source": "36氪前沿科技",
+      "weight": 0.9,
+      "score": 5.5,
+      "category": "模型发布"
     }
   ],
-  "updated_at": "2026-07-29T01:56:21.817050+00:00"
+  "updated_at": "2026-07-29T09:43:02.269701+00:00"
 }

@@ -1,94 +1,189 @@
 ## 🎯 今日 AI 焦点 TOP 5
 
-**[腾讯混元大语言模型和多模态团队合并，统一由姚顺雨管理](https://www.ithome.com/0/981/121.htm)**
-- 评分: 8.81 | 信源: IT之家AI频道
+**[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393v1)**
+📰 arXiv (Yifei Zhao, Xiangxin Zhou, Wenhao Yang, Jiaqi Tang, Pu Jian, Huanjin Yao, Jiarui Yao, Haowei Lin, Chunchao Guo, Zhuo Chen, Wenkai Lyu, Jianzhu Ma, Xueqian Wang, Wenxi Zhu) | ⭐ 6.47 | 🏷️ 技巧观点
 
-**[带着AI去前线！36氪逛透WAIC，带你看懂2026全行业AI最真实走向！](https://36kr.com/p/3909033052722310?f=rss)**
-- 评分: 8.6 | 信源: 36氪前沿科技
-
-**[阿里开源 0.8B 文档解析模型 OvisOCR2，端到端模型首次超越流水线方法](https://www.ithome.com/0/981/138.htm)**
-- 评分: 8.57 | 信源: IT之家AI频道
-
-**[超 GPT-5.6 Sol：月之暗面 Kimi K3 模型 AI 智能体知识工作跑分仅次于 Claude Fable 5](https://www.ithome.com/0/981/126.htm)**
-- 评分: 8.57 | 信源: IT之家AI频道
-
-**[DeepSeek不是理想主义公司，它只是把现实服务于理想](https://36kr.com/p/3909084356433025?f=rss)**
-- 评分: 8.55 | 信源: 36氪前沿科技
-
-## 📊 5大分类动态速览
-
-### 📁 模型发布 (9篇)
-
-**[腾讯混元大语言模型和多模态团队合并，统一由姚顺雨管理](https://www.ithome.com/0/981/121.htm)**
-- 评分: 8.81 | 信源: IT之家AI频道
-
-**[阿里开源 0.8B 文档解析模型 OvisOCR2，端到端模型首次超越流水线方法](https://www.ithome.com/0/981/138.htm)**
-- 评分: 8.57 | 信源: IT之家AI频道
-
-**[DeepSeek不是理想主义公司，它只是把现实服务于理想](https://36kr.com/p/3909084356433025?f=rss)**
-- 评分: 8.55 | 信源: 36氪前沿科技
-
-**[氪星晚报 ｜DeepSeek今年已增资65%；马斯克：FSD是拉动特斯拉汽车需求的核心驱动力](https://36kr.com/p/3908051015488640?f=rss)**
-- 评分: 8.0 | 信源: 36氪前沿科技
-
-**[宝马 M 部门负责人：纯电 M3 将成为燃油 M3 的“天敌”](https://www.ithome.com/0/981/176.htm)**
-- 评分: 7.81 | 信源: IT之家AI频道
-
-**[中科宇航：力箭一号圆满完成“一箭 5 星”任务，开启下半年逐月常态化发射](https://www.ithome.com/0/981/173.htm)**
-- 评分: 7.65 | 信源: IT之家AI频道
-
-**[独家｜混元多模态理解负责人胡瀚离职创业，原团队或将聚焦世界模型](https://36kr.com/p/3907934819521670?f=rss)**
-- 评分: 7.55 | 信源: 36氪前沿科技
-
-**[FLUX 3 多模态 AI 模型登场：支持单次生成 20 秒多样化视频](https://www.ithome.com/0/981/137.htm)**
-- 评分: 7.34 | 信源: IT之家AI频道
-
-**[何小鹏：目标到明年下半年，小鹏广州 Robotaxi 业务实现单车盈亏平衡](https://www.ithome.com/0/981/119.htm)**
-- 评分: 7.33 | 信源: IT之家AI频道
-
-### 📁 产品更新 (2篇)
-
-**[超 GPT-5.6 Sol：月之暗面 Kimi K3 模型 AI 智能体知识工作跑分仅次于 Claude Fable 5](https://www.ithome.com/0/981/126.htm)**
-- 评分: 8.57 | 信源: IT之家AI频道
-
-**[一加调整深度测试 Bootloader 解锁申请条件：账号需注册满 60 天，一年解锁设备不超过 4 台](https://www.ithome.com/0/981/128.htm)**
-- 评分: 7.8 | 信源: IT之家AI频道
-
-### 📁 行业动态 (7篇)
-
-**[带着AI去前线！36氪逛透WAIC，带你看懂2026全行业AI最真实走向！](https://36kr.com/p/3909033052722310?f=rss)**
-- 评分: 8.6 | 信源: 36氪前沿科技
-
-**[对话曾鸣教授：AI时代，企业竞争的关键是构建智能复利，让AI真正进入业务流程](https://36kr.com/p/3909358392988806?f=rss)**
-- 评分: 8.5 | 信源: 36氪前沿科技
-
-**[网格智算：“不堆算力”的AI大脑如何填补林下场景空白 | 水下项目](https://36kr.com/p/3908027308823684?f=rss)**
-- 评分: 7.8 | 信源: 36氪前沿科技
-
-**[海康威视 2026 年半年度归母净利润 7.90 亿元，同比增长 39.57%](https://www.ithome.com/0/981/283.htm)**
-- 评分: 7.67 | 信源: IT之家AI频道
-
-**[捷豹路虎召回 7.6 万辆进口路虎揽胜、路虎发现汽车：可能导致驾驶员安全气囊无法正常展开](https://www.ithome.com/0/981/151.htm)**
-- 评分: 7.4 | 信源: IT之家AI频道
-
-**[8点1氪丨段永平称10年内大概率不会卖泡泡玛特；中国数学家王虹、邓煜获得菲尔兹奖；宜家回应甩卖8处物业：不代表退出中国市场](https://36kr.com/p/3908881985901959?f=rss)**
-- 评分: 7.35 | 信源: 36氪前沿科技
-
-**[宇树科技 CEO 王兴兴登上《时代》杂志封面，近 2.7 米高的 GD01 载人机甲几乎占满画面](https://www.ithome.com/0/981/153.htm)**
-- 评分: 7.35 | 信源: IT之家AI频道
-
-### 📁 论文研究 (0篇)
-
-暂无相关资讯
-
-### 📁 技巧观点 (2篇)
-
-**[联想推出拯救者笔记本电脑原装 64GB DDR5 5600 套条，6549 元](https://www.ithome.com/0/981/116.htm)**
-- 评分: 7.25 | 信源: IT之家AI频道
-
-**[极氪 9X 五座版电混 SUV 展车到店，7 月 28 日上市](https://www.ithome.com/0/981/282.htm)**
-- 评分: 7.24 | 信源: IT之家AI频道
+> Vision-language model (VLM) agents increasingly use tools to act on 3D scenes rather than only describe them. Existing 3...
 
 ---
 
-*📝 本文由AI知识日报智能体自动生成 | 共收录 110 篇资讯*
+**[Hopformer: Homogeneity-Pursuit Transformer for Time Series Forecasting](https://arxiv.org/abs/2607.22299v1)**
+📰 arXiv (Wan Zhang, Qinjie Lin, Chan Lee, Weijian Li, Han Liu, Kai Zhang) | ⭐ 6.39 | 🏷️ 论文研究
+
+> Forecasting multiple time-series with high-dimensional covariates presents a core challenge: unifying common temporal pa...
+
+---
+
+**[Synthetic Speech, Real Signal: Paralinguistic Preservation and Cross-Lingual Augmentation via Voice Cloning](https://arxiv.org/abs/2607.22304v1)**
+📰 arXiv (Roseline Polle, Owen Parsons, George Fairs, Luis Miguel San Martin Fernandez, Cole Looney, Xiaoliang Wu, Alexandra Livia Georgescu, Stefano Goria) | ⭐ 6.30 | 🏷️ 技巧观点
+
+> Synthetic data augmentation in speech is common practice for linguistic tasks like ASR, but has seen far less work for p...
+
+---
+
+**[AI4PLE: A Methodology for Integrating AI into Product Line Engineering](https://arxiv.org/abs/2607.22260v1)**
+📰 arXiv (Bedir Tekinerdogan) | ⭐ 6.24 | 🏷️ 技巧观点
+
+> Reuse-based development has become increasingly important in the creation of complex systems, offering significant oppor...
+
+---
+
+**[A Self-Calibrating Agentic AI Framework for Autonomous Edge Resource Allocation](https://arxiv.org/abs/2607.22400v1)**
+📰 arXiv (Fin Gentzen, Marla Grunewald, Iulisloi Zacarias, Mounir Bensalem, Admela Jukan) | ⭐ 6.15 | 🏷️ 模型发布
+
+> Large Language Models (LLMs) are increasingly deployed as autonomous agents, transitioning from static conversational in...
+
+---
+
+## 📊 5大分类动态速览
+
+### 📁 模型发布
+
+**[A Self-Calibrating Agentic AI Framework for Autonomous Edge Resource Allocation](https://arxiv.org/abs/2607.22400v1)**
+📰 arXiv (Fin Gentzen, Marla Grunewald, Iulisloi Zacarias, Mounir Bensalem, Admela Jukan) | ⏰ 07-24 23:21 | ⭐ 6.15分
+
+---
+
+**[IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation](https://arxiv.org/abs/2607.22375v1)**
+📰 arXiv (Varun Gumma, Navonil Majumder, Soumitra Sinhahajari, Soujanya Poria) | ⏰ 07-24 23:03 | ⭐ 6.15分
+
+---
+
+**[Towards Trustworthy and Cost-Efficient Data Integration: From Naïve RAG to Agentic RAG](https://arxiv.org/abs/2607.22319v1)**
+📰 arXiv (Chuangtao Ma, Arijit Khan) | ⏰ 07-24 21:58 | ⭐ 6.15分
+
+---
+
+**[DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents](https://arxiv.org/abs/2607.22165v1)**
+📰 arXiv (Junming Chen, Junyang Jiang, Xu Chen, Zibo Liang, Kai Zheng) | ⏰ 07-24 18:11 | ⭐ 6.15分
+
+---
+
+**[Trajectory-Regularized Stochastic Optimal Control via KL Divergence](https://arxiv.org/abs/2607.22201v1)**
+📰 arXiv (Mintae Kim, Koushil Sreenath) | ⏰ 07-24 19:15 | ⭐ 6.01分
+
+---
+
+**[HiKV: Hierarchical Importance-Aware KV Cache with Hardware Acceleration for LLM Decoding](https://arxiv.org/abs/2607.22389v1)**
+📰 arXiv (Chao Fang, Jun Yin, Man Shi, Marian Verhelst) | ⏰ 07-24 23:15 | ⭐ 6.0分
+
+---
+
+**[Biomedical Machine Translation for Low-Resource Arabic-Script Languages via Cross-Lingual Transfer and LoRA Adapter Merging](https://arxiv.org/abs/2607.22300v1)**
+📰 arXiv (Abdullah Alabdullah, Arash Eslamighayour, Sarp Harbalioglu, Lifeng Han) | ⏰ 07-24 21:44 | ⭐ 6.0分
+
+---
+
+**[RadSight: Towards Perceptually Reliable Multimodal Radiology Image Understanding](https://arxiv.org/abs/2607.22293v1)**
+📰 arXiv (Jianqin Liu, Weiwei Cao, Wanxing Chang, Ruifeng Yuan, Bowen Shi, Zhilin Zheng, Xianjie Zhang, Ling Zhang, Peng Wang, Jianpeng Zhang) | ⏰ 07-24 21:35 | ⭐ 6.0分
+
+---
+
+**[General Value Functions for Remaining Useful Life and Failure-Mode Prediction](https://arxiv.org/abs/2607.22268v1)**
+📰 arXiv (Hao Yan, Ali Sarabi, Qing Zou, Boyang Xu) | ⏰ 07-24 21:04 | ⭐ 6.0分
+
+---
+
+**[AgentHOI: Multi-Agent Reasoning for Human-Object-Interaction Video Generation via Implicit Representation Alignment](https://arxiv.org/abs/2607.22241v1)**
+📰 arXiv (Ziyao Huang, Shunkai Li, Juan Cao, Chenyu Li, Youliang Zhang, Zixiang Zhou, Cong Wang, Yuan Zhou, Qinglin Lu, Fan Tang) | ⏰ 07-24 20:17 | ⭐ 6.0分
+
+---
+
+### 📁 产品更新
+
+**[Local-Global Geometric Insights for Graph Neural Networks via Entropic Curvature](https://arxiv.org/abs/2607.22381v1)**
+📰 arXiv (Rachid Caich, Yassine Abbahaddou) | ⏰ 07-24 23:07 | ⭐ 5.85分
+
+---
+
+### 📁 行业动态
+
+_暂无相关资讯_
+
+### 📁 论文研究
+
+**[Hopformer: Homogeneity-Pursuit Transformer for Time Series Forecasting](https://arxiv.org/abs/2607.22299v1)**
+📰 arXiv (Wan Zhang, Qinjie Lin, Chan Lee, Weijian Li, Han Liu, Kai Zhang) | ⏰ 07-24 21:44 | ⭐ 6.39分
+
+---
+
+**[From Isolated Tasks to Structured Capabilities: A Multilayer Taxonomy for Large Language Models](https://arxiv.org/abs/2607.22182v1)**
+📰 arXiv (Shixin Fang, Jiachen Wo, Wenjuan Qin, Sihang Jiang, Yanghua Xiao) | ⏰ 07-24 18:49 | ⭐ 6.0分
+
+---
+
+**[Reflector: Arrangement-Aware Harmonic Retrieval for Sample-Based Composition](https://arxiv.org/abs/2607.22413v1)**
+📰 arXiv (Austin Rockman) | ⏰ 07-24 23:30 | ⭐ 5.85分
+
+---
+
+**[Integrated Order Dispatching and Routing for Last-Mile Pickup via Deep Reinforcement Learning](https://arxiv.org/abs/2607.22356v1)**
+📰 arXiv (Yida Xu, Zhaofang Mao, Yuheng Miao, Jiaxin Zhang, Yiting Sun) | ⏰ 07-24 22:37 | ⭐ 5.85分
+
+---
+
+**[Explicit Iteration Complexity of Exact Data-Driven Inverse Optimization for Integer Linear Programs](https://arxiv.org/abs/2607.22263v1)**
+📰 arXiv (Akira Kitaoka) | ⏰ 07-24 20:56 | ⭐ 5.85分
+
+---
+
+**[Closed-Loop Generative Selection: Convergence, Memory, and Noisy Oracles](https://arxiv.org/abs/2607.22211v1)**
+📰 arXiv (Konstantin Fackeldey, Christof Schütte) | ⏰ 07-24 19:29 | ⭐ 5.85分
+
+---
+
+### 📁 技巧观点
+
+**[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393v1)**
+📰 arXiv (Yifei Zhao, Xiangxin Zhou, Wenhao Yang, Jiaqi Tang, Pu Jian, Huanjin Yao, Jiarui Yao, Haowei Lin, Chunchao Guo, Zhuo Chen, Wenkai Lyu, Jianzhu Ma, Xueqian Wang, Wenxi Zhu) | ⏰ 07-24 23:16 | ⭐ 6.47分
+
+---
+
+**[Synthetic Speech, Real Signal: Paralinguistic Preservation and Cross-Lingual Augmentation via Voice Cloning](https://arxiv.org/abs/2607.22304v1)**
+📰 arXiv (Roseline Polle, Owen Parsons, George Fairs, Luis Miguel San Martin Fernandez, Cole Looney, Xiaoliang Wu, Alexandra Livia Georgescu, Stefano Goria) | ⏰ 07-24 21:46 | ⭐ 6.3分
+
+---
+
+**[AI4PLE: A Methodology for Integrating AI into Product Line Engineering](https://arxiv.org/abs/2607.22260v1)**
+📰 arXiv (Bedir Tekinerdogan) | ⏰ 07-24 20:52 | ⭐ 6.24分
+
+---
+
+**[PRIMS: Physics-guided Representation for Fluid Identification in Multimodal Sensing](https://arxiv.org/abs/2607.22422v1)**
+📰 arXiv (Hai-Long Nguyen, Trung Thanh Nguyen, Lars Holm, Dennis Alveringh, Duc Viet Le) | ⏰ 07-24 23:46 | ⭐ 6.0分
+
+---
+
+**[Agentic Root Cause Analysis through Evidence-Grounded Reasoning](https://arxiv.org/abs/2607.22385v1)**
+📰 arXiv (Amaury Wei, Olga Fink) | ⏰ 07-24 23:10 | ⭐ 6.0分
+
+---
+
+**[Active few-shot segmentation by reinforcing data selection](https://arxiv.org/abs/2607.22371v1)**
+📰 arXiv (Chenlan Zhao, Benny Wong, Timothy F. Lundberg, Ahmed M. Elsayed, Abdallah Aljarkas, Hamad A. Aljamaan, Lynn Karam, Qianye Yang, Yipeng Hu, Claire C. Villette, Shaheer U. Saeed) | ⏰ 07-24 22:58 | ⭐ 6.0分
+
+---
+
+**[Do Agent Benchmarks Measure Capability? Protocol Validity in the Age of Agentic AI](https://arxiv.org/abs/2607.22368v1)**
+📰 arXiv (Jiaqi Shao, Hanck Chen, Wei Zhang, Maxm Pan, Bing Luo) | ⏰ 07-24 22:55 | ⭐ 6.0分
+
+---
+
+**[Interior interpretability with attention rollout: contraction and propagation profiles in Transformers](https://arxiv.org/abs/2607.22367v1)**
+📰 arXiv (Umberto Biccari, Qian Huang, Enrique Zuazua) | ⏰ 07-24 22:51 | ⭐ 6.0分
+
+---
+
+**[IQ-JEPA: A Joint-Embedding Predictive Architecture with a Hermitian Vision Transformer for Sound Speed and Attenuation Estimation from Ultrasound IQ Data](https://arxiv.org/abs/2607.22351v1)**
+📰 arXiv (Masashi Sode, Gianmarco Pinton) | ⏰ 07-24 22:31 | ⭐ 6.0分
+
+---
+
+**[IFCLoRA: Topology-Aware Rank Allocation for Parameter-Efficient Fine-Tuning](https://arxiv.org/abs/2607.22251v1)**
+📰 arXiv (Wei Zhang, Xinwu Liu, Yihang Cheng) | ⏰ 07-24 20:34 | ⭐ 6.0分
+
+---
+
+---
+
+*📝 本文由AI知识日报智能体自动生成 | 共收录 74 篇资讯*
