@@ -511,6 +511,14 @@ def init_session_state():
         st.session_state.selected_articles = []
     if "selected_category" not in st.session_state:
         st.session_state.selected_category = "全部讯息"
+    if "dd_current_page" not in st.session_state:
+        st.session_state.dd_current_page = 1
+    if "dd_page_size" not in st.session_state:
+        st.session_state.dd_page_size = 50
+    if "_category_articles_map" not in st.session_state:
+        st.session_state._category_articles_map = {}
+    if "_sorted_all_articles" not in st.session_state:
+        st.session_state._sorted_all_articles = []
 
 init_session_state()
 
@@ -687,7 +695,27 @@ def fetch_latest_articles():
 
 def load_data():
     """每次刷新都加载数据，Streamlit缓存保证速度"""
-    st.session_state.articles = fetch_latest_articles()
+    articles = fetch_latest_articles()
+    st.session_state.articles = articles
+    
+    # 预计算分类数据，避免每次切换分类时重复筛选
+    if articles:
+        # 预计算全部文章（按时间倒序）
+        sorted_all = sorted(articles, key=lambda a: convert_to_beijing_time(a.get("published_at", "")), reverse=True)
+        st.session_state._sorted_all_articles = sorted_all
+        
+        # 预计算各分类文章（按时间倒序）
+        category_map = {}
+        for category in CATEGORIES:
+            if category == "全部讯息":
+                category_map[category] = sorted_all
+            else:
+                cat_articles = [a for a in articles if a.get("category") == category]
+                category_map[category] = sorted(cat_articles, key=lambda a: convert_to_beijing_time(a.get("published_at", "")), reverse=True)
+        st.session_state._category_articles_map = category_map
+    else:
+        st.session_state._sorted_all_articles = []
+        st.session_state._category_articles_map = {}
 
 def get_icon(page_name):
     """根据页面名称获取图标"""
@@ -766,19 +794,41 @@ def render_daily_dynamic():
             is_selected = st.session_state.selected_category == cat
             if st.button(cat, key=f"tab_{cat}", use_container_width=True, type="primary" if is_selected else "secondary"):
                 st.session_state.selected_category = cat
+                st.session_state.dd_current_page = 1
                 st.rerun()
     
     keyword = st.text_input("🔍 搜索关键词", placeholder=f"搜索{st.session_state.selected_category}相关资讯...", key="dd_search_input")
-    cat_articles = get_articles_by_category(st.session_state.articles, st.session_state.selected_category)
+    
+    if keyword != st.session_state.get("_dd_last_keyword", ""):
+        st.session_state.dd_current_page = 1
+        st.session_state._dd_last_keyword = keyword or ""
+    
+    # 使用预计算的分类数据（已排序）
+    if st.session_state.get("_category_articles_map"):
+        cat_articles = st.session_state._category_articles_map.get(st.session_state.selected_category, [])
+    else:
+        cat_articles = get_articles_by_category(st.session_state.articles, st.session_state.selected_category)
+    
+    # 搜索时过滤
     if keyword:
         cat_articles = filter_articles_by_keyword(cat_articles, keyword)
     
-    # 按时间倒序排序，最新的在最上面
-    cat_articles = sorted(cat_articles, key=lambda a: convert_to_beijing_time(a.get("published_at", "")), reverse=True)
+    total_count = len(cat_articles)
+    page_size = st.session_state.dd_page_size
+    total_pages = max(1, (total_count + page_size - 1) // page_size)
+    current_page = st.session_state.dd_current_page
     
-    if cat_articles:
+    if current_page > total_pages:
+        current_page = total_pages
+        st.session_state.dd_current_page = current_page
+    
+    start_idx = (current_page - 1) * page_size
+    end_idx = start_idx + page_size
+    page_articles = cat_articles[start_idx:end_idx]
+    
+    if page_articles:
         timeline_html = ['<div class="timeline-container">']
-        for article in cat_articles:
+        for article in page_articles:
             dt = convert_to_beijing_time(article.get("published_at", ""))
             summary = article.get("content", "")[:100]
             if len(article.get("content", "")) > 100:
@@ -798,6 +848,45 @@ def render_daily_dynamic():
 """)
         timeline_html.append("</div>")
         st.markdown("".join(timeline_html), unsafe_allow_html=True)
+    else:
+        st.info("暂无相关资讯")
+    
+    # 分页控件
+    if total_count > 0:
+        st.markdown("---")
+        col_info, col_nav = st.columns([1, 2])
+        
+        with col_info:
+            st.markdown(f'<div style="color:#94a3b8; font-size:14px;">共 <b style="color:#e2e8f0;">{total_count}</b> 篇 · 第 <b style="color:#e2e8f0;">{current_page}</b> / {total_pages} 页</div>', unsafe_allow_html=True)
+        
+        with col_nav:
+            nav_cols = st.columns([1, 1, 1, 1, 1])
+            
+            with nav_cols[0]:
+                if st.button("⏮️ 首页", key="dd_first", use_container_width=True, disabled=current_page == 1):
+                    st.session_state.dd_current_page = 1
+                    st.rerun()
+            
+            with nav_cols[1]:
+                if st.button("← 上一页", key="dd_prev", use_container_width=True, disabled=current_page == 1):
+                    st.session_state.dd_current_page = current_page - 1
+                    st.rerun()
+            
+            with nav_cols[2]:
+                page_input = st.number_input("页码", min_value=1, max_value=total_pages, value=current_page, key="dd_page_input", label_visibility="collapsed")
+                if page_input != current_page:
+                    st.session_state.dd_current_page = page_input
+                    st.rerun()
+            
+            with nav_cols[3]:
+                if st.button("下一页 →", key="dd_next", use_container_width=True, disabled=current_page == total_pages):
+                    st.session_state.dd_current_page = current_page + 1
+                    st.rerun()
+            
+            with nav_cols[4]:
+                if st.button("末页 ⏭️", key="dd_last", use_container_width=True, disabled=current_page == total_pages):
+                    st.session_state.dd_current_page = total_pages
+                    st.rerun()
 
 def render_daily_report():
     # 页面隔离检查：确保只在AI日报页面渲染
