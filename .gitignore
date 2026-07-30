@@ -12,4 +12,4 @@ __pycache__/
 
 # 生成的本地报告文件
 # daily_report_*.md
-report_*.json
+ report_*.json

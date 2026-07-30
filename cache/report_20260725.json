@@ -1,0 +1,320 @@
+{
+  "report": "## 🎯 今日 AI 焦点 TOP 5\n\n**[Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science](https://arxiv.org/abs/2607.22513v1)**\n📰 arXiv (Davide Scarso, Hugo Noronha de Almeida, Joaquim Pina) | ⭐ 6.60 | 🏷️ 模型发布\n\n> Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific...\n\n---\n\n**[Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](https://arxiv.org/abs/2607.22529v1)**\n📰 arXiv (Siyuan Huang, Pengyu Cheng, Haotian Liu, Tao Chen, Yihao Liu, Jingwei Ni, Shijie Zhou, Ziyi Yang, Gangwei Jiang, Mengyu Zhou, Yu Cheng, Xiaoxi Jiang, Guanjun Jiang) | ⭐ 6.45 | 🏷️ 模型发布\n\n> LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-...\n\n---\n\n**[The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents](https://arxiv.org/abs/2607.22520v1)**\n📰 arXiv (Darshan Tank, Baran Nama) | ⭐ 6.45 | 🏷️ 模型发布\n\n> Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this me...\n\n---\n\n**[CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference](https://arxiv.org/abs/2607.22511v1)**\n📰 arXiv (Jiyuan Tan, Vasilis Syrgkanis) | ⭐ 6.45 | 🏷️ 模型发布\n\n> Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliab...\n\n---\n\n**[TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI](https://arxiv.org/abs/2607.22465v1)**\n📰 arXiv (Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna) | ⭐ 6.45 | 🏷️ 模型发布\n\n> Routing to select large language models (LLMs) with different cost-quality trade-offs has become a fundamental deploymen...\n\n---\n\n## 📊 5大分类动态速览\n\n### 📁 模型发布\n\n**[Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science](https://arxiv.org/abs/2607.22513v1)**\n📰 arXiv (Davide Scarso, Hugo Noronha de Almeida, Joaquim Pina) | ⏰ 07-25 01:32 | ⭐ 6.6分\n\n---\n\n**[Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](https://arxiv.org/abs/2607.22529v1)**\n📰 arXiv (Siyuan Huang, Pengyu Cheng, Haotian Liu, Tao Chen, Yihao Liu, Jingwei Ni, Shijie Zhou, Ziyi Yang, Gangwei Jiang, Mengyu Zhou, Yu Cheng, Xiaoxi Jiang, Guanjun Jiang) | ⏰ 07-25 01:59 | ⭐ 6.45分\n\n---\n\n**[The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents](https://arxiv.org/abs/2607.22520v1)**\n📰 arXiv (Darshan Tank, Baran Nama) | ⏰ 07-25 01:50 | ⭐ 6.45分\n\n---\n\n**[CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference](https://arxiv.org/abs/2607.22511v1)**\n📰 arXiv (Jiyuan Tan, Vasilis Syrgkanis) | ⏰ 07-25 01:32 | ⭐ 6.45分\n\n---\n\n**[TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI](https://arxiv.org/abs/2607.22465v1)**\n📰 arXiv (Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna) | ⏰ 07-25 00:29 | ⭐ 6.45分\n\n---\n\n**[Dynamic Capability Scoping for Enterprise AI Agents: A Synthetic Dataset and Three-Source Permission Architecture](https://arxiv.org/abs/2607.22445v1)**\n📰 arXiv (Halil Burak Noyan) | ⏰ 07-25 00:08 | ⭐ 6.45分\n\n---\n\n**[Twins: Learn to Predict Unified Representations with Focal Loss](https://arxiv.org/abs/2607.22531v1)**\n📰 arXiv (Kaixiong Gong, Xin Cai, Bin Lin, Hao Wang, Yunlong Lin, Mingzhe Zheng, Bohao Li, Jian-Wei Zhang, Miles Yang, Zhao Zhong, Liefeng Bo, Xiangyu Yue) | ⏰ 07-25 01:59 | ⭐ 6.3分\n\n---\n\n**[MineValiCoder: Reliable Code Generation with Test Case Quality Mining and Bipartite Graph-Based Mutual Validation](https://arxiv.org/abs/2607.22471v1)**\n📰 arXiv (Zhen Zhao, Qihang Yang, Feifei Dai, Xiangfang Li, Bo Li) | ⏰ 07-25 00:39 | ⭐ 6.3分\n\n---\n\n**[Beyond Perspectives: A Trio-Ethnography of Interpretation Evolution in LLM-Supported Programming Education](https://arxiv.org/abs/2607.22463v1)**\n📰 arXiv (Jennie Ren, Jordan H. McDowell, Kyrie Zhixuan Zhou) | ⏰ 07-25 00:28 | ⭐ 6.3分\n\n---\n\n**[VLOOK 2026.7～主题天花板级大焕新+幻灯片视图～好看好用 Markdown 主题包与排版增强插件](https://www.oschina.net/news/479243)**\n📰 开源中国 | ⏰ 07-25 19:57 | ⭐ 4.25分\n\n---\n\n### 📁 产品更新\n\n**[调问更新 7.12~7.25丨150+ 优质模板上线！选人更高效，体验再升级](https://www.oschina.net/news/479214)**\n📰 开源中国 | ⏰ 07-25 19:01 | ⭐ 4.45分\n\n---\n\n### 📁 行业动态\n\n_暂无相关资讯_\n\n### 📁 论文研究\n\n_暂无相关资讯_\n\n### 📁 技巧观点\n\n**[SM4RT: Learning Structured Motion Geometry for 4D Reconstruction](https://arxiv.org/abs/2607.22534v1)**\n📰 arXiv (Shing Ho J. Lin, Wenzhao Zheng, Dong Zhuo, Yuqi Wu, Jie Zhou, Jiwen Lu) | ⏰ 07-25 01:59 | ⭐ 6.3分\n\n---\n\n**[Explainable Reinforcement Learning for assisting Air Traffic Controllers](https://arxiv.org/abs/2607.22525v1)**\n📰 arXiv (Anduel Mehmeti, Gabriella Gigante, Salvatore Venticinque) | ⏰ 07-25 01:56 | ⭐ 6.3分\n\n---\n\n**[Learning to Prepare Molecular Ground States with Transformer Models](https://arxiv.org/abs/2607.22468v1)**\n📰 arXiv (Alex Koziell-Pipe, Jasmine Brewer, Jem Guhit, Marwa H. Farag, Kripa Panchagnula, Gabriel Laude, Fabian Finger, Carlo Gaggioli, Ludmila Szulakowska, Oliver J. Backhouse, Christos Papalitsas, Jason G. Mustakis, Thomas Soini, David Munoz Ramo, Stephen Clark, Elica Kyoseva, Enrico Rinaldi) | ⏰ 07-25 00:32 | ⭐ 6.3分\n\n---\n\n**[Robot-Factored World Models via Robot Rendering](https://arxiv.org/abs/2607.22535v1)**\n📰 arXiv (Byungjun Kim, Taeksoo Kim, Hyunsoo Cha, Hanbyul Joo) | ⏰ 07-25 01:59 | ⭐ 6.15分\n\n---\n\n**[Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking](https://arxiv.org/abs/2607.22514v1)**\n📰 arXiv (Siyuan Zhao, Eric Ababio Anyimadu, Zachary G. Brumm, Yue Ma, Clifton David Fuller, Xinhua Zhang, G. Elisabeta Marai, Guadalupe Canahuate) | ⏰ 07-25 01:34 | ⭐ 6.15分\n\n---\n\n**[CARA: Concept-Aware Risk Attention for Interpretable Collision Anticipation](https://arxiv.org/abs/2607.22494v1)**\n📰 arXiv (Zhishan Tao, Ruoyu Wang, Yucheng Wu, Enjun Du, Yilei Yuan, Sherwin Ho, Yue Su, Jinbo Su, Yi Hong) | ⏰ 07-25 01:06 | ⭐ 6.15分\n\n---\n\n**[The V-fold jackknife for semiparametric inference: variance estimation, confidence intervals, and simultaneous confidence bands](https://arxiv.org/abs/2607.22493v1)**\n📰 arXiv (Yi Li, Ashkan Ertefaie, Mark van der Laan) | ⏰ 07-25 01:05 | ⭐ 6.15分\n\n---\n\n**[Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting](https://arxiv.org/abs/2607.22491v1)**\n📰 arXiv (Aliaksei Kaliutau) | ⏰ 07-25 01:03 | ⭐ 6.15分\n\n---\n\n**[\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating](https://arxiv.org/abs/2607.22489v1)**\n📰 arXiv (Jianghui Wang, Silong Yong, Francesco Orabona, Marco Canini, Katia P. Sycara, Yaqi Xie) | ⏰ 07-25 01:00 | ⭐ 6.15分\n\n---\n\n**[Optimal Transport Image Representation and Deep Covariance Alignment (CORAL) for Control Valve Stiction Detection](https://arxiv.org/abs/2607.22486v1)**\n📰 arXiv (Seshu K. Damarla) | ⏰ 07-25 00:56 | ⭐ 6.15分\n\n---\n\n---\n\n*📝 本文由AI知识日报智能体自动生成 | 共收录 31 篇资讯*\n",
+  "articles": [
+    {
+      "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
+      "content": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families (Claude, Grok, GPT, Gemini) evaluate ethnonationalist pseudo-science derived from Frank Salter's biosocial framework across four temporal snapshots (October 2025-February 2026), via both API and web interfaces. Grok's Fast versions (which power the default user experience on X) consistently assigned credibility scores of 70-75, two to five times higher than all other models (which scored 15-40). This pattern was absent from control prompts testing basic evolutionary consensus and refuted Lamarckian claims, where all models performed comparably. Three additional findings emerged: (1) a silent patch reversed Grok's behaviour from chaotic to stably high validation overnight, without any public documentation; (2) the same Grok model identifier produced radically divergent outputs via API (75)",
+      "link": "https://arxiv.org/abs/2607.22513v1",
+      "published_at": "2026-07-24T17:32:43+00:00",
+      "source": "arXiv (Davide Scarso, Hugo Noronha de Almeida, Joaquim Pina)",
+      "weight": 1.0,
+      "score": 6.6,
+      "category": "模型发布"
+    },
+    {
+      "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+      "content": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned o",
+      "link": "https://arxiv.org/abs/2607.22529v1",
+      "published_at": "2026-07-24T17:59:22+00:00",
+      "source": "arXiv (Siyuan Huang, Pengyu Cheng, Haotian Liu, Tao Chen, Yihao Liu, Jingwei Ni, Shijie Zhou, Ziyi Yang, Gangwei Jiang, Mengyu Zhou, Yu Cheng, Xiaoxi Jiang, Guanjun Jiang)",
+      "weight": 1.0,
+      "score": 6.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+      "content": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both sides by comparing agents with and without skills across nearly 6,000 runs spanning two office automation benchmarks and three model harness stacks. This allows us to distinguish two outcomes. A regression is a task solved without skills but failed after skills are added. A residual failure is a task that fails both with and without skills. We find that regressions are substantial enough that the best performing skills outperform others primarily by regressing less, not by gaining more. We identify three causes of regression: (i) skill description osmosis, a skill changes an agent's behavior simply by being present in context, even when it is never invoked; (ii) grounding displacement, a skill's prescribed procedure overrides how the agent interprets its inputs; and (iii) verification dis",
+      "link": "https://arxiv.org/abs/2607.22520v1",
+      "published_at": "2026-07-24T17:50:03+00:00",
+      "source": "arXiv (Darshan Tank, Baran Nama)",
+      "weight": 1.0,
+      "score": 6.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+      "content": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large language model (LLM) reviewer. However, such reviewers remain empirically unreliable: they may accept fabricated papers and detect them at rates close to chance (Bad Scientist, 2025). We present CausalForge, a framework for automated theoretical research in causal inference grounded in the Lean proof assistant. CausalForge combines Causalean, a foundational Lean library for causal inference containing 7,035 machine-checked declarations developed with language-model assistance under human design and review, with CausalSmith, a self-improving agentic pipeline that selects research topics, proposes results, formalizes statements, constructs proofs, and presents the resulting artifacts for human inspection. Because a machine-checked proof establishes only that a formal statement follows from its a",
+      "link": "https://arxiv.org/abs/2607.22511v1",
+      "published_at": "2026-07-24T17:32:35+00:00",
+      "source": "arXiv (Jiyuan Tan, Vasilis Syrgkanis)",
+      "weight": 1.0,
+      "score": 6.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
+      "content": "Routing to select large language models (LLMs) with different cost-quality trade-offs has become a fundamental deployment feature of enterprise AI. Existing routers, primarily make independent routing decisions for each LLM call. However, agentic applications execute as long-horizon workflows whose quality is determined only by a delayed, task-level outcome. This mismatch prevents per-call routers from correctly attributing feedback to individual routing decisions. Towards mitigating this, we present TRACE-Router, a task-level routing framework that aligns routing with the unit of supervision. TRACE-Router assigns each task to a model once at admission using a contextual bandit, pins all subsequent LLM calls to the selected backend, and updates its policy using the task's terminal reward, jointly accounting for accuracy and latency. By leveraging delayed task feedback, TRACE-Router learns routing policies that adapt to the workload while avoiding explicit task-complexity estimation. Ac",
+      "link": "https://arxiv.org/abs/2607.22465v1",
+      "published_at": "2026-07-24T16:29:06+00:00",
+      "source": "arXiv (Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna)",
+      "weight": 1.0,
+      "score": 6.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "Dynamic Capability Scoping for Enterprise AI Agents: A Synthetic Dataset and Three-Source Permission Architecture",
+      "content": "Enterprise AI agents are typically granted static credential sets at configuration time, holding every tool the role might need for every task they perform. This persistent over-privilege expands the attack surface. We argue that capability scoping must follow a dynamic least-privilege principle and be treated as a prevention mechanism before a detection one. A credential that does not exist in an agent's context cannot be misused regardless of the agent's reasoning or evasion sophistication. We outline a three-source architecture instantiating this principle: role-based ceilings, a task-context classifier, and policy-derived combination prohibitions creating a layered proactive defense against LLM agent misalignment and misuse cases. The architecture supports both enforcing and observe-only deployment; the latter records agent permission requests inconsistent with task context, producing a behavioral signal usable in misalignment research.\nAs a first step toward evaluating this archit",
+      "link": "https://arxiv.org/abs/2607.22445v1",
+      "published_at": "2026-07-24T16:08:03+00:00",
+      "source": "arXiv (Halil Burak Noyan)",
+      "weight": 1.0,
+      "score": 6.45,
+      "category": "模型发布"
+    },
+    {
+      "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+      "content": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing motion perception methods (e.g., sparse tracking, dense point-wise flow) treat motion as independent point-wise displacements, ignoring the structured nature of physical motion. However, real-world objects usually obey rigid-body kinematics, and points thus usually move collectively, not in isolation. Motion itself possesses geometric structure: physical objects undergo a set of rigid-body transformations governed by SE(3), rather than unstructured point-wise displacements. Building on this insight, we propose SM4RT, a Structured Motion 4D Reconstruction Transformer for end-to-end 3D reconstruction and structured motion perception. SM4RT introduces Structure-of-Motion to represent scene dynamics, where scene motion is decomposed into a compact set of motion bases, each represented as a tempora",
+      "link": "https://arxiv.org/abs/2607.22534v1",
+      "published_at": "2026-07-24T17:59:51+00:00",
+      "source": "arXiv (Shing Ho J. Lin, Wenzhao Zheng, Dong Zhuo, Yuqi Wu, Jie Zhou, Jiwen Lu)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Twins: Learn to Predict Unified Representations with Focal Loss",
+      "content": "Unified multimodal models seek a shared visual token space that supports both multimodal understanding and image generation. Discrete methods unify the interface via a shared codebook, whereas continuous pipelines often rely on two disparate representations -- semantic features (e.g., ViT) for understanding and low-level latents (e.g., VAE) for synthesis -- resulting in mismatched latent spaces. We propose Twins, a unified continuous token space formed by channel-wise concatenating ViT and VAE features on the same token grid, so the sequence length is unchanged and attention cost does not increase. However, jointly modeling Twins in a Diffusion Transformer exposes a severe optimization imbalance: the model fits the ViT component well but struggles to match the VAE latent distribution. We trace this imbalance to three sources of heterogeneity: frequency bias, intrinsic dimensionality, and condition-aligned vs condition-independent uncertainty. To address it, we adapt a focal regression ",
+      "link": "https://arxiv.org/abs/2607.22531v1",
+      "published_at": "2026-07-24T17:59:39+00:00",
+      "source": "arXiv (Kaixiong Gong, Xin Cai, Bin Lin, Hao Wang, Yunlong Lin, Mingzhe Zheng, Bohao Li, Jian-Wei Zhang, Miles Yang, Zhao Zhong, Liefeng Bo, Xiangyu Yue)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+      "content": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to the explainability of AI systems. The rapid advancements in AI across various domains have underscored the challenges of establishing trust, raising increasing interest in AI explainability even more when applied to deep learning. In this context, the present work aims to explore the application of explainability techniques to Reinforcement Learning (RL) algorithms, specifically within the safety-critical domain of Air Traffic Control (ATC). Using a simplified ATC environment as an initial testbed, an intelligent agent is trained with a reinforcement learning algorithm to make decisions on alternative flight routes that avoid no-fly zones. As a preliminary explainability approach, a saliency m",
+      "link": "https://arxiv.org/abs/2607.22525v1",
+      "published_at": "2026-07-24T17:56:38+00:00",
+      "source": "arXiv (Anduel Mehmeti, Gabriella Gigante, Salvatore Venticinque)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "MineValiCoder: Reliable Code Generation with Test Case Quality Mining and Bipartite Graph-Based Mutual Validation",
+      "content": "Large Language Model (LLM)-based Test-Driven Development (TDD) has advanced automated code generation. However, existing approaches depend heavily on human-crafted test cases and cannot operate effectively when only natural-language requirements are available. Although recent work enables automatic test generation, it often overlooks the inherent stochasticity of LLMs, leading to two key defects: faulty tests generate misleading feedback that distorts code optimization, while mixed-quality test cases produce conflicting evaluation signals that hinder reliable code selection.\nTo address these challenges, we propose MineValiCoder, a collaborative closed-loop TDD framework based on the mutual reinforcement of test-case quality and code quality. MineValiCoder comprises three modules. The Test Case Quality Mining (TCQM) module filters faulty test cases through self-validation, providing reliable optimization supervision. The Parallel TDD Refinement module iteratively optimizes code and gene",
+      "link": "https://arxiv.org/abs/2607.22471v1",
+      "published_at": "2026-07-24T16:39:06+00:00",
+      "source": "arXiv (Zhen Zhao, Qihang Yang, Feifei Dai, Xiangfang Li, Bo Li)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Learning to Prepare Molecular Ground States with Transformer Models",
+      "content": "Quantum state preparation is a key component of many quantum algorithms. Performing this step efficiently is essential for realizing practical quantum advantage in quantum chemistry applications. Iterative algorithms like ADAPT-VQE can produce shallow ground-state preparation circuits, but become computationally prohibitive for the larger molecules relevant to materials science and pharmaceutical development. Here, we introduce ADAPT-GQE, a generative AI framework that learns to synthesize ground-state preparation circuits for electronic structure calculations. We first use ADAPT-VQE to generate high-quality reference circuits, which are then used as targets for training models for circuit generation. Once trained, the model can efficiently propose and score circuits, enabling reinforcement learning (RL) to drive circuit generation accuracy beyond the accuracy of the ADAPT-VQE training data. This pipeline achieves order-of-magnitude reductions in circuit generation time relative to ADA",
+      "link": "https://arxiv.org/abs/2607.22468v1",
+      "published_at": "2026-07-24T16:32:40+00:00",
+      "source": "arXiv (Alex Koziell-Pipe, Jasmine Brewer, Jem Guhit, Marwa H. Farag, Kripa Panchagnula, Gabriel Laude, Fabian Finger, Carlo Gaggioli, Ludmila Szulakowska, Oliver J. Backhouse, Christos Papalitsas, Jason G. Mustakis, Thomas Soini, David Munoz Ramo, Stephen Clark, Elica Kyoseva, Enrico Rinaldi)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Beyond Perspectives: A Trio-Ethnography of Interpretation Evolution in LLM-Supported Programming Education",
+      "content": "Generative AI is reshaping programming education, yet educators often infer students' AI-supported learning from classroom observations alone. This experience report presents a trio-ethnography involving two computing educators with different teaching philosophies and one undergraduate computer science student to examine how these interpretations evolve through dialogue. Across three conversations, the educators reflected on students' AI use, discussed changes to programming pedagogy, and revisited their assumptions after engaging with the student's lived experiences. Rather than simply confirming or contradicting the educators' perspectives, the student's narratives revealed learning processes that were largely invisible in the classroom, prompting both educators to reconsider assumptions about AI use, assessment, transparency, and programming instruction. We argue that trio-ethnography offers a valuable reflective approach for helping computing educators move beyond observable studen",
+      "link": "https://arxiv.org/abs/2607.22463v1",
+      "published_at": "2026-07-24T16:28:14+00:00",
+      "source": "arXiv (Jennie Ren, Jordan H. McDowell, Kyrie Zhixuan Zhou)",
+      "weight": 1.0,
+      "score": 6.3,
+      "category": "模型发布"
+    },
+    {
+      "title": "Robot-Factored World Models via Robot Rendering",
+      "content": "Action-conditioned video world models predict future observations from an initial observation and an action signal. In robotics, actions influence future observations through two distinct processes: they are first realized into robot motion by the robot body and controller, and the scene then responds through contact and object motion. Conditioning directly on action commands asks the world model to learn the realization process itself, while conditioning on logged future states leaks the interaction outcomes it is meant to predict. We propose robot-factored world models, which move two robot-specific factors outside the world model. First, action realization: each command is rolled through the robot's own controller and kinematics into a deployment-available nominal trajectory, a middle signal that avoids both action-realization learning and future-state leakage. Second, robot rendering: this nominal trajectory is rendered through the robot URDF, factoring the robot's geometry, kinema",
+      "link": "https://arxiv.org/abs/2607.22535v1",
+      "published_at": "2026-07-24T17:59:57+00:00",
+      "source": "arXiv (Byungjun Kim, Taeksoo Kim, Hyunsoo Cha, Hanbyul Joo)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+      "content": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on videofluoroscopic imaging, as captured by the Dynamic Imaging Grade of Swallowing Toxicity (CTCAE-DIGEST), which, while validated, requires specialized equipment, trained personnel, and significant patient burden, limiting its routine use in surveillance. Patient-reported outcomes (PROs), by contrast, are low-cost, scalable, and easily collected at any clinical encounter, making them an attractive alternative signal for identifying patients who may warrant further evaluation. However, a clear clinical framework for translating PRO responses into actionable interventions is still evolving. In particular, uncertainty remains regarding when a patient's self-reported symptom burden should prompt escalation of care.\nThis study addresses this gap by formulating a single-visit PRO-clinical predi",
+      "link": "https://arxiv.org/abs/2607.22514v1",
+      "published_at": "2026-07-24T17:34:26+00:00",
+      "source": "arXiv (Siyuan Zhao, Eric Ababio Anyimadu, Zachary G. Brumm, Yue Ma, Clifton David Fuller, Xinhua Zhang, G. Elisabeta Marai, Guadalupe Canahuate)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "CARA: Concept-Aware Risk Attention for Interpretable Collision Anticipation",
+      "content": "Collision anticipation in autonomous driving requires not only accurate early warnings but also interpretable reasoning about what risk factors are being tracked and how risk evolves over time. Existing methods fall short in this regard: feature-driven models are opaque, post-hoc explanations often lack fidelity, and concept-based methods are mostly designed for static recognition rather than dynamic driving scenes. We propose CARA (Concept-Aware Risk Attention), an intrinsically interpretable spatio-temporal framework for collision anticipation. CARA derives domain-grounded risk concepts from accident narratives, aligns them with video frames via vision-language similarity, and organizes them into evolving concept trajectories. These trajectories provide explicit risk evidence that guides spatial attention, temporal attention, and anticipation, allowing semantic concepts to directly influence both where the model attends and how it predicts risk over time. By treating semantic risk fa",
+      "link": "https://arxiv.org/abs/2607.22494v1",
+      "published_at": "2026-07-24T17:06:05+00:00",
+      "source": "arXiv (Zhishan Tao, Ruoyu Wang, Yucheng Wu, Enjun Du, Yilei Yuan, Sherwin Ho, Yue Su, Jinbo Su, Yi Hong)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "The V-fold jackknife for semiparametric inference: variance estimation, confidence intervals, and simultaneous confidence bands",
+      "content": "For decades, the bootstrap has been a default tool for statistical inference because of its broad applicability and minimal analytic requirements. Although its validity is well understood for smooth parametric estimators, its theoretical properties for many modern semiparametric and machine-learning estimators remain largely unstudied. Nevertheless, bootstrap procedures are often used routinely in such settings, even when their validity is unknown and their computational cost is substantial. We develop the $V$-fold jackknife as a computationally efficient and theoretically justified alternative for semiparametric inference. It requires only $V$ leave-fold-out refits and uses the empirical dispersion of jackknife pseudo-values to quantify uncertainty, without deriving or evaluating an influence function. For regular asymptotically linear estimators of pathwise differentiable parameters, we show that, for fixed $V$, the Studentized $V$-fold jackknife statistic converges to a $t$-distribu",
+      "link": "https://arxiv.org/abs/2607.22493v1",
+      "published_at": "2026-07-24T17:05:54+00:00",
+      "source": "arXiv (Yi Li, Ashkan Ertefaie, Mark van der Laan)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting",
+      "content": "Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle for volatility forecasting, and its two concrete implementations, based on complex-valued open-chain and periodic reservoirs and regime-conditioned experts to interpret reservoir features across calm, onset, recovery, and persistent-stress states. We also implement open-system $q$-qubit counterparts in Qiskit while retaining a common AR-Ridge anchor and a bounded residual correction trained under QLIKE. We evaluate models on 16 U.S. equity and exchange-traded-fund series using three disjoint chronological training, validation, and test folds, a 12-observation input window, and a five-observation forecast horizon. The proposed models perform competitively with GARCH, achieving statistically significant QLIKE improvements for specific assets (IWM, XLP). Also models' forecas",
+      "link": "https://arxiv.org/abs/2607.22491v1",
+      "published_at": "2026-07-24T17:03:08+00:00",
+      "source": "arXiv (Aliaksei Kaliutau)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
+      "content": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costly because it updates all matrices uniformly, regardless of their actual contribution to adaptation. This cost is especially prohibitive for large-scale models with billions of parameters and for resource-constrained settings such as edge deployment and on-device fine-tuning. We show for the first time that not all LoRA matrices are equally worth tuning: matrices with smaller condition numbers (the ratio of largest to smallest singular value) are already well-balanced across directions and contribute only marginally to adaptation, whereas matrices with larger condition numbers contain underdeveloped directions that span richer subspaces and drive most of the performance gains. This observation itself is a key contribution of our work, and it motivates a more selective approach to fine-tunin",
+      "link": "https://arxiv.org/abs/2607.22489v1",
+      "published_at": "2026-07-24T17:00:40+00:00",
+      "source": "arXiv (Jianghui Wang, Silong Yong, Francesco Orabona, Marco Canini, Katia P. Sycara, Yaqi Xie)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Optimal Transport Image Representation and Deep Covariance Alignment (CORAL) for Control Valve Stiction Detection",
+      "content": "Control valve stiction is a common cause of unwanted oscillations and poor control-loop performance in industrial processes. Data-driven methods can automatically detect stiction, but models trained purely on simulated data often struggle to generalize to real industrial control loops due to domain shift. To bridge this gap, this work propose a novel stiction detection methodology that combines optimal transport (OT) imaging technique with deep correlation alignment (Deep CORAL) algorithm. Closed loop signals: controller output and process variable are converted into two-dimensional OT images. These images capture the dynamic behaviour of control loops. The proposed methodology includes a convolutional neural network (CNN) encoder (or feature extractor) trained to learn domain-invariant representations by optimizing a combined objective: a cross-entropy loss on labeled simulation data and a Deep CORAL (covariance-alignment) loss between simulation data and unlabeled target-domain indus",
+      "link": "https://arxiv.org/abs/2607.22486v1",
+      "published_at": "2026-07-24T16:56:33+00:00",
+      "source": "arXiv (Seshu K. Damarla)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Beyond Negative-Ridge Endpoints: Mixed-Sign Spectral Regularization via Negative-Shifted Gradient Descent",
+      "content": "In overparameterized linear regression, many weak spectral directions act like a ridge penalty on the signal-bearing spectrum; negative ridge is the natural correction, pushing filters above one. The stable negative-ridge endpoint, however, is structurally limited: its pole must stay below the smallest nonzero empirical eigenvalue, and it anti-shrinks smaller eigenvalues more than larger ones. Early-stopped negative-shifted gradient descent escapes this constraint. Its filter is smooth at the would-be pole and mixed-sign-capable: above-ridgeless directions form a leading prefix, with lower directions shrunk or exposure-controlled while stopping sets the crossover. In a Gaussian spike-plus-flat model we discover a Marchenko-Pastur barrier: the shift that cancels the implicit penalty lies a bulk width above the smallest empirical eigenvalue, and the stopped path improves on every admissible endpoint by a polynomial factor in risk under explicit conditions. Our main theorem permits a gene",
+      "link": "https://arxiv.org/abs/2607.22474v1",
+      "published_at": "2026-07-24T16:42:46+00:00",
+      "source": "arXiv (Peng Zhao)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Complexity Bounds and Approaches to Learning Projected Gradient Descent Solver Iterates",
+      "content": "Data scarcity poses a fundamental challenge in training generative models to produce initial guesses for parametric optimization problems that are otherwise numerically expensive to solve. We therefore study a $k$-neighborhood data collection strategy that augments datasets of converged solutions with intermediate solver iterates, increasing the amount of training data without additional solver runs. To understand the benefits of this approach, we derive a generalization bound based on Rademacher complexity that reveals the role of the $k$-neighborhoods and related parameters. To achieve this result, we focus on one-sided box-constrained quadratic programs solved by projected gradient descent. We illustrate the behavior of this solver on two examples. The approach proposed in this paper enables a more capable DDDAS paradigm by improving the efficiency of the data-model-optimization loop. We finish by discussing two views of learning solver-iterate data and connect our analysis with GLE",
+      "link": "https://arxiv.org/abs/2607.22467v1",
+      "published_at": "2026-07-24T16:31:30+00:00",
+      "source": "arXiv (Anjian Li, Ryne Beeson)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Phylogenetic signal in marine mammal and bird vocalizations captured by audio foundation models: the limited benefit of domain-specific pretraining",
+      "content": "Do learned audio embeddings encode structure that nobody told them to encode? We probe four large pretrained audio models (AST, CLAP, BEATs-bio and BirdNET) with a downstream task none of them saw during training: recovering phylogenetic distance from species vocalizations. If the geometry of the embedding space tracks the tree of life, the representation is picking up something deeper than the labels the model was optimized for.\nWe run Mantel tests across two independent radiations. In 32 marine mammal species (1,754 recordings from the Watkins Marine Mammal Sound Database) the foundation models recover strong phylogenetic signal within the 26 cetaceans (CLAP r=0.82, BEATs-bio r=0.82, AST r=0.74; all p<0.001), among the highest acoustic-phylogenetic correlations reported for any taxon. Hand-crafted MFCC features (105d) find nothing (r=0.040, p=0.338). The gap survives after PCA-projecting every embedding down to 105 dimensions, so it is not an artefact of representation size. It also ",
+      "link": "https://arxiv.org/abs/2607.22458v1",
+      "published_at": "2026-07-24T16:19:04+00:00",
+      "source": "arXiv (Víctor Rincón Yepes)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Hyperball May Not Be a Free Lunch",
+      "content": "For scale-invariant deep networks, Hyperball-style optimizers have shown strong performance in large-scale training by fixing the norms of matrix-valued parameters and normalizing updates. However, the source of their advantage remains unclear. Starting from the angular displacement between consecutive parameter states, we derive an angular effective learning rate that accounts for the parameter-update angle, parameter norm, and update norm. We also show that the conventional norm-based measure is a special case under parameter-update orthogonality. We then decompose optimizer updates into radial and tangential components and analyze how radial updates affect one-step angular displacement. Under the training configurations considered, numerical results show that the radial component has only a limited direct effect on the angular effective learning rate. It therefore cannot explain why MuonH converges more slowly than MuonWD early in training but overtakes it later. To further isolate ",
+      "link": "https://arxiv.org/abs/2607.22444v1",
+      "published_at": "2026-07-24T16:06:38+00:00",
+      "source": "arXiv (Yihao Xiao, Jialong Sun, Zitian Gao, Zeming Wei, Chutian Wang, Ran Tao, Jiaye Teng, Bryan Dai)",
+      "weight": 1.0,
+      "score": 6.15,
+      "category": "技巧观点"
+    },
+    {
+      "title": "grapheme-kit: Grapheme-Level Metrics and Text Processing for Multilingual NLP",
+      "content": "Existing lexical distance, similarity, and evaluation metrics operate on Unicode code points, which can misrepresent errors in writing systems where a single grapheme is represented by multiple Unicode code points. We introduce grapheme-kit, an open-source Python library that extends these metrics to operate on grapheme clusters instead. The library also provides improved grapheme processing for Tamil and Sinhala, including accurate grapheme cluster identification and grapheme composition/decomposition utilities. Through an OCR case study, we demonstrate that grapheme-level metrics provide a more faithful evaluation of complex scripts.",
+      "link": "https://arxiv.org/abs/2607.22456v1",
+      "published_at": "2026-07-24T16:14:37+00:00",
+      "source": "arXiv (Izzath Nisfer, Ashini Kavindya, Ovindu Atukorala, Purushoth Velayuthan, Menan Velayuthan)",
+      "weight": 1.0,
+      "score": 6.09,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
+      "content": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-level relationships can be characterised through spectral values and spectral subspaces; however, common coordinate-wise rotation-gate data-encoding unitaries used in most quantum machine learning models do not explicitly construct such a matrix-level representation. We introduce Quantum Spectral Models (QSMs), in which we construct the generator of the data-encoding unitary directly from each input matrix. We study three QSM variants based on symmetric, global block, and non-overlapping patch-local block Hamiltonians. Their outputs admit truncated Fourier representations in which input-dependent spectral gaps supply candidate phase carriers, while spectral subspaces help determine their coefficients. We evaluate the QSMs and comparison quantum models on two matrix representations of Pendig",
+      "link": "https://arxiv.org/abs/2607.22516v1",
+      "published_at": "2026-07-24T17:39:14+00:00",
+      "source": "arXiv (Peiyong Wang, Udaya Parampalli, Casey R. Myers)",
+      "weight": 1.0,
+      "score": 6.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+      "content": "Electroencephalography (EEG) is widely used to diagnose neurological conditions, but its analysis usually relies on either predefined spectral features or deep neural networks. Predefined features carry a strong bias, since they fix in advance what counts as informative, while deep neural networks and foundation models are hard to interpret and need large amounts of data and compute. We present bag-of-waves, an interpretable framework that learns a small dictionary of recurring EEG waveform templates, called atoms, using shift-invariant k-means without labels. The continuous EEG is then turned into a sequence of atom tokens, whose counts feed a simple downstream classifier or clustering step. We extend this representation in two ways: we add atom-to-atom transitions, which we call n- grams, to capture temporal structure, and we move from single-channel atoms to regional and cross-channel spatial atoms for the multichannel case. We test the method on three complementary datasets, each p",
+      "link": "https://arxiv.org/abs/2607.22508v1",
+      "published_at": "2026-07-24T17:27:43+00:00",
+      "source": "arXiv (Athanasios Papastathopoulos-Katsaros, Steven T. Lee, Lin Yao, Ajay Thomas, Junseok Park, Matthew J. McGinley, Zhandong Liu)",
+      "weight": 1.0,
+      "score": 6.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "The quest to keep organs alive outside the body",
+      "content": "This week, I covered a fascinating effort to preserve organs outside the body. There’s a huge shortage of donor organs, and one of the main reasons is time—they survive only a matter of hours outside the body, even when they’re kept on ice.\nDoctors dream of organ banks—stores of human organs that can be preserved for days, weeks, months, or even longer. That would allow them to run tests on organs, find the best matches for them, and transport the organs to those recipients.\nIn new research, one team has been able to supercool the kidneys of pigs—animals whose organs are of a similar size to human ones—and preserve them for days. The kidneys survived being stored at −4 °C (25 °F) and eventually reimplanted back into pigs. And that’s just the latest development in a field that is positively buzzing.\nIt has proved super difficult to freeze organs. Once ice forms in them, they’re done. The ice crystals create all kinds of damage and render the organs unusable. That hasn’t stopped many res",
+      "link": "https://www.technologyreview.com/2026/07/24/1140790/the-quest-to-keep-organs-alive-outside-the-body/",
+      "published_at": "2026-07-24T17:03:55+00:00",
+      "source": "MIT Technology Review",
+      "weight": 0.95,
+      "score": 6.0,
+      "category": "技巧观点"
+    },
+    {
+      "title": "调问更新 7.12~7.25丨150+ 优质模板上线！选人更高效，体验再升级",
+      "content": "DWSurvey 更新日志 调问重磅更新模板中心上线与组卷效率提升 坚持前后端代码 100% 开源助力企业建设自主可控的问卷调研系统 官网地址www.diaowen.net ➔ 源码下载Gitee 仓库 ➔ 各位小伙伴，我们的系统又迎来了重磅更新！本次更新重点提升了组卷效率与分发体验，同时解决了大家反馈的多项细节问题，欢迎体验！ 新增功能 ...",
+      "link": "https://www.oschina.net/news/479214",
+      "published_at": "2026-07-25T19:01:20+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 4.45,
+      "category": "产品更新"
+    },
+    {
+      "title": "One fallen power line exposed a growing AI data center problem. Here’s how to fix it.",
+      "content": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
+      "link": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
+      "published_at": "2026-07-25T13:05:00+00:00",
+      "source": "TechCrunch",
+      "weight": 0.9,
+      "score": 4.35,
+      "category": "技巧观点"
+    },
+    {
+      "title": "VLOOK 2026.7～主题天花板级大焕新+幻灯片视图～好看好用 Markdown 主题包与排版增强插件",
+      "content": "VLOOK:tm: 是针对 Typora（跨平台 Markdown 编辑器）的主题包和增强插件（针对导出的 HTML 文件)，旨在与众 Markdown 粉共创 Markdown 的自动化排版 2.0，在保持 Markdown 简洁性的基础上，让编辑、阅读 Markdown 文档更实用，也更愉悦。 VLOOK:tm: 属于开源软件（遵从 MIT License），也是 OSCHINA 开源中国 推荐的国产...",
+      "link": "https://www.oschina.net/news/479243",
+      "published_at": "2026-07-25T19:57:26+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 4.25,
+      "category": "模型发布"
+    },
+    {
+      "title": "WePush v5.0.6 已经发布，消息批量推送工具",
+      "content": "WePush v5.0.6 已经发布，消息批量推送工具 此版本更新内容包括： ● 分析并优化界面EDT线程问题，提升UI响应稳定性 ● 性能优化，优化人群数据导入等场景 ● 修复SQLite不支持useGeneratedKeys的问题 ● 优化自动更新下载与安装包发布流程 ● 升级部分依赖 下载地址：https://github.com/rememberber/WePush/releases/...",
+      "link": "https://www.oschina.net/news/478906",
+      "published_at": "2026-07-25T09:22:15+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 4.25,
+      "category": "模型发布"
+    }
+  ],
+  "generated_at": "2026-07-30T10:13:07.747005+08:00",
+  "time_range": {
+    "start": "2026-07-25T00:00:00+08:00",
+    "end": "2026-07-25T23:59:59.999999+08:00"
+  }
+}

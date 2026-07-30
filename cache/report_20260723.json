@@ -1,0 +1,50 @@
+{
+  "report": "## 🎯 今日 AI 焦点 TOP 5\n\n**[The Download: energy transmission and US threats against Chinese AI](https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/)**\n📰 MIT Technology Review | ⭐ 5.70 | 🏷️ 技巧观点\n\n> This is today’s edition of The Download , our weekday newsletter that provides a daily dose of what’s going on in the wo...\n\n---\n\n**[How AI helps scientists design the next generation of medicines](https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/)**\n📰 MIT Technology Review | ⭐ 5.70 | 🏷️ 技巧观点\n\n> Designing and developing a new medicine is an expensive, failure-prone scientific challenge. A new drug can take many ye...\n\n---\n\n**[Skills 模块上线！qKnow 开源版 v2.3.0 让 Agent 能力快速复用，提升智能体构建效率！](https://www.oschina.net/news/477812)**\n📰 开源中国 | ⭐ 4.25 | 🏷️ 模型发布\n\n> qKnow智能体构建平台开源版v2.3.0新增Skills模块，支持对Skills进行创建、导入、修改、预览、下载及启停管理，并可在Agent编排页面中选择已经启用的Skills，让原本分散在个人手中的提示词与任务指令，逐步形成可管理、可复...\n\n---\n\n**[IPFire 2.29 Core 203 发布](https://www.oschina.net/news/477678/ipfire-2-29-core-update-203-released)**\n📰 开源中国 | ⭐ 4.15 | 🏷️ 模型发布\n\n> IPFire 是一个开源 Linux 发行版，主要用于路由器和防火墙；具有一个独立的防火墙系统，带有基于 Web 的管理控制台进行配置，它支持安装附加组件以添加更多服务。 IPFire 2.29 – Core Update 203 现已发布...\n\n---\n\n## 📊 5大分类动态速览\n\n### 📁 模型发布\n\n**[Skills 模块上线！qKnow 开源版 v2.3.0 让 Agent 能力快速复用，提升智能体构建效率！](https://www.oschina.net/news/477812)**\n📰 开源中国 | ⏰ 07-23 17:31 | ⭐ 4.25分\n\n---\n\n**[IPFire 2.29 Core 203 发布](https://www.oschina.net/news/477678/ipfire-2-29-core-update-203-released)**\n📰 开源中国 | ⏰ 07-23 15:36 | ⭐ 4.15分\n\n---\n\n### 📁 产品更新\n\n_暂无相关资讯_\n\n### 📁 行业动态\n\n_暂无相关资讯_\n\n### 📁 论文研究\n\n_暂无相关资讯_\n\n### 📁 技巧观点\n\n**[The Download: energy transmission and US threats against Chinese AI](https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/)**\n📰 MIT Technology Review | ⏰ 07-23 20:10 | ⭐ 5.7分\n\n---\n\n**[How AI helps scientists design the next generation of medicines](https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/)**\n📰 MIT Technology Review | ⏰ 07-23 20:00 | ⭐ 5.7分\n\n---\n\n---\n\n*📝 本文由AI知识日报智能体自动生成 | 共收录 4 篇资讯*\n",
+  "articles": [
+    {
+      "title": "The Download: energy transmission and US threats against Chinese AI",
+      "content": "This is today’s edition of\nThe Download\n,\nour weekday newsletter that provides a daily dose of what’s going on in the world of technology.\nThe power line that could reshape New York’s grid is hitting snags\nDuring a heat wave on July 3, New York State’s grid imported enough electricity from Canada to meet about 9% of its total demand that day.\nSome of that power shuttled in on a 339-mile power line stretching from Quebec to Queens. It opened in May and is officially the longest underground transmission line in North America. It could provide up to 20% of New York City’s electricity demand, largely with abundant hydropower from Quebec.\nOne wrinkle: The line has been down for most of this month, and some experts are concerned about how drought will affect the power supply feeding it.\nStill, the line could help shape the future of our grid, if it can overcome these sorts of snags.\nRead our story to understand how\n.\n—Casey Crownhart\nThis\nstory\nis from The Spark, our weekly climate tech news",
+      "link": "https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/",
+      "published_at": "2026-07-23T12:10:00+00:00",
+      "source": "MIT Technology Review",
+      "weight": 0.95,
+      "score": 5.7,
+      "category": "技巧观点"
+    },
+    {
+      "title": "How AI helps scientists design the next generation of medicines",
+      "content": "Designing and developing a new medicine\nis an expensive, failure-prone scientific challenge.\nA new drug can take many years to develop, at the cost of a significant investment. And even then, most possible candidates never reach the patient. For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.\nScientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale. Today, AI is speeding up these processes and has quickly become a core part of the infrastructure in pharmaceutical R&D.\nAI-assisted design is a growing part of how biologic drug candidates are developed, and companies like AstraZeneca are actively building its engineering teams to push this further. “Everything we do, whether it’s design, make, test, or ",
+      "link": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+      "published_at": "2026-07-23T12:00:00+00:00",
+      "source": "MIT Technology Review",
+      "weight": 0.95,
+      "score": 5.7,
+      "category": "技巧观点"
+    },
+    {
+      "title": "Skills 模块上线！qKnow 开源版 v2.3.0 让 Agent 能力快速复用，提升智能体构建效率！",
+      "content": "qKnow智能体构建平台开源版v2.3.0新增Skills模块，支持对Skills进行创建、导入、修改、预览、下载及启停管理，并可在Agent编排页面中选择已经启用的Skills，让原本分散在个人手中的提示词与任务指令，逐步形成可管理、可复用的能力单元。 从重复输入提示词，到沉淀可复用能力 在简单的问答场景中，用户可以直接向模型输入...",
+      "link": "https://www.oschina.net/news/477812",
+      "published_at": "2026-07-23T17:31:29+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 4.25,
+      "category": "模型发布"
+    },
+    {
+      "title": "IPFire 2.29 Core 203 发布",
+      "content": "IPFire 是一个开源 Linux 发行版，主要用于路由器和防火墙；具有一个独立的防火墙系统，带有基于 Web 的管理控制台进行配置，它支持安装附加组件以添加更多服务。 IPFire 2.29 – Core Update 203 现已发布。这是一次重大更新，其核心在于对 IPFire 处理 DNS 方式的根本性变革：用 Knot Resolver 取代了 Unbound，从而构...",
+      "link": "https://www.oschina.net/news/477678/ipfire-2-29-core-update-203-released",
+      "published_at": "2026-07-23T15:36:49+08:00",
+      "source": "开源中国",
+      "weight": 0.8,
+      "score": 4.15,
+      "category": "模型发布"
+    }
+  ],
+  "generated_at": "2026-07-30T10:13:07.761090+08:00",
+  "time_range": {
+    "start": "2026-07-23T00:00:00+08:00",
+    "end": "2026-07-23T23:59:59.999999+08:00"
+  }
+}

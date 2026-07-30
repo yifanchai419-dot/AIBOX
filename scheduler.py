@@ -224,15 +224,23 @@ def ensure_daily_reports_ready():
             continue
         date_str = target_date.strftime("%Y%m%d")
         output_path = get_daily_report_md_path(date_str)
-        if not os.path.exists(output_path):
-            logger.info(f"发现 {date_str} 的日报缺失，正在生成...")
+        cache_path = get_daily_cache_path(date_str)
+        md_exists = os.path.exists(output_path)
+        cache_exists = os.path.exists(cache_path)
+        if not md_exists or not cache_exists:
+            missing = []
+            if not md_exists:
+                missing.append("MD")
+            if not cache_exists:
+                missing.append("缓存JSON")
+            logger.info(f"发现 {date_str} 的日报文件缺失({'、'.join(missing)})，正在重建...")
             try:
-                result = generate_daily_report_for_date(target_date)
-                logger.info(f"{date_str} 日报生成结果: {result}")
+                result = generate_daily_report_for_date(target_date, force=True)
+                logger.info(f"{date_str} 日报重建结果: {result}")
             except Exception as e:
-                logger.error(f"生成 {date_str} 日报时发生异常: {str(e)}", exc_info=True)
+                logger.error(f"重建 {date_str} 日报时发生异常: {str(e)}", exc_info=True)
         else:
-            logger.info(f"{date_str} 的日报已存在，无需生成")
+            logger.info(f"{date_str} 的日报已存在（MD + 缓存JSON均就绪），无需生成")
 
     return True
 
