@@ -937,8 +937,11 @@ def render_daily_report():
         if cached:
             date_str_to_load = today_str
 
-    # 若仍无缓存，直接尝试读取 Markdown 文件
-    if not cached:
+    # 加载报告文本（优先缓存，回退到 Markdown 文件）
+    if cached:
+        report_content = cached.get("report", "")
+        st.session_state.daily_report = report_content
+    else:
         md_path = os.path.join(OUTPUT_DIR, "daily_reports", f"daily_report_{date_str_to_load}.md")
         if os.path.exists(md_path):
             try:
@@ -949,9 +952,11 @@ def render_daily_report():
                 report_content = ""
         else:
             report_content = ""
-    else:
-        report_content = cached.get("report", "")
-        st.session_state.daily_report = report_content
+
+    # 重新尝试加载缓存获取结构化文章数据
+    # （首次加载可能因时序问题失败，但缓存文件实际已存在）
+    if not cached:
+        cached = load_daily_report_from_cache(date_str_to_load)
 
     if st.session_state.daily_report:
         st.download_button(
@@ -962,6 +967,10 @@ def render_daily_report():
         )
 
         # 从缓存中获取结构化文章数据，用于渲染 TOP 5 卡片 + 分类卡片
+        # 最终兜底：再次尝试加载缓存获取结构化数据
+        if not cached or not cached.get("articles"):
+            cached = load_daily_report_from_cache(date_str_to_load)
+
         top5_articles = []
         cat_articles_map = {}
         target_date_str = yesterday.strftime("%Y-%m-%d")

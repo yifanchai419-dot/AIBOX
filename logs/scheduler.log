@@ -48396,3 +48396,120 @@ streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machin
 2026-07-30 09:31:49,057 - INFO - ============================================================
 2026-07-30 09:31:49,057 - INFO - 20260729 日报生成完成
 2026-07-30 09:31:49,057 - INFO - ============================================================
+2026-07-30 10:13:06,093 - INFO - 启动日报定时任务调度器...
+2026-07-30 10:13:06,093 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-30 10:13:06,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-07-30 10:13:06,158 - INFO - Added job "每日AI日报生成" to job store "default"
+2026-07-30 10:13:06,158 - INFO - Scheduler started
+2026-07-30 10:13:06,158 - INFO - 定时任务调度器已启动
+2026-07-30 10:13:06,158 - INFO - 每天早上 6:00（北京时间）自动生成前一天的日报
+2026-07-30 10:13:06,158 - INFO - 启动时日报检查：当前北京时间 2026-07-30 10:13:06
+2026-07-30 10:13:06,160 - INFO - 20260729 的日报已存在，无需生成
+2026-07-30 10:13:06,160 - INFO - 20260728 的日报已存在，无需生成
+2026-07-30 10:13:06,160 - INFO - 20260727 的日报已存在，无需生成
+2026-07-30 10:13:06,162 - INFO - 20260726 的日报已存在，无需生成
+2026-07-30 10:13:06,162 - INFO - 发现 20260725 的日报缺失，正在生成...
+2026-07-30 10:13:06,163 - INFO - ============================================================
+2026-07-30 10:13:06,163 - INFO - 开始生成 20260725 的 AI 日报
+2026-07-30 10:13:06,163 - INFO - ============================================================
+2026-07-30 10:13:06,163 - INFO - 北京时间范围: 2026-07-25 00:00 到 2026-07-25 23:59
+2026-07-30 10:13:06,163 - INFO - UTC 时间范围: 2026-07-24 16:00 到 2026-07-25 15:59
+2026-07-30 10:13:06,178 - INFO - 成功加载.env文件
+2026-07-30 10:13:07,428 - INFO - 增量抓取模式: 2026-07-29 14:25:08.338331+00:00 到 2026-07-30 02:13:07.391179+00:00
+2026-07-30 10:13:07,432 - INFO - 定时任务模式: 2026-07-29 14:25:08.338331+00:00 到 2026-07-30 02:13:07.391179+00:00
+2026-07-30 10:13:07,432 - INFO - 正在通过 arXiv API 抓取论文: 2026-07-29 14:25:08.338331+00:00 到 2026-07-30 02:13:07.391179+00:00
+2026-07-30 10:13:07,734 - INFO - 从持久化数据库中读取文章...
+2026-07-30 10:13:07,743 - INFO - 数据库中共有 792 篇文章
+2026-07-30 10:13:07,743 - INFO - 筛选出 31 篇指定时间范围内的文章
+2026-07-30 10:13:07,743 - INFO - 开始生成日报内容...
+2026-07-30 10:13:07,743 - INFO - 生成日报：开始处理 31 篇文章
+2026-07-30 10:13:07,743 - INFO - 生成日报：使用Mock模式（确保格式正确）
+2026-07-30 10:13:07,748 - INFO - 日报缓存已保存: D:\trae\Trae Project\ai_course_agent\cache\report_20260725.json
+2026-07-30 10:13:07,749 - INFO - 日报已保存: D:\trae\Trae Project\ai_course_agent\output\daily_reports\daily_report_20260725.md
+2026-07-30 10:13:07,749 - INFO - ============================================================
+2026-07-30 10:13:07,749 - INFO - 20260725 日报生成完成
+2026-07-30 10:13:07,749 - INFO - ============================================================
+2026-07-30 10:13:07,749 - INFO - 20260725 日报生成结果: ok
+2026-07-30 10:13:07,750 - INFO - 20260724 的日报已存在，无需生成
+2026-07-30 10:13:07,750 - INFO - 发现 20260723 的日报缺失，正在生成...
+2026-07-30 10:13:07,750 - INFO - ============================================================
+2026-07-30 10:13:07,750 - INFO - 开始生成 20260723 的 AI 日报
+2026-07-30 10:13:07,750 - INFO - ============================================================
+2026-07-30 10:13:07,750 - INFO - 北京时间范围: 2026-07-23 00:00 到 2026-07-23 23:59
+2026-07-30 10:13:07,750 - INFO - UTC 时间范围: 2026-07-22 16:00 到 2026-07-23 15:59
+2026-07-30 10:13:07,750 - INFO - 从持久化数据库中读取文章...
+2026-07-30 10:13:07,761 - INFO - 数据库中共有 792 篇文章
+2026-07-30 10:13:07,761 - INFO - 筛选出 4 篇指定时间范围内的文章
+2026-07-30 10:13:07,761 - INFO - 开始生成日报内容...
+2026-07-30 10:13:07,761 - INFO - 生成日报：开始处理 4 篇文章
+2026-07-30 10:13:07,761 - INFO - 生成日报：使用Mock模式（确保格式正确）
+2026-07-30 10:13:07,762 - INFO - 日报缓存已保存: D:\trae\Trae Project\ai_course_agent\cache\report_20260723.json
+2026-07-30 10:13:07,763 - INFO - 日报已保存: D:\trae\Trae Project\ai_course_agent\output\daily_reports\daily_report_20260723.md
+2026-07-30 10:13:07,763 - INFO - ============================================================
+2026-07-30 10:13:07,763 - INFO - 20260723 日报生成完成
+2026-07-30 10:13:07,763 - INFO - ============================================================
+2026-07-30 10:13:07,764 - INFO - 20260723 日报生成结果: ok
+2026-07-30 10:13:12,433 - INFO - arXiv API 请求URL: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Astat.ML+OR+cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.NE%29%2BAND%2BsubmittedDate%3A%5B202607291425%2BTO%2B202607300213%5D&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending
+2026-07-30 10:13:12,998 - WARNING - arXiv API 请求超限 (429)，第 1/3 次尝试
+2026-07-30 10:13:21,268 - ERROR - Exception in callback AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601
+handle: <Handle AppSession._on_scriptrunner_event.<locals>.<lambda>() at D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py:601>
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 115, in streamlit_write
+    with open(path, mode) as handle:
+         ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Faaandy\\.streamlit\\machine_id_v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\python\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 601, in <lambda>
+    lambda: self._handle_scriptrunner_event_on_event_loop(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 696, in _handle_scriptrunner_event_on_event_loop
+    msg = self._create_new_session_message(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 855, in _create_new_session_message
+    _populate_user_info_msg(imsg.user_info)
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\app_session.py", line 1412, in _populate_user_info_msg
+    inst = Installation.instance()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 311, in instance
+    cls._instance = Installation()
+                    ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 320, in __init__
+    self.installation_id_v4 = _get_machine_id_v4()
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\runtime\metrics_util.py", line 292, in _get_machine_id_v4
+    with file_util.streamlit_write(filepath) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Python\python\Lib\site-packages\streamlit\file_util.py", line 124, in streamlit_write
+    raise errors.Error("\n".join(msg))
+streamlit.errors.Error: Unable to write file: C:\Users\Faaandy\.streamlit\machine_id_v4
+2026-07-30 10:13:21,333 - INFO - 调度器已在运行，跳过重复启动
+2026-07-30 10:13:21,333 - INFO - AIBOX 调度器已在后台线程中启动
+2026-07-30 10:13:33,895 - WARNING - arXiv API 请求超限 (429)，第 2/3 次尝试
+2026-07-30 10:14:14,039 - WARNING - arXiv API 请求异常，第 3/3 次尝试: The read operation timed out
+2026-07-30 10:14:29,040 - WARNING - arXiv API 抓取失败: arXiv API 请求失败，已重试 3 次
+2026-07-30 10:14:29,040 - INFO - 使用 arXiv API 兜底方案：获取最近提交的论文
+2026-07-30 10:14:59,457 - WARNING - arXiv API 兜底方案失败: The read operation timed out
+2026-07-30 10:14:59,457 - INFO - 正在通过 GitHub API 抓取热门仓库: 2026-07-29 14:25:08.338331+00:00 到 2026-07-30 02:13:07.391179+00:00
+2026-07-30 10:15:03,058 - INFO - GitHub API 没有找到仓库
+2026-07-30 10:15:03,058 - INFO - 开始抓取 10 个信源的文章...
+2026-07-30 10:15:03,058 - INFO - 正在抓取信源: 36氪前沿科技
+2026-07-30 10:15:03,551 - INFO - 信源 36氪前沿科技 抓取完成，共 23 篇文章
+2026-07-30 10:15:03,551 - INFO - 正在抓取信源: 少数派
+2026-07-30 10:15:03,774 - INFO - 信源 少数派 抓取完成，共 1 篇文章
+2026-07-30 10:15:03,774 - INFO - 正在抓取信源: IT之家AI频道
+2026-07-30 10:15:04,343 - INFO - 信源 IT之家AI频道 抓取完成，共 60 篇文章
+2026-07-30 10:15:04,343 - INFO - 正在抓取信源: AI前线
+2026-07-30 10:15:04,554 - INFO - 信源 AI前线 抓取完成，共 0 篇文章
+2026-07-30 10:15:04,554 - INFO - 正在抓取信源: 开源中国
+2026-07-30 10:15:04,888 - INFO - 信源 开源中国 抓取完成，共 0 篇文章
+2026-07-30 10:15:04,888 - INFO - 正在抓取信源: Engadget
+2026-07-30 10:15:05,821 - INFO - 信源 Engadget 抓取完成，共 17 篇文章
+2026-07-30 10:15:05,821 - INFO - 正在抓取信源: Hacker News
