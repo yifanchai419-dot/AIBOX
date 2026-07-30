@@ -202,43 +202,23 @@ def generate_daily_report():
     today = now_bjt.date()
     yesterday = today - timedelta(days=1)
 
-    # 检查今日启动时是否已补齐过昨天的日报（避免重复生成）
-    last_run_marker = os.path.join(CACHE_DIR, ".last_daily_report_run")
-    if os.path.exists(last_run_marker):
-        try:
-            with open(last_run_marker, "r", encoding="utf-8") as f:
-                last_run_date = f.read().strip()
-            if last_run_date == today.strftime("%Y%m%d"):
-                logger.info(f"今日日报已在启动时补齐，跳过定时任务: yesterday={yesterday}")
-                return "skipped"
-        except Exception:
-            pass
-
     result = generate_daily_report_for_date(yesterday)
-
-    # 标记今日调度任务已执行
-    try:
-        with open(last_run_marker, "w", encoding="utf-8") as f:
-            f.write(today.strftime("%Y%m%d"))
-    except Exception:
-        pass
     return result
 
 
 def ensure_daily_reports_ready():
     """
     启动时检查并补齐缺失的日报：
-    - 优先补齐昨天的日报（每天 0 点之后补齐昨天的日报）
-    - 若发现最近 2 天内日报均缺失，按日期逐个补齐，确保调度器长期未运行后的数据完整性
+    - 检查最近 7 天的日报，逐个补齐缺失的
+    - 确保调度器长期未运行后的数据完整性
     """
     now_bjt = datetime.now(BJT)
     today = now_bjt.date()
-    yesterday = today - timedelta(days=1)
 
     logger.info(f"启动时日报检查：当前北京时间 {now_bjt.strftime('%Y-%m-%d %H:%M:%S')}")
 
-    # 检查最近 2 天的日报，逐个补齐（昨天、前天）
-    days_to_check = [yesterday, today - timedelta(days=2)]
+    # 检查最近 7 天的日报，逐个补齐
+    days_to_check = [today - timedelta(days=i) for i in range(1, 8)]
     for target_date in days_to_check:
         if target_date >= today:
             continue
@@ -254,13 +234,6 @@ def ensure_daily_reports_ready():
         else:
             logger.info(f"{date_str} 的日报已存在，无需生成")
 
-    # 标记今日调度任务已检查，避免重复生成
-    last_run_marker = os.path.join(CACHE_DIR, ".last_daily_report_run")
-    try:
-        with open(last_run_marker, "w", encoding="utf-8") as f:
-            f.write(today.strftime("%Y%m%d"))
-    except Exception:
-        pass
     return True
 
 
